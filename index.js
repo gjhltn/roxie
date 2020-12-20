@@ -3,14 +3,12 @@ const FileSync = require('lowdb/adapters/FileSync')
 const path = require('path');
 const fs = require('fs');
 
-// setup data access
-
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 
-// directory <———> db
+/* directory <———> db */
 
-const sync = (directory,dataSource) => {
+const sync = (directory, dataSource) => {
 	// initialise
 	let files = fs.readdirSync(directory);
 	const collection =
@@ -50,6 +48,32 @@ processFile = (file,collection) => {
 	return({added: false})
 }
 
-// RUN IT
+/* data manipulation */
 
-sync('./files/',db);
+updateAll = (dataSource) => {
+	dataSource
+		.get('items')
+		.each(item=>Object.assign(item,buildUpdate(item)))
+		.write()
+}
+
+const buildUpdate = item => {
+	const fileName = item.file
+	const [author,title] = fileName.split('#')
+	const [surname,forename] = author.split(',')
+	return {
+		file: fileName,
+		surname: surname.trim(),
+		forename: forename.trim(),
+		title: title.trim()
+	}
+}
+
+/* main */
+
+const run = (directory,dataSource) => {
+	sync(directory,dataSource)
+	updateAll(dataSource)
+}
+
+run('./files/',db)
