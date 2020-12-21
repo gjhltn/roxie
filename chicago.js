@@ -16,8 +16,19 @@ export const humaniseArray = (arr) => oxford(arr, "and", "")
 
 export const names = arr => {
     const l = arr.length
-    if (!l) return
+    if (!l) return ""
 	let flat = [nameLastFirst(arr[0])]
 	if (l>1) flat = flat.concat(arr.slice(1).map(name=>nameFirstLast(name)))
 	return humaniseArray(flat)
 }
+
+export const authorship = (item) => {
+	if (item.authors && item.authors.length == 0) return ""
+	if (item.authors) return `${names(item.authors)}. `
+	if (item.editors) return `${names(item.editors)}, ed., `
+}
+/*
+const bibliographyItem(item) => 
+	return `
+	${names(item.authors)}. ${item.title} 
+*/

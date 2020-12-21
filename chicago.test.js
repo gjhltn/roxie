@@ -47,3 +47,30 @@ describe('names', () => {
 		)).toEqual("Asheton, Scott, Ron Asheton, James Williamson, and Iggy Pop")
 	})
 })
+
+const anonymousAuthor = {
+	authors: [],
+	title: "Beowulf"
+}
+
+const oneAuthor = {
+	authors: [{last: "Acker", first: "Kathy"}],
+	title: "Blood and Guts in High School"
+}
+
+const twoAuthors = {
+	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"}],
+	title: "Mille Plateaux"
+}
+
+describe('authorship', () => {
+	it('anonymous', () => {
+		expect(c.authorship(anonymousAuthor)).toEqual("")
+	})
+	it('oneAuthor', () => {
+		expect(c.authorship(oneAuthor)).toEqual("Acker, Kathy. ")
+	})
+	it('twoAuthors', () => {
+		expect(c.authorship(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. ")
+	})
+})
