@@ -68,6 +68,17 @@ const oneAuthor = {
 	}
 }
 
+const oneTranslator = {
+	authors: [{last: "Artaud", first: "Antonin"}],
+	title: "The Theatre and Its Double",
+	translators:[{last:"Corti", first:"Victor"}],
+	publication: {
+		place: "London",
+		publisher: "Alma Classics",
+		year: "2017"
+	}
+}
+
 const twoAuthors = {
 	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"}],
 	title: "Mille Plateaux",
@@ -205,7 +216,7 @@ const pub = {
 
 describe('publication', () => {
 	it('bibliography', () => {
-		expect(c.publication(pub,"bibliography")).toEqual("Venice: Aldine Press, 1580. ")
+		expect(c.publication(pub,"bibliography")).toEqual("Venice: Aldine Press, 1580")
 	})
 	it('notes', () => {
 		expect(c.publication(pub,"notes")).toEqual("(Venice: Aldine Press, 1580), ")
@@ -214,26 +225,30 @@ describe('publication', () => {
 
 describe('bibliographyItem', () => {
 	it('anonymous', () => {
-		expect(c.bibliographyItem(anonymousAuthor)).toEqual("_Beowulf_.")
+		expect(c.bibliographyItem(anonymousAuthor)).toEqual("_Beowulf_. London: Penguin Classics, 2020.")
 	})
 	it('one author', () => {
-		expect(c.bibliographyItem(oneAuthor)).toEqual("Acker, Kathy. _Blood and Guts in High School_.")
+		expect(c.bibliographyItem(oneAuthor)).toEqual("Acker, Kathy. _Blood and Guts in High School_. London: Penguin Classics, 2020.")
 	})
 	it('two authors', () => {
-		expect(c.bibliographyItem(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. _Mille Plateaux_.")
+		expect(c.bibliographyItem(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. _Mille Plateaux_. London: Penguin Classics, 2020.")
 	})
 	it('single editor', () => {
-		expect(c.bibliographyItem(editedOnly)).toEqual("Tatar, Maria, ed. _The Cambridge Companion to Fairy Tales_.")
+		expect(c.bibliographyItem(editedOnly)).toEqual("Tatar, Maria, ed. _The Cambridge Companion to Fairy Tales_. London: Penguin Classics, 2020.")
 	})
 	it('two editors', () => {
-		expect(c.bibliographyItem(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_.")
+		expect(c.bibliographyItem(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_. London: Penguin Classics, 2020.")
 	})
 	it('author plus editor', () => {
-		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P.. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi.")
+		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P.. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi. London: Penguin Classics, 2020.")
 	})
 	it('author plus multiple editors', () => {
-		expect(c.bibliographyItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker.")
+		expect(c.bibliographyItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker. London: Penguin Classics, 2020.")
 	})
+	/*
+	it('author plus translator', () => {
+		expect(c.bibliographyItem(oneTranslator)).toEqual("Artaud, Antonin. _The Theatre and Its Double_. Translated by Victor Corti. London: Aldi Classics, 2020.")
+	})*/
 })
 
 describe('noteItem', () => {

@@ -49,7 +49,7 @@ export const publication = (publication,style) => {
 	}
 	if (style==='bibliography'){
 		// “Place of Publication: Publisher’s Name, Date of Publication.”
-		return `${result}. `
+		return `${result}`
 	}
 }	
 
@@ -64,7 +64,7 @@ export const editors = (item,style) => {
 }
 
 export const bibliographyItem = (item) => 
-	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}`
+	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")} ${publication(item.publication,"bibliography")}.`
 	
 export const noteItem = (item) =>
 	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")} ${publication(item.publication,"notes")}XX.`
