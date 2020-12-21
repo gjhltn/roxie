@@ -63,14 +63,48 @@ const twoAuthors = {
 	title: "Mille Plateaux"
 }
 
+const edited = {
+	editors: [{last: "Joshi", first: "S.T."}],
+	title: "The Call of Cthulhu and Other Weird Stories",
+	authors: [{last: "Lovecraft", first:"H.P"}]
+}
+
+const editedOnly = {
+	editors: [{last: "Tatar", first: "Maria"}],
+	title: "The Cambridge Companion to Fairy Tales",
+}
+
+const editedOnlyTwo = {
+	editors: [{last: "Heaney", first: "Seamus"},{last: "Hughes", first: "Ted"}],
+	title: "The Rattle Bag"
+}
+
+describe('editors', () => {
+	it('single editor', () => {
+		expect(c.editors(editedOnly)).toEqual("Tatar, Maria, ed. ")
+	})
+	it('two editors', () => {
+		expect(c.editors(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
+	})
+})
+
 describe('authorship', () => {
 	it('anonymous', () => {
 		expect(c.authorship(anonymousAuthor)).toEqual("")
 	})
-	it('oneAuthor', () => {
+	it('one author', () => {
 		expect(c.authorship(oneAuthor)).toEqual("Acker, Kathy. ")
 	})
-	it('twoAuthors', () => {
+	it('two authors', () => {
 		expect(c.authorship(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. ")
+	})
+	it('single editor', () => {
+		expect(c.authorship(editedOnly)).toEqual("Tatar, Maria, ed. ")
+	})
+	it('two editors', () => {
+		expect(c.authorship(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
+	})
+	it('edited', () => {
+		expect(c.authorship(edited)).toEqual("Lovecraft, H.P. ")
 	})
 })

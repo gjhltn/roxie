@@ -22,10 +22,13 @@ export const names = arr => {
 	return humaniseArray(flat)
 }
 
+export const editors = (item) => 
+	`${names(item.editors)}, ${item.editors.length>1 ? "eds. " : "ed. "}`
+
 export const authorship = (item) => {
 	if (item.authors && item.authors.length == 0) return ""
 	if (item.authors) return `${names(item.authors)}. `
-	if (item.editors) return `${names(item.editors)}, ed., `
+	if (item.editors) return editors(item)
 }
 /*
 const bibliographyItem(item) => 
