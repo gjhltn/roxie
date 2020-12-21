@@ -25,10 +25,20 @@ export const names = arr => {
 export const editorOnly = (item) => 
 	`${names(item.editors)}, ${item.editors.length>1 ? "eds. " : "ed. "}`
 
-export const authorship = (item) => {
-	if (item.authors && item.authors.length == 0) return ""
-	if (item.authors) return `${names(item.authors)}. `
-	if (item.editors) return editorOnly(item)
+export const authorship = (item,style) => {
+	if (style=="bibliography") {
+		if (item.authors && item.authors.length == 0) return ""
+		if (item.authors) return `${names(item.authors)}. `
+		if (item.editors) return editorOnly(item)
+	}
+	if (style=="notes") {
+		if (item.authors){
+			if (item.authors.length == 0) return ""
+			if (item.authors.length>=4) return `${nameFirstLast(item.authors[0])} et al. , `
+			return `${humaniseArray(item.authors.map(author=>nameFirstLast(author)))}, `
+		}
+		if (item.editors) return `${humaniseArray(item.editors.map(ed=>nameFirstLast(ed)))}, ${item.editors.length>1 ? "eds., " : "ed., "}`
+	}
 }
 
 export const editors = item => {
@@ -37,4 +47,7 @@ export const editors = item => {
 }
 
 export const bibliographyItem = (item) => 
-	`${authorship(item)}_${item.title}_.${editors(item)}`
+	`${authorship(item,"bibliography")}_${item.title}_.${editors(item)}`
+	
+export const noteItem = (item) =>
+	`${authorship(item,"notes")}_${item.title}_ XX`

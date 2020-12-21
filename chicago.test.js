@@ -63,10 +63,20 @@ const twoAuthors = {
 	title: "Mille Plateaux"
 }
 
+const threeAuthors = {
+	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"},{last:"Marx",first:"Harpo"}],
+	title: "Silly-Oedipus"
+}
+
+const fourAuthors = {
+	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"},{last:"Marx",first:"Harpo"}, {last:"Marx", first:"Groucho"}],
+	title: "Sillier-Oedipus"
+}
+
 const edited = {
 	editors: [{last: "Joshi", first: "S.T."}],
 	title: "The Call of Cthulhu and Other Weird Stories",
-	authors: [{last: "Lovecraft", first:"H.P"}]
+	authors: [{last: "Lovecraft", first:"H.P."}]
 }
 
 const editedTwo = {
@@ -94,24 +104,51 @@ describe('editorOnly', () => {
 	})
 })
 
-describe('authorship', () => {
+describe('authorship: bibliography', () => {
 	it('anonymous', () => {
-		expect(c.authorship(anonymousAuthor)).toEqual("")
+		expect(c.authorship(anonymousAuthor,"bibliography")).toEqual("")
 	})
 	it('one author', () => {
-		expect(c.authorship(oneAuthor)).toEqual("Acker, Kathy. ")
+		expect(c.authorship(oneAuthor,"bibliography")).toEqual("Acker, Kathy. ")
 	})
 	it('two authors', () => {
-		expect(c.authorship(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. ")
+		expect(c.authorship(twoAuthors,"bibliography")).toEqual("Deleuze, Giles and Félix Guattari. ")
 	})
 	it('single editor only', () => {
-		expect(c.authorship(editedOnly)).toEqual("Tatar, Maria, ed. ")
+		expect(c.authorship(editedOnly,"bibliography")).toEqual("Tatar, Maria, ed. ")
 	})
 	it('two editors only', () => {
-		expect(c.authorship(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
+		expect(c.authorship(editedOnlyTwo,"bibliography")).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
 	})
 	it('edited', () => {
-		expect(c.authorship(edited)).toEqual("Lovecraft, H.P. ")
+		expect(c.authorship(edited,"bibliography")).toEqual("Lovecraft, H.P.. ")
+	})
+})
+
+describe('authorship: notes', () => {
+	it('anonymous', () => {
+		expect(c.authorship(anonymousAuthor,"notes")).toEqual("")
+	})
+	it('one author', () => {
+		expect(c.authorship(oneAuthor,"notes")).toEqual("Kathy Acker, ")
+	})
+	it('two authors', () => {
+		expect(c.authorship(twoAuthors,"notes")).toEqual("Giles Deleuze and Félix Guattari, ")
+	})
+	it('three authors', () => {
+		expect(c.authorship(threeAuthors,"notes")).toEqual("Giles Deleuze, Félix Guattari, and Harpo Marx, ")
+	})
+	it('four authors', () => {
+		expect(c.authorship(fourAuthors,"notes")).toEqual("Giles Deleuze et al. , ")
+	})
+	it('single editor only', () => {
+		expect(c.authorship(editedOnly,"notes")).toEqual("Maria Tatar, ed., ")
+	})
+	it('two editors only', () => {
+		expect(c.authorship(editedOnlyTwo,"notes")).toEqual("Seamus Heaney and Ted Hughes, eds., ")
+	})
+	it('edited', () => {
+		expect(c.authorship(edited,"notes")).toEqual("H.P. Lovecraft, ")
 	})
 })
 
@@ -132,9 +169,15 @@ describe('bibliographyItem', () => {
 		expect(c.bibliographyItem(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_.")
 	})
 	it('author plus editor', () => {
-		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi.")
+		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P.. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi.")
 	})
 	it('author plus multiple editors', () => {
 		expect(c.bibliographyItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker.")
+	})
+})
+
+describe('noteItem', () => {
+	it('one author', () => {
+		expect(c.noteItem(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ XX")
 	})
 })
