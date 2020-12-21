@@ -41,6 +41,18 @@ export const authorship = (item,style) => {
 	}
 }
 
+export const publication = (publication,style) => {
+	const result = `${publication.place}: ${publication.publisher}, ${publication.year}`
+	if (style==='notes'){
+		//“(Place of Publication: Publisher’s Name, Date of Publication), ”
+		return `(${result}), `
+	}
+	if (style==='bibliography'){
+		// “Place of Publication: Publisher’s Name, Date of Publication.”
+		return `${result}. `
+	}
+}	
+
 export const editors = item => {
 	if (!item.authors || !item.editors || item.editors.length < 1) return ""
 	return ` Edited by ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}.`
@@ -50,4 +62,4 @@ export const bibliographyItem = (item) =>
 	`${authorship(item,"bibliography")}_${item.title}_.${editors(item)}`
 	
 export const noteItem = (item) =>
-	`${authorship(item,"notes")}_${item.title}_ XX`
+	`${authorship(item,"notes")}_${item.title}_ ${publication(item.publication,"notes")}XX.`

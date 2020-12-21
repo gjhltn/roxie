@@ -50,49 +50,94 @@ describe('names', () => {
 
 const anonymousAuthor = {
 	authors: [],
-	title: "Beowulf"
+	title: "Beowulf",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const oneAuthor = {
 	authors: [{last: "Acker", first: "Kathy"}],
-	title: "Blood and Guts in High School"
+	title: "Blood and Guts in High School",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const twoAuthors = {
 	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"}],
-	title: "Mille Plateaux"
+	title: "Mille Plateaux",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const threeAuthors = {
 	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"},{last:"Marx",first:"Harpo"}],
-	title: "Silly-Oedipus"
+	title: "Silly-Oedipus",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const fourAuthors = {
 	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"},{last:"Marx",first:"Harpo"}, {last:"Marx", first:"Groucho"}],
-	title: "Sillier-Oedipus"
+	title: "Sillier-Oedipus",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const edited = {
 	editors: [{last: "Joshi", first: "S.T."}],
 	title: "The Call of Cthulhu and Other Weird Stories",
-	authors: [{last: "Lovecraft", first:"H.P."}]
+	authors: [{last: "Lovecraft", first:"H.P."}],
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const editedTwo = {
 	editors: [{last:"Miller",first:"Elizabeth"},{last: "Stoker", first: "Dacre"}],
 	title: "The Lost Journal of Bram Stoker: The Dublin Years",
-	authors: [{last: "Stoker", first:"Bram"}]
+	authors: [{last: "Stoker", first:"Bram"}],
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const editedOnly = {
 	editors: [{last: "Tatar", first: "Maria"}],
 	title: "The Cambridge Companion to Fairy Tales",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 const editedOnlyTwo = {
 	editors: [{last: "Heaney", first: "Seamus"},{last: "Hughes", first: "Ted"}],
-	title: "The Rattle Bag"
+	title: "The Rattle Bag",
+	publication: {
+		place: "London",
+		publisher: "Penguin Classics",
+		year: "2020"
+	}
 }
 
 describe('editorOnly', () => {
@@ -152,6 +197,21 @@ describe('authorship: notes', () => {
 	})
 })
 
+const pub = {
+	place: "Venice",
+	publisher: "Aldine Press",
+	year: "1580"
+}
+
+describe('publication', () => {
+	it('bibliography', () => {
+		expect(c.publication(pub,"bibliography")).toEqual("Venice: Aldine Press, 1580. ")
+	})
+	it('notes', () => {
+		expect(c.publication(pub,"notes")).toEqual("(Venice: Aldine Press, 1580), ")
+	})
+})
+
 describe('bibliographyItem', () => {
 	it('anonymous', () => {
 		expect(c.bibliographyItem(anonymousAuthor)).toEqual("_Beowulf_.")
@@ -177,7 +237,10 @@ describe('bibliographyItem', () => {
 })
 
 describe('noteItem', () => {
+	it('anonymous', () => {
+		expect(c.noteItem(anonymousAuthor)).toEqual("_Beowulf_ (London: Penguin Classics, 2020), XX.")
+	})
 	it('one author', () => {
-		expect(c.noteItem(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ XX")
+		expect(c.noteItem(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ (London: Penguin Classics, 2020), XX.")
 	})
 })
