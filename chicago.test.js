@@ -243,4 +243,19 @@ describe('noteItem', () => {
 	it('one author', () => {
 		expect(c.noteItem(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ (London: Penguin Classics, 2020), XX.")
 	})
+	it('two authors', () => {
+		expect(c.noteItem(twoAuthors)).toEqual("Giles Deleuze and Félix Guattari, _Mille Plateaux_ (London: Penguin Classics, 2020), XX.")
+	})
+	it('single editor', () => {
+		expect(c.noteItem(editedOnly)).toEqual("Maria Tatar, ed., _The Cambridge Companion to Fairy Tales_ (London: Penguin Classics, 2020), XX.")
+	})
+	it('two editors', () => {
+		expect(c.noteItem(editedOnlyTwo)).toEqual("Seamus Heaney and Ted Hughes, eds., _The Rattle Bag_ (London: Penguin Classics, 2020), XX.")
+	})
+	it('author plus editor', () => {
+		expect(c.notesItem(edited)).toEqual("Lovecraft, H.P.. _The Call of Cthulhu and Other Weird Stories_, ed. S.T. Joshi (London: Penguin Classics, 2020), XX.")
+	})
+	it('author plus multiple editors', () => {
+		expect(c.notesItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_, ed. Elizabeth Miller and Dacre Stoker (London: Penguin Classics, 2020), XX.")
+	})
 })
