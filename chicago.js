@@ -53,13 +53,18 @@ export const publication = (publication,style) => {
 	}
 }	
 
-export const editors = item => {
+export const editors = (item,style) => {
 	if (!item.authors || !item.editors || item.editors.length < 1) return ""
-	return ` Edited by ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}.`
+	if (style==="bibliography"){
+		return ` Edited by ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}.`
+	}
+	if (style==="notes"){
+		return `, ed. ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}`
+	}
 }
 
 export const bibliographyItem = (item) => 
-	`${authorship(item,"bibliography")}_${item.title}_.${editors(item)}`
+	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}`
 	
 export const noteItem = (item) =>
-	`${authorship(item,"notes")}_${item.title}_ ${publication(item.publication,"notes")}XX.`
+	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")} ${publication(item.publication,"notes")}XX.`
