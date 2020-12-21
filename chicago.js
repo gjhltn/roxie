@@ -22,16 +22,19 @@ export const names = arr => {
 	return humaniseArray(flat)
 }
 
-export const editors = (item) => 
+export const editorOnly = (item) => 
 	`${names(item.editors)}, ${item.editors.length>1 ? "eds. " : "ed. "}`
 
 export const authorship = (item) => {
 	if (item.authors && item.authors.length == 0) return ""
 	if (item.authors) return `${names(item.authors)}. `
-	if (item.editors) return editors(item)
+	if (item.editors) return editorOnly(item)
 }
-/*
-const bibliographyItem(item) => 
-	return `
-	${names(item.authors)}. ${item.title} 
-*/
+
+export const editors = item => {
+	if (!item.authors || !item.editors || item.editors.length > 1) return ""
+	return ` Edited by ${oxford(item.editors.map(editor=>nameFirstLast(editor)))}.`
+}
+
+export const bibliographyItem = (item) => 
+	`${authorship(item)}_${item.title}_.${editors(item)}`

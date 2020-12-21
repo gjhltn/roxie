@@ -79,12 +79,12 @@ const editedOnlyTwo = {
 	title: "The Rattle Bag"
 }
 
-describe('editors', () => {
+describe('editorOnly', () => {
 	it('single editor', () => {
-		expect(c.editors(editedOnly)).toEqual("Tatar, Maria, ed. ")
+		expect(c.editorOnly(editedOnly)).toEqual("Tatar, Maria, ed. ")
 	})
 	it('two editors', () => {
-		expect(c.editors(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
+		expect(c.editorOnly(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
 	})
 })
 
@@ -106,5 +106,26 @@ describe('authorship', () => {
 	})
 	it('edited', () => {
 		expect(c.authorship(edited)).toEqual("Lovecraft, H.P. ")
+	})
+})
+
+describe('bibliographyItem', () => {
+	it('anonymous', () => {
+		expect(c.bibliographyItem(anonymousAuthor)).toEqual("_Beowulf_.")
+	})
+	it('one author', () => {
+		expect(c.bibliographyItem(oneAuthor)).toEqual("Acker, Kathy. _Blood and Guts in High School_.")
+	})
+	it('two authors', () => {
+		expect(c.bibliographyItem(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. _Mille Plateaux_.")
+	})
+	it('single editor', () => {
+		expect(c.bibliographyItem(editedOnly)).toEqual("Tatar, Maria, ed. _The Cambridge Companion to Fairy Tales_.")
+	})
+	it('two editors', () => {
+		expect(c.bibliographyItem(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_.")
+	})
+	it('edited', () => {
+		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi.")
 	})
 })
