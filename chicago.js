@@ -32,8 +32,8 @@ export const authorship = (item) => {
 }
 
 export const editors = item => {
-	if (!item.authors || !item.editors || item.editors.length > 1) return ""
-	return ` Edited by ${oxford(item.editors.map(editor=>nameFirstLast(editor)))}.`
+	if (!item.authors || !item.editors || item.editors.length < 1) return ""
+	return ` Edited by ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}.`
 }
 
 export const bibliographyItem = (item) => 

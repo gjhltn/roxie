@@ -69,6 +69,12 @@ const edited = {
 	authors: [{last: "Lovecraft", first:"H.P"}]
 }
 
+const editedTwo = {
+	editors: [{last:"Miller",first:"Elizabeth"},{last: "Stoker", first: "Dacre"}],
+	title: "The Lost Journal of Bram Stoker: The Dublin Years",
+	authors: [{last: "Stoker", first:"Bram"}]
+}
+
 const editedOnly = {
 	editors: [{last: "Tatar", first: "Maria"}],
 	title: "The Cambridge Companion to Fairy Tales",
@@ -98,10 +104,10 @@ describe('authorship', () => {
 	it('two authors', () => {
 		expect(c.authorship(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. ")
 	})
-	it('single editor', () => {
+	it('single editor only', () => {
 		expect(c.authorship(editedOnly)).toEqual("Tatar, Maria, ed. ")
 	})
-	it('two editors', () => {
+	it('two editors only', () => {
 		expect(c.authorship(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
 	})
 	it('edited', () => {
@@ -125,7 +131,10 @@ describe('bibliographyItem', () => {
 	it('two editors', () => {
 		expect(c.bibliographyItem(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_.")
 	})
-	it('edited', () => {
+	it('author plus editor', () => {
 		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi.")
+	})
+	it('author plus multiple editors', () => {
+		expect(c.bibliographyItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker.")
 	})
 })
