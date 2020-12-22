@@ -72,10 +72,10 @@ export const editors = (item,style) => {
 export const translators = (item,style) => {
 	if (!item.translators || item.translators.length < 1) return ""
 	if (style==="bibliography"){
-		return ` Translated by ${humaniseArray(item.translators.map(editor=>nameFirstLast(editor)))}.`
+		return ` Translated by ${humaniseArray(item.translators.map(translator=>nameFirstLast(translator)))}.`
 	}
 	if (style==="notes"){
-		return `, ed. ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}`
+		return `, tr. ${humaniseArray(item.translators.map(translator=>nameFirstLast(translator)))}`
 	}
 }
 	
@@ -84,4 +84,4 @@ export const bibliographyItem = (item) =>
 	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${publication(item.publication,"bibliography")}.`
 	
 export const noteItem = (item) =>
-	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")} ${publication(item.publication,"notes")}XX.`
+	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${publication(item.publication,"notes")}XX.`

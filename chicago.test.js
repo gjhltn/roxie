@@ -313,4 +313,13 @@ describe('noteItem', () => {
 	it('author plus multiple editors', () => {
 		expect(c.noteItem(editedTwo)).toEqual("Bram Stoker, _The Lost Journal of Bram Stoker: The Dublin Years_, ed. Elizabeth Miller and Dacre Stoker (London: Penguin Classics, 2020), XX.")
 	})
+	it('author plus translator', () => {
+		expect(c.noteItem(oneTranslator)).toEqual("Antonin Artaud, _The Theatre and Its Double_, tr. Victor Corti (London: Alma Classics, 2017), XX.")
+	})
+	it('author plus 2 translators', () => {
+		expect(c.noteItem(twoTranslators)).toEqual("Umberto Eco, _How to Write a Thesis_, tr. Catherina Mongiat Farina and Geoff Farina (Cambridge, MA: MIT Press, 2015), XX.")
+	})
+	it('author, editor plus translator', () => {
+		expect(c.noteItem(authorEditorTranslator)).toEqual("Epicetus, _Discourses, Fragments, Handbook_, ed. Christopher Gill, tr. Robin Hard (Oxford: OUP, 2014), XX.")
+	})
 })
