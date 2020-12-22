@@ -216,7 +216,7 @@ const pub = {
 
 describe('publication', () => {
 	it('bibliography', () => {
-		expect(c.publication(pub,"bibliography")).toEqual("Venice: Aldine Press, 1580")
+		expect(c.publication(pub,"bibliography")).toEqual(" Venice: Aldine Press, 1580")
 	})
 	it('notes', () => {
 		expect(c.publication(pub,"notes")).toEqual("(Venice: Aldine Press, 1580), ")
@@ -245,10 +245,9 @@ describe('bibliographyItem', () => {
 	it('author plus multiple editors', () => {
 		expect(c.bibliographyItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker. London: Penguin Classics, 2020.")
 	})
-	/*
 	it('author plus translator', () => {
-		expect(c.bibliographyItem(oneTranslator)).toEqual("Artaud, Antonin. _The Theatre and Its Double_. Translated by Victor Corti. London: Aldi Classics, 2020.")
-	})*/
+		expect(c.bibliographyItem(oneTranslator)).toEqual("Artaud, Antonin. _The Theatre and Its Double_. Translated by Victor Corti. London: Alma Classics, 2017.")
+	})
 })
 
 describe('noteItem', () => {
