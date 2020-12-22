@@ -323,3 +323,58 @@ describe('noteItem', () => {
 		expect(c.noteItem(authorEditorTranslator)).toEqual("Epicetus, _Discourses, Fragments, Handbook_, ed. Christopher Gill, tr. Robin Hard (Oxford: OUP, 2014), XX.")
 	})
 })
+
+/* TURABIAN */ 
+
+const turabian1a = {
+	title: "Grit: The Power of Passion and Perseverance",
+	authors:[
+		{
+			last: "Duckworth",
+			first: "Angela",
+		},
+	],
+	publication: {
+		place: "New York",
+		publisher: "Scribner",
+		year: "2016"
+	}
+}
+
+describe('Turabian examples', () => {
+	it('1A notes', () => {
+		expect(c.noteItem(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
+	})
+	it('1A bibliography', () => {
+		expect(c.bibliographyItem(turabian1a)).toEqual("Duckworth, Angela. _Grit: The Power of Passion and Perseverance_. New York: Scribner, 2016.")
+	})
+})
+
+/* TEMPLATE ITEM ✂️ -> 📋  */
+
+const t = {
+	title: " ",
+	authors:[
+		{
+			last: " ",
+			first: " ",
+		},
+	],
+	editors:[
+		{
+			last: " ",
+			first: " ",
+		}
+	],
+	translators:[
+		{
+			last: " ",
+			first: " ",
+		}
+	],
+	publication: {
+		place: " ",
+		publisher: " ",
+		year: " "
+	}
+}
