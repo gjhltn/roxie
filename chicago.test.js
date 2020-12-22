@@ -341,6 +341,47 @@ const turabian1a = {
 	}
 }
 
+const turabian2a = {
+	title: "Masculine Promise: Migration, Family, and Gender in China",
+	authors:[
+		{
+			last: "Choi",
+			first: "Susanne Y. P.",
+		},
+		{
+			last: "Peng",
+			first: "Yinni",
+		},
+	],
+	publication: {
+		place: "Oakland",
+		publisher: "University of California Press",
+		year: "2016"
+	}
+}
+
+const turabian3a = {
+	title: "Mansfield Park: An Annotated Edition",
+	authors:[
+		{
+			last: "Austen",
+			first: "Jane",
+		},
+	],
+	editors:[
+		{
+			last: "Lynch",
+			first: "Deidre Shauna",
+		}
+	],
+	publication: {
+		place: "Cambridge, MA",
+		publisher: "Belknap Press of Harvard University Press",
+		year: "2016"
+	}
+}
+
+
 describe('Turabian examples', () => {
 	it('1A notes', () => {
 		expect(c.noteItem(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
@@ -348,6 +389,32 @@ describe('Turabian examples', () => {
 	it('1A bibliography', () => {
 		expect(c.bibliographyItem(turabian1a)).toEqual("Duckworth, Angela. _Grit: The Power of Passion and Perseverance_. New York: Scribner, 2016.")
 	})
+	it('2A notes', () => {
+		expect(c.noteItem(turabian2a)).toEqual("Susanne Y. P. Choi and Yinni Peng, _Masculine Promise: Migration, Family, and Gender in China_ (Oakland: University of California Press, 2016), XX.")
+	})
+	/* 
+	FIXME: TURABIAN by the book HAS OXFORD COMMA after amd
+	it('2A bibliography', () => {
+		expect(c.bibliographyItem(turabian2a)).toEqual("Choi, Susanne Y. P., and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
+	}
+	*/
+	it('2A bibliography', () => {
+		expect(c.bibliographyItem(turabian2a)).toEqual("Choi, Susanne Y. P. and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
+	})
+	it('3A notes', () => {
+		expect(c.noteItem(turabian3a)).toEqual("Jane Austen, _Mansfield Park: An Annotated Edition_, ed. Deidre Shauna Lynch (Cambridge, MA: Belknap Press of Harvard University Press, 2016), XX.")
+	})
+	it('3a bibliography', () => {
+		expect(c.bibliographyItem(turabian3a)).toEqual("Austen, Jane. _Mansfield Park: An Annotated Edition_. Edited by Deidre Shauna Lynch. Cambridge, MA: Belknap Press of Harvard University Press, 2016.")
+	})
+	/*
+	it(' notes', () => {
+		expect(c.noteItem(turabian )).toEqual(" XX.")
+	})
+	it(' bibliography', () => {
+		expect(c.bibliographyItem(turabian )).toEqual(" ")
+	})
+	*/
 })
 
 /* TEMPLATE ITEM ✂️ -> 📋  */

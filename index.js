@@ -84,7 +84,7 @@ const main = async () => {
     		.then(answers => {
 				console.log(answers)
 			})
-		}
+	}
 }
 
 const buildUpdate = item => {
@@ -100,66 +100,4 @@ const buildUpdate = item => {
 
 /* main */
 
-const run = (directory,dataSource) => {
-	sync(directory,dataSource)
-}
-
-/*
-run('./files/',db)
 main()
-*/
-
-/* output */
-
-var compiled = _.template(`
-	<%_.forEach(authors, function(name) { %>
-		<%- user %>
-	<% });%>`
-)
-
-const humaniseArray = (arr) =>
-	switch arr.length
-
-const authors = item =>
-	item.authors.map(name=>"x")
-
-const render = (item) => {
-	const result = 
-		`
-			${authors(item)}
-		`
-	
-	
-	console.log(result)
-}
-
-const singleAuthor = 
-	{
-		authors: [
-			{
-				lastName:'Flintstone',
-				firstName:'Fred'
-			}
-		]
-	}
-
-const twoAuthors =
-		{
-		authors: [
-			{
-				lastName:'Flintstone',
-				firstName:'Fred'
-			},
-			{	
-				lastName: 'Rubble',
-				firstName: 'Barney'
-			}
-		]
-	}
-
-render(singleAuthor)
-render(twoAuthors)
-
-/*
-	“Author’s Last Name, Author’s First Name. Title of Book: Subtitle of Book. Place of Publication: Publisher’s Name, Date of Publication.”
-	*/
