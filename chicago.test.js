@@ -79,6 +79,17 @@ const oneTranslator = {
 	}
 }
 
+const twoTranslators = {
+	authors: [{last: "Eco", first: "Umberto"}],
+	title: "How to Write a Thesis",
+	translators:[{last:"Farina", first:"Catherina Mongiat"},{last:"Farina", first:"Geoff"}],
+	publication: {
+		place: "Cambridge, MA",
+		publisher: "MIT Press",
+		year: "2015"
+	}
+}
+
 const twoAuthors = {
 	authors: [{last: "Deleuze", first: "Giles"},{last: "Guattari", first: "Félix"}],
 	title: "Mille Plateaux",
@@ -247,6 +258,9 @@ describe('bibliographyItem', () => {
 	})
 	it('author plus translator', () => {
 		expect(c.bibliographyItem(oneTranslator)).toEqual("Artaud, Antonin. _The Theatre and Its Double_. Translated by Victor Corti. London: Alma Classics, 2017.")
+	})
+	it('author plus 2 translators', () => {
+		expect(c.bibliographyItem(twoTranslators)).toEqual("Eco, Umberto. _How to Write a Thesis_. Translated by Catherina Mongiat Farina and Geoff Farina. Cambridge, MA: MIT Press, 2015.")
 	})
 })
 
