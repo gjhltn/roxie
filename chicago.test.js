@@ -286,6 +286,9 @@ describe('bibliographyItem', () => {
 	it('author plus 2 translators', () => {
 		expect(c.bibliographyItem(twoTranslators)).toEqual("Eco, Umberto. _How to Write a Thesis_. Translated by Catherina Mongiat Farina and Geoff Farina. Cambridge, MA: MIT Press, 2015.")
 	})
+	it('author, editor plus translator', () => {
+		expect(c.bibliographyItem(authorEditorTranslator)).toEqual("Epicetus. _Discourses, Fragments, Handbook_. Edited by Christopher Gill. Translated by Robin Hard. Oxford: OUP, 2014.")
+	})
 })
 
 describe('noteItem', () => {
