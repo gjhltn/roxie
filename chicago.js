@@ -8,9 +8,15 @@ export const oxford = (arr, conjunction, ifempty) => {
     return arr.join(", ");
 }
 
-export const nameLastFirst = name =>`${name.last}, ${name.first}`
+export const nameLastFirst = name =>{
+	if (!name.first || name.first==="") return name.last
+	return `${name.last}, ${name.first}`
+}
 	
-export const nameFirstLast = name =>`${name.first} ${name.last}`
+export const nameFirstLast = name =>{
+	if (!name.first || name.first==="") return name.last
+	return `${name.first} ${name.last}`
+}
 
 export const humaniseArray = (arr) => oxford(arr, "and", "")
 

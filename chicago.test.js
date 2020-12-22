@@ -22,6 +22,18 @@ describe('name', () => {
 	it('first, last', () => {
 		expect(c.nameFirstLast({last: "Wittgenstein",first: "Ludwig"})).toEqual("Ludwig Wittgenstein")
 	})
+	it('mononym (last, first) blank first', () => {
+		expect(c.nameLastFirst({last: "Epicetus",first: ""})).toEqual("Epicetus")
+	})
+	it('mononym (last, first) no first', () => {
+		expect(c.nameLastFirst({last: "Epicetus"})).toEqual("Epicetus")
+	})
+	it('mononym (first, last) blank first', () => {
+		expect(c.nameFirstLast({last: "Epicetus",first: ""})).toEqual("Epicetus")
+	})
+	it('mononym (first, last) no first', () => {
+		expect(c.nameFirstLast({last: "Epicetus"})).toEqual("Epicetus")
+	})
 })
 
 describe('names', () => {
@@ -76,6 +88,18 @@ const oneTranslator = {
 		place: "London",
 		publisher: "Alma Classics",
 		year: "2017"
+	}
+}
+
+const authorEditorTranslator = {
+	authors: [{last: "Epicetus", first: ""}],
+	title: "Discourses, Fragments, Handbook",
+	editors:[{last:"Gill", first:"Christopher"}],
+	translators:[{last:"Hard", first:"Robin"}],
+	publication: {
+		place: "Oxford",
+		publisher: "OUP",
+		year: "2014"
 	}
 }
 
