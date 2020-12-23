@@ -381,8 +381,7 @@ const turabian3a = {
 	}
 }
 
-
-describe('Turabian examples', () => {
+describe('Turabian books', () => {
 	it('1A notes', () => {
 		expect(c.noteBook(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
 	})
@@ -407,75 +406,41 @@ describe('Turabian examples', () => {
 	it('3a bibliography', () => {
 		expect(c.bibliographyBook(turabian3a)).toEqual("Austen, Jane. _Mansfield Park: An Annotated Edition_. Edited by Deidre Shauna Lynch. Cambridge, MA: Belknap Press of Harvard University Press, 2016.")
 	})
-	/*
-	it(' notes', () => {
-		expect(c.noteBook(turabian )).toEqual(" XX.")
-	})
-	it(' bibliography', () => {
-		expect(c.bibliographyBook(turabian )).toEqual(" ")
-	})
-	*/
 })
 
-/* TEMPLATE ITEM ✂️ -> 📋  */
-
-const bookTemplate = {
-	title: " ",
-	authors:[
-		{
-			last: " ",
-			first: " ",
-		},
-	],
-	editors:[
-		{
-			last: " ",
-			first: " ",
-		}
-	],
-	translators:[
-		{
-			last: " ",
-			first: " ",
-		}
-	],
-	publication: {
-		place: " ",
-		publisher: " ",
-		year: " "
-	}
-}
+// ----- CHAPTERS ------------------------------- 
 
 // Turabian chapter
 // Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017.
 
-const chapterTemplate = {
-	title: " ",
-	location: " ",
+const chapterBasic = {
+	title: "Before the Commission: Ethnography as Public Testimony",
+	location: "69–95",
 	authors:[
 		{
-			last: " ",
-			first: " ",
+			last: "Gillespie",
+			first: "Kelly",
 		},
 	],
-	translators:[
-		{
-			last: " ",
-			first: " ",
-		}
-	],
 	in: {
-		title: " ",
+		title: "If Truth Be Told: The Politics of Public Ethnography",
 		editors:[
 			{
-				last: " ",
-				first: " ",
+				last: "Fassin",
+				first: "Didier",
 			}
 		],
 		publication: {
-			place: " ",
-			publisher: " ",
-			year: " "
+			place: "Durham, NC",
+			publisher: "Duke University Press",
+			year: "2017"
 		}
 	}
 }
+
+describe('chapters', () => {
+	it('simple case - bibliography', () => {
+		expect(c.bibliographyChapter(chapterBasic)).toEqual("Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017.")
+	})
+})
+	

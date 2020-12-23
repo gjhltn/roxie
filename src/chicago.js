@@ -67,23 +67,26 @@ export const publication = (publication,style) => {
 	}
 }	
 
+export const flattenNames = nameArray =>
+	humaniseArray(nameArray.map(n=>nameFirstLast(n)))
+
 export const editors = (item,style) => {
 	if (!item.authors || !item.editors || item.editors.length < 1) return ""
 	if (style==="bibliography"){
-		return ` Edited by ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}.`
+		return ` Edited by ${flattenNames(item.editors)}.`
 	}
 	if (style==="notes"){
-		return `, ed. ${humaniseArray(item.editors.map(editor=>nameFirstLast(editor)))}`
+		return `, ed. ${flattenNames(item.editors)}`
 	}
 }
 
 export const translators = (item,style) => {
 	if (!item.translators || item.translators.length < 1) return ""
 	if (style==="bibliography"){
-		return ` Translated by ${humaniseArray(item.translators.map(translator=>nameFirstLast(translator)))}.`
+		return ` Translated by ${flattenNames(item.translators)}.`
 	}
 	if (style==="notes"){
-		return `, tr. ${humaniseArray(item.translators.map(translator=>nameFirstLast(translator)))}`
+		return `, tr. ${flattenNames(item.translators)}`
 	}
 }
 	
@@ -93,5 +96,7 @@ export const bibliographyBook = (item) =>
 export const noteBook = (item) =>
 	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${publication(item.publication,"notes")}XX.`
 	
-
+// ----- CHAPTERS -------------------------------	
 	
+export const bibliographyChapter = (item) => 
+`${authorship(item,"bibliography")}“${item.title}.” In _${item.in.title}_, edited by ${flattenNames(item.in.editors)}, ${item.location}.${publication(item.in.publication,"bibliography")}.`
