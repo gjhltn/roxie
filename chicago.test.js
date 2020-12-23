@@ -258,69 +258,69 @@ describe('publication', () => {
 	})
 })
 
-describe('bibliographyItem', () => {
+describe('bibliographyBook', () => {
 	it('anonymous', () => {
-		expect(c.bibliographyItem(anonymousAuthor)).toEqual("_Beowulf_. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(anonymousAuthor)).toEqual("_Beowulf_. London: Penguin Classics, 2020.")
 	})
 	it('one author', () => {
-		expect(c.bibliographyItem(oneAuthor)).toEqual("Acker, Kathy. _Blood and Guts in High School_. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(oneAuthor)).toEqual("Acker, Kathy. _Blood and Guts in High School_. London: Penguin Classics, 2020.")
 	})
 	it('two authors', () => {
-		expect(c.bibliographyItem(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. _Mille Plateaux_. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(twoAuthors)).toEqual("Deleuze, Giles and Félix Guattari. _Mille Plateaux_. London: Penguin Classics, 2020.")
 	})
 	it('single editor', () => {
-		expect(c.bibliographyItem(editedOnly)).toEqual("Tatar, Maria, ed. _The Cambridge Companion to Fairy Tales_. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(editedOnly)).toEqual("Tatar, Maria, ed. _The Cambridge Companion to Fairy Tales_. London: Penguin Classics, 2020.")
 	})
 	it('two editors', () => {
-		expect(c.bibliographyItem(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(editedOnlyTwo)).toEqual("Heaney, Seamus and Ted Hughes, eds. _The Rattle Bag_. London: Penguin Classics, 2020.")
 	})
 	it('author plus editor', () => {
-		expect(c.bibliographyItem(edited)).toEqual("Lovecraft, H.P.. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(edited)).toEqual("Lovecraft, H.P.. _The Call of Cthulhu and Other Weird Stories_. Edited by S.T. Joshi. London: Penguin Classics, 2020.")
 	})
 	it('author plus multiple editors', () => {
-		expect(c.bibliographyItem(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker. London: Penguin Classics, 2020.")
+		expect(c.bibliographyBook(editedTwo)).toEqual("Stoker, Bram. _The Lost Journal of Bram Stoker: The Dublin Years_. Edited by Elizabeth Miller and Dacre Stoker. London: Penguin Classics, 2020.")
 	})
 	it('author plus translator', () => {
-		expect(c.bibliographyItem(oneTranslator)).toEqual("Artaud, Antonin. _The Theatre and Its Double_. Translated by Victor Corti. London: Alma Classics, 2017.")
+		expect(c.bibliographyBook(oneTranslator)).toEqual("Artaud, Antonin. _The Theatre and Its Double_. Translated by Victor Corti. London: Alma Classics, 2017.")
 	})
 	it('author plus 2 translators', () => {
-		expect(c.bibliographyItem(twoTranslators)).toEqual("Eco, Umberto. _How to Write a Thesis_. Translated by Catherina Mongiat Farina and Geoff Farina. Cambridge, MA: MIT Press, 2015.")
+		expect(c.bibliographyBook(twoTranslators)).toEqual("Eco, Umberto. _How to Write a Thesis_. Translated by Catherina Mongiat Farina and Geoff Farina. Cambridge, MA: MIT Press, 2015.")
 	})
 	it('author, editor plus translator', () => {
-		expect(c.bibliographyItem(authorEditorTranslator)).toEqual("Epicetus. _Discourses, Fragments, Handbook_. Edited by Christopher Gill. Translated by Robin Hard. Oxford: OUP, 2014.")
+		expect(c.bibliographyBook(authorEditorTranslator)).toEqual("Epicetus. _Discourses, Fragments, Handbook_. Edited by Christopher Gill. Translated by Robin Hard. Oxford: OUP, 2014.")
 	})
 })
 
-describe('noteItem', () => {
+describe('noteBook', () => {
 	it('anonymous', () => {
-		expect(c.noteItem(anonymousAuthor)).toEqual("_Beowulf_ (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(anonymousAuthor)).toEqual("_Beowulf_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('one author', () => {
-		expect(c.noteItem(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('two authors', () => {
-		expect(c.noteItem(twoAuthors)).toEqual("Giles Deleuze and Félix Guattari, _Mille Plateaux_ (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(twoAuthors)).toEqual("Giles Deleuze and Félix Guattari, _Mille Plateaux_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('single editor', () => {
-		expect(c.noteItem(editedOnly)).toEqual("Maria Tatar, ed., _The Cambridge Companion to Fairy Tales_ (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(editedOnly)).toEqual("Maria Tatar, ed., _The Cambridge Companion to Fairy Tales_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('two editors', () => {
-		expect(c.noteItem(editedOnlyTwo)).toEqual("Seamus Heaney and Ted Hughes, eds., _The Rattle Bag_ (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(editedOnlyTwo)).toEqual("Seamus Heaney and Ted Hughes, eds., _The Rattle Bag_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('author plus editor', () => {
-		expect(c.noteItem(edited)).toEqual("H.P. Lovecraft, _The Call of Cthulhu and Other Weird Stories_, ed. S.T. Joshi (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(edited)).toEqual("H.P. Lovecraft, _The Call of Cthulhu and Other Weird Stories_, ed. S.T. Joshi (London: Penguin Classics, 2020), XX.")
 	})
 	it('author plus multiple editors', () => {
-		expect(c.noteItem(editedTwo)).toEqual("Bram Stoker, _The Lost Journal of Bram Stoker: The Dublin Years_, ed. Elizabeth Miller and Dacre Stoker (London: Penguin Classics, 2020), XX.")
+		expect(c.noteBook(editedTwo)).toEqual("Bram Stoker, _The Lost Journal of Bram Stoker: The Dublin Years_, ed. Elizabeth Miller and Dacre Stoker (London: Penguin Classics, 2020), XX.")
 	})
 	it('author plus translator', () => {
-		expect(c.noteItem(oneTranslator)).toEqual("Antonin Artaud, _The Theatre and Its Double_, tr. Victor Corti (London: Alma Classics, 2017), XX.")
+		expect(c.noteBook(oneTranslator)).toEqual("Antonin Artaud, _The Theatre and Its Double_, tr. Victor Corti (London: Alma Classics, 2017), XX.")
 	})
 	it('author plus 2 translators', () => {
-		expect(c.noteItem(twoTranslators)).toEqual("Umberto Eco, _How to Write a Thesis_, tr. Catherina Mongiat Farina and Geoff Farina (Cambridge, MA: MIT Press, 2015), XX.")
+		expect(c.noteBook(twoTranslators)).toEqual("Umberto Eco, _How to Write a Thesis_, tr. Catherina Mongiat Farina and Geoff Farina (Cambridge, MA: MIT Press, 2015), XX.")
 	})
 	it('author, editor plus translator', () => {
-		expect(c.noteItem(authorEditorTranslator)).toEqual("Epicetus, _Discourses, Fragments, Handbook_, ed. Christopher Gill, tr. Robin Hard (Oxford: OUP, 2014), XX.")
+		expect(c.noteBook(authorEditorTranslator)).toEqual("Epicetus, _Discourses, Fragments, Handbook_, ed. Christopher Gill, tr. Robin Hard (Oxford: OUP, 2014), XX.")
 	})
 })
 
@@ -384,42 +384,42 @@ const turabian3a = {
 
 describe('Turabian examples', () => {
 	it('1A notes', () => {
-		expect(c.noteItem(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
+		expect(c.noteBook(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
 	})
 	it('1A bibliography', () => {
-		expect(c.bibliographyItem(turabian1a)).toEqual("Duckworth, Angela. _Grit: The Power of Passion and Perseverance_. New York: Scribner, 2016.")
+		expect(c.bibliographyBook(turabian1a)).toEqual("Duckworth, Angela. _Grit: The Power of Passion and Perseverance_. New York: Scribner, 2016.")
 	})
 	it('2A notes', () => {
-		expect(c.noteItem(turabian2a)).toEqual("Susanne Y. P. Choi and Yinni Peng, _Masculine Promise: Migration, Family, and Gender in China_ (Oakland: University of California Press, 2016), XX.")
+		expect(c.noteBook(turabian2a)).toEqual("Susanne Y. P. Choi and Yinni Peng, _Masculine Promise: Migration, Family, and Gender in China_ (Oakland: University of California Press, 2016), XX.")
 	})
 	/* 
 	FIXME: TURABIAN by the book HAS OXFORD COMMA after amd
 	it('2A bibliography', () => {
-		expect(c.bibliographyItem(turabian2a)).toEqual("Choi, Susanne Y. P., and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
+		expect(c.bibliographyBook(turabian2a)).toEqual("Choi, Susanne Y. P., and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
 	}
 	*/
 	it('2A bibliography', () => {
-		expect(c.bibliographyItem(turabian2a)).toEqual("Choi, Susanne Y. P. and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
+		expect(c.bibliographyBook(turabian2a)).toEqual("Choi, Susanne Y. P. and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
 	})
 	it('3A notes', () => {
-		expect(c.noteItem(turabian3a)).toEqual("Jane Austen, _Mansfield Park: An Annotated Edition_, ed. Deidre Shauna Lynch (Cambridge, MA: Belknap Press of Harvard University Press, 2016), XX.")
+		expect(c.noteBook(turabian3a)).toEqual("Jane Austen, _Mansfield Park: An Annotated Edition_, ed. Deidre Shauna Lynch (Cambridge, MA: Belknap Press of Harvard University Press, 2016), XX.")
 	})
 	it('3a bibliography', () => {
-		expect(c.bibliographyItem(turabian3a)).toEqual("Austen, Jane. _Mansfield Park: An Annotated Edition_. Edited by Deidre Shauna Lynch. Cambridge, MA: Belknap Press of Harvard University Press, 2016.")
+		expect(c.bibliographyBook(turabian3a)).toEqual("Austen, Jane. _Mansfield Park: An Annotated Edition_. Edited by Deidre Shauna Lynch. Cambridge, MA: Belknap Press of Harvard University Press, 2016.")
 	})
 	/*
 	it(' notes', () => {
-		expect(c.noteItem(turabian )).toEqual(" XX.")
+		expect(c.noteBook(turabian )).toEqual(" XX.")
 	})
 	it(' bibliography', () => {
-		expect(c.bibliographyItem(turabian )).toEqual(" ")
+		expect(c.bibliographyBook(turabian )).toEqual(" ")
 	})
 	*/
 })
 
 /* TEMPLATE ITEM ✂️ -> 📋  */
 
-const t = {
+const bookTemplate = {
 	title: " ",
 	authors:[
 		{
@@ -443,5 +443,39 @@ const t = {
 		place: " ",
 		publisher: " ",
 		year: " "
+	}
+}
+
+// Turabian chapter
+// Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017.
+
+const chapterTemplate = {
+	title: " ",
+	location: " ",
+	authors:[
+		{
+			last: " ",
+			first: " ",
+		},
+	],
+	translators:[
+		{
+			last: " ",
+			first: " ",
+		}
+	],
+	in: {
+		title: " ",
+		editors:[
+			{
+				last: " ",
+				first: " ",
+			}
+		],
+		publication: {
+			place: " ",
+			publisher: " ",
+			year: " "
+		}
 	}
 }

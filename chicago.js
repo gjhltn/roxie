@@ -87,17 +87,11 @@ export const translators = (item,style) => {
 	}
 }
 	
-export const bibliographyItem = (item) => 
+export const bibliographyBook = (item) => 
 	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${publication(item.publication,"bibliography")}.`
 	
-export const noteItem = (item) =>
+export const noteBook = (item) =>
 	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${publication(item.publication,"notes")}XX.`
 	
-export const render = (item, style) => {
-	if (style===STLYE.b){
-		return bibliographyItem(item)
-	}
-	if (style===STLYE.n){
-		return noteItem(item)
-	}
-}
+
+	
