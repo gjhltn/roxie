@@ -1,7 +1,7 @@
 {
   "name": "roxie",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/roxie.js",
   "author": "guy@swirrl.com",
   "license": "MIT",
   "private": true,
@@ -9,18 +9,19 @@
   "dependencies": {
     "@babel/preset-env": "^7.12.11",
     "babel-jest": "^26.6.3",
+    "core-js": "^3.8.1",
     "inquirer": "^7.3.3",
     "jest": "^26.6.3",
     "lowdb": "^1.0.0",
-    "scholarly": "^1.1.0"
+    "regenerator-runtime": "^0.13.7"
   },
   "jest": {
-      "transform": {
+    "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
-  }
-	},
+    }
+  },
   "scripts": {
-    "go": "node src/index.js",
-	 "test": "jest"
+    "go": "node src/roxie.js",
+    "test": "jest"
   }
 }

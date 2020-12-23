@@ -1,3 +1,7 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
+/*
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const path = require('path');
@@ -10,7 +14,7 @@ const _ = require('lodash');
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 
-/* directory <———> db */
+/* directory <———> db 
 
 const sync = (directory, dataSource) => {
 	// initialise
@@ -52,7 +56,7 @@ processFile = (file,collection) => {
 	return({added: false})
 }
 
-/* data manipulation */
+/* data manipulation 
 
 updateAll = (dataSource) => {
 	dataSource
@@ -76,7 +80,7 @@ const interactiveUpdate = () => {
   ];
   return inquirer.prompt(questions);
 };
-
+/*
 const main = async () => {
 	let files = ["wang","chung"]
 	for (const file of files) {
@@ -98,6 +102,43 @@ const buildUpdate = item => {
 	}
 }
 
-/* main */
+
 
 main()
+
+*/
+import inquirer from 'inquirer';
+
+const loop = async (itemsNeeded, inputs = []) => {
+	
+	if (itemsNeeded.length == 0) {
+		console.log("ALL DONE!")
+		return inputs
+	}
+
+  const prompts = [
+    {
+      type: 'input',
+      name: 'inputValue',
+      message: 'Enter some input: '
+    },
+    {
+      type: 'confirm',
+      name: 'again',
+      message: `${itemsNeeded.length-1} Still to do. Continue?`,
+      default: true
+    }
+  ];
+	
+  const { again, ...answers } = await inquirer.prompt(prompts);
+  const newInputs = [...inputs, answers];
+  console.log("wrote database")
+  return again ? loop(itemsNeeded, newInputs) : newInputs;
+};
+
+const main = async () => {
+  const inputs = await loop(10);
+  console.log(inputs);
+};
+
+main();
