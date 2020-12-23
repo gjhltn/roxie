@@ -93,10 +93,13 @@ export const translators = (item,style) => {
 export const bibliographyBook = (item) => 
 	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${publication(item.publication,"bibliography")}.`
 	
-export const noteBook = (item) =>
+export const notesBook = (item) =>
 	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${publication(item.publication,"notes")}XX.`
 	
 // ----- CHAPTERS -------------------------------	
 	
 export const bibliographyChapter = (item) => 
 `${authorship(item,"bibliography")}“${item.title}.” In _${item.in.title}_, edited by ${flattenNames(item.in.editors)}, ${item.location}.${publication(item.in.publication,"bibliography")}.`
+
+export const notesChapter = (item) => 
+`${authorship(item,"notes")}“${item.title},” in _${item.in.title}_, ed. ${flattenNames(item.in.editors)} ${publication(item.in.publication,"notes")}XX.`

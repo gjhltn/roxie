@@ -291,36 +291,36 @@ describe('bibliographyBook', () => {
 	})
 })
 
-describe('noteBook', () => {
+describe('notesBook', () => {
 	it('anonymous', () => {
-		expect(c.noteBook(anonymousAuthor)).toEqual("_Beowulf_ (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(anonymousAuthor)).toEqual("_Beowulf_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('one author', () => {
-		expect(c.noteBook(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(oneAuthor)).toEqual("Kathy Acker, _Blood and Guts in High School_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('two authors', () => {
-		expect(c.noteBook(twoAuthors)).toEqual("Giles Deleuze and Félix Guattari, _Mille Plateaux_ (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(twoAuthors)).toEqual("Giles Deleuze and Félix Guattari, _Mille Plateaux_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('single editor', () => {
-		expect(c.noteBook(editedOnly)).toEqual("Maria Tatar, ed., _The Cambridge Companion to Fairy Tales_ (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(editedOnly)).toEqual("Maria Tatar, ed., _The Cambridge Companion to Fairy Tales_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('two editors', () => {
-		expect(c.noteBook(editedOnlyTwo)).toEqual("Seamus Heaney and Ted Hughes, eds., _The Rattle Bag_ (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(editedOnlyTwo)).toEqual("Seamus Heaney and Ted Hughes, eds., _The Rattle Bag_ (London: Penguin Classics, 2020), XX.")
 	})
 	it('author plus editor', () => {
-		expect(c.noteBook(edited)).toEqual("H.P. Lovecraft, _The Call of Cthulhu and Other Weird Stories_, ed. S.T. Joshi (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(edited)).toEqual("H.P. Lovecraft, _The Call of Cthulhu and Other Weird Stories_, ed. S.T. Joshi (London: Penguin Classics, 2020), XX.")
 	})
 	it('author plus multiple editors', () => {
-		expect(c.noteBook(editedTwo)).toEqual("Bram Stoker, _The Lost Journal of Bram Stoker: The Dublin Years_, ed. Elizabeth Miller and Dacre Stoker (London: Penguin Classics, 2020), XX.")
+		expect(c.notesBook(editedTwo)).toEqual("Bram Stoker, _The Lost Journal of Bram Stoker: The Dublin Years_, ed. Elizabeth Miller and Dacre Stoker (London: Penguin Classics, 2020), XX.")
 	})
 	it('author plus translator', () => {
-		expect(c.noteBook(oneTranslator)).toEqual("Antonin Artaud, _The Theatre and Its Double_, tr. Victor Corti (London: Alma Classics, 2017), XX.")
+		expect(c.notesBook(oneTranslator)).toEqual("Antonin Artaud, _The Theatre and Its Double_, tr. Victor Corti (London: Alma Classics, 2017), XX.")
 	})
 	it('author plus 2 translators', () => {
-		expect(c.noteBook(twoTranslators)).toEqual("Umberto Eco, _How to Write a Thesis_, tr. Catherina Mongiat Farina and Geoff Farina (Cambridge, MA: MIT Press, 2015), XX.")
+		expect(c.notesBook(twoTranslators)).toEqual("Umberto Eco, _How to Write a Thesis_, tr. Catherina Mongiat Farina and Geoff Farina (Cambridge, MA: MIT Press, 2015), XX.")
 	})
 	it('author, editor plus translator', () => {
-		expect(c.noteBook(authorEditorTranslator)).toEqual("Epicetus, _Discourses, Fragments, Handbook_, ed. Christopher Gill, tr. Robin Hard (Oxford: OUP, 2014), XX.")
+		expect(c.notesBook(authorEditorTranslator)).toEqual("Epicetus, _Discourses, Fragments, Handbook_, ed. Christopher Gill, tr. Robin Hard (Oxford: OUP, 2014), XX.")
 	})
 })
 
@@ -383,13 +383,13 @@ const turabian3a = {
 
 describe('Turabian books', () => {
 	it('1A notes', () => {
-		expect(c.noteBook(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
+		expect(c.notesBook(turabian1a)).toEqual("Angela Duckworth, _Grit: The Power of Passion and Perseverance_ (New York: Scribner, 2016), XX.")
 	})
 	it('1A bibliography', () => {
 		expect(c.bibliographyBook(turabian1a)).toEqual("Duckworth, Angela. _Grit: The Power of Passion and Perseverance_. New York: Scribner, 2016.")
 	})
 	it('2A notes', () => {
-		expect(c.noteBook(turabian2a)).toEqual("Susanne Y. P. Choi and Yinni Peng, _Masculine Promise: Migration, Family, and Gender in China_ (Oakland: University of California Press, 2016), XX.")
+		expect(c.notesBook(turabian2a)).toEqual("Susanne Y. P. Choi and Yinni Peng, _Masculine Promise: Migration, Family, and Gender in China_ (Oakland: University of California Press, 2016), XX.")
 	})
 	/* 
 	FIXME: TURABIAN by the book HAS OXFORD COMMA after amd
@@ -401,7 +401,7 @@ describe('Turabian books', () => {
 		expect(c.bibliographyBook(turabian2a)).toEqual("Choi, Susanne Y. P. and Yinni Peng. _Masculine Promise: Migration, Family, and Gender in China_. Oakland: University of California Press, 2016.")
 	})
 	it('3A notes', () => {
-		expect(c.noteBook(turabian3a)).toEqual("Jane Austen, _Mansfield Park: An Annotated Edition_, ed. Deidre Shauna Lynch (Cambridge, MA: Belknap Press of Harvard University Press, 2016), XX.")
+		expect(c.notesBook(turabian3a)).toEqual("Jane Austen, _Mansfield Park: An Annotated Edition_, ed. Deidre Shauna Lynch (Cambridge, MA: Belknap Press of Harvard University Press, 2016), XX.")
 	})
 	it('3a bibliography', () => {
 		expect(c.bibliographyBook(turabian3a)).toEqual("Austen, Jane. _Mansfield Park: An Annotated Edition_. Edited by Deidre Shauna Lynch. Cambridge, MA: Belknap Press of Harvard University Press, 2016.")
@@ -410,8 +410,7 @@ describe('Turabian books', () => {
 
 // ----- CHAPTERS ------------------------------- 
 
-// Turabian chapter
-// Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017.
+// Turabian 5 chapter
 
 const chapterBasic = {
 	title: "Before the Commission: Ethnography as Public Testimony",
@@ -442,5 +441,8 @@ describe('chapters', () => {
 	it('simple case - bibliography', () => {
 		expect(c.bibliographyChapter(chapterBasic)).toEqual("Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017.")
 	})
+	it('simple case - notes', () => {
+		expect(c.notesChapter(chapterBasic)).toEqual("Kelly Gillespie, “Before the Commission: Ethnography as Public Testimony,” in _If Truth Be Told: The Politics of Public Ethnography_, ed. Didier Fassin (Durham, NC: Duke University Press, 2017), XX.")
+	})
 })
-	
+
