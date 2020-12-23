@@ -6,7 +6,7 @@
 
 Roxie is a bibliography and citation formatter for the wretched, misconceived, benighted poison that is the Chicago notes and bibliography citation style.
 
-Status: Hey, I just started. This is jnder development and does'nt do anything useful yet. 
+Status: Hey, I just started. This is jnder development and doesn't do anything useful yet. Also, it's a quick hack. I need it in ten days' time 😬 so code quality? Not my main priority here.
 
 ## Internal data structures
 
