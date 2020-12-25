@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import ItemList from '../ItemList/ItemList'
+import Editor from '../Editor/Editor'
 
 const Wrapper = styled.div`
 	display: flex;
@@ -15,7 +16,6 @@ const Sidebar = styled.div`
 	flex: 0 0 25vw;
 	overflow-y scroll;
 	background: rgba(0,0,0,0.2);
-	border-right: 2px solid rgba(0,0,0,0.5);
 `
 	
 const Document = styled.div`
@@ -39,7 +39,11 @@ const Layout = ({
 						items={items} />
 				</Sidebar>
 				<Document>
-					<button onClick={e=>saveItem()}>save</button></Document>	
+					<Editor
+						saveHandler={saveItem}
+						item={items.filter(item=>item.id===selectedId)[0]}
+					/>
+				</Document>	
 			</Wrapper>
 	</GlobalStyle>
 	)

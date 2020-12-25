@@ -16,7 +16,8 @@ const Button = styled.button`
 	margin: 0;
 	outline: 0;
 	color:#fff;
-	border-bottom: 2px solid rgba(0,0,0,0.5);
+	border-bottom: 2px solid rgba(0,0,0,0.3);
+	border-right:  ${props => props.selected ? 0 : "2px solid rgba(0,0,0,0.3)"};
 	background: ${props => props.selected ? (props => props.theme.bg) : "transprent"};
 	width: 100%;
 	text-align: left;

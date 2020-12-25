@@ -1,9 +1,11 @@
 import React from "react"
 
-export default Editor(props) = {
-	render => {
+const Editor = ({item,saveHandler}) =>
+	<div>
+		{JSON.stringify(item)}
 		<div>
-			editor
+			<button onClick={e=>saveHandler(item)}>save</button>
 		</div>
-	}
-}
+	</div>
+	
+export default Editor
