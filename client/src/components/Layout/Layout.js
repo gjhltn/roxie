@@ -1,6 +1,8 @@
 import React from "react"
-import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import styled from 'styled-components';
+
+import GlobalStyle from '../GlobalStyle/GlobalStyle'
+import ItemList from '../ItemList/ItemList'
 
 const Wrapper = styled.div`
 	display: flex;
@@ -23,11 +25,14 @@ const Document = styled.div`
 `
 
 const Layout = ({
+	items,
 	saveItem
 }) =>
 	<GlobalStyle>
 		<Wrapper>
-			<Sidebar></Sidebar>
+			<Sidebar>
+				<ItemList items={items} />
+			</Sidebar>
 			<Document><button onClick={e=>saveItem()}>save</button></Document>
 		</Wrapper>
 	</GlobalStyle>
