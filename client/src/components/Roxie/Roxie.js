@@ -27,11 +27,28 @@ const items=[
 ]
 
 class Roxie extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { apiResponse: "" };
+	}
+	
+	callAPI() {
+		fetch("http://192.168.1.66:9000/testAPI")
+			.then(res => res.text())
+        	.then(res => this.setState({ apiResponse: res }));
+		}
+		
+		componentWillMount() {
+			this.callAPI();
+		}
+	
+	
 	saveItem = (e) => {
 		alert("item saved")
 	}
   render = () => {
     return(<>
+	<p className="App-intro">{this.state.apiResponse}</p>
 		<Layout
 			items={items}
 			saveItem={this.saveItem}
