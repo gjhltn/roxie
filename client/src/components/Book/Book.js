@@ -15,7 +15,7 @@ const Button = styled.button`
 export default function Book (props) {
   return (
     <div >
-	    <Button>I am a button</Button>
+	    <Button>yes yes?</Button>
 	</div>
   )
 }
