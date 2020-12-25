@@ -1,22 +1,16 @@
-import styled from '@emotion/styled'
-import { ThemeProvider, withTheme } from '@emotion/react'
-import "./global.css"
+import styled, {ThemeProvider} from 'styled-components';
 
+import GlobalStyle, {theme} from './components/GlobalStyle/GlobalStyle'
 import Book from './components/Book/Book'
-
-const theme = {
-  colors: {
-	  primary: "#F00"
-	}
-}
 
 function App() {
   return (
-    <div className="App">
+    <>
+		<GlobalStyle />
 	      <ThemeProvider theme={theme}>
 		  <Book />
 		</ThemeProvider>
-    </div>
+    </>
   );
 }
 
