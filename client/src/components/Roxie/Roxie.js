@@ -3,7 +3,7 @@ import Layout from '../Layout/Layout'
 
 const items=[
 	{
-		id:1,
+		id:0,
 		authors: [{last: "Eco", first: "Umberto"}],
 		title: "How to Write a Thesis",
 		translators:[{last:"Farina", first:"Catherina Mongiat"},{last:"Farina", first:"Geoff"}],
@@ -14,7 +14,7 @@ const items=[
 		}
 	},
 	{
-		id:2,
+		id:1,
 		authors: [{last: "Artaud", first: "Antonin"}],
 		title: "The Theatre and Its Double",
 		translators:[{last:"Corti", first:"Victor"}],

@@ -2,12 +2,33 @@ import React from "react"
 import styled from 'styled-components';
 
 const Wrapper = styled.li`
-	border: 10px blue solid;
-	`
+	padding:0;
+	margin:0;
+	text-indent:0;
+`
 
-const Item = () =>
+const Button = styled.button`
+	appearance: none;
+	border: 0;
+	cursor: pointer;
+	font-size: inherit;
+	padding: 1rem;
+	margin: 0;
+	outline: 0;
+	color:#fff;
+	border-bottom: 2px solid rgba(0,0,0,0.5);
+	background: ${props => props.selected ? (props => props.theme.bg) : "transprent"};
+	width: 100%;
+	text-align: left;
+`
+
+const Item = ({
+	data,
+	clickHandler,
+	isSelected
+})	=>
 	<Wrapper>
-	item
+		<Button selected={isSelected} onClick={e=>clickHandler(data)}>{data.title}</Button>
 	</Wrapper>
 	
 export default Item

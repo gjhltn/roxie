@@ -15,7 +15,7 @@ const Sidebar = styled.div`
 	flex: 0 0 25vw;
 	overflow-y scroll;
 	background: rgba(0,0,0,0.2);
-	padding: 1rem;
+	border-right: 2px solid rgba(0,0,0,0.5);
 `
 	
 const Document = styled.div`
@@ -27,14 +27,22 @@ const Document = styled.div`
 const Layout = ({
 	items,
 	saveItem
-}) =>
-	<GlobalStyle>
-		<Wrapper>
-			<Sidebar>
-				<ItemList items={items} />
-			</Sidebar>
-			<Document><button onClick={e=>saveItem()}>save</button></Document>
-		</Wrapper>
+}) => {
+	const [selectedId, setSelectedId] = React.useState(items[0].id);
+	return(
+		<GlobalStyle>
+			<Wrapper>
+				<Sidebar>
+					<ItemList
+						selected={selectedId}
+						selectHandler={(item)=>setSelectedId(item.id)}
+						items={items} />
+				</Sidebar>
+				<Document>
+					<button onClick={e=>saveItem()}>save</button></Document>	
+			</Wrapper>
 	</GlobalStyle>
-	
+	)
+}
+
 export default Layout;
