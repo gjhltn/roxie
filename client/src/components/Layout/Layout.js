@@ -28,7 +28,7 @@ const Layout = ({
 	items,
 	saveItem
 }) => {
-	const [selectedId, setSelectedId] = React.useState(items[0].id);
+	const [selectedId, setSelectedId] = React.useState();
 	return(
 		<GlobalStyle>
 			<Wrapper>
@@ -41,7 +41,7 @@ const Layout = ({
 				<Document>
 					<Editor
 						saveHandler={saveItem}
-						item={items.filter(item=>item.id===selectedId)[0]}
+						item={selectedId===undefined ? false : items.filter(i=>i.id===selectedId)[0]}
 					/>
 				</Document>	
 			</Wrapper>

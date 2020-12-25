@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from '../Layout/Layout'
 
+/*
 const items=[
 	{
 		id:0,
@@ -25,17 +26,18 @@ const items=[
 		}
 	}
 ]
+*/
 
 class Roxie extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { apiResponse: "" };
+		this.state = { items: [] };
 	}
 	
 	callAPI() {
-		fetch("http://192.168.1.66:9000/testAPI")
+		fetch("http://192.168.1.66:9000/items")
 			.then(res => res.text())
-        	.then(res => this.setState({ apiResponse: res }));
+        	.then(res => this.setState({ items: JSON.parse(res) }));
 		}
 		
 		componentWillMount() {
@@ -48,9 +50,8 @@ class Roxie extends React.Component {
 	}
   render = () => {
     return(<>
-	<p className="App-intro">{this.state.apiResponse}</p>
 		<Layout
-			items={items}
+			items={this.state.items}
 			saveItem={this.saveItem}
 		/>
 	</>)

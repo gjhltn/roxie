@@ -16,7 +16,7 @@ const ItemList = ({
 }) =>
 	<Wrapper>
 		{
-			items.map(item=>
+			items && items.map(item=>
 				<Item
 					key={item.id}
 					data={item}
