@@ -69,6 +69,7 @@ router.delete(`/:id`, async function(req, res) {
 })
 
 router.post(`/new`, async function(req, res) {
+	console.log('got post')
 	const { title } = req.body;
     const id = shortid.generate();
     const items = db

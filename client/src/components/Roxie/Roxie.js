@@ -1,6 +1,38 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Layout from '../Layout/Layout'
+import itemService from '../../services/items'
 
+const Roxie = () => {
+	const [ items, setItems ] = useState(null);
+	const [ loaded, setLoaded ] = useState(0);
+	
+	useEffect(() => {
+		if (!items) {
+			getItems();
+		}
+	})
+	
+	const getItems = async () => {
+		let res = await itemService.getAll();
+		setItems(res);
+		setLoaded(true);
+	}
+	
+	const create = async (data) => {
+		alert(JSON.stringify(data, null, 2));
+		let res = await itemService.add();
+	}
+	
+	return(
+		<Layout
+			createFn={create}
+			items={items}
+			loaded={loaded}
+		/>
+	)
+}
+
+/*
 class Roxie extends React.Component {
 	constructor(props) {
 		super(props);
@@ -44,5 +76,6 @@ class Roxie extends React.Component {
 		</>)
 	}
 }
+*/
 
 export default Roxie;

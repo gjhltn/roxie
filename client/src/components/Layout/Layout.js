@@ -29,7 +29,7 @@ const Document = styled.div`
 const Layout = ({
 	items,
 	loaded,
-	saveItem
+	createFn
 }) => {
 	const [selectedId, setSelectedId] = React.useState();
 	return(
@@ -50,7 +50,7 @@ const Layout = ({
 							</Sidebar>
 							<Document>
 								<Editor
-									saveHandler={saveItem}
+									createFn={createFn}
 									item={selectedId===undefined ? false : items.filter(i=>i.id===selectedId)[0]}
 								/>
 							</Document>	

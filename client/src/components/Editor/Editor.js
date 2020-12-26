@@ -222,7 +222,33 @@ const Submit = () =>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
 
-export const BookForm = ({item}) => {
+export const MiniForm = ({createFn,item}) => {
+	const defaults = {
+		title: ""
+	}
+	const initialValues = Object.assign({},defaults,item)
+	return (
+		<Formik
+			initialValues={initialValues}
+			
+			onSubmit={values =>
+				setTimeout(() => {
+					var pruned = Object.assign({},values)
+					createFn(pruned)
+				}, 500)
+			}
+       
+			render={({ values }) => (
+				<Form>
+					<Title values={values} />
+					<Submit/>
+				</Form>
+			)}
+		/>
+	)
+}
+
+export const BookForm = ({createFn,item}) => {
 	const defaults = {
 		title: "",
 		authors: [
@@ -260,7 +286,8 @@ export const BookForm = ({item}) => {
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
 					pruned = pruneBlank(['authors','editors','translators'], pruned)
-					alert(JSON.stringify(pruned, null, 2));
+					//alert(JSON.stringify(pruned, null, 2));
+					createFn()
 				}, 500)
 			}
        
@@ -278,9 +305,9 @@ export const BookForm = ({item}) => {
 
 /* -- EXPORTED COMPONENT ---------------------------------------------*/
 
-const Editor = ({item,saveHandler}) =>
+const Editor = ({item,createFn}) =>
 	<div>
-		<BookForm key={item.id || "new"} item={item} />
+		<MiniForm createFn={createFn} key={item.id || "new"} item={item} />
 	</div>
 
 export default Editor
