@@ -1,6 +1,33 @@
 import React from "react"
 import  { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
+import styled from 'styled-components';
+
+const Columns = styled.div`
+	display: flex;
+`
+const Column = styled.div`
+	flex:1;
+	&:not(:first-child){
+		margin-left: 1rem;
+	}
+`
+
+const TextInputInner = styled.div`
+	margin-bottom: 1rem;
+	
+	label {
+		display: block;
+	}
+	
+	input {
+		font-size: inherit;
+		width: 100%;
+		border-radius: 0;
+		border: 0;
+		background: ${props => props.error ? "pink" : "white"};
+	}
+`
 
 const MyTextInput = ({ label, ...props }) => {
 	// useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -8,13 +35,13 @@ const MyTextInput = ({ label, ...props }) => {
 	// message if the field is invalid and it has been touched (i.e. visited)
 	const [field, meta] = useField(props);
 	return (
-		<>
+		<TextInputInner error={meta.touched && meta.error}>
 			<label htmlFor={props.id || props.name}>{label}</label>
-			<input className="text-input" {...field} {...props} />
+			<input {...field} {...props} />
 			{meta.touched && meta.error ? (
 				<div className="error">{meta.error}</div>
 				) : null}
-		</>
+		</TextInputInner>
 	);
 };
 
@@ -54,34 +81,41 @@ const MySelect = ({ label, ...props }) => {
 const SignupForm = () => {
 return (
    <>
-   <h1>Subscribe!</h1>
       <Formik
        initialValues={{
+		   title: "",
          firstName: '',
          lastName: '',
-         email: '',
-        acceptedTerms: false, // added for our checkbox
-          jobType: '', // added for our select
+		 imprint: {
+			 publisher: '',
+			 place: '',
+			 date: '',
+		}
+     //    email: '',
+      //  acceptedTerms: false, // added for our checkbox
+      //    jobType: '', // added for our select
        }}
-      validationSchema={Yup.object({
-          firstName: Yup.string()
-          .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-          lastName: Yup.string()
-           .max(20, 'Must be 20 characters or less')
-           .required('Required'),
-         email: Yup.string()
-           .email('Invalid email address')
-           .required('Required'),
-         acceptedTerms: Yup.boolean()
-             .required('Required')
-            .oneOf([true], 'You must accept the terms and conditions.'),
-         jobType: Yup.string()
-            .oneOf(
-              ['designer', 'development', 'product', 'other'],
-              'Invalid Job Type'
-             )
-             .required('Required'),
+	   validationSchema={
+		  Yup.object({
+			  title: Yup.string().required('Required'),
+			/*  firstName: Yup.string()
+			  	.max(15, 'Must be 15 characters or less')
+				.required('Required'),
+			lastName: Yup.string()
+				.max(20, 'Must be 20 characters or less')
+				.required('Required'),*/
+	/*		email: Yup.string()
+				.email('Invalid email address')
+				.required('Required'),
+			acceptedTerms: Yup.boolean()
+				.required('Required')
+				.oneOf([true], 'You must accept the terms and conditions.'),
+				jobType: Yup.string()
+					.oneOf(
+						['designer', 'development', 'product', 'other'],
+						'Invalid Job Type'
+					)
+					.required('Required'),*/
          })}
          onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -90,18 +124,29 @@ return (
           }, 400);
         }}
       >
-        <Form>           <MyTextInput
+	  <Form>
+	  	  	<MyTextInput
+            label="Title"
+            name="title"
+             type="text"
+             placeholder="Fear and Trembling"
+			 />
+		<Columns>
+			<Column>	  	<MyTextInput
             label="First Name"
             name="firstName"
              type="text"
              placeholder="Jane"
-           />
-           <MyTextInput
+			 /></Column>
+			<Column>           <MyTextInput
              label="Last Name"
              name="lastName"
              type="text"
              placeholder="Doe"
-           />
+			 /></Column>
+		</Columns>
+		
+		{/*
            <MyTextInput
              label="Email Address"
              name="email"
@@ -117,8 +162,32 @@ return (
            </MySelect>
            <MyCheckbox name="acceptedTerms">
              I accept the terms and conditions
-           </MyCheckbox>
- 
+           </MyCheckbox>*/}
+ 			<h2>Imprint</h2>
+			  	  	<MyTextInput
+            label="Publisher"
+            name="publication.publisher"
+             type="text"
+             placeholder="Birmigham University Press"
+			 />
+			 		<Columns>
+					<Column>
+			 			  	  	<MyTextInput
+            label="Place"
+            name="publication.place"
+             type="text"
+             placeholder="Birmigham "
+			 />
+			 </Column>
+			 <Column>
+						 			  	  	<MyTextInput
+            label="Date"
+            name="publication.date"
+             type="text"
+             placeholder="2021"
+			 />
+			</Column>
+			</Columns>
           <button type="submit">Submit</button>
          </Form>
        </Formik>
