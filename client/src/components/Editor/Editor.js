@@ -1,69 +1,75 @@
 import React from "react"
 import * as Yup from 'yup';
 import styled from 'styled-components';
-
-
 import { Formik, Form, Field, FieldArray, useField } from 'formik';
 
 
 
 const NameList = ({
-	title
-}) => 
-	<>
-		<h3>{title}</h3>
-	</>
+	arrayHelpers,
+	arrayName,
+	vals
+}) =>
+	<div>
+		{vals.map((friend, index) => (
+			<div key={index}>
+				<Field name={`${arrayName}[${index}].last`} />
+				<Field name={`${arrayName}[${index}].first`} />
+				<button type="button" onClick={() => arrayHelpers.remove(index)}>-</button>
+			</div>
+         ))}
+         <button
+           type="button"
+          onClick={() => arrayHelpers.push({ last: '', first: '' })}
+         >
+           +
+         </button>
+		 </div>
 
 
 
 export const FriendList = () => (
-	<div>
-     <Formik
-       initialValues={{ friends: [
-		  {
-			 name:'dave',
-			 age:''
-		} 
-		] }}
-       onSubmit={values =>
-         setTimeout(() => {
-	           alert(JSON.stringify(values, null, 2));
-         }, 500)
-      }
-       render={({ values }) => (
-  <Form>
-  <h3>Author</h3>
-   <FieldArray
-     name="friends"
-    render={arrayHelpers => (
-       <div>
-         {values.friends.map((friend, index) => (
-          <div key={index}>
-             {/** both these conventions do the same */}
-             <Field name={`friends[${index}].name`} />
-             <Field name={`friends.${index}.age`} />
- 
-            <button type="button" onClick={() => arrayHelpers.remove(index)}>
-               -
-             </button>
-           </div>
-         ))}
-         <button
-           type="button"
-          onClick={() => arrayHelpers.push({ name: '', age: '' })}
-         >
-           +
-         </button>
-       </div>
-    )}
-   />
-    <button type="submit">Submit</button>
-   </Form>
-
-      )}
-     />
-   </div>
-);
+	<Formik
+		initialValues={{
+			authors: [
+				{
+					last:'Neckett',
+					first:'Samuel'
+				}
+			],
+			editors: []
+		}}
+		
+		onSubmit={values =>
+			setTimeout(() => {
+				alert(JSON.stringify(values, null, 2));
+			}, 500)
+		}
+       
+		render={({ values }) => (
+			<Form>
+				<h2>Book</h2>
+				<h3>Author</h3>
+				<FieldArray
+					name="authors"
+					render= {arrayHelpers =>
+						<NameList
+							arrayName="authors"
+							arrayHelpers={arrayHelpers}
+							vals={values.authors} />}/>
+				<h3>Editor</h3>
+				<FieldArray
+					name="editors"
+					render={arrayHelpers =>
+						<NameList
+							arrayName="editors" 
+							arrayHelpers={arrayHelpers} 
+							vals={values.editors} />}/>
+				<button type="submit">Submit</button>
+			</Form>
+		)}
+	/>
+)
 
 
 const Columns = styled.div`
@@ -95,7 +101,7 @@ const TextInputInner = styled.div`
 const MyTextInput = ({ label, ...props }) => {
 	// useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
 	// which we can spread on <input>. We can use field meta to show an error
-	// message if the field is invalid and it has been touched (i.e. visited)
+	// messfirst if the field is invalid and it has been touched (i.e. visited)
 	const [field, meta] = useField(props);
 	return (
 		<TextInputInner error={meta.touched && meta.error}>
@@ -220,7 +226,7 @@ return (
              <option value="">Select a job type</option>
              <option value="designer">Designer</option>
             <option value="development">Developer</option>
-<option value="product">Product Manager</option>
+<option value="product">Product Manfirstr</option>
              <option value="other">Other</option>
            </MySelect>
            <MyCheckbox name="acceptedTerms">
