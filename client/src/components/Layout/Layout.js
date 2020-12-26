@@ -10,6 +10,7 @@ const Wrapper = styled.div`
 	display: flex;
 	overflow: hidden;
 	height: 100vh;
+	height: -webkit-fill-available;
 `
  
 const Sidebar = styled.div`
