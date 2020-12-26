@@ -7,7 +7,6 @@ const pruneBlank = (cull,o) => {
 	cull.forEach(arrName=>{
 		var keep = []
 		if (o[arrName]){
-			console.log(o[arrName])
 			keep = o[arrName].filter(
 				name => 
 					(name.first && name.first.trim().length >0 ) || (name.last && name.last.trim().length>0 )
@@ -37,17 +36,17 @@ const NameListInput = ({
 					<MyTextInput label="Last" name={`${arrayName}[${index}].last`} />
 				</Column>
 				<Column size="1rem">
-					<button type="button" onClick={() => arrayHelpers.remove(index)}>-</button>
+					<Button type="button" red onClick={() => arrayHelpers.remove(index)}>-</Button>
 				</Column>
 			</Columns>
          ))}
-         <button
+         <Button
            type="button"
           onClick={() => arrayHelpers.push({ last: '', first: '' })}
          >
            +
-         </button>
-		 </div>
+         </Button>
+	</div>
 
 
 
@@ -86,7 +85,7 @@ export const FriendList = () => (
 			 />
 			</Box>
 			<Box>
-				<h3>Author</h3>
+				<h3>Authorship</h3>
 				<FieldArray
 					name="authors"
 					render= {arrayHelpers =>
@@ -111,17 +110,71 @@ export const FriendList = () => (
 							arrayHelpers={arrayHelpers} 
 							vals={values.translators} />}/>
 				</Box>
-				<Box><button type="submit">Submit</button></Box>
+				<Box>
+					<h2>Imprint</h2>
+			  	  	<MyTextInput
+            label="Publisher"
+            name="publication.publisher"
+             type="text"
+             placeholder="Birmigham University Press"
+			 />
+			 		<Columns>
+					<Column>
+			 			  	  	<MyTextInput
+            label="Place"
+            name="publication.place"
+             type="text"
+             placeholder="Birmigham "
+			 />
+			 </Column>
+			 <Column>
+						 			  	  	<MyTextInput
+            label="Date"
+            name="publication.date"
+             type="text"
+             placeholder="2021"
+			 />
+			</Column>
+			</Columns>
+				</Box>
+				<Box><Button type="submit">Submit</Button></Box>
 			</Form>
 		)}
 	/>
 )
+
+const Button = styled.button`
+	appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
+	height: ${props => props.red ? "1.5rem" : "3rem"};
+	letter-spacing: inherit;
+	line-height: ${props => props.red ? "1.5rem" : "2rem"};
+	margin-top: ${props => props.red ? "1.7rem" : "0"};
+	margin-bottom: ${props => props.red ? "0" : "2rem"};
+	outline: 0;
+	overflow: hidden;
+	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
+	vertical-align: top;
+	border-radius: 2rem;
+	background: ${props => props.red ? "red" : "transparent"};
+	box-shadow:0 0 0 2px #ffff inset;
+	color: white;
+`
 
 const Box = styled.fieldset`
 	display: block;
 	border: 0;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	padding: 0.5rem 2rem;
+	
+	&:last-child {
+		border-bottom: 0;
+		padding-top: 4rem;
+	}
 `
 
 

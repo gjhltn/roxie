@@ -22,6 +22,7 @@ const Sidebar = styled.div`
 const Document = styled.div`
 	flex: 1;
 	overflow-y scroll;
+	padding-bottom: 4rem;
 `
 
 const Layout = ({
