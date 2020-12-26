@@ -25,6 +25,9 @@ const Globals = createGlobalStyle`
 		font-size: 24px;
 		color: #fff;
 	}
+	div {
+		/*border: 1px solid red;*/
+	}
 `;
 
 const GlobalStyle = ({children}) =>
