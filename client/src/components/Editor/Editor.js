@@ -12,11 +12,17 @@ const NameList = ({
 }) =>
 	<div>
 		{vals.map((friend, index) => (
-			<div key={index}>
-				<Field name={`${arrayName}[${index}].last`} />
-				<Field name={`${arrayName}[${index}].first`} />
-				<button type="button" onClick={() => arrayHelpers.remove(index)}>-</button>
-			</div>
+			<Columns key={index}>
+				<Column>
+					<MyTextInput label="First" name={`${arrayName}[${index}].first`} />
+				</Column>
+				<Column>
+					<MyTextInput label="Last" name={`${arrayName}[${index}].last`} />
+				</Column>
+				<Column size="1rem">
+					<button type="button" onClick={() => arrayHelpers.remove(index)}>-</button>
+				</Column>
+			</Columns>
          ))}
          <button
            type="button"
@@ -76,7 +82,7 @@ const Columns = styled.div`
 	display: flex;
 `
 const Column = styled.div`
-	flex:1;
+	flex: ${props => props.size ? `0 0 ${props.size}` : 1};
 	&:not(:first-child){
 		margin-left: 1rem;
 	}
