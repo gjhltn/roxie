@@ -60,7 +60,8 @@ export const FriendList = () => (
 					first:'Samuel'
 				}
 			],
-			editors: []
+			editors: [],
+			translators: []
 		}}
 		
 		onSubmit={values =>
@@ -90,6 +91,14 @@ export const FriendList = () => (
 							arrayName="editors" 
 							arrayHelpers={arrayHelpers} 
 							vals={values.editors} />}/>
+				<h3>Translator</h3>
+				<FieldArray
+					name="translators"
+					render={arrayHelpers =>
+						<NameList
+							arrayName="translators" 
+							arrayHelpers={arrayHelpers} 
+							vals={values.translators} />}/>
 				<button type="submit">Submit</button>
 			</Form>
 		)}
