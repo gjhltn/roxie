@@ -1,7 +1,75 @@
 import React from "react"
 import * as Yup from 'yup';
 import styled from 'styled-components';
-import { Formik, Form, Field, FieldArray, useField , ErrorMessage, getIn} from 'formik';
+import { Formik, Form, FieldArray, useField} from 'formik';
+
+/* -- STYLED COMPONENTS ---------------------------------------------*/
+
+const Button = styled.button`
+	appearance: none;
+	background: ${props => props.red ? "red" : "transparent"};
+	border-radius: 2rem;
+	border: 0;
+	box-shadow:0 0 0 2px #ffff inset;
+	color: white;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
+	height: ${props => props.red ? "1.5rem" : "3rem"};
+	letter-spacing: inherit;
+	line-height: ${props => props.red ? "1.5rem" : "2rem"};
+	margin-bottom: ${props => props.red ? "0" : "2rem"};
+	margin-top: ${props => props.red ? "1.7rem" : "0"};
+	outline: 0;
+	overflow: hidden;
+	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
+	vertical-align: top;
+`
+
+const Fieldset = styled.fieldset`
+	display: block;
+	border: 0;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	padding: 0.5rem 2rem;
+	
+	&:last-child {
+		border-bottom: 0;
+		padding-top: 4rem;
+	}
+`
+
+const Columns = styled.div`
+	display: flex;
+`
+const Column = styled.div`
+	flex: ${props => props.size ? `0 0 ${props.size}` : 1};
+	&:not(:first-child){
+		margin-left: 1rem;
+	}
+`
+
+const TextInputInner = styled.div`
+	margin-bottom: 1rem;
+	
+	label {
+		display: block;
+	}
+	
+	input, textarea {
+		font-size: inherit;
+		width: 100%;
+		border-radius: 0;
+		border: 2px solid ${props => props.error ? "red" : "transparent"};
+				background:  ${props => props.error ? "pink" : "white"};
+	}
+	
+	.error {
+		color: pink;
+		font-weight: 800;
+	}
+`
+
+/* -- UTILITY FUNCTIONS ---------------------------------------------*/
 
 const pruneBlank = (cull,o) => {
 	cull.forEach(arrName=>{
@@ -20,6 +88,8 @@ const pruneBlank = (cull,o) => {
 	})
 	return(o)
 }
+
+/* -- FORM WIDGETS --------------------------------------------------*/
 
 const NameListInput = ({
 	arrayHelpers,
@@ -49,8 +119,37 @@ const NameListInput = ({
 	</div>
 
 
+/* -- FORM FRAGMEMTS ------------------------------------------------*/
 
-export const FriendList = () => (
+const MyTextArea = ({ label, ...props }) => {
+	const [field, meta] = useField(props);
+	return (
+		<TextInputInner error={meta.touched && meta.error}>
+			{/*<label htmlFor={props.id || props.name}>{label}</label>*/}
+			<textarea {...field} {...props} />
+			{meta.touched && meta.error ? (
+				<div className="error">{meta.error}</div>
+				) : null}
+		</TextInputInner>
+	);
+};
+
+const MyTextInput = ({ label, ...props }) => {
+	const [field, meta] = useField(props);
+	return (
+		<TextInputInner error={meta.touched && meta.error}>
+			<label htmlFor={props.id || props.name}>{label}</label>
+			<input {...field} {...props} />
+			{meta.touched && meta.error ? (
+				<div className="error">{meta.error}</div>
+				) : null}
+		</TextInputInner>
+	);
+};
+
+/* -- WHOLE FORMS ---------------------------------------------------*/
+
+export const BookForm = () => (
 	<Formik
 		initialValues={{
 			title: "",
@@ -93,7 +192,7 @@ export const FriendList = () => (
        
 		render={({ values }) => (
 			<Form>
-			<Box>
+			<Fieldset>
 			<h3>Title</h3>
 				  	  	<MyTextArea
             label="Title"
@@ -102,8 +201,8 @@ export const FriendList = () => (
 			 rows="4"
              placeholder="Fear and Trembling"
 			 />
-			</Box>
-			<Box>
+			</Fieldset>
+			<Fieldset>
 				<h3>Authorship</h3>
 				<FieldArray
 					name="authors"
@@ -128,8 +227,8 @@ export const FriendList = () => (
 							arrayName="translators" 
 							arrayHelpers={arrayHelpers} 
 							vals={values.translators} />}/>
-				</Box>
-				<Box>
+				</Fieldset>
+				<Fieldset>
 					<h2>Imprint</h2>
 			  	  	<MyTextInput
             label="Publisher"
@@ -155,111 +254,18 @@ export const FriendList = () => (
 			 />
 			</Column>
 			</Columns>
-				</Box>
-				<Box><Button type="submit">Submit</Button></Box>
+				</Fieldset>
+				<Fieldset><Button type="submit">Submit</Button></Fieldset>
 			</Form>
 		)}
 	/>
-)
+	)
 
-const Button = styled.button`
-	appearance: none;
-	background: none;
-	border: 0;
-	cursor: pointer;
-	font-size: 1.5rem;
-	font-weight: bold;
-	height: ${props => props.red ? "1.5rem" : "3rem"};
-	letter-spacing: inherit;
-	line-height: ${props => props.red ? "1.5rem" : "2rem"};
-	margin-top: ${props => props.red ? "1.7rem" : "0"};
-	margin-bottom: ${props => props.red ? "0" : "2rem"};
-	outline: 0;
-	overflow: hidden;
-	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
-	vertical-align: top;
-	border-radius: 2rem;
-	background: ${props => props.red ? "red" : "transparent"};
-	box-shadow:0 0 0 2px #ffff inset;
-	color: white;
-`
-
-const Box = styled.fieldset`
-	display: block;
-	border: 0;
-	border-bottom: 2px solid rgba(0,0,0,0.2);
-	padding: 0.5rem 2rem;
-	
-	&:last-child {
-		border-bottom: 0;
-		padding-top: 4rem;
-	}
-`
-
-
-const Columns = styled.div`
-	display: flex;
-`
-const Column = styled.div`
-	flex: ${props => props.size ? `0 0 ${props.size}` : 1};
-	&:not(:first-child){
-		margin-left: 1rem;
-	}
-`
-
-const TextInputInner = styled.div`
-	margin-bottom: 1rem;
-	
-	label {
-		display: block;
-	}
-	
-	input, textarea {
-		font-size: inherit;
-		width: 100%;
-		border-radius: 0;
-		border: 2px solid ${props => props.error ? "red" : "transparent"};
-				background:  ${props => props.error ? "pink" : "white"};
-	}
-	
-	.error {
-		color: pink;
-		font-weight: 800;
-	}
-`
-
-const MyTextArea = ({ label, ...props }) => {
-	const [field, meta] = useField(props);
-	return (
-		<TextInputInner error={meta.touched && meta.error}>
-			{/*<label htmlFor={props.id || props.name}>{label}</label>*/}
-			<textarea {...field} {...props} />
-			{meta.touched && meta.error ? (
-				<div className="error">{meta.error}</div>
-				) : null}
-		</TextInputInner>
-	);
-};
-
-const MyTextInput = ({ label, ...props }) => {
-	const [field, meta] = useField(props);
-	return (
-		<TextInputInner error={meta.touched && meta.error}>
-			<label htmlFor={props.id || props.name}>{label}</label>
-			<input {...field} {...props} />
-			{meta.touched && meta.error ? (
-				<div className="error">{meta.error}</div>
-				) : null}
-		</TextInputInner>
-	);
-};
+/* -- EXPORTED COMPONENT ---------------------------------------------*/
 
 const Editor = ({item,saveHandler}) =>
 	<div>
-		<FriendList/>
+		<BookForm/>
 	</div>
-
-
-
 
 export default Editor
