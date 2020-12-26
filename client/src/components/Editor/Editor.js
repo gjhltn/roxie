@@ -206,8 +206,8 @@ const Imprint = ({ values }) =>
 		</Column>
 		<Column>
 			<MyTextInput
-				label="Date"
-				name="imprint.date"
+				label="Year"
+				name="imprint.year"
 				type="text"
 				placeholder="2021"
 			/>
@@ -222,63 +222,65 @@ const Submit = () =>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
 
-export const BookForm = () => (
-	<Formik
-		initialValues={{
-			title: "",
-			authors: [
-				{
-					last:'Neckett',
-					first:'Samuel'
-				}
-			],
-			editors: [],
-			translators: [],
-			imprint: {
-			 publisher: '',
-			 place: '',
-			 date: '',
-		 },
-		}}
-		
-		validationSchema={
-		  Yup.object({
-			  title: Yup.string().required('Required'),
-			  imprint: Yup.object().shape({
-				  				  date: Yup.string()
-								  .required('Required'),
-								  				  publisher: Yup.string()
-												  .required('Required'),
-				  place: Yup.string()
-				  	.required('Required'),
-			}),
-	
-		})}
-		
-		onSubmit={values =>
-			setTimeout(() => {
-				var pruned = Object.assign({},values)
-				pruned = pruneBlank(['authors','editors','translators'], pruned)
-				alert(JSON.stringify(pruned, null, 2));
-			}, 500)
-		}
+export const BookForm = ({item}) => {
+	const defaults = {
+		title: "",
+		authors: [
+			{
+				last:'Neckett',
+				first:'Samuel'
+			}
+		],
+		editors: [],
+		translators: [],
+		imprint: {
+			publisher: '',
+			place: '',
+			year: '',
+		},
+	}
+	const initialValues = Object.assign({},defaults,item)
+	return (
+		<Formik
+			initialValues={initialValues}
+			validationSchema={
+				Yup.object({
+					title: Yup.string().required('Required'),
+					imprint: Yup.object().shape({
+						year: Yup.string()
+							.required('Required'),
+						publisher: Yup.string()
+							.required('Required'),
+						place: Yup.string()
+							.required('Required'),
+				}),
+			})}
+			
+			onSubmit={values =>
+				setTimeout(() => {
+					var pruned = Object.assign({},values)
+					pruned = pruneBlank(['authors','editors','translators'], pruned)
+					alert(JSON.stringify(pruned, null, 2));
+				}, 500)
+			}
        
-		render={({ values }) => (
-			<Form>
-				<Title values={values} />
-				<Authorship values={values} />
-				<Imprint values={values}/>
-				<Submit/>
-			</Form>
-		)}
-	/>
-)
+			render={({ values }) => (
+				<Form>
+					<Title values={values} />
+					<Authorship values={values} />
+					<Imprint values={values}/>
+					<Submit/>
+				</Form>
+			)}
+		/>
+	)
+}
 
 /* -- EXPORTED COMPONENT ---------------------------------------------*/
 
 const Editor = ({item,saveHandler}) =>
 	<div>
-		<BookForm/>
+		<BookForm key={item.id || "new"} item={item} />
 	</div>
 
 export default Editor
