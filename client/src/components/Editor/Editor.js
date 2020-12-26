@@ -3,7 +3,24 @@ import * as Yup from 'yup';
 import styled from 'styled-components';
 import { Formik, Form, Field, FieldArray, useField } from 'formik';
 
-
+const pruneBlank = (cull,o) => {
+	cull.forEach(arrName=>{
+		var keep = []
+		if (o[arrName]){
+			console.log(o[arrName])
+			keep = o[arrName].filter(
+				name => 
+					(name.first && name.first.trim().length >0 ) || (name.last && name.last.trim().length>0 )
+			)
+		}
+		if (keep.length > 0) {
+			o[arrName] = keep
+		} else {
+			delete o[arrName]
+		}
+	})
+	return(o)
+}
 
 const NameList = ({
 	arrayHelpers,
@@ -48,7 +65,9 @@ export const FriendList = () => (
 		
 		onSubmit={values =>
 			setTimeout(() => {
-				alert(JSON.stringify(values, null, 2));
+				var pruned = Object.assign({},values)
+				pruned = pruneBlank(['authors','editors','translators'], pruned)
+				alert(JSON.stringify(pruned, null, 2));
 			}, 500)
 		}
        
@@ -194,6 +213,7 @@ return (
          })}
          onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
+			  let pruned=pruneBlank(values);
              alert(JSON.stringify(values, null, 2));
             setSubmitting(false);
           }, 400);
