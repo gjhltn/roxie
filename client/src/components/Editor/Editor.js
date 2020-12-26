@@ -118,9 +118,6 @@ const NameListInput = ({
          </Button>
 	</div>
 
-
-/* -- FORM FRAGMEMTS ------------------------------------------------*/
-
 const MyTextArea = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
 	return (
@@ -146,6 +143,82 @@ const MyTextInput = ({ label, ...props }) => {
 		</TextInputInner>
 	);
 };
+	
+/* -- FORM FRAGMEMTS ------------------------------------------------*/
+
+const Title = ({ values }) =>
+<Fieldset>
+	<h3>Title</h3>
+	<MyTextArea
+		label="Title"
+		name="title"
+		type="textArea"
+		rows="4"
+		placeholder="Fear and Trembling"
+	/>
+</Fieldset>
+
+const Authorship = ({ values }) =>
+<Fieldset>
+	<h3>Authorship</h3>
+	<FieldArray
+		name="authors"
+		render= {arrayHelpers =>
+			<NameListInput
+				arrayName="authors"
+				arrayHelpers={arrayHelpers}
+				vals={values.authors} />}/>
+	<h3>Editor</h3>
+	<FieldArray
+		name="editors"
+		render={arrayHelpers =>
+			<NameListInput
+				arrayName="editors" 
+				arrayHelpers={arrayHelpers} 
+				vals={values.editors} />}/>
+	<h3>Translator</h3>
+	<FieldArray
+		name="translators"
+		render={arrayHelpers =>
+		<NameListInput
+				arrayName="translators" 
+				arrayHelpers={arrayHelpers} 
+				vals={values.translators} />}/>
+</Fieldset>
+
+const Imprint = ({ values }) =>
+<Fieldset>
+	<h2>Imprint</h2>
+	<MyTextInput
+		label="Publisher"
+		name="imprint.publisher"
+		type="text"
+		placeholder="Birmigham University Press"
+	/>
+	<Columns>
+		<Column>
+			 <MyTextInput
+			 	label="Place"
+				name="imprint.place"
+				type="text"
+				placeholder="Birmigham "
+			 />
+		</Column>
+		<Column>
+			<MyTextInput
+				label="Date"
+				name="imprint.date"
+				type="text"
+				placeholder="2021"
+			/>
+		</Column>
+	</Columns>
+</Fieldset>
+
+const Submit = () =>
+<Fieldset>
+	<Button type="submit">Submit</Button>
+</Fieldset>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
 
@@ -192,74 +265,14 @@ export const BookForm = () => (
        
 		render={({ values }) => (
 			<Form>
-			<Fieldset>
-			<h3>Title</h3>
-				  	  	<MyTextArea
-            label="Title"
-            name="title"
-             type="textArea"
-			 rows="4"
-             placeholder="Fear and Trembling"
-			 />
-			</Fieldset>
-			<Fieldset>
-				<h3>Authorship</h3>
-				<FieldArray
-					name="authors"
-					render= {arrayHelpers =>
-						<NameListInput
-							arrayName="authors"
-							arrayHelpers={arrayHelpers}
-							vals={values.authors} />}/>
-				<h3>Editor</h3>
-				<FieldArray
-					name="editors"
-					render={arrayHelpers =>
-						<NameListInput
-							arrayName="editors" 
-							arrayHelpers={arrayHelpers} 
-							vals={values.editors} />}/>
-				<h3>Translator</h3>
-				<FieldArray
-					name="translators"
-					render={arrayHelpers =>
-						<NameListInput
-							arrayName="translators" 
-							arrayHelpers={arrayHelpers} 
-							vals={values.translators} />}/>
-				</Fieldset>
-				<Fieldset>
-					<h2>Imprint</h2>
-			  	  	<MyTextInput
-            label="Publisher"
-            name="imprint.publisher"
-             type="text"
-             placeholder="Birmigham University Press"
-			 />
-			 		<Columns>
-					<Column>
-			 			  	  	<MyTextInput
-            label="Place"
-            name="imprint.place"
-             type="text"
-             placeholder="Birmigham "
-			 />
-			 </Column>
-			 <Column>
-						 			  	  	<MyTextInput
-            label="Date"
-            name="imprint.date"
-             type="text"
-             placeholder="2021"
-			 />
-			</Column>
-			</Columns>
-				</Fieldset>
-				<Fieldset><Button type="submit">Submit</Button></Fieldset>
+				<Title values={values} />
+				<Authorship values={values} />
+				<Imprint values={values}/>
+				<Submit/>
 			</Form>
 		)}
 	/>
-	)
+)
 
 /* -- EXPORTED COMPONENT ---------------------------------------------*/
 
