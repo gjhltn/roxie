@@ -1,7 +1,70 @@
 import React from "react"
-import  { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import styled from 'styled-components';
+
+
+import { Formik, Form, Field, FieldArray, useField } from 'formik';
+
+
+
+const NameList = ({
+	title
+}) => 
+	<>
+		<h3>{title}</h3>
+	</>
+
+
+
+export const FriendList = () => (
+	<div>
+     <Formik
+       initialValues={{ friends: [
+		  {
+			 name:'dave',
+			 age:''
+		} 
+		] }}
+       onSubmit={values =>
+         setTimeout(() => {
+	           alert(JSON.stringify(values, null, 2));
+         }, 500)
+      }
+       render={({ values }) => (
+  <Form>
+  <h3>Author</h3>
+   <FieldArray
+     name="friends"
+    render={arrayHelpers => (
+       <div>
+         {values.friends.map((friend, index) => (
+          <div key={index}>
+             {/** both these conventions do the same */}
+             <Field name={`friends[${index}].name`} />
+             <Field name={`friends.${index}.age`} />
+ 
+            <button type="button" onClick={() => arrayHelpers.remove(index)}>
+               -
+             </button>
+           </div>
+         ))}
+         <button
+           type="button"
+          onClick={() => arrayHelpers.push({ name: '', age: '' })}
+         >
+           +
+         </button>
+       </div>
+    )}
+   />
+    <button type="submit">Submit</button>
+   </Form>
+
+      )}
+     />
+   </div>
+);
+
 
 const Columns = styled.div`
 	display: flex;
@@ -392,12 +455,12 @@ const MyForm = ({
 
 const Editor = ({item,saveHandler}) =>
 	<div>
-		<SignupForm/>
+		<FriendList/>
 	
 	{item && <div>
 		{JSON.stringify(item)}
 		<div>
-			<SignupForm/>
+			<FriendList/>
 			{/*<button onClick={e=>saveHandler(item)}>save</button>*/}
 		</div></div>}
 	</div>
