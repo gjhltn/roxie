@@ -32,7 +32,7 @@ const bookTemplate = {
 			first: " ",
 		}
 	],
-	publication: {
+	imprint: {
 		place: " ",
 		publisher: " ",
 		year: " "
@@ -65,11 +65,16 @@ const chapterTemplate = {
 				first: " ",
 			}
 		],
-		publication: {
+		imprint: {
 			place: " ",
 			publisher: " ",
 			year: " "
 		}
 	}
 }
+```
+
+### Journal Article
+```
+TODO
 ```
