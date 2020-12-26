@@ -28,10 +28,11 @@ html {
 		padding: 0;
 		background: ${theme.bg};
 		font-family: Helvetica, Sans-Serif;
-		font-size: 24px;
+		font-size: 18px;
 		color: #fff;
+		overflow: hidden;
 	}
-	div {
+	* {
 		/*border: 1px solid red;*/
 	}
 `;

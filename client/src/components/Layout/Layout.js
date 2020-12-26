@@ -16,10 +16,10 @@ const Sidebar = styled.div`
 	flex: 0 0 25vw;
 	overflow-y scroll;
 	background: rgba(0,0,0,0.2);
+	box-shadow:   inset 0 0 20px #000;
 `
 	
 const Document = styled.div`
-	padding:1rem;
 	flex: 1;
 	overflow-y scroll;
 `

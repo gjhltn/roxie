@@ -22,7 +22,7 @@ const pruneBlank = (cull,o) => {
 	return(o)
 }
 
-const NameList = ({
+const NameListInput = ({
 	arrayHelpers,
 	arrayName,
 	vals
@@ -54,6 +54,7 @@ const NameList = ({
 export const FriendList = () => (
 	<Formik
 		initialValues={{
+			title: "",
 			authors: [
 				{
 					last:'Neckett',
@@ -74,12 +75,22 @@ export const FriendList = () => (
        
 		render={({ values }) => (
 			<Form>
-				<h2>Book</h2>
+			<Box>
+			<h3>Title</h3>
+				  	  	<MyTextArea
+            label="Title"
+            name="title"
+             type="textArea"
+			 rows="4"
+             placeholder="Fear and Trembling"
+			 />
+			</Box>
+			<Box>
 				<h3>Author</h3>
 				<FieldArray
 					name="authors"
 					render= {arrayHelpers =>
-						<NameList
+						<NameListInput
 							arrayName="authors"
 							arrayHelpers={arrayHelpers}
 							vals={values.authors} />}/>
@@ -87,7 +98,7 @@ export const FriendList = () => (
 				<FieldArray
 					name="editors"
 					render={arrayHelpers =>
-						<NameList
+						<NameListInput
 							arrayName="editors" 
 							arrayHelpers={arrayHelpers} 
 							vals={values.editors} />}/>
@@ -95,15 +106,23 @@ export const FriendList = () => (
 				<FieldArray
 					name="translators"
 					render={arrayHelpers =>
-						<NameList
+						<NameListInput
 							arrayName="translators" 
 							arrayHelpers={arrayHelpers} 
 							vals={values.translators} />}/>
-				<button type="submit">Submit</button>
+				</Box>
+				<Box><button type="submit">Submit</button></Box>
 			</Form>
 		)}
 	/>
 )
+
+const Box = styled.fieldset`
+	display: block;
+	border: 0;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	padding: 0.5rem 2rem;
+`
 
 
 const Columns = styled.div`
@@ -123,7 +142,7 @@ const TextInputInner = styled.div`
 		display: block;
 	}
 	
-	input {
+	input, textarea {
 		font-size: inherit;
 		width: 100%;
 		border-radius: 0;
@@ -131,6 +150,23 @@ const TextInputInner = styled.div`
 		background: ${props => props.error ? "pink" : "white"};
 	}
 `
+
+const MyTextArea = ({ label, ...props }) => {
+	// useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+	// which we can spread on <input>. We can use field meta to show an error
+	// messfirst if the field is invalid and it has been touched (i.e. visited)
+	const [field, meta] = useField(props);
+	return (
+		<TextInputInner error={meta.touched && meta.error}>
+			{/*<label htmlFor={props.id || props.name}>{label}</label>*/}
+			<textarea {...field} {...props} />
+			{meta.touched && meta.error ? (
+				<div className="error">{meta.error}</div>
+				) : null}
+		</TextInputInner>
+	);
+};
+
 
 const MyTextInput = ({ label, ...props }) => {
 	// useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
