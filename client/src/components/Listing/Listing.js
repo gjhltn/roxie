@@ -6,6 +6,7 @@ import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import ItemList from '../ItemList/ItemList'
 import Editor from '../Editor/Editor'
 import Splash from '../Splash/Splash'
+import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
 import {names} from '../../lib/chicago'
 
@@ -94,9 +95,11 @@ const AuthorWrapper = styled.div`
 
 const SectionHeader = styled.header`
 	display: flex;
+	margin-bottom: 2rem;
 	h2 {
 		flex:1;
 		margin: 0 0 1rem;
+		font-weight: bold;
 	}
 	.New {
 		flex: 0 0 2rem;
@@ -133,7 +136,13 @@ const Kind = ({name, allData, handleNew}) => {
 			<SectionHeader>
 				<Heading>{name}</Heading>
 				<div className="New">
-					<Button onClick={e=>handleNew()}>+</Button>
+					<IconButton
+						handler={e=>handleNew()}
+						icon={ICON_TYPE.ADD}
+						weight="2"
+						size="52"
+						colour="white"
+					/>
 				</div>
 			</SectionHeader>
 						{
@@ -183,7 +192,7 @@ const Listing = ({
 								data={items}/>
 							</Main>
 														<Header>
-								toolbar
+														
 								</Header>
 						</Wrapper>
 					</>
