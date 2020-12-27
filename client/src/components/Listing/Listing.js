@@ -110,7 +110,7 @@ const Items = ({data,...props}) => {
 		<>
 			{
 				["book","chapter","journal"].map(kind =>
-					<Kind name={kind} allData={data} {...props}/>)
+					<Kind key={kind} name={kind} allData={data} {...props}/>)
 			}
 		</>
 	)

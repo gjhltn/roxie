@@ -238,14 +238,14 @@ export const JournalForm = ({action,item,closeModalCallback}) => {
 					action(pruned,closeModalCallback)
 				}, 500)
 			}
-       
-			render={({ values }) => (
+		>
+		{({ values }) => (
 				<Form>
 					<Title values={values} />
 					<Submit/>
 				</Form>
-			)}
-		/>
+				)}
+		</Formik>
 	)
 }
 
@@ -265,14 +265,14 @@ export const ChapterForm = ({action,item,closeModalCallback}) => {
 					action(pruned,closeModalCallback)
 				}, 500)
 			}
-       
-			render={({ values }) => (
+		>
+		{({ values }) => (
 				<Form>
 					<Title values={values} />
 					<Submit/>
 				</Form>
-			)}
-		/>
+				)}
+		</Formik>
 	)
 }
 
@@ -318,16 +318,18 @@ export const BookForm = ({action,item,closeModalCallback}) => {
 					action(pruned,closeModalCallback)
 				}, 500)
 			}
-       
-			render={({ values }) => (
-				<Form>
-					<Title values={values} />
-					<Authorship values={values} />
-					<Imprint values={values}/>
-					<Submit/>
-				</Form>
-			)}
-		/>
+		>
+			{
+				({	values }) => (
+					<Form>
+						<Title values={values} />
+						<Authorship values={values} />
+						<Imprint values={values}/>
+						<Submit/>
+					</Form>
+				)
+			}
+		</Formik>
 	)
 }
 
