@@ -42,6 +42,7 @@ export const bookB = {
 		year: "2017"
 	}
 }
+
 export const bookC = {
 	// two authors
 	id: "bookC",
@@ -53,7 +54,7 @@ export const bookC = {
 		last: "Guattari",
 		first: "Félix"
 	}],
-	title: "Mille Plateaux",
+	title: "Anti-Oedipus",
 	imprint: {
 		place: "London",
 		publisher: "Penguin Classics",
@@ -255,5 +256,21 @@ export const bookM = {
 		place: "London",
 		publisher: "Penguin Classics",
 		year: "2020"
+	}
+}
+
+export const bookN = {
+	// same author as bookA
+	id: "bookN",
+	type: "book",
+	authors: [{
+		last: "Eco",
+		first: "Umberto"
+	}],
+	title: "The Name of the Rose",
+	imprint: {
+		place: "London",
+		publisher: "Vintage",
+		year: "1990"
 	}
 }

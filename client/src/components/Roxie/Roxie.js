@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import Layout from '../Layout/Layout'
+import Listing from '../Listing/Listing'
 import itemService from '../../services/items'
 
 const Roxie = () => {
@@ -13,18 +13,18 @@ const Roxie = () => {
 	})
 	
 	const getItems = async () => {
-		let res = await itemService.getAll();
+		//let res = await itemService.getAll();
+		let res = Object.values(require('../../lib/examples'))
 		setItems(res);
 		setLoaded(true);
 	}
 	
 	const create = async (data) => {
-		//alert(JSON.stringify(data, null, 2));
 		let res = await itemService.add(data);
 	}
 	
 	return(
-		<Layout
+		<Listing
 			createFn={create}
 			items={items}
 			loaded={loaded}
@@ -68,7 +68,7 @@ class Roxie extends React.Component {
   render = () => {
     return(
 		<>
-			<Layout
+			<Listing
 				items={this.state.items}
 				saveItem={this.saveItem}
 				loaded={this.state.loaded}

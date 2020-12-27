@@ -28,7 +28,7 @@ html {
 		padding: 0;
 		background: ${theme.bg};
 		font-family: Helvetica, Sans-Serif;
-		font-size: 18px;
+		font-size: 24px;
 		color: #fff;
 		overflow: hidden;
 	}
