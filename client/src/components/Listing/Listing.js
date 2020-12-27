@@ -6,7 +6,6 @@ import Modal from 'react-modal';
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
-import Splash from '../Splash/Splash'
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
 import {names, groupBy} from '../../lib/chicago'
