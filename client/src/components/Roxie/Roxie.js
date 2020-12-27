@@ -21,20 +21,21 @@ const Roxie = () => {
 	}
 	
 	const createItem = async (data,closeModalCallback) => {
-		alert("Roxie create " + data.title)
+		//alert("Roxie create " + data.title)
+		let res = await itemService.add(data);
 		closeModalCallback.call()
-		// let res = await itemService.add(data);0
 		getItems()
 	}
 	
 	const deleteItem = async (id) => {
-		alert("Roxie delete " + id)
+		//alert("Roxie delete " + id)
 		await itemService.delete(id)
 		getItems()
 	}
 	
 	const updateItem = async (data,closeModalCallback) => {
-		alert("Roxie update " + data.id)
+		//alert("Roxie update " + data.id)
+		await itemService.edit(data)
 		closeModalCallback()
 		getItems()
 	}

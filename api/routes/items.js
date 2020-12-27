@@ -57,7 +57,6 @@ router.get("/:id", async function(req, res, next) {
 
 router.delete(`/:id`, async function(req, res) {
     const { id } = req.params;
-    console.log(id);
 
     db.get('items')
       .remove({ id })
@@ -87,17 +86,18 @@ router.post(`/new`, async function(req, res) {
 })
 
 router.put(`/update`, async function(req, res) {
-	const { title, id } = req.body;
+	const data = Object.assign({},req.body)
+	const id = data.id
 
     let items = db.get('items')
-        .find({ id })
-        .assign({ title })
+        .find({id})
+        .assign(data)
         .write();
-
+		
     const item = db.get('items')
-      .find({ id })
+      .find({id})
       .value();
-
+	
     return res.status(202).send({
       error: false,
       item
