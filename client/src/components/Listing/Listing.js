@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components';
+import Modal from 'react-modal';
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import ItemList from '../ItemList/ItemList'
@@ -102,9 +103,9 @@ const SectionHeader = styled.header`
 	}
 `
 
-const Items = ({data}) => {
+const Items = ({data,...props}) => {
 	return (
-		<Kind name="book" allData={data} />
+		<Kind name="book" allData={data} {...props}/>
 	)
 }
 
@@ -121,7 +122,7 @@ const Author = ({name,data}) =>
 		}
 	</AuthorWrapper>
 
-const Kind = ({name, allData}) => {
+const Kind = ({name, allData, handleNew}) => {
 	const data = allData.filter(datum=>datum.type===name)
 	const grouped = groupBy(data, 
 		datum => (datum.authors && datum.authors.length>0) ? names(datum.authors) : "[anonymous]"
@@ -132,7 +133,7 @@ const Kind = ({name, allData}) => {
 			<SectionHeader>
 				<Heading>{name}</Heading>
 				<div className="New">
-					<Button onClick={e=>alert('new')}>+</Button>
+					<Button onClick={e=>handleNew()}>+</Button>
 				</div>
 			</SectionHeader>
 						{
@@ -148,6 +149,22 @@ const Listing = ({
 	createFn
 }) => {
 	const [selectedId, setSelectedId] = React.useState();
+	const [modalIsOpen,setIsOpen] = React.useState(false);
+	
+	const openModal = () => setIsOpen(true)
+	const closeModal = () => setIsOpen(false)
+	
+	const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+	
 	return(
 		<GlobalStyle>
 			<Wrapper>
@@ -160,7 +177,9 @@ const Listing = ({
 					<>
 						<Wrapper>
 							<Main>
-							<Items data={items}/>
+							<Items
+								handleNew={openModal}
+								data={items}/>
 							</Main>
 														<Header>
 								toolbar
@@ -169,6 +188,18 @@ const Listing = ({
 					</>
 				}
 			</Wrapper>
+			        <Modal
+          isOpen={modalIsOpen}
+          
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+
+          
+          <button onClick={closeModal}>close</button>
+          
+		  </Modal>
 	</GlobalStyle>
 	)
 }
