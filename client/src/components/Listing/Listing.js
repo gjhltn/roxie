@@ -8,47 +8,7 @@ import Editor from '../Editor/Editor'
 import Splash from '../Splash/Splash'
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
-import {names} from '../../lib/chicago'
-
-function Mini() {
-	
-const defaultFn =  () => alert("default ooops")
-const modifiedFn =  () => alert("modified ooops")
-	
-  const [ooops, setOoops] = React.useState(() => defaultFn);
-
-  return (
-    <div>
-      <button onClick={ooops}>Show Ooops</button>
-
-      <button
-        onClick={() => {
-          setOoops(() => modifiedFn);
-        }}
-      >
-        change oops
-      </button>
-    </div>
-  );
-}
-
-
-
-
-
-function groupBy(list, keyGetter) {
-    const map = new Map();
-    list.forEach((item) => {
-         const key = keyGetter(item);
-         const collection = map.get(key);
-         if (!collection) {
-             map.set(key, [item]);
-         } else {
-             collection.push(item);
-         }
-	})
-    return map;
-}
+import {names, groupBy} from '../../lib/chicago'
 
 const Button = styled.button`
 	appearance: none;
@@ -221,8 +181,7 @@ const Listing = ({
 	
 	const handleUpdate = (id) => {
 		setModalAction(()=>updateFn)
-		//setModalItem(items.find(item=>item.property===id))
-		setModalItem(items[0])
+		setModalItem(items.find(item=>item.id===id))
 		openModal();
 	}
 	
@@ -257,7 +216,7 @@ const Listing = ({
 								data={items}/>
 							</Main>
 														<Header>
-							<Mini />
+							
 								</Header>
 						</Wrapper>
 					</>
