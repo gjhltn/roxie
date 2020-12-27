@@ -9,6 +9,8 @@ import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
 import {names, groupBy} from '../../lib/chicago'
 
+Modal.setAppElement('#root')
+
 const Button = styled.button`
 	appearance: none;
 	background: ${props => props.red ? "red" : "transparent"};
@@ -38,9 +40,10 @@ const Wrapper = styled.div`
 	flex-direction: column;
 `
 
-const Header = styled.header`
+const Toolbar = styled.header`
 	flex: 0 0 4rem;
 	background: rgba(0,0,0,0.5);
+	padding: 2rem 2rem 0;
 `
 
 const Main = styled.main`
@@ -229,9 +232,9 @@ const Listing = ({
 									handleNew={handleNew}
 									data={items}/>
 							</Main>
-							<Header>
+							<Toolbar>
 								<Button onClick={(e)=>alert('Yes, if only this button worked')}>Generate Bibliography</Button>
-							</Header>
+							</Toolbar>
 						</Wrapper>
 					</>
 				}
