@@ -24,7 +24,6 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use("/testAPI", testAPIRouter);
 app.use("/items", itemsRouter);
 
 // catch 404 and forward to error handler
