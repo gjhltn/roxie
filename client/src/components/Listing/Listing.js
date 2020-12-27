@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Modal from 'react-modal';
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
-import ItemList from '../ItemList/ItemList'
 import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
 import Splash from '../Splash/Splash'
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
@@ -82,9 +81,9 @@ const Heading = styled.h2`
 const AuthorWrapper = styled.div`
 	margin-bottom: 2rem;
 	.Author {
-			border-bottom: 4px solid white;
-	padding:0 0 1rem;
-	font-weight:800;
+		border-bottom: 4px solid white;
+		padding:0 0 1rem;
+		font-weight:800;
 	}
 `
 
@@ -169,9 +168,7 @@ const Listing = ({
 	deleteFn,
 	updateFn
 }) => {
-	const [selectedId, setSelectedId] = React.useState();
 	const [modalIsOpen,setIsOpen] = React.useState(false);
-
 	const [modalAction, setModalAction] = React.useState()
 	const [modalItem, setModalItem] = React.useState()
 	const [modalComponent, setModalComponent] = React.useState()
@@ -183,6 +180,7 @@ const Listing = ({
 			case 'book': return(BookForm)
 			case 'chapter': return(ChapterForm)
 			case 'journal': return(JournalForm)
+			default: return
 		}
 	}
 	
@@ -225,36 +223,31 @@ const Listing = ({
 					<>
 						<Wrapper>
 							<Main>
-							<Items
-								handleUpdate={handleUpdate}
-								handleDelete={deleteFn}
-								handleNew={handleNew}
-								data={items}/>
+								<Items
+									handleUpdate={handleUpdate}
+									handleDelete={deleteFn}
+									handleNew={handleNew}
+									data={items}/>
 							</Main>
-														<Header>
-							
-								</Header>
+							<Header>
+								<Button onClick={(e)=>alert('Yes, if only this button worked')}>Generate Bibliography</Button>
+							</Header>
 						</Wrapper>
 					</>
 				}
 			</Wrapper>
-			        <Modal
-          isOpen={modalIsOpen}
-          
-          onRequestClose={closeModal}
-          style={customStyles}
-          
-        >
-
-          
-          <button onClick={closeModal}>close</button>
-          <Editor
-		  	closeModalCallback={closeModal}
-		  	formComponent={modalComponent}
-		  	item={modalItem}
-			action={modalAction}/>
-		  </Modal>
-	</GlobalStyle>
+			<Modal
+				isOpen={modalIsOpen}
+				onRequestClose={closeModal}
+				style={customStyles}
+			>
+				<Editor
+					closeModalCallback={closeModal}
+					formComponent={modalComponent}
+					item={modalItem}
+					action={modalAction}/>
+			</Modal>
+		</GlobalStyle>
 	)
 }
 
