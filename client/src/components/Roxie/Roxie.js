@@ -19,8 +19,9 @@ const Roxie = () => {
 		setLoaded(true);
 	}
 	
-	const createItem = async (data) => {
+	const createItem = async (data,closeModalCallback) => {
 		alert("Roxie create " + data.title)
+		closeModalCallback.call()
 		// let res = await itemService.add(data);
 	}
 	
@@ -28,8 +29,9 @@ const Roxie = () => {
 		alert("Roxie delete " + id)
 	}
 	
-	const updateItem = async (data) => {
+	const updateItem = async (data,closeModalCallback) => {
 		alert("Roxie update " + data.id)
+		closeModalCallback()
 	}
 	
 	return(

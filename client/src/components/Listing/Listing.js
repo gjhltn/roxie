@@ -249,6 +249,7 @@ const Listing = ({
           
           <button onClick={closeModal}>close</button>
           <Editor
+		  	closeModalCallback={closeModal}
 		  	formComponent={modalComponent}
 		  	item={modalItem}
 			action={modalAction}/>

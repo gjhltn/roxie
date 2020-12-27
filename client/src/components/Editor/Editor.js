@@ -222,7 +222,7 @@ const Submit = () =>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
 
-export const JournalForm = ({action,item}) => {
+export const JournalForm = ({action,item,closeModalCallback}) => {
 	const defaults = {
 		title: ""
 	}
@@ -235,7 +235,7 @@ export const JournalForm = ({action,item}) => {
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
 					pruned.type="journal"
-					action(pruned)
+					action(pruned,closeModalCallback)
 				}, 500)
 			}
        
@@ -249,7 +249,7 @@ export const JournalForm = ({action,item}) => {
 	)
 }
 
-export const ChapterForm = ({action,item}) => {
+export const ChapterForm = ({action,item,closeModalCallback}) => {
 	const defaults = {
 		title: ""
 	}
@@ -262,7 +262,7 @@ export const ChapterForm = ({action,item}) => {
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
 					pruned.type="chapter"
-					action(pruned)
+					action(pruned,closeModalCallback)
 				}, 500)
 			}
        
@@ -276,7 +276,7 @@ export const ChapterForm = ({action,item}) => {
 	)
 }
 
-export const BookForm = ({action,item}) => {
+export const BookForm = ({action,item,closeModalCallback}) => {
 	const defaults = {
 		title: "",
 		authors: [
@@ -315,7 +315,7 @@ export const BookForm = ({action,item}) => {
 					var pruned = Object.assign({},values)
 					pruned = pruneBlank(['authors','editors','translators'], pruned)
 					pruned.type="book"
-					action(pruned)
+					action(pruned,closeModalCallback)
 				}, 500)
 			}
        
@@ -337,14 +337,17 @@ const Editor = ({
 	item,
 	action,
 	descriptor,
-	formComponent
+	formComponent,
+	closeModalCallback
 }) => {
 	const C = formComponent
 	return (
 		<C
+			closeModalCallback={closeModalCallback}
 			action={action}
 			key={(item && item.id) ? item.id : "new"}
-			item={item} />)
+			item={item} />
+		)
 }
 
 export default Editor
