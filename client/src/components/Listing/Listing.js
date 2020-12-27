@@ -158,6 +158,7 @@ const Listing = ({
   content : {
 	  background: '#00366e',
 	  border:0,
+	  paddingBottom: "60vh",
     top                   : '0',
     left                  : '0',
     right                 : '0',
@@ -198,7 +199,7 @@ const Listing = ({
 
           
           <button onClick={closeModal}>close</button>
-          
+          <Editor item={false} createFn={createFn}/>
 		  </Modal>
 	</GlobalStyle>
 	)
