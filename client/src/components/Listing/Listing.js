@@ -18,9 +18,30 @@ function groupBy(list, keyGetter) {
          } else {
              collection.push(item);
          }
-    });
+	})
     return map;
 }
+
+const Button = styled.button`
+	appearance: none;
+	background: ${props => props.red ? "red" : "transparent"};
+	border-radius: 2rem;
+	border: 0;
+	box-shadow:0 0 0 2px #ffff inset;
+	color: white;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
+	height: ${props => props.red ? "1.5rem" : "3rem"};
+	letter-spacing: inherit;
+	line-height: ${props => props.red ? "1.5rem" : "2rem"};
+	margin-bottom: ${props => props.red ? "0" : "2rem"};
+	margin-top: ${props => props.red ? "1.7rem" : "0"};
+	outline: 0;
+	overflow: hidden;
+	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
+	vertical-align: top;
+`
 
 const Wrapper = styled.div`
 	display: flex;
@@ -38,7 +59,7 @@ const Header = styled.header`
 const Main = styled.main`
 	flex:1;
 	overflow-y: scroll;
-	padding: 0 2rem 10rem;
+	padding: 2rem 2rem 10rem;
 `
 
 const Section = styled.section`
@@ -64,12 +85,23 @@ const Heading = styled.h2`
 const AuthorWrapper = styled.div`
 	margin-bottom: 2rem;
 	.Author {
-		border-bottom: 4px solid white;
-		padding:0 0 1rem;
-		font-weight:800;
+			border-bottom: 4px solid white;
+	padding:0 0 1rem;
+	font-weight:800;
 	}
 `
-	
+
+const SectionHeader = styled.header`
+	display: flex;
+	h2 {
+		flex:1;
+		margin: 0 0 1rem;
+	}
+	.New {
+		flex: 0 0 2rem;
+	}
+`
+
 const Items = ({data}) => {
 	return (
 		<Kind name="book" allData={data} />
@@ -97,7 +129,12 @@ const Kind = ({name, allData}) => {
 	const allNames = Array.from(grouped.keys()).sort()
 	return (
 		<Section>
-			<Heading>{name}</Heading>
+			<SectionHeader>
+				<Heading>{name}</Heading>
+				<div className="New">
+					<Button onClick={e=>alert('new')}>+</Button>
+				</div>
+			</SectionHeader>
 						{
 				allNames.map(n => <Author key={n} name={n} data={grouped.get(n)}/>)
 			}
