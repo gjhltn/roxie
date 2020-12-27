@@ -19,63 +19,28 @@ const Roxie = () => {
 		setLoaded(true);
 	}
 	
-	const create = async (data) => {
-		let res = await itemService.add(data);
+	const createItem = async (data) => {
+		alert("Roxie create " + data.id)
+		// let res = await itemService.add(data);
+	}
+	
+	const deleteItem = async (id) => {
+		alert("Roxie delete " + id)
+	}
+	
+	const updateItem = async (data) => {
+		alert("Roxie update " + data.id)
 	}
 	
 	return(
 		<Listing
-			createFn={create}
+			createFn={createItem}
+			deleteFn={deleteItem}
+			updateFn={updateItem}
 			items={items}
 			loaded={loaded}
 		/>
 	)
 }
-
-/*
-class Roxie extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			items: false,
-			loaded: false
-		};
-	}
-	
-	callAPI() {
-		fetch("http://192.168.1.66:9000/items")
-			.then(res => res.text())
-        	.then(res => this.setState({
-				loaded: true,
-				items: JSON.parse(res)
-			}));
-		}
-		
-		componentWillMount() {
-			//this.callAPI();
-			this.setState(
-			{
-				loaded: true,
-				items: Object.values(require('../../lib/examples'))
-			}
-		)
-		}
-	
-	
-	saveItem = (e) => {
-		alert("item saved")
-	}
-  render = () => {
-    return(
-		<>
-			<Listing
-				items={this.state.items}
-				saveItem={this.saveItem}
-				loaded={this.state.loaded}
-			/>
-		</>)
-	}
-}
-*/
 
 export default Roxie;

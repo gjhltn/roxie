@@ -10,6 +10,32 @@ import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
 import {names} from '../../lib/chicago'
 
+function Mini() {
+	
+const defaultFn =  () => alert("default ooops")
+const modifiedFn =  () => alert("modified ooops")
+	
+  const [ooops, setOoops] = React.useState(() => defaultFn);
+
+  return (
+    <div>
+      <button onClick={ooops}>Show Ooops</button>
+
+      <button
+        onClick={() => {
+          setOoops(() => modifiedFn);
+        }}
+      >
+        change oops
+      </button>
+    </div>
+  );
+}
+
+
+
+
+
 function groupBy(list, keyGetter) {
     const map = new Map();
     list.forEach((item) => {
@@ -76,7 +102,16 @@ const ItemWrapper = styled.div`
 		border-bottom: 1px solid rgba(255,255,255,0.4);
 	}
 	.Title {
+		flex: 1;
 		font-style: italic;
+		display: block;
+		color: white !important;
+		text-decoration: none;
+	}
+	
+	.Delete {
+		margin-top: -6px;
+		flex: 0 0 48px;
 	}
 `
 
@@ -112,20 +147,29 @@ const Items = ({data,...props}) => {
 	)
 }
 
-const Item = ({data}) =>
+const Item = ({data,handleUpdate,handleDelete}) =>
 	<ItemWrapper>
-		<div className="Title">{data.title}</div>
+		<a onClick={e=>handleUpdate(data.id)} href="#" className="Title">{data.title}</a>
+		<div className="Delete">
+			<IconButton
+				handler={e=>handleDelete(data.id)}
+				icon={ICON_TYPE.CROSS}
+				weight="2"
+				size="32"
+				colour="pink"
+			/>
+		</div>
 	</ItemWrapper>
 
-const Author = ({name,data}) =>
+const Author = ({name,data,handleUpdate,handleDelete}) =>
 	<AuthorWrapper>
 		<div className="Author">{name}</div>
 		{
-			data.map(d=><Item key={d.id} data={d}/>)
+			data.map(d=><Item key={d.id} handleUpdate={handleUpdate} handleDelete={handleDelete} data={d}/>)
 		}
 	</AuthorWrapper>
 
-const Kind = ({name, allData, handleNew}) => {
+const Kind = ({name, allData, handleNew, handleUpdate, handleDelete}) => {
 	const data = allData.filter(datum=>datum.type===name)
 	const grouped = groupBy(data, 
 		datum => (datum.authors && datum.authors.length>0) ? names(datum.authors) : "[anonymous]"
@@ -146,7 +190,8 @@ const Kind = ({name, allData, handleNew}) => {
 				</div>
 			</SectionHeader>
 						{
-				allNames.map(n => <Author key={n} name={n} data={grouped.get(n)}/>)
+				allNames.map(n => <Author key={n}
+			handleUpdate={handleUpdate}	handleDelete={handleDelete} name={n} data={grouped.get(n)}/>)
 			}
 		</Section>
 	)
@@ -155,24 +200,42 @@ const Kind = ({name, allData, handleNew}) => {
 const Listing = ({
 	items,
 	loaded,
-	createFn
+	createFn,
+	deleteFn,
+	updateFn
 }) => {
 	const [selectedId, setSelectedId] = React.useState();
 	const [modalIsOpen,setIsOpen] = React.useState(false);
+
+	const [modalAction, setModalAction] = React.useState();
+	const [modalItem, setModalItem] = React.useState();
 	
 	const openModal = () => setIsOpen(true)
 	const closeModal = () => setIsOpen(false)
 	
+	const handleNew = () => {
+		setModalAction(()=>createFn)
+		setModalItem(null)
+		openModal()
+	}
+	
+	const handleUpdate = (id) => {
+		setModalAction(()=>updateFn)
+		//setModalItem(items.find(item=>item.property===id))
+		setModalItem(items[0])
+		openModal();
+	}
+	
 	const customStyles = {
-  content : {
-	  background: '#00366e',
-	  border:0,
-	  paddingBottom: "60vh",
-    top                   : '0',
-    left                  : '0',
-    right                 : '0',
-    bottom                : '0'
-  }
+		content : {
+			background: '#00366e',
+			border:0,
+			paddingBottom: "60vh",
+			top: '0',
+			left: '0',
+			right: '0',
+			bottom: '0'
+	}
 };
 	
 	return(
@@ -188,11 +251,13 @@ const Listing = ({
 						<Wrapper>
 							<Main>
 							<Items
-								handleNew={openModal}
+								handleUpdate={handleUpdate}
+								handleDelete={deleteFn}
+								handleNew={handleNew}
 								data={items}/>
 							</Main>
 														<Header>
-														
+							<Mini />
 								</Header>
 						</Wrapper>
 					</>
@@ -203,12 +268,14 @@ const Listing = ({
           
           onRequestClose={closeModal}
           style={customStyles}
-          contentLabel="Example Modal"
+          
         >
 
           
           <button onClick={closeModal}>close</button>
-          <Editor item={false} createFn={createFn}/>
+          <Editor
+		  	item={modalItem}
+			action={modalAction}/>
 		  </Modal>
 	</GlobalStyle>
 	)
