@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from "react"
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import Modal from 'react-modal';
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
@@ -12,6 +12,39 @@ import {ICON_TYPE, IconButton} from '../Icon/Icon'
 import {names, groupBy} from '../../lib/chicago'
 
 Modal.setAppElement('#root')
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Spinner = styled.div`
+  animation: ${rotate360} 1s linear infinite;
+  border-top: 2px solid rgba(255,255,255,0.3);
+  border-right: 2px solid rgba(255,255,255,0.3);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  border-left: 4px solid transparent;
+  background: transparent;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0 auto;
+`;
+
+
+const LoadingWrapper = styled.div`
+	flex:1;
+`
+
+const Loading = () =>
+	<LoadingWrapper>
+		<Spinner />
+	</LoadingWrapper>
+
 
 const Button = styled.button`
 	appearance: none;
@@ -219,27 +252,21 @@ const Listing = ({
 	return(
 		<GlobalStyle>
 			<Wrapper>
-				{
-					(!loaded) ?
-						<Splash 
-							status="loading"
-						/>
-					:
-					<>
-						<Wrapper>
-							<Main>
-								<Items
-									handleUpdate={handleUpdate}
-									handleDelete={deleteFn}
-									handleNew={handleNew}
-									data={items}/>
-							</Main>
-							<Toolbar>
-								<Button onClick={(e)=>alert('Yes, if only this button worked')}>Generate Bibliography</Button>
-							</Toolbar>
-						</Wrapper>
-					</>
-				}
+				<Main>
+					{
+						!loaded ?
+							<Loading/>
+						:
+							<Items
+								handleUpdate={handleUpdate}
+								handleDelete={deleteFn}
+								handleNew={handleNew}
+								data={items}/>
+					}
+				</Main>
+				<Toolbar>
+					<Button onClick={(e)=>alert('Yes, if only this button worked')}>Generate Bibliography</Button>
+				</Toolbar>
 			</Wrapper>
 			<Modal
 				isOpen={modalIsOpen}
