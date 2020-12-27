@@ -13,8 +13,9 @@ const Roxie = () => {
 	})
 	
 	const getItems = async () => {
-		//let res = await itemService.getAll();
-		let res = Object.values(require('../../lib/examples'))
+		setLoaded(false);
+		let res = await itemService.getAll();
+		//let res = Object.values(require('../../lib/examples'))
 		setItems(res);
 		setLoaded(true);
 	}
@@ -22,16 +23,20 @@ const Roxie = () => {
 	const createItem = async (data,closeModalCallback) => {
 		alert("Roxie create " + data.title)
 		closeModalCallback.call()
-		// let res = await itemService.add(data);
+		// let res = await itemService.add(data);0
+		getItems()
 	}
 	
 	const deleteItem = async (id) => {
 		alert("Roxie delete " + id)
+		await itemService.delete(id)
+		getItems()
 	}
 	
 	const updateItem = async (data,closeModalCallback) => {
 		alert("Roxie update " + data.id)
 		closeModalCallback()
+		getItems()
 	}
 	
 	return(

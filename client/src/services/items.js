@@ -9,6 +9,10 @@ const API = {
 		let res = await axios.post(`http://192.168.1.66:9000/items/new`, itemData)
 		return res.data || {};
 	},
+	delete: async (id) => {
+		let res = await axios.delete(`http://192.168.1.66:9000/items/${id}`);
+		return res.data || [];
+	}
   /*
   get: async (id) => {
     let res = await axios.get(`/item/${id}`);
