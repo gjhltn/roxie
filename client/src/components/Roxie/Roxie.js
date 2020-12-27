@@ -20,7 +20,7 @@ const Roxie = () => {
 	}
 	
 	const createItem = async (data) => {
-		alert("Roxie create " + data.id)
+		alert("Roxie create " + data.title)
 		// let res = await itemService.add(data);
 	}
 	

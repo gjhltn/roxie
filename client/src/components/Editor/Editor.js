@@ -222,7 +222,7 @@ const Submit = () =>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
 
-export const MiniForm = ({createFn,item}) => {
+export const JournalForm = ({action,item}) => {
 	const defaults = {
 		title: ""
 	}
@@ -234,7 +234,35 @@ export const MiniForm = ({createFn,item}) => {
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
-					createFn(pruned)
+					pruned.type="journal"
+					action(pruned)
+				}, 500)
+			}
+       
+			render={({ values }) => (
+				<Form>
+					<Title values={values} />
+					<Submit/>
+				</Form>
+			)}
+		/>
+	)
+}
+
+export const ChapterForm = ({action,item}) => {
+	const defaults = {
+		title: ""
+	}
+	const initialValues = Object.assign({},defaults,item)
+	return (
+		<Formik
+			initialValues={initialValues}
+			
+			onSubmit={values =>
+				setTimeout(() => {
+					var pruned = Object.assign({},values)
+					pruned.type="chapter"
+					action(pruned)
 				}, 500)
 			}
        
@@ -253,8 +281,8 @@ export const BookForm = ({action,item}) => {
 		title: "",
 		authors: [
 			{
-				last:'Neckett',
-				first:'Samuel'
+				last:'',
+				first:''
 			}
 		],
 		editors: [],
@@ -286,8 +314,7 @@ export const BookForm = ({action,item}) => {
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
 					pruned = pruneBlank(['authors','editors','translators'], pruned)
-					//alert(JSON.stringify(pruned, null, 2));
-					//createFn(pruned)
+					pruned.type="book"
 					action(pruned)
 				}, 500)
 			}
@@ -309,13 +336,15 @@ export const BookForm = ({action,item}) => {
 const Editor = ({
 	item,
 	action,
-	descriptor
-}) =>
-	<div>
-		<BookForm
+	descriptor,
+	formComponent
+}) => {
+	const C = formComponent
+	return (
+		<C
 			action={action}
 			key={(item && item.id) ? item.id : "new"}
-			item={item} />
-	</div>
+			item={item} />)
+}
 
 export default Editor

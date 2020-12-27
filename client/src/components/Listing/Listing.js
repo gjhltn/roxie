@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import ItemList from '../ItemList/ItemList'
-import Editor from '../Editor/Editor'
+import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
 import Splash from '../Splash/Splash'
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
@@ -51,7 +51,7 @@ const Main = styled.main`
 `
 
 const Section = styled.section`
-
+	margin-bottom: 4rem;
 `
 
 const ItemWrapper = styled.div`
@@ -103,7 +103,12 @@ const SectionHeader = styled.header`
 
 const Items = ({data,...props}) => {
 	return (
-		<Kind name="book" allData={data} {...props}/>
+		<>
+			{
+				["book","chapter","journal"].map(kind =>
+					<Kind name={kind} allData={data} {...props}/>)
+			}
+		</>
 	)
 }
 
@@ -141,7 +146,7 @@ const Kind = ({name, allData, handleNew, handleUpdate, handleDelete}) => {
 				<Heading>{name}</Heading>
 				<div className="New">
 					<IconButton
-						handler={e=>handleNew()}
+						handler={e=>handleNew(name)}
 						icon={ICON_TYPE.ADD}
 						weight="2"
 						size="52"
@@ -167,21 +172,32 @@ const Listing = ({
 	const [selectedId, setSelectedId] = React.useState();
 	const [modalIsOpen,setIsOpen] = React.useState(false);
 
-	const [modalAction, setModalAction] = React.useState();
-	const [modalItem, setModalItem] = React.useState();
-	
+	const [modalAction, setModalAction] = React.useState()
+	const [modalItem, setModalItem] = React.useState()
+	const [modalComponent, setModalComponent] = React.useState()
 	const openModal = () => setIsOpen(true)
 	const closeModal = () => setIsOpen(false)
 	
-	const handleNew = () => {
+	const componentForType = type => {
+		switch (type) {
+			case 'book': return(BookForm)
+			case 'chapter': return(ChapterForm)
+			case 'journal': return(JournalForm)
+		}
+	}
+	
+	const handleNew = (kind) => {
+		setModalComponent(()=>componentForType(kind))
 		setModalAction(()=>createFn)
 		setModalItem(null)
 		openModal()
 	}
 	
 	const handleUpdate = (id) => {
+		const item = items.find(item=>item.id===id)
+		setModalComponent(()=>componentForType(item.type))
 		setModalAction(()=>updateFn)
-		setModalItem(items.find(item=>item.id===id))
+		setModalItem(item)
 		openModal();
 	}
 	
@@ -233,6 +249,7 @@ const Listing = ({
           
           <button onClick={closeModal}>close</button>
           <Editor
+		  	formComponent={modalComponent}
 		  	item={modalItem}
 			action={modalAction}/>
 		  </Modal>
