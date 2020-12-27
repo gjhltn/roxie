@@ -19,8 +19,8 @@ const Roxie = () => {
 	}
 	
 	const create = async (data) => {
-		alert(JSON.stringify(data, null, 2));
-		let res = await itemService.add();
+		//alert(JSON.stringify(data, null, 2));
+		let res = await itemService.add(data);
 	}
 	
 	return(

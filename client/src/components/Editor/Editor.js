@@ -287,7 +287,7 @@ export const BookForm = ({createFn,item}) => {
 					var pruned = Object.assign({},values)
 					pruned = pruneBlank(['authors','editors','translators'], pruned)
 					//alert(JSON.stringify(pruned, null, 2));
-					createFn()
+					createFn(pruned)
 				}, 500)
 			}
        
@@ -307,7 +307,10 @@ export const BookForm = ({createFn,item}) => {
 
 const Editor = ({item,createFn}) =>
 	<div>
-		<MiniForm createFn={createFn} key={item.id || "new"} item={item} />
+		<BookForm
+			createFn={createFn}
+			key={item.id || "new"}
+			item={item} />
 	</div>
 
 export default Editor

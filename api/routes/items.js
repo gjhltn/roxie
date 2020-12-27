@@ -69,22 +69,21 @@ router.delete(`/:id`, async function(req, res) {
 })
 
 router.post(`/new`, async function(req, res) {
-	console.log('got post')
-	const { title } = req.body;
-    const id = shortid.generate();
-    const items = db
-      .get('items')
-      .push({ id, title })
-      .write();
-
-    const item = db.get('items')
-      .find({ id })
-      .value();
-
-    return res.status(201).send({
-      error: false,
-      item
-  });
+	const id= shortid.generate();
+	const newItem = Object.assign({},req.body,{id:id})
+	const items = db
+		.get('items')
+		.push(newItem)
+		.write();
+		
+	const item = db.get('items')
+		.find({ id })
+		.value();
+		
+	return res.status(201).send({
+		error: false,
+		item
+	});
 })
 
 router.put(`/update`, async function(req, res) {

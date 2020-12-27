@@ -1,19 +1,13 @@
 import axios from 'axios';
 
 const API = {
-  getAll: async () => {
+	getAll: async () => {
 	  let res = await axios.get(`http://192.168.1.66:9000/items`);
-    //let res = await axios.get(`/items`);
-    return res.data || [];
-  },
-  add: async (title) => {
-	  alert("wat")
-    let res = await axios.post(`http://192.168.1.66:9000/items/new`, {
-		title: "Shadbolt",
-		id:"shad"
-	})
-	alert(res)
-    return res.data || {};
+	  return res.data || [];
+	},
+	add: async (itemData) => {
+		let res = await axios.post(`http://192.168.1.66:9000/items/new`, itemData)
+		return res.data || {};
 	},
   /*
   get: async (id) => {
