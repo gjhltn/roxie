@@ -3,46 +3,20 @@ const router = express.Router();
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const shortid = require('shortid');
+const fs = require('fs');
+
+const dbFile = "db.json"
+
+const backup = `${dbFile}.backup.${new Date().toISOString().replace(/:/g,"-")}`
+
+fs.copyFile(dbFile, backup, (err) => {
+  if (err) throw err;
+  console.log(`${dbFile} was backed up to ${backup}`);
+});
+
 
 const adapter = new FileSync('db.json');
 const db = low(adapter);
-
-const items=[
-	{
-		id:0,
-		authors: [{last: "Eco", first: "Umberto"}],
-		title: "How to Write a Thesis",
-		translators:[{last:"Farina", first:"Catherina Mongiat"},{last:"Farina", first:"Geoff"}],
-		publication: {
-			place: "Cambridge, MA",
-			publisher: "MIT Press",
-			year: "2015"
-		}
-	},
-	{
-		id:1,
-		authors: [{last: "Artaud", first: "Antonin"}],
-		title: "The Theatre and Its Double",
-		translators:[{last:"Corti", first:"Victor"}],
-		publication: {
-			place: "London",
-			publisher: "Alma Classics",
-			year: "2017"
-		}
-	},
-	{
-		id:3,
-	authors: [{last: "Epicetus", first: ""}],
-	title: "Discourses, Fragments, Handbook",
-	editors:[{last:"Gill", first:"Christopher"}],
-	translators:[{last:"Hard", first:"Robin"}],
-	publication: {
-		place: "Oxford",
-		publisher: "OUP",
-		year: "2014"
-	}
-}
-]
 
 router.get("/", async function(req, res, next) {
 	const result = db.get('items').value();
