@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components';
 
 export const ICON_TYPE = {
+	CLOSE: "M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575",
 	BUSY: "M5 12h12v5a5 5 0 01-5 5h-2a5 5 0 01-5-5v-5zm12 1h2a2 2 0 012 2v0a2 2 0 01-2 2h-2M9 9s-1-.5-1-2 1-2 1-2m3-2s1 .5 1 2-1 2-1 2",
 	ADD: 'M17 12H7m5 5V7m0-5a10 10 0 1 0 0 20 10 10 0 1 0 0-20z',
 	CROSS: 'M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8.5 8.9l7 6.9m-7 0l7-6.9',

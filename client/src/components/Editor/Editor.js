@@ -2,12 +2,13 @@ import React from "react"
 import * as Yup from 'yup';
 import styled from 'styled-components';
 import { Formik, Form, FieldArray, useField} from 'formik';
+import {ICON_TYPE, IconButton} from '../Icon/Icon'
 
 /* -- STYLED COMPONENTS ---------------------------------------------*/
 
 const Button = styled.button`
 	appearance: none;
-	background: ${props => props.red ? "red" : "transparent"};
+	background: "transparent";
 	border-radius: 2rem;
 	border: 0;
 	box-shadow:0 0 0 2px #ffff inset;
@@ -15,13 +16,13 @@ const Button = styled.button`
 	cursor: pointer;
 	font-size: 1.5rem;
 	font-weight: bold;
-	height: ${props => props.red ? "1.5rem" : "3rem"};
+	height: 3rem;
 	letter-spacing: inherit;
-	line-height: ${props => props.red ? "1.5rem" : "2rem"};
+	line-height: 2rem;
 	margin: 0;
 	outline: 0;
 	overflow: hidden;
-	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
+	padding: 0 "1rem";
 	vertical-align: top;
 `
 
@@ -99,6 +100,11 @@ const pruneBlank = (cull,o) => {
 
 /* -- FORM WIDGETS --------------------------------------------------*/
 
+const PushdownHack = styled.div`
+position: relative;
+	top: 2.5rem;
+`
+
 const NameListInput = ({
 	arrayHelpers,
 	arrayName,
@@ -114,16 +120,25 @@ const NameListInput = ({
 					<MyTextInput label="Last" name={`${arrayName}[${index}].last`} />
 				</Column>
 				<Column size="1rem">
-					<Button type="button" red onClick={() => arrayHelpers.remove(index)}>-</Button>
+				<PushdownHack>
+							<IconButton
+				handler={e=>arrayHelpers.remove(index)}
+				icon={ICON_TYPE.CROSS}
+				weight="2"
+				size="32"
+				colour="pink"
+				/>
+				</PushdownHack>
 				</Column>
 			</Columns>
          ))}
-         <Button
-           type="button"
-          onClick={() => arrayHelpers.push({ last: '', first: '' })}
-         >
-           +
-         </Button>
+		 							<IconButton
+				handler={() => arrayHelpers.push({ last: '', first: '' })}
+				icon={ICON_TYPE.ADD}
+				weight="2"
+				size="52"
+				colour="white"
+				/>
 	</div>
 
 const MyTextArea = ({ label, ...props }) => {
@@ -154,13 +169,13 @@ const MyTextInput = ({ label, ...props }) => {
 	
 /* -- FORM FRAGMEMTS ------------------------------------------------*/
 
-const FormSkeleton = ({children}) =>
+const FormSkeleton = ({children, closeModalCallback}) =>
 	<Form>
-		<Submit/>
+		<Submit closeModalCallback={closeModalCallback}/>
 		<Pale>
 			{children}
 		</Pale>
-		<Submit/>
+		<Submit closeModalCallback={closeModalCallback}/>
 	</Form>
 
 const Title = ({ values }) =>
@@ -232,10 +247,16 @@ const Imprint = ({ values }) =>
 	</Columns>
 </Fieldset>
 
-const Submit = () =>
+const Submit = ({closeModalCallback}) =>
 <WrapSubmit>
 	<Column><Button type="submit">Submit</Button></Column>
-	<Column size="1rem"><Button type="submit">Submit</Button></Column>
+	<Column size="1rem"><IconButton
+				handler={() => closeModalCallback()}
+				icon={ICON_TYPE.CLOSE}
+				weight="2"
+				size="52"
+				colour="white"
+				/></Column>
 </WrapSubmit>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
@@ -337,7 +358,7 @@ export const BookForm = ({action,item,closeModalCallback}) => {
 		>
 			{
 				({	values }) => (
-					<FormSkeleton>
+					<FormSkeleton closeModalCallback={closeModalCallback}>
 						<Title values={values} />
 						<Authorship values={values} />
 						<Imprint values={values}/>
