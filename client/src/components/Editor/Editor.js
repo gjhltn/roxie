@@ -2,36 +2,20 @@ import React from "react"
 import * as Yup from 'yup';
 import styled from 'styled-components';
 import { Formik, Form, FieldArray, useField} from 'formik';
+
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
+import Button from '../Button/Button'
+import Columns, {Column} from '../Columns/Columns'
 
 /* -- STYLED COMPONENTS ---------------------------------------------*/
 
-const Button = styled.button`
-	appearance: none;
-	background: "transparent";
-	border-radius: 2rem;
-	border: 0;
-	box-shadow:0 0 0 2px #ffff inset;
-	color: white;
-	cursor: pointer;
-	font-size: 1.5rem;
-	font-weight: bold;
-	height: 3rem;
-	letter-spacing: inherit;
-	line-height: 2rem;
-	margin: 0;
-	outline: 0;
-	overflow: hidden;
-	padding: 0 "1rem";
-	vertical-align: top;
-`
 
 const Fieldset = styled.fieldset`
 	display: block;
 	border: 0;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	padding: 0.5rem 2rem;
-	
+
 	&:last-child {
 		border-bottom: 0;
 		padding-top: 4rem;
@@ -46,24 +30,13 @@ const Pale = styled.div`
 	background: #00366e;
 `
 
-
-const Columns = styled.div`
-	display: flex;
-`
-const Column = styled.div`
-	flex: ${props => props.size ? `0 0 ${props.size}` : 1};
-	&:not(:first-child){
-		margin-left: 1rem;
-	}
-`
-
 const TextInputInner = styled.div`
 	margin-bottom: 1rem;
-	
+
 	label {
 		display: block;
 	}
-	
+
 	input, textarea {
 		font-size: inherit;
 		width: 100%;
@@ -71,7 +44,7 @@ const TextInputInner = styled.div`
 		border: 2px solid ${props => props.error ? "red" : "transparent"};
 				background:  ${props => props.error ? "pink" : "white"};
 	}
-	
+
 	.error {
 		color: pink;
 		font-weight: 800;
@@ -85,7 +58,7 @@ const pruneBlank = (cull,o) => {
 		var keep = []
 		if (o[arrName]){
 			keep = o[arrName].filter(
-				name => 
+				name =>
 					(name.first && name.first.trim().length >0 ) || (name.last && name.last.trim().length>0 )
 			)
 		}
@@ -166,7 +139,7 @@ const MyTextInput = ({ label, ...props }) => {
 		</TextInputInner>
 	);
 };
-	
+
 /* -- FORM FRAGMEMTS ------------------------------------------------*/
 
 const FormSkeleton = ({children, closeModalCallback}) =>
@@ -205,16 +178,16 @@ const Authorship = ({ values }) =>
 		name="editors"
 		render={arrayHelpers =>
 			<NameListInput
-				arrayName="editors" 
-				arrayHelpers={arrayHelpers} 
+				arrayName="editors"
+				arrayHelpers={arrayHelpers}
 				vals={values.editors} />}/>
 	<h3>Translator</h3>
 	<FieldArray
 		name="translators"
 		render={arrayHelpers =>
 		<NameListInput
-				arrayName="translators" 
-				arrayHelpers={arrayHelpers} 
+				arrayName="translators"
+				arrayHelpers={arrayHelpers}
 				vals={values.translators} />}/>
 </Fieldset>
 
@@ -269,7 +242,7 @@ export const JournalForm = ({action,item,closeModalCallback}) => {
 	return (
 		<Formik
 			initialValues={initialValues}
-			
+
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
@@ -295,7 +268,7 @@ export const ChapterForm = ({action,item,closeModalCallback}) => {
 	return (
 		<Formik
 			initialValues={initialValues}
-			
+
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
@@ -346,7 +319,7 @@ export const BookForm = ({action,item,closeModalCallback}) => {
 							.required('Required'),
 				}),
 			})}
-			
+
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)

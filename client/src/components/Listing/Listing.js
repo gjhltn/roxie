@@ -3,12 +3,14 @@
 import React from "react"
 import styled from 'styled-components';
 import Modal from 'react-modal';
-import GlobalStyle from '../GlobalStyle/GlobalStyle'
-import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
+
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
-import Loading from '../Loading/Loading'
 import Button from '../Button/Button'
 import Copier from '../Copier/Copier'
+import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
+import GlobalStyle from '../GlobalStyle/GlobalStyle'
+import Loading from '../Loading/Loading'
+
 import {names, groupBy} from '../../lib/chicago'
 
 Modal.setAppElement('#root')
