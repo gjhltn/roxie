@@ -3,10 +3,10 @@
 import React from "react"
 import styled, {keyframes} from 'styled-components';
 import Modal from 'react-modal';
-
+import useClipboard from "react-use-clipboard";
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
-import {ICON_TYPE, IconButton} from '../Icon/Icon'
+import Icon, {ICON_TYPE, IconButton} from '../Icon/Icon'
 
 import {names, groupBy} from '../../lib/chicago'
 
@@ -101,6 +101,7 @@ const ItemWrapper = styled.div`
 	.copy {
 		flex: 0 0 3rem;
 		padding-right: 1rem;
+		position: relative;
 	}
 	
 	.Title {
@@ -154,22 +155,45 @@ const Items = ({data,...props}) => {
 	)
 }
 
+const Copier = ({
+	icon,
+	text
+})	=> {
+	const [isCopied, setCopied] = useClipboard(text, {
+    successDuration: 2000,
+});
+	return(
+	<div className="Copier, copy">
+			{ !isCopied ?
+				<IconButton
+				handler={e=>setCopied()}
+				icon={icon}
+				weight="2"
+				size="32"
+				colour="white"
+				/>
+			:
+				<Icon
+				
+				icon={ICON_TYPE.OK}
+				weight="2"
+				size="32"
+				colour="green"
+				/>
+			} 
+		</div>
+	)
+}
+
+
 const Item = ({data,handleUpdate,handleDelete}) =>
 	<ItemWrapper>
-		<div className="copy">			<IconButton
-				handler={e=>alert("copy citation")}
-				icon={ICON_TYPE.NOTE}
-				weight="2"
-				size="32"
-				colour="white"
-				/></div>
-		<div className="copy"><IconButton
-				handler={e=>alert("copy bibliograpy")}
-				icon={ICON_TYPE.BIBLIOG}
-				weight="2"
-				size="32"
-				colour="white"
-				/></div>
+	<Copier
+		text={"i wish this worked " + data.title}
+		icon={ICON_TYPE.NOTE}/>
+	<Copier
+		text="i wish this worked"
+		icon={ICON_TYPE.BIBLIOG}/>
 		<a onClick={e=>handleUpdate(data.id)} href="#" className="Title">{data.title}</a>
 		<div className="Delete">
 			<IconButton
