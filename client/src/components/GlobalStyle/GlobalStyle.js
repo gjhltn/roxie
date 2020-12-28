@@ -23,6 +23,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+
 	body {
 		margin: 0;
 		padding: 0;
@@ -30,7 +32,7 @@ html {
 		font-family: Helvetica, Sans-Serif;
 		font-size: 24px;
 		color: #fff;
-		overflow: hidden;
+		soverflow: hidden;
 	}
 	* {
 		/*border: 1px solid red;*/
