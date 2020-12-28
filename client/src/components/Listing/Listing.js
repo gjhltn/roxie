@@ -1,70 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from "react"
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import Modal from 'react-modal';
-import useClipboard from "react-use-clipboard";
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
-import Icon, {ICON_TYPE, IconButton} from '../Icon/Icon'
-
+import {ICON_TYPE, IconButton} from '../Icon/Icon'
+import Loading from '../Loading/Loading'
+import Button from '../Button/Button'
+import Copier from '../Copier/Copier'
 import {names, groupBy} from '../../lib/chicago'
 
 Modal.setAppElement('#root')
-
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const Spinner = styled.div`
-  animation: ${rotate360} 1s linear infinite;
-  border-top: 2px solid rgba(255,255,255,0.3);
-  border-right: 2px solid rgba(255,255,255,0.3);
-  border-bottom: 2px solid rgba(255,255,255,0.3);
-  border-left: 4px solid transparent;
-  background: transparent;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  margin: 0 auto;
-`;
-
-
-const LoadingWrapper = styled.div`
-	flex:1;
-`
-
-const Loading = () =>
-	<LoadingWrapper>
-		<Spinner />
-	</LoadingWrapper>
-
-
-const Button = styled.button`
-	appearance: none;
-	background: ${props => props.red ? "red" : "transparent"};
-	border-radius: 2rem;
-	border: 0;
-	box-shadow:0 0 0 2px #ffff inset;
-	color: white;
-	cursor: pointer;
-	font-size: 1.5rem;
-	font-weight: bold;
-	height: ${props => props.red ? "1.5rem" : "3rem"};
-	letter-spacing: inherit;
-	line-height: ${props => props.red ? "1.5rem" : "2rem"};
-	margin-bottom: ${props => props.red ? "0" : "2rem"};
-	margin-top: ${props => props.red ? "1.7rem" : "0"};
-	outline: 0;
-	overflow: hidden;
-	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
-	vertical-align: top;
-`
 
 const Wrapper = styled.div`
 	display: flex;
@@ -97,13 +44,7 @@ const ItemWrapper = styled.div`
 	&:not(:last-child) {
 		border-bottom: 1px solid rgba(255,255,255,0.4);
 	}
-	
-	.copy {
-		flex: 0 0 3rem;
-		padding-right: 1rem;
-		position: relative;
-	}
-	
+
 	.Title {
 		flex: 1;
 		font-style: italic;
@@ -111,7 +52,7 @@ const ItemWrapper = styled.div`
 		color: white !important;
 		text-decoration: none;
 	}
-	
+
 	.Delete {
 		margin-top: -6px;
 		flex: 0 0 48px;
@@ -155,37 +96,6 @@ const Items = ({data,...props}) => {
 	)
 }
 
-const Copier = ({
-	icon,
-	text
-})	=> {
-	const [isCopied, setCopied] = useClipboard(text, {
-    successDuration: 2000,
-});
-	return(
-	<div className="Copier, copy">
-			{ !isCopied ?
-				<IconButton
-				handler={e=>setCopied()}
-				icon={icon}
-				weight="2"
-				size="32"
-				colour="white"
-				/>
-			:
-				<Icon
-				
-				icon={ICON_TYPE.OK}
-				weight="2"
-				size="32"
-				colour="green"
-				/>
-			} 
-		</div>
-	)
-}
-
-
 const Item = ({data,handleUpdate,handleDelete}) =>
 	<ItemWrapper>
 	<Copier
@@ -216,7 +126,7 @@ const Author = ({name,data,handleUpdate,handleDelete}) =>
 
 const Kind = ({name, allData, handleNew, handleUpdate, handleDelete}) => {
 	const data = allData.filter(datum=>datum.type===name)
-	const grouped = groupBy(data, 
+	const grouped = groupBy(data,
 		datum => (datum.authors && datum.authors.length>0) ? names(datum.authors) : "[anonymous]"
 	);
 	const allNames = Array.from(grouped.keys()).sort()
@@ -255,7 +165,7 @@ const Listing = ({
 	const [modalComponent, setModalComponent] = React.useState()
 	const openModal = () => setIsOpen(true)
 	const closeModal = () => setIsOpen(false)
-	
+
 	const componentForType = type => {
 		switch (type) {
 			case 'book': return(BookForm)
@@ -264,14 +174,14 @@ const Listing = ({
 			default: return
 		}
 	}
-	
+
 	const handleNew = (kind) => {
 		setModalComponent(()=>componentForType(kind))
 		setModalAction(()=>createFn)
 		setModalItem(null)
 		openModal()
 	}
-	
+
 	const handleUpdate = (id) => {
 		const item = items.find(item=>item.id===id)
 		setModalComponent(()=>componentForType(item.type))
@@ -279,7 +189,7 @@ const Listing = ({
 		setModalItem(item)
 		openModal();
 	}
-	
+
 	const customStyles = {
 		content : {
 			background: '#002451',
@@ -292,7 +202,7 @@ const Listing = ({
 			padding: '0'
 	}
 };
-	
+
 	return(
 		<GlobalStyle>
 			<Wrapper>
