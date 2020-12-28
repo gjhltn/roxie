@@ -34,7 +34,7 @@ export const nameLastFirst = name =>{
 	if (!name.first || name.first==="") return name.last
 	return `${name.last}, ${name.first}`
 }
-	
+
 export const nameFirstLast = name =>{
 	if (!name.first || name.first==="") return name.last
 	return `${name.first} ${name.last}`
@@ -50,7 +50,7 @@ export const names = arr => {
 	return humaniseArray(flat)
 }
 
-export const editorOnly = (item) => 
+export const editorOnly = (item) =>
 	`${names(item.editors)}, ${item.editors.length>1 ? "eds. " : "ed. "}`
 
 export const authorship = (item,style) => {
@@ -69,17 +69,17 @@ export const authorship = (item,style) => {
 	}
 }
 
-export const publication = (publication,style) => {
-	const result = `${publication.place}: ${publication.publisher}, ${publication.year}`
+export const imprint = (imprint,style) => {
+	const result = `${imprint.place}: ${imprint.publisher}, ${imprint.year}`
 	if (style==='notes'){
-		//“(Place of Publication: Publisher’s Name, Date of Publication), ”
+		//“(Place of imprint: Publisher’s Name, Date of imprint), ”
 		return `(${result}), `
 	}
 	if (style==='bibliography'){
-		// “Place of Publication: Publisher’s Name, Date of Publication.”
+		// “Place of imprint: Publisher’s Name, Date of imprint.”
 		return ` ${result}`
 	}
-}	
+}
 
 export const flattenNames = nameArray =>
 	humaniseArray(nameArray.map(n=>nameFirstLast(n)))
@@ -103,17 +103,17 @@ export const translators = (item,style) => {
 		return `, tr. ${flattenNames(item.translators)}`
 	}
 }
-	
-export const bibliographyBook = (item) => 
-	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${publication(item.publication,"bibliography")}.`
-	
-export const notesBook = (item) =>
-	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${publication(item.publication,"notes")}XX.`
-	
-// ----- CHAPTERS -------------------------------	
-	
-export const bibliographyChapter = (item) => 
-`${authorship(item,"bibliography")}“${item.title}.” In _${item.in.title}_, edited by ${flattenNames(item.in.editors)}, ${item.location}.${publication(item.in.publication,"bibliography")}.`
 
-export const notesChapter = (item) => 
-`${authorship(item,"notes")}“${item.title},” in _${item.in.title}_, ed. ${flattenNames(item.in.editors)} ${publication(item.in.publication,"notes")}XX.`
+export const bibliographyBook = (item) =>
+	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${imprint(item.imprint,"bibliography")}.`
+
+export const notesBook = (item) =>
+	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${imprint(item.imprint,"notes")}XX.`
+
+// ----- CHAPTERS -------------------------------
+
+export const bibliographyChapter = (item) =>
+`${authorship(item,"bibliography")}“${item.title}.” In _${item.in.title}_, edited by ${flattenNames(item.in.editors)}, ${item.location}.${imprint(item.in.imprint,"bibliography")}.`
+
+export const notesChapter = (item) =>
+`${authorship(item,"notes")}“${item.title},” in _${item.in.title}_, ed. ${flattenNames(item.in.editors)} ${imprint(item.in.imprint,"notes")}XX.`
