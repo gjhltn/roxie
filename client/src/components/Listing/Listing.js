@@ -97,6 +97,12 @@ const ItemWrapper = styled.div`
 	&:not(:last-child) {
 		border-bottom: 1px solid rgba(255,255,255,0.4);
 	}
+	
+	.copy {
+		flex: 0 0 3rem;
+		padding-right: 1rem;
+	}
+	
 	.Title {
 		flex: 1;
 		font-style: italic;
@@ -150,6 +156,20 @@ const Items = ({data,...props}) => {
 
 const Item = ({data,handleUpdate,handleDelete}) =>
 	<ItemWrapper>
+		<div className="copy">			<IconButton
+				handler={e=>alert("copy citation")}
+				icon={ICON_TYPE.NOTE}
+				weight="2"
+				size="32"
+				colour="white"
+				/></div>
+		<div className="copy"><IconButton
+				handler={e=>alert("copy bibliograpy")}
+				icon={ICON_TYPE.BIBLIOG}
+				weight="2"
+				size="32"
+				colour="white"
+				/></div>
 		<a onClick={e=>handleUpdate(data.id)} href="#" className="Title">{data.title}</a>
 		<div className="Delete">
 			<IconButton
