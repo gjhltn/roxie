@@ -18,8 +18,7 @@ const Button = styled.button`
 	height: ${props => props.red ? "1.5rem" : "3rem"};
 	letter-spacing: inherit;
 	line-height: ${props => props.red ? "1.5rem" : "2rem"};
-	margin-bottom: ${props => props.red ? "0" : "2rem"};
-	margin-top: ${props => props.red ? "1.7rem" : "0"};
+	margin: 0;
 	outline: 0;
 	overflow: hidden;
 	padding: 0 ${props => props.red ? "1.2rem" : "1rem"};
@@ -37,6 +36,15 @@ const Fieldset = styled.fieldset`
 		padding-top: 4rem;
 	}
 `
+
+const WrapSubmit = styled.div`
+	display: flex;
+	padding: 0.5rem 2rem;
+`
+const Pale = styled.div`
+	background: #00366e;
+`
+
 
 const Columns = styled.div`
 	display: flex;
@@ -146,6 +154,15 @@ const MyTextInput = ({ label, ...props }) => {
 	
 /* -- FORM FRAGMEMTS ------------------------------------------------*/
 
+const FormSkeleton = ({children}) =>
+	<Form>
+		<Submit/>
+		<Pale>
+			{children}
+		</Pale>
+		<Submit/>
+	</Form>
+
 const Title = ({ values }) =>
 <Fieldset>
 	<h3>Title</h3>
@@ -216,9 +233,10 @@ const Imprint = ({ values }) =>
 </Fieldset>
 
 const Submit = () =>
-<Fieldset>
-	<Button type="submit">Submit</Button>
-</Fieldset>
+<WrapSubmit>
+	<Column><Button type="submit">Submit</Button></Column>
+	<Column size="1rem"><Button type="submit">Submit</Button></Column>
+</WrapSubmit>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/
 
@@ -240,10 +258,9 @@ export const JournalForm = ({action,item,closeModalCallback}) => {
 			}
 		>
 		{({ values }) => (
-				<Form>
+			<FormSkeleton>
 					<Title values={values} />
-					<Submit/>
-				</Form>
+					</FormSkeleton>
 				)}
 		</Formik>
 	)
@@ -267,10 +284,9 @@ export const ChapterForm = ({action,item,closeModalCallback}) => {
 			}
 		>
 		{({ values }) => (
-				<Form>
+				<FormSkeleton>
 					<Title values={values} />
-					<Submit/>
-				</Form>
+				</FormSkeleton>
 				)}
 		</Formik>
 	)
@@ -321,12 +337,11 @@ export const BookForm = ({action,item,closeModalCallback}) => {
 		>
 			{
 				({	values }) => (
-					<Form>
+					<FormSkeleton>
 						<Title values={values} />
 						<Authorship values={values} />
 						<Imprint values={values}/>
-						<Submit/>
-					</Form>
+					</FormSkeleton>
 				)
 			}
 		</Formik>

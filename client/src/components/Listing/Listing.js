@@ -238,13 +238,14 @@ const Listing = ({
 	
 	const customStyles = {
 		content : {
-			background: '#00366e',
+			background: '#002451',
 			border:0,
 			paddingBottom: "60vh",
 			top: '0',
 			left: '0',
 			right: '0',
-			bottom: '0'
+			bottom: '0',
+			padding: '0'
 	}
 };
 	
