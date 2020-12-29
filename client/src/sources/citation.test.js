@@ -105,50 +105,15 @@ describe('names flip and abbreviate', () => {
 })
 
 describe('editorNames', () => {
-	it('single editor', () => {	expect(c.editorNames({editors:_.take(exampleNames,1)})).toEqual("Ludwig Wittgenstein, ed. ")
+	it('single editor', () => {	expect(c.editorNames({editors:_.take(exampleNames,1)})).toEqual("Ludwig Wittgenstein, ed.")
 	})
-	it('two editors', () => {	expect(c.editorNames({editors:_.take(exampleNames,2)})).toEqual("Ludwig Wittgenstein and Ken Dodd, eds. ")
+	it('two editors', () => {	expect(c.editorNames({editors:_.take(exampleNames,2)})).toEqual("Ludwig Wittgenstein and Ken Dodd, eds.")
 	})
-	it('single editor, reversed', () => {	expect(c.editorNames({editors:_.take(exampleNames,1)},{flipFirst:true})).toEqual("Wittgenstein, Ludwig, ed. ")
+	it('single editor, reversed', () => {	expect(c.editorNames({editors:_.take(exampleNames,1)},{flipFirst:true})).toEqual("Wittgenstein, Ludwig, ed.")
 	})
-	it('two editors, reversed', () => {	expect(c.editorNames({editors:_.take(exampleNames,2)},{flipFirst:true})).toEqual("Wittgenstein, Ludwig and Ken Dodd, eds. ")
-	})
-})
-
-/*
-describe('names, first reversed', () => {
-	it('one name', () => {
-		expect(c.names([{last: "Wittgenstein",first: "Ludwig"}],true)).toEqual("Wittgenstein, Ludwig")
-	})
-	it('two names', () => {
-		expect(c.names(
-			[
-				{last: "Wittgenstein",first: "Ludwig"},
-				{last: "Dodd", first:"Ken"}
-			],
-			true
-		)).toEqual("Wittgenstein, Ludwig and Ken Dodd")
-	})
-	it('four names', () => {
-		expect(c.names(
-			[
-				{last: "Asheton",first: "Scott"},
-				{last: "Asheton", first:"Ron"},
-				{last: "Williamson", first:"James"},
-				{last: "Pop", first:"Iggy"},
-			],
-			true
-		)).toEqual("Asheton, Scott, Ron Asheton, James Williamson, and Iggy Pop")
+	it('two editors, reversed', () => {	expect(c.editorNames({editors:_.take(exampleNames,2)},{flipFirst:true})).toEqual("Wittgenstein, Ludwig and Ken Dodd, eds.")
 	})
 })
-*/
-/*
-const one
-
-
-*/
-/*
-
 
 describe('authorship: bibliography', () => {
 	it('anonymous', () => {
@@ -185,7 +150,7 @@ describe('authorship: notes', () => {
 		expect(c.authorship(book.H,"notes")).toEqual("Giles Deleuze, Félix Guattari, and Harpo Marx, ")
 	})
 	it('four authors', () => {
-		expect(c.authorship(book.I,"notes")).toEqual("Giles Deleuze et al. , ")
+		expect(c.authorship(book.I,"notes")).toEqual("Giles Deleuze et al., ")
 	})
 	it('single editor only', () => {
 		expect(c.authorship(book.L,"notes")).toEqual("Maria Tatar, ed., ")
@@ -213,6 +178,8 @@ describe('imprint', () => {
 	})
 })
 
+
+/*
 describe('bibliographyBook', () => {
 	it('anonymous', () => {
 		expect(c.bibliographyBook(book.D)).toEqual("_Beowulf_. London: Penguin Classics, 2020.")

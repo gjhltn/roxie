@@ -50,10 +50,8 @@ export const names = (arr,opts) => {
 }
 
 export const editorNames = (item,opts) =>
-	`${names(item.editors,opts)}, ${item.editors && item.editors.length>1 ? "eds. " : "ed. "}`
+	`${names(item.editors,opts)}, ${item.editors && item.editors.length>1 ? "eds." : "ed."}`
 	
-
-/*
 export const groupBy = (list, keyGetter) => {
     const map = new Map();
     list.forEach((item) => {
@@ -68,26 +66,18 @@ export const groupBy = (list, keyGetter) => {
     return map;
 }
 
-
-
-
-
-
-
-
 export const authorship = (item,style) => {
 	if (style==="bibliography") {
 		if (item.authors && item.authors.length === 0) return ""
-		if (item.authors) return `${names(item.authors)}. `
-		if (item.editors) return editorOnly(item)
+		if (item.authors) return `${names(item.authors,{flipFirst:true})}. `
+		if (item.editors) return `${editorNames(item,{flipFirst:true})} `
 	}
 	if (style==="notes") {
 		if (item.authors){
 			if (item.authors.length === 0) return ""
-			if (item.authors.length>=4) return `${nameFirstLast(item.authors[0])} et al. , `
-			return `${humaniseArray(item.authors.map(author=>nameFirstLast(author)))}, `
+			return `${names(item.authors,{abbreviate:4})}, `
 		}
-		if (item.editors) return `${humaniseArray(item.editors.map(ed=>nameFirstLast(ed)))}, ${item.editors.length>1 ? "eds., " : "ed., "}`
+		if (item.editors) return `${editorNames(item)}, `
 	}
 }
 
@@ -126,6 +116,7 @@ export const translators = (item,style) => {
 	}
 }
 
+/*
 export const bibliographyBook = (item) =>
 	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${imprint(item.imprint,"bibliography")}.`
 
