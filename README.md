@@ -13,29 +13,29 @@ Status: Hey, I just started. This is under heavy development and doesn't do anyt
 ### Book
 ```
 const bookTemplate = {
-	title: " ",
+	title: "",
 	authors:[
 		{
-			last: " ",
-			first: " ",
+			last: "",
+			first: "",
 		},
 	],
 	editors:[
 		{
-			last: " ",
-			first: " ",
+			last: "",
+			first: "",
 		}
 	],
 	translators:[
 		{
-			last: " ",
-			first: " ",
+			last: "",
+			first: "",
 		}
 	],
 	imprint: {
-		place: " ",
-		publisher: " ",
-		year: " "
+		place: "",
+		publisher: "",
+		year: ""
 	}
 }
 ```
@@ -43,32 +43,32 @@ const bookTemplate = {
 ### Chapter
 ```
 const chapterTemplate = {
-	title: " ",
-	location: " ",
+	title: "",
+	location: "",
 	authors:[
 		{
-			last: " ",
-			first: " ",
+			last: "",
+			first: "",
 		},
 	],
 	translators:[
 		{
-			last: " ",
-			first: " ",
+			last: "",
+			first: "",
 		}
 	],
 	in: {
-		title: " ",
+		title: "",
 		editors:[
 			{
-				last: " ",
-				first: " ",
+				last: "",
+				first: "",
 			}
 		],
 		imprint: {
-			place: " ",
-			publisher: " ",
-			year: " "
+			place: "",
+			publisher: "",
+			year: ""
 		}
 	}
 }
@@ -76,5 +76,28 @@ const chapterTemplate = {
 
 ### Journal Article
 ```
-TODO
+const journalTemplate = {
+	title: "",
+	location: "",
+	url:"",
+	authors:[
+		{
+			last: "",
+			first: "",
+		},
+	],
+	journal: "",
+	volume: "",
+	issue: "",
+	date: "",
+	specialIssue: {
+		title:"",
+		editors:[
+			{
+				last: "",
+				first: "",
+			},
+		],
+	}
+}
 ```
