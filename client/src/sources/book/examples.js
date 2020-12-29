@@ -1,4 +1,4 @@
-export const bookA = {
+export const A = {
 	// two translators
 	id: "bookA",
 	type: "book",
@@ -23,7 +23,7 @@ export const bookA = {
 	}
 }
 
-export const bookB = {
+export const B = {
 	// translated
 	id: "bookB",
 	type: "book",
@@ -43,7 +43,7 @@ export const bookB = {
 	}
 }
 
-export const bookC = {
+export const C = {
 	// two authors
 	id: "bookC",
 	type: "book",
@@ -62,7 +62,7 @@ export const bookC = {
 	}
 }
 
-export const bookD = {
+export const D = {
 	// anonymous
 	id: "bookD",
 	type: "book",
@@ -75,7 +75,7 @@ export const bookD = {
 	}
 }
 
-export const bookE = {
+export const E = {
 	// oneAuthor
 	id: "bookE",
 	type: "book",
@@ -91,7 +91,7 @@ export const bookE = {
 	}
 }
 
-export const bookF = {
+export const F = {
 	// authorEditorTranslator
 	id: "bookF",
 	type: "book",
@@ -115,7 +115,7 @@ export const bookF = {
 	}
 }
 
-export const bookG = {
+export const G = {
 	// twoAuthors
 	id: "bookG",
 	type: "book",
@@ -134,7 +134,7 @@ export const bookG = {
 	}
 }
 
-export const bookH = {
+export const H = {
 	// threeAuthors
 	id: "bookH",
 	type: "book",
@@ -156,7 +156,7 @@ export const bookH = {
 	}
 }
 
-export const bookI = {
+export const I = {
 	// fourAuthors
 	id: "bookI",
 	type: "book",
@@ -181,7 +181,7 @@ export const bookI = {
 	}
 }
 
-export const bookJ = {
+export const J = {
 	// edited
 	id: "bookJ",
 	type: "book",
@@ -201,7 +201,7 @@ export const bookJ = {
 	}
 }
 
-export const bookK = {
+export const K = {
 	// editedTwo
 	id: "bookK",
 	type: "book",
@@ -224,7 +224,7 @@ export const bookK = {
 	}
 }
 
-export const bookL = {
+export const L = {
 	//editedOnly
 	id: "bookL",
 	type: "book",
@@ -240,7 +240,7 @@ export const bookL = {
 	}
 }
 
-export const bookM = {
+export const M = {
 	// editedOnlyTwo
 	id: "bookM",
 	type: "book",
@@ -259,7 +259,7 @@ export const bookM = {
 	}
 }
 
-export const bookN = {
+export const N = {
 	// same author as bookA
 	id: "bookN",
 	type: "book",
