@@ -22,7 +22,7 @@ const Form = ({action,item,closeModalCallback}) => {
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
-					pruned.type="chapter"
+					pruned.type="journal"
 					action(pruned,closeModalCallback)
 				}, 500)
 			}
