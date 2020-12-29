@@ -1,4 +1,5 @@
 import * as c from './citation.js';
+import _ from 'lodash'
 
 describe('humaniseArray', () => {
 	it('humanises 1 item', () => {
@@ -36,30 +37,46 @@ describe('name', () => {
 	})
 })
 
+const exampleNames = [
+	{last: "Wittgenstein",first: "Ludwig"},
+	{last: "Dodd", first:"Ken"},
+	{last: "Harvey", first:"Polly Jean"},
+	{last: "Asheton",first: "Scott"},
+	{last: "Asheton", first:"Ron"},
+	{last: "Williamson", first:"James"},
+	{last: "Pop", first:"Iggy"}
+]
+
 describe('names', () => {
-	it('one name', () => {
-		expect(c.names([{last: "Wittgenstein",first: "Ludwig"}])).toEqual("Ludwig Wittgenstein")
+	it('1', () => {expect(c.names(_.take(exampleNames,1))).toEqual("Ludwig Wittgenstein")
 	})
-	it('two names', () => {
-		expect(c.names(
-			[
-				{last: "Wittgenstein",first: "Ludwig"},
-				{last: "Dodd", first:"Ken"}
-			]
-		)).toEqual("Ludwig Wittgenstein and Ken Dodd")
+	it('2', () => {
+		expect(c.names(_.take(exampleNames,2))).toEqual("Ludwig Wittgenstein and Ken Dodd")
 	})
-	it('four names', () => {
-		expect(c.names(
-			[
-				{last: "Asheton",first: "Scott"},
-				{last: "Asheton", first:"Ron"},
-				{last: "Williamson", first:"James"},
-				{last: "Pop", first:"Iggy"},
-			]
-		)).toEqual("Scott Asheton, Ron Asheton, James Williamson, and Iggy Pop")
+	it('3', () => {
+		expect(c.names(_.take(exampleNames,3))).toEqual("Ludwig Wittgenstein, Ken Dodd, and Polly Jean Harvey")
+	})
+	it('4', () => {
+		expect(c.names(_.slice(exampleNames,3))).toEqual("Scott Asheton, Ron Asheton, James Williamson, and Iggy Pop")
 	})
 })
 
+describe('names abbreviate', () => {
+	it('1', () => {expect(c.names(_.take(exampleNames,1),{abbreviate:4})).toEqual("Ludwig Wittgenstein")
+	})
+	it('2', () => {
+		expect(c.names(_.take(exampleNames,2),{abbreviate:4})).toEqual("Ludwig Wittgenstein and Ken Dodd")
+	})
+	it('3', () => {
+		expect(c.names(_.take(exampleNames,3),{abbreviate:4})).toEqual("Ludwig Wittgenstein, Ken Dodd, and Polly Jean Harvey")
+	})
+	it('4', () => {
+		expect(c.names(_.slice(exampleNames,3),{abbreviate:4})).toEqual("Scott Asheton et al.
+	})
+})
+
+
+/*
 describe('names, first reversed', () => {
 	it('one name', () => {
 		expect(c.names([{last: "Wittgenstein",first: "Ludwig"}],true)).toEqual("Wittgenstein, Ludwig")
@@ -85,16 +102,27 @@ describe('names, first reversed', () => {
 		)).toEqual("Asheton, Scott, Ron Asheton, James Williamson, and Iggy Pop")
 	})
 })
-
+*/
 /*
-describe('editorOnly', () => {
+const one
+
+describe('editorNames', () => {
 	it('single editor', () => {
-		expect(c.editorOnly(book.L)).toEqual("Tatar, Maria, ed. ")
+		expect(c.editorNames(book.L)).toEqual("Tatar, Maria, ed. ")
 	})
 	it('two editors', () => {
-		expect(c.editorOnly(book.M)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
+		expect(c.editorNames(book.M)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
+	}),
+	it('single editor reversed', () => {
+		expect(c.editorNames(book.L)).toEqual("Tatar, Maria, ed. ")
+	})
+	it('two editors, reversed', () => {
+		expect(c.editorNames(book.M)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
 	})
 })
+*/
+/*
+
 
 describe('authorship: bibliography', () => {
 	it('anonymous', () => {

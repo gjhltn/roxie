@@ -28,11 +28,18 @@ export const nameFirstLast = name =>{
 	return `${name.first} ${name.last}`
 }
 
-export const names = (arr,flipFirst=false) => {
+export const names = (arr,opts) => {
     const l = arr.length
+	const flipFirst = opts && opts.flipFirst
+	// easy cases
     if (!l) return ""
+	if (opts && opts.abbreviate && l>=opts.abbreviate) {
+		const subject = arr[0]
+		return(`${flipFirst ? 
+			nameLastFirst(subject) : nameFirstLast(subject)} et al.`)
+	}
+	// 
 	let flat = []
-	
 	if (flipFirst) {
 		flat = [nameLastFirst(arr[0])]
 		if (l>1) flat = flat.concat(arr.slice(1).map(name=>nameFirstLast(name)))
@@ -41,6 +48,10 @@ export const names = (arr,flipFirst=false) => {
 	}
 	return humaniseArray(flat)
 }
+
+export const editorNames = (item,flipFirst) =>
+	`${names(item.editors),flipFirst}, ${item.editors.length>1 ? "eds. " : "ed. "}`
+	
 
 /*
 export const groupBy = (list, keyGetter) => {
@@ -63,8 +74,6 @@ export const groupBy = (list, keyGetter) => {
 
 
 
-export const editorOnly = (item) =>
-	`${names(item.editors)}, ${item.editors.length>1 ? "eds. " : "ed. "}`
 
 export const authorship = (item,style) => {
 	if (style==="bibliography") {
