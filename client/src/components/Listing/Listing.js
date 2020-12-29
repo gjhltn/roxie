@@ -11,7 +11,7 @@ import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Loading from '../Loading/Loading'
 
-import {names, groupBy} from '../../lib/chicago'
+import {names, groupBy} from '../../sources/citation'
 
 Modal.setAppElement('#root')
 
@@ -129,7 +129,7 @@ const Author = ({name,data,handleUpdate,handleDelete}) =>
 const Kind = ({name, allData, handleNew, handleUpdate, handleDelete}) => {
 	const data = allData.filter(datum=>datum.type===name)
 	const grouped = groupBy(data,
-		datum => (datum.authors && datum.authors.length>0) ? names(datum.authors) : "[anonymous]"
+		datum => (datum.authors && datum.authors.length>0) ? names(datum.authors,{flipFirst:true}) : "[anonymous]"
 	);
 	const allNames = Array.from(grouped.keys()).sort()
 	return (

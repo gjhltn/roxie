@@ -15,7 +15,7 @@ const Roxie = () => {
 	const getItems = async () => {
 		setLoaded(false);
 		let res = await itemService.getAll();
-		//let res = Object.values(require('../../lib/examples'))
+		//let res = Object.values(require('../../sources/turabianExamples'))
 		setItems(res);
 		setLoaded(true);
 	}
