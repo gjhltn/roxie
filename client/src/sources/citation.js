@@ -115,20 +115,3 @@ export const translators = (item,style) => {
 		return `, tr. ${flattenNames(item.translators)}`
 	}
 }
-
-/*
-export const bibliographyBook = (item) =>
-	`${authorship(item,"bibliography")}_${item.title}_.${editors(item,"bibliography")}${translators(item,"bibliography")}${imprint(item.imprint,"bibliography")}.`
-
-export const notesBook = (item) =>
-	`${authorship(item,"notes")}_${item.title}_${editors(item,"notes")}${translators(item,"notes")} ${imprint(item.imprint,"notes")}XX.`
-
-// ----- CHAPTERS -------------------------------
-
-export const bibliographyChapter = (item) =>
-`${authorship(item,"bibliography")}“${item.title}.” In _${item.in.title}_, edited by ${flattenNames(item.in.editors)}, ${item.location}.${imprint(item.in.imprint,"bibliography")}.`
-
-export const notesChapter = (item) =>
-`${authorship(item,"notes")}“${item.title},” in _${item.in.title}_, ed. ${flattenNames(item.in.editors)} ${imprint(item.in.imprint,"notes")}XX.`
-
-*/
