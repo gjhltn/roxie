@@ -49,8 +49,8 @@ export const names = (arr,opts) => {
 	return humaniseArray(flat)
 }
 
-export const editorNames = (item,flipFirst) =>
-	`${names(item.editors),flipFirst}, ${item.editors.length>1 ? "eds. " : "ed. "}`
+export const editorNames = (item,opts) =>
+	`${names(item.editors,opts)}, ${item.editors && item.editors.length>1 ? "eds. " : "ed. "}`
 	
 
 /*

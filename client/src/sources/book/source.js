@@ -1,3 +1,8 @@
+// BOOK
+
+// export const name = 
+
+/*
 export const groupBy = (list, keyGetter) => {
     const map = new Map();
     list.forEach((item) => {
@@ -117,3 +122,5 @@ export const bibliographyChapter = (item) =>
 
 export const notesChapter = (item) =>
 `${authorship(item,"notes")}“${item.title},” in _${item.in.title}_, ed. ${flattenNames(item.in.editors)} ${imprint(item.in.imprint,"notes")}XX.`
+
+*/

@@ -1,4 +1,5 @@
 import * as c from './citation.js';
+import * as book from './book/examples.js';
 import _ from 'lodash'
 
 describe('humaniseArray', () => {
@@ -103,6 +104,17 @@ describe('names flip and abbreviate', () => {
 	})
 })
 
+describe('editorNames', () => {
+	it('single editor', () => {	expect(c.editorNames({editors:_.take(exampleNames,1)})).toEqual("Ludwig Wittgenstein, ed. ")
+	})
+	it('two editors', () => {	expect(c.editorNames({editors:_.take(exampleNames,2)})).toEqual("Ludwig Wittgenstein and Ken Dodd, eds. ")
+	})
+	it('single editor, reversed', () => {	expect(c.editorNames({editors:_.take(exampleNames,1)},{flipFirst:true})).toEqual("Wittgenstein, Ludwig, ed. ")
+	})
+	it('two editors, reversed', () => {	expect(c.editorNames({editors:_.take(exampleNames,2)},{flipFirst:true})).toEqual("Wittgenstein, Ludwig and Ken Dodd, eds. ")
+	})
+})
+
 /*
 describe('names, first reversed', () => {
 	it('one name', () => {
@@ -133,20 +145,7 @@ describe('names, first reversed', () => {
 /*
 const one
 
-describe('editorNames', () => {
-	it('single editor', () => {
-		expect(c.editorNames(book.L)).toEqual("Tatar, Maria, ed. ")
-	})
-	it('two editors', () => {
-		expect(c.editorNames(book.M)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
-	}),
-	it('single editor reversed', () => {
-		expect(c.editorNames(book.L)).toEqual("Tatar, Maria, ed. ")
-	})
-	it('two editors, reversed', () => {
-		expect(c.editorNames(book.M)).toEqual("Heaney, Seamus and Ted Hughes, eds. ")
-	})
-})
+
 */
 /*
 
