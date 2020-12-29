@@ -1,5 +1,6 @@
 export const turabian1a = {
 	type: "book",
+	id:"t1a",
 	title: "Grit: The Power of Passion and Perseverance",
 	authors:[
 		{
@@ -16,6 +17,7 @@ export const turabian1a = {
 
 export const turabian2a = {
 	type: "book",
+	id:"t2a",
 	title: "Masculine Promise: Migration, Family, and Gender in China",
 	authors:[
 		{
@@ -36,6 +38,7 @@ export const turabian2a = {
 
 export const turabian3a = {
 	type: "book",
+	id:"t3a",
 	title: "Mansfield Park: An Annotated Edition",
 	authors:[
 		{
@@ -58,6 +61,7 @@ export const turabian3a = {
 
 export const turabian5 = {
 	type: "chapter",
+	id: "t5",
 	title: "Before the Commission: Ethnography as Public Testimony",
 	location: "69–95",
 	authors:[

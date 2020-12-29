@@ -11,13 +11,7 @@ import Columns, {Column} from '../Columns/Columns'
 export const Fieldset = styled.fieldset`
 	display: block;
 	border: 0;
-	border-bottom: 2px solid rgba(0,0,0,0.2);
 	padding: 0.5rem 2rem;
-
-	&:last-child {
-		border-bottom: 0;
-		padding-top: 4rem;
-	}
 `
 
 const WrapSubmit = styled.div`
@@ -28,7 +22,7 @@ const Pale = styled.div`
 	background: #00366e;
 `
 
-const TextInputInner = styled.div`
+export const TextInputInner = styled.div`
 	margin-bottom: 1rem;
 
 	label {
@@ -76,7 +70,7 @@ position: relative;
 	top: 2.5rem;
 `
 
-const NameListInput = ({
+export const NameListInput = ({
 	arrayHelpers,
 	arrayName,
 	vals
@@ -112,7 +106,7 @@ const NameListInput = ({
 				/>
 	</div>
 
-const MyTextArea = ({ label, ...props }) => {
+export const MyTextArea = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
 	return (
 		<TextInputInner error={meta.touched && meta.error}>
@@ -125,10 +119,11 @@ const MyTextArea = ({ label, ...props }) => {
 	);
 };
 
-const MyTextInput = ({ label, ...props }) => {
+export const MyTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
 	return (
 		<TextInputInner error={meta.touched && meta.error}>
+		
 			<label htmlFor={props.id || props.name}>{label}</label>
 			<input {...field} {...props} />
 			{meta.touched && meta.error ? (
@@ -146,7 +141,7 @@ export const FormSkeleton = ({children, closeModalCallback}) =>
 		<Pale>
 			{children}
 		</Pale>
-		<Submit closeModalCallback={closeModalCallback}/>
+		<Submit closeModalCallback={closeModalCallback} hideClose={true}/>
 	</Form>
 
 export const Title = ({ values }) =>
@@ -218,16 +213,16 @@ export const Imprint = ({ values }) =>
 	</Columns>
 </Fieldset>
 
-const Submit = ({closeModalCallback}) =>
+const Submit = ({closeModalCallback, hideClose}) =>
 <WrapSubmit>
 	<Column><Button type="submit">Submit</Button></Column>
-	<Column size="1rem"><IconButton
+	{!hideClose && <Column size="1rem"><IconButton
 				handler={() => closeModalCallback()}
 				icon={ICON_TYPE.CLOSE}
 				weight="2"
 				size="52"
 				colour="white"
-				/></Column>
+				/></Column>}
 </WrapSubmit>
 
 /* -- WHOLE FORMS ---------------------------------------------------*/

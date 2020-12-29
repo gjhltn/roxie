@@ -13,11 +13,11 @@ const Button = styled.button`
 	height: "3rem";
 	letter-spacing: inherit;
 	line-height: 2rem;
-	margin-bottom: 2rem;
+	margin-bottom: 0;
 	margin-top: 0;
 	outline: 0;
 	overflow: hidden;
-	padding: 0 1rem;
+	padding: 0.5rem 2rem;
 	vertical-align: top;
 `
 

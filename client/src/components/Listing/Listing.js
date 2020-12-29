@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 const Toolbar = styled.header`
 	flex: 0 0 4rem;
 	background: rgba(0,0,0,0.5);
-	padding: 2rem 2rem 0;
+	padding: 2rem 2rem;
 `
 
 const Main = styled.main`

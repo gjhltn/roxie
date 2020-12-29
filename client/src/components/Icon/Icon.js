@@ -46,6 +46,7 @@ export const IconButton = ({
 	colour
 }) => 
 	<Button
+		type="button"
 		onClick={handler}>
 		{label && <span className="visually-hidden">{label}</span>}
 		<Icon
