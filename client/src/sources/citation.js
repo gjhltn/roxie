@@ -82,6 +82,7 @@ export const authorship = (item,style) => {
 }
 
 export const imprint = (imprint,style) => {
+	if (!imprint) return ""
 	const result = `${imprint.place}: ${imprint.publisher}, ${imprint.year}`
 	if (style==='notes'){
 		//“(Place of imprint: Publisher’s Name, Date of imprint), ”

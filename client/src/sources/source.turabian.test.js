@@ -29,44 +29,16 @@ describe('Turabian books', () => {
 	})
 })
 
-const chapterBasic = {
-	type: "chapter",
-	title: "Before the Commission: Ethnography as Public Testimony",
-	location: "69–95",
-	authors:[
-		{
-			last: "Gillespie",
-			first: "Kelly",
-		},
-	],
-	in: {
-		title: "If Truth Be Told: The Politics of Public Ethnography",
-		editors:[
-			{
-				last: "Fassin",
-				first: "Didier",
-			}
-		],
-		imprint: {
-			place: "Durham, NC",
-			publisher: "Duke University Press",
-			year: "2017"
-		}
-	}
-}
-
 describe('chapters', () => {
 	it('simple case - bibliography', () => {
-		expect(bibliography(chapterBasic)).toEqual(
-		"[unsupported item type: chapter]"
-		//"Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017."
+		expect(bibliography(eg.turabian5)).toEqual(
+		"Gillespie, Kelly. ”Before the Commission: Ethnography as Public Testimony.“ In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017."
 		
 		)
 	})
 	it('simple case - notes', () => {
-		expect(note(chapterBasic)).toEqual(
-		"[unsupported item type: chapter]"
-		// "Kelly Gillespie, “Before the Commission: Ethnography as Public Testimony,” in _If Truth Be Told: The Politics of Public Ethnography_, ed. Didier Fassin (Durham, NC: Duke University Press, 2017), XX."
+		expect(note(eg.turabian5)).toEqual(
+		"Kelly Gillespie, ”Before the Commission: Ethnography as Public Testimony,“ in _If Truth Be Told: The Politics of Public Ethnography_, ed. Didier Fassin (Durham, NC: Duke University Press, 2017), XX."
 		
 		)
 	})

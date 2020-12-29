@@ -55,3 +55,29 @@ export const turabian3a = {
 		year: "2016"
 	}
 }
+
+export const turabian5 = {
+	type: "chapter",
+	title: "Before the Commission: Ethnography as Public Testimony",
+	location: "69–95",
+	authors:[
+		{
+			last: "Gillespie",
+			first: "Kelly",
+		},
+	],
+	in: {
+		title: "If Truth Be Told: The Politics of Public Ethnography",
+		editors:[
+			{
+				last: "Fassin",
+				first: "Didier",
+			}
+		],
+		imprint: {
+			place: "Durham, NC",
+			publisher: "Duke University Press",
+			year: "2017"
+		}
+	}
+}

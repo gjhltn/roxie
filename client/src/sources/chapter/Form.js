@@ -12,13 +12,56 @@ import {
 
 const Form = ({action,item,closeModalCallback}) => {
 	const defaults = {
-		title: ""
+		title: " ",
+		location: " ",
+		authors:[
+			{
+				last: " ",
+				first: " ",
+			},
+		],
+		translators:[
+			{
+				last: " ",
+				first: " ",
+			}
+		],
+		in: {
+			title: " ",
+			editors:[
+				{
+					last: " ",
+					first: " ",
+				}
+			],
+			imprint: {
+				place: " ",
+				publisher: " ",
+				year: " "
+			}
+		}
 	}
+
 	const initialValues = Object.assign({},defaults,item)
 	return (
 		<Formik
 			initialValues={initialValues}
-
+			validationSchema={
+				Yup.object({
+					title: Yup.string().required('Required'),
+					in: Yup.object().shape({
+						title: Yup.string()
+							.required('Required'),
+						imprint: Yup.object().shape({
+							year: Yup.string()
+								.required('Required'),
+							publisher: Yup.string()
+								.required('Required'),
+							place: Yup.string()
+								.required('Required'),
+							}),
+					}),
+			})}
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
