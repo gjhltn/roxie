@@ -75,32 +75,32 @@ const Chapter = ({ values }) =>
 
 const ChapterForm = ({action,item,closeModalCallback}) => {
 	const defaults = {
-		title: " ",
-		location: " ",
+		title: "",
+		location: "",
 		authors:[
 			{
-				last: " ",
-				first: " ",
+				last: "",
+				first: "",
 			},
 		],
 		translators:[
 			{
-				last: " ",
-				first: " ",
+				last: "",
+				first: "",
 			}
 		],
 		in: {
-			title: " ",
+			title: "",
 			editors:[
 				{
-					last: " ",
-					first: " ",
+					last: "",
+					first: "",
 				}
 			],
 			imprint: {
-				place: " ",
-				publisher: " ",
-				year: " "
+				place: "",
+				publisher: "",
+				year:  ""
 			}
 		}
 	}
