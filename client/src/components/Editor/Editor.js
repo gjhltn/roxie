@@ -258,33 +258,6 @@ export const JournalForm = ({action,item,closeModalCallback}) => {
 	)
 }
 
-export const ChapterForm = ({action,item,closeModalCallback}) => {
-	const defaults = {
-		title: ""
-	}
-	const initialValues = Object.assign({},defaults,item)
-	return (
-		<Formik
-			initialValues={initialValues}
-
-			onSubmit={values =>
-				setTimeout(() => {
-					var pruned = Object.assign({},values)
-					pruned.type="chapter"
-					action(pruned,closeModalCallback)
-				}, 500)
-			}
-		>
-		{({ values }) => (
-				<FormSkeleton>
-					<Title values={values} />
-				</FormSkeleton>
-				)}
-		</Formik>
-	)
-}
-
-
 /* -- EXPORTED COMPONENT ---------------------------------------------*/
 
 const Editor = ({
