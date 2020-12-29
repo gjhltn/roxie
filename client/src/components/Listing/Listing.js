@@ -7,7 +7,8 @@ import Modal from 'react-modal';
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
 import Button from '../Button/Button'
 import Copier from '../Copier/Copier'
-import Editor, {BookForm, ChapterForm, JournalForm} from '../Editor/Editor'
+import BookForm from '../../sources/book/Form'
+import Editor, {ChapterForm, JournalForm} from '../Editor/Editor'
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Loading from '../Loading/Loading'
 

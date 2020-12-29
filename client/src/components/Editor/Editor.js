@@ -1,5 +1,4 @@
 import React from "react"
-import * as Yup from 'yup';
 import styled from 'styled-components';
 import { Formik, Form, FieldArray, useField} from 'formik';
 
@@ -9,8 +8,7 @@ import Columns, {Column} from '../Columns/Columns'
 
 /* -- STYLED COMPONENTS ---------------------------------------------*/
 
-
-const Fieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
 	display: block;
 	border: 0;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
@@ -53,7 +51,7 @@ const TextInputInner = styled.div`
 
 /* -- UTILITY FUNCTIONS ---------------------------------------------*/
 
-const pruneBlank = (cull,o) => {
+export const pruneBlank = (cull,o) => {
 	cull.forEach(arrName=>{
 		var keep = []
 		if (o[arrName]){
@@ -142,7 +140,7 @@ const MyTextInput = ({ label, ...props }) => {
 
 /* -- FORM FRAGMEMTS ------------------------------------------------*/
 
-const FormSkeleton = ({children, closeModalCallback}) =>
+export const FormSkeleton = ({children, closeModalCallback}) =>
 	<Form>
 		<Submit closeModalCallback={closeModalCallback}/>
 		<Pale>
@@ -151,7 +149,7 @@ const FormSkeleton = ({children, closeModalCallback}) =>
 		<Submit closeModalCallback={closeModalCallback}/>
 	</Form>
 
-const Title = ({ values }) =>
+export const Title = ({ values }) =>
 <Fieldset>
 	<h3>Title</h3>
 	<MyTextArea
@@ -163,7 +161,7 @@ const Title = ({ values }) =>
 	/>
 </Fieldset>
 
-const Authorship = ({ values }) =>
+export const Authorship = ({ values }) =>
 <Fieldset>
 	<h3>Authorship</h3>
 	<FieldArray
@@ -191,7 +189,7 @@ const Authorship = ({ values }) =>
 				vals={values.translators} />}/>
 </Fieldset>
 
-const Imprint = ({ values }) =>
+export const Imprint = ({ values }) =>
 <Fieldset>
 	<h2>Imprint</h2>
 	<MyTextInput
@@ -286,61 +284,6 @@ export const ChapterForm = ({action,item,closeModalCallback}) => {
 	)
 }
 
-export const BookForm = ({action,item,closeModalCallback}) => {
-	const defaults = {
-		title: "",
-		authors: [
-			{
-				last:'',
-				first:''
-			}
-		],
-		editors: [],
-		translators: [],
-		imprint: {
-			publisher: '',
-			place: '',
-			year: '',
-		},
-	}
-	const initialValues = Object.assign({},defaults,item)
-	return (
-		<Formik
-			initialValues={initialValues}
-			validationSchema={
-				Yup.object({
-					title: Yup.string().required('Required'),
-					imprint: Yup.object().shape({
-						year: Yup.string()
-							.required('Required'),
-						publisher: Yup.string()
-							.required('Required'),
-						place: Yup.string()
-							.required('Required'),
-				}),
-			})}
-
-			onSubmit={values =>
-				setTimeout(() => {
-					var pruned = Object.assign({},values)
-					pruned = pruneBlank(['authors','editors','translators'], pruned)
-					pruned.type="book"
-					action(pruned,closeModalCallback)
-				}, 500)
-			}
-		>
-			{
-				({	values }) => (
-					<FormSkeleton closeModalCallback={closeModalCallback}>
-						<Title values={values} />
-						<Authorship values={values} />
-						<Imprint values={values}/>
-					</FormSkeleton>
-				)
-			}
-		</Formik>
-	)
-}
 
 /* -- EXPORTED COMPONENT ---------------------------------------------*/
 
