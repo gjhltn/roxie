@@ -71,10 +71,37 @@ describe('names abbreviate', () => {
 		expect(c.names(_.take(exampleNames,3),{abbreviate:4})).toEqual("Ludwig Wittgenstein, Ken Dodd, and Polly Jean Harvey")
 	})
 	it('4', () => {
-		expect(c.names(_.slice(exampleNames,3),{abbreviate:4})).toEqual("Scott Asheton et al.
+		expect(c.names(_.slice(exampleNames,3),{abbreviate:4})).toEqual("Scott Asheton et al.")
 	})
 })
 
+describe('names flip', () => {
+	it('1', () => {expect(c.names(_.take(exampleNames,1),{flipFirst:true})).toEqual("Wittgenstein, Ludwig")
+	})
+	it('2', () => {
+		expect(c.names(_.take(exampleNames,2),{flipFirst:true})).toEqual("Wittgenstein, Ludwig and Ken Dodd")
+	})
+	it('3', () => {
+		expect(c.names(_.take(exampleNames,3),{flipFirst:true})).toEqual("Wittgenstein, Ludwig, Ken Dodd, and Polly Jean Harvey")
+	})
+	it('4', () => {
+		expect(c.names(_.slice(exampleNames,3),{flipFirst:true})).toEqual("Asheton, Scott, Ron Asheton, James Williamson, and Iggy Pop")
+	})
+})
+
+describe('names flip and abbreviate', () => {
+	it('1', () => {expect(c.names(_.take(exampleNames,1),{abbreviate:4, flipFirst:true})).toEqual("Wittgenstein, Ludwig")
+	})
+	it('2', () => {
+		expect(c.names(_.take(exampleNames,2),{abbreviate:4, flipFirst:true})).toEqual("Wittgenstein, Ludwig and Ken Dodd")
+	})
+	it('3', () => {
+		expect(c.names(_.take(exampleNames,3),{abbreviate:4, flipFirst:true})).toEqual("Wittgenstein, Ludwig, Ken Dodd, and Polly Jean Harvey")
+	})
+	it('4', () => {
+		expect(c.names(_.slice(exampleNames,3),{abbreviate:4, flipFirst:true})).toEqual("Asheton, Scott et al.")
+	})
+})
 
 /*
 describe('names, first reversed', () => {
