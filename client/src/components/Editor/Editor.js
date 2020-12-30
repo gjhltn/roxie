@@ -135,13 +135,13 @@ export const MyTextInput = ({ label, ...props }) => {
 
 /* -- FORM FRAGMEMTS ------------------------------------------------*/
 
-export const FormSkeleton = ({children, closeModalCallback}) =>
+export const FormSkeleton = ({id, children, handleDelete, closeModalCallback}) =>
 	<Form>
-		<Submit closeModalCallback={closeModalCallback}/>
+		<Submit  closeModalCallback={closeModalCallback}/>
 		<Pale>
 			{children}
 		</Pale>
-		<Submit closeModalCallback={closeModalCallback} hideClose={true}/>
+		<Submit id={id} handleDelete={handleDelete} closeModalCallback={closeModalCallback} hideClose={true}/>
 	</Form>
 
 export const Title = ({ values }) =>
@@ -213,9 +213,14 @@ export const Imprint = ({ values }) =>
 	</Columns>
 </Fieldset>
 
-const Submit = ({closeModalCallback, hideClose}) =>
+const Submit = ({id, handleDelete, closeModalCallback, hideClose}) =>
 <WrapSubmit>
 	<Column><Button type="submit">Submit</Button></Column>
+	{handleDelete && id && <Column><Button onClick={
+		e=> {
+			handleDelete(id, closeModalCallback)
+		}
+	}type="button">Delete</Button></Column>}
 	{!hideClose && <Column size="1rem"><IconButton
 				handler={() => closeModalCallback()}
 				icon={ICON_TYPE.CLOSE}
@@ -260,11 +265,14 @@ const Editor = ({
 	action,
 	descriptor,
 	formComponent,
-	closeModalCallback
+	closeModalCallback,
+	handleDelete
 }) => {
 	const C = formComponent
 	return (
 		<C
+			handleDelete={handleDelete}
+			
 			closeModalCallback={closeModalCallback}
 			action={action}
 			key={(item && item.id) ? item.id : "new"}

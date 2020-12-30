@@ -75,7 +75,7 @@ const Chapter = ({ values }) =>
 	/>		
 </Fieldset>
 
-const ChapterForm = ({action,item,closeModalCallback}) => {
+const ChapterForm = ({action,item,closeModalCallback,handleDelete}) => {
 	const defaults = {
 		title: "",
 		location: "",
@@ -125,7 +125,9 @@ const ChapterForm = ({action,item,closeModalCallback}) => {
 			}
 		>
 		{({ values }) => (
-				<FormSkeleton closeModalCallback={closeModalCallback}>
+				<FormSkeleton
+				id={(item && item.id) ? item.id : null}
+			handleDelete={handleDelete}	closeModalCallback={closeModalCallback}>
 					<Chapter values={values} />
 					<In values={values} />
 				</FormSkeleton>

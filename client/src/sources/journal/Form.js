@@ -56,7 +56,7 @@ const Journal = ({values}) =>
 </Fieldset>
 </>
 
-const JournalForm = ({action,item,closeModalCallback}) => {
+const JournalForm = ({action,item,closeModalCallback,handleDelete}) => {
 	const defaults = {
 	title: "",
 	location: "",
@@ -101,7 +101,9 @@ const JournalForm = ({action,item,closeModalCallback}) => {
 			}
 		>
 		{({ values }) => (
-				<FormSkeleton closeModalCallback={closeModalCallback}>
+				<FormSkeleton
+				id={(item && item.id) ? item.id : null}
+				handleDelete={handleDelete}	closeModalCallback={closeModalCallback}>
 					<Title values={values} />
 					<Journal values={values} />
 				</FormSkeleton>

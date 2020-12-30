@@ -9,7 +9,7 @@ import {
 	Imprint
 } from '../../components/Editor/Editor'
 
-const BookForm = ({action,item,closeModalCallback}) => {
+const BookForm = ({action,item,closeModalCallback,handleDelete}) => {
 	const defaults = {
 		title: "",
 		authors: [
@@ -54,7 +54,9 @@ const BookForm = ({action,item,closeModalCallback}) => {
 		>
 			{
 				({	values }) => (
-					<FormSkeleton closeModalCallback={closeModalCallback}>
+					<FormSkeleton
+					id={(item && item.id) ? item.id : null}
+					handleDelete={handleDelete} closeModalCallback={closeModalCallback}>
 						<Title values={values} />
 						<Authorship values={values} />
 						<Imprint values={values}/>

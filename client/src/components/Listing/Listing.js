@@ -85,9 +85,6 @@ const Toolbar = ({handleNew}) =>
 			<AddButton onClick={e=>handleNew("chapter")} label={"Chapter"} />
 			<AddButton onClick={e=>handleNew("journal")} label={"Journal"} />
 		</div>
-		<div className="right">
-			trash
-		</div>
 	</ToolbarContents>
 
 
@@ -200,11 +197,11 @@ const SectionHeader = styled.header`
 	}
 `
 
-const Items = ({data,...props}) => {
+const Items = ({data,handleUpdate,...props}) => {
 	return (
 		<>
 			{
-				data.map((item) => <Item key={data.id} data={item}/>)
+				data.map((item) => <Item handleUpdate={handleUpdate}key={data.id} data={item}/>)
 			}
 		</>
 	)
@@ -222,7 +219,7 @@ const Item = ({data,handleUpdate,handleDelete}) =>
 				icon={ICON_TYPE.NOTE}/>
 		</div>
 		<div className="text">
-			<Citation dangerouslySetInnerHTML={createMarkup(data)} />
+			<Citation onClick={e=>handleUpdate(data.id)} dangerouslySetInnerHTML={createMarkup(data)} />
 		</div>
 	</ItemWrapper>
 
@@ -325,7 +322,6 @@ const Listing = ({
 						:
 							<Items
 								handleUpdate={handleUpdate}
-								handleDelete={deleteFn}
 								handleNew={handleNew}
 								data={items}/>
 					}
@@ -338,6 +334,7 @@ const Listing = ({
 				style={customStyles}
 			>
 				<Editor
+					handleDelete={deleteFn}
 					closeModalCallback={closeModal}
 					formComponent={modalComponent}
 					item={modalItem}
