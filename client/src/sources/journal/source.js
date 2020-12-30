@@ -9,7 +9,7 @@ import {
 } from '../citation.js';
 
 export const bibliography = (item) =>
-	`TODO`
+	`${names(item.authors,{flipFirst:true})}. “${item.title}.” _${item.journal}_ ${item.volume}, no. ${item.issue} (${item.date}): ${item.location}.${item.url? (" " + item.url +"."):""}`
 
 export const note = (item) =>
-	`TODO`
+		`${names(item.authors)}, “${item.title},” _${item.journal}_ ${item.volume}, no. ${item.issue} (${item.date}): XX${item.url? (", " + item.url +"."):"."}`
