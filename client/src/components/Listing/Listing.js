@@ -275,6 +275,17 @@ const Listing = ({
 	const openModal = () => setIsOpen(true)
 	const closeModal = () => setIsOpen(false)
 
+	const sortItems = (items) => {
+		let anon = items
+			.filter(item=>item.type==="book")
+			.filter(item=>!(!item.authors || item.authors.length>0))
+			.sort((a, b) => (a.title > b.title) ? 1 : -1)
+		let authored = items.filter(item=>item.authors && item.authors.length>0).sort((a, b) => ((a.authors[0].last + a.authors[0].first) > (b.authors[0].last + b.authors[0].first)) ? 1 : -1)
+		
+		return anon.concat(authored)
+	}
+	
+	
 	const componentForType = type => {
 		switch (type) {
 			case 'book': return(BookForm)
@@ -323,7 +334,7 @@ const Listing = ({
 							<Items
 								handleUpdate={handleUpdate}
 								handleNew={handleNew}
-								data={items}/>
+								data={sortItems(items)}/>
 					}
 				</Main>
 				<Toolbar handleNew={handleNew} />

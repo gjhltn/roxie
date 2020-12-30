@@ -14,14 +14,14 @@ const Roxie = () => {
 	
 	const getItems = async () => {
 		setLoaded(false);
-		let res = await itemService.getAll();
-		/*
+		//let res = await itemService.getAll();
+		
 		let res = Object.values(require('../../sources/turabianExamples'))
 		let books = Object.values(require('../../sources/book/examples'))
 		let chapters = Object.values(require('../../sources/chapter/examples'))
 		let journals = Object.values(require('../../sources/journal/examples'))
 		res = res.concat(books,chapters,journals)
-		*/
+		
 		setItems(res);
 		setLoaded(true);
 	}
