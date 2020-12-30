@@ -1,16 +1,13 @@
 import React from "react"
 import * as Yup from 'yup';
 import styled from 'styled-components';
-import { Formik, Form, FieldArray, useField} from 'formik';
+import { Formik, FieldArray } from 'formik';
 import {
 	Fieldset,
 	MyTextArea,
 	NameListInput,
 	pruneBlank,
-	FormSkeleton,
-	Title,
-	Authorship,
-	Imprint
+	FormSkeleton
 } from '../../components/Editor/Editor'
 
 const Boxed = styled.div`
@@ -116,6 +113,7 @@ const ChapterForm = ({action,item,closeModalCallback}) => {
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
+					pruned = pruneBlank(['authors','in.editors','translators'], pruned)
 					pruned.type="chapter"
 					action(pruned,closeModalCallback)
 				}, 500)

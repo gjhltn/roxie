@@ -22,7 +22,7 @@ const Roxie = () => {
 	
 	const createItem = async (data,closeModalCallback) => {
 		//alert("Roxie create " + data.title)
-		let res = await itemService.add(data);
+		await itemService.add(data);
 		closeModalCallback.call()
 		getItems()
 	}

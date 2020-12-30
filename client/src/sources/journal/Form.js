@@ -12,8 +12,29 @@ import {
 
 const Form = ({action,item,closeModalCallback}) => {
 	const defaults = {
-		title: ""
+	title: "",
+	location: "",
+	url:"",
+	authors:[
+		{
+			last: "",
+			first: "",
+		},
+	],
+	journal: "",
+	volume: "",
+	issue: "",
+	date: "",
+	specialIssue: {
+		title:"",
+		editors:[
+			{
+				last: "",
+				first: "",
+			},
+		],
 	}
+}
 	const initialValues = Object.assign({},defaults,item)
 	return (
 		<Formik
