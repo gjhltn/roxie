@@ -1,16 +1,62 @@
 import React from "react"
 import * as Yup from 'yup';
-import styled from 'styled-components';
-import { Formik } from 'formik';
+import { Formik, FieldArray } from 'formik';
+import Columns, {Column} from '../../components/Columns/Columns'
 import {
-	pruneBlank,
-	FormSkeleton,
 	Title,
-	Authorship,
-	Imprint
+	Fieldset,
+	MyTextInput,
+	NameListInput,
+	pruneBlank,
+	FormSkeleton
 } from '../../components/Editor/Editor'
 
-const Form = ({action,item,closeModalCallback}) => {
+const Journal = ({values}) =>
+<><Fieldset>
+	<h3>Authorship</h3>
+	<FieldArray
+		name="authors"
+		render= {arrayHelpers =>
+			<NameListInput
+				arrayName="authors"
+				arrayHelpers={arrayHelpers}
+				vals={values.authors} />}/>
+</Fieldset><Fieldset>
+<h3>Reference</h3>
+	<MyTextInput
+		label="Journal"
+		name="journal"
+	/>
+	<Columns>
+		<Column>
+			<MyTextInput
+		label="Volume"
+		name="volume"
+		/>
+		</Column>
+		<Column>
+			<MyTextInput
+		label="Issue"
+		name="issue"
+		/>
+		</Column>
+		<Column>
+			<MyTextInput
+		label="Date"
+		name="date"
+		/>
+		</Column>
+		<Column>
+			<MyTextInput
+		label="Location"
+		name="location"
+		/>
+		</Column>
+	</Columns>
+</Fieldset>
+</>
+
+const JournalForm = ({action,item,closeModalCallback}) => {
 	const defaults = {
 	title: "",
 	location: "",
@@ -39,22 +85,29 @@ const Form = ({action,item,closeModalCallback}) => {
 	return (
 		<Formik
 			initialValues={initialValues}
-
+			validationSchema={
+				Yup.object({
+					title: Yup.string().required('Required'),
+					journal: Yup.string().required('Required'),
+				})
+			}
 			onSubmit={values =>
 				setTimeout(() => {
 					var pruned = Object.assign({},values)
 					pruned.type="journal"
+					pruned = pruneBlank(['authors','specialIssue.editors'], pruned)
 					action(pruned,closeModalCallback)
 				}, 500)
 			}
 		>
 		{({ values }) => (
-				<FormSkeleton>
+				<FormSkeleton closeModalCallback={closeModalCallback}>
 					<Title values={values} />
+					<Journal values={values} />
 				</FormSkeleton>
 				)}
 		</Formik>
 	)
 }
 
-export default Form
+export default JournalForm

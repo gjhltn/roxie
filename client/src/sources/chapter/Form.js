@@ -5,6 +5,7 @@ import { Formik, FieldArray } from 'formik';
 import {
 	Fieldset,
 	MyTextArea,
+	MyTextInput,
 	NameListInput,
 	pruneBlank,
 	FormSkeleton
@@ -67,7 +68,11 @@ const Chapter = ({ values }) =>
 				arrayName="translators"
 				arrayHelpers={arrayHelpers}
 				vals={values.authors} />}/>
-			
+	<h3>Location</h3>
+	<MyTextInput
+		label="Location"
+		name="location"
+	/>		
 </Fieldset>
 
 const ChapterForm = ({action,item,closeModalCallback}) => {
