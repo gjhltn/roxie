@@ -4,8 +4,7 @@ import React from "react"
 import styled from 'styled-components';
 import Modal from 'react-modal';
 
-import {ICON_TYPE, IconButton} from '../Icon/Icon'
-import Button from '../Button/Button'
+import Icon, {ICON_TYPE, IconButton} from '../Icon/Icon'
 import Copier from '../Copier/Copier'
 import BookForm from '../../sources/book/Form'
 import ChapterForm from '../../sources/chapter/Form'
@@ -14,9 +13,46 @@ import Editor  from '../Editor/Editor'
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Loading from '../Loading/Loading'
 
-import {names, groupBy} from '../../sources/citation'
+import {bibliography, note} from '../../sources/source'
 
 Modal.setAppElement('#root')
+
+const AddButton = ({label, onClick}) =>
+	<Button
+		type="button"
+		onClick={onClick}
+	>
+		<Icon
+			icon={ICON_TYPE.PLUS}
+			weight="2"
+			size="21"
+			colour="bbdaef"
+		/>
+		<span className="label">{label}</span>
+	</Button>
+
+const Button = styled.button`
+	appearance: none;
+	background: rgba(0,0,0,0.3);
+	border-radius: 2rem;
+	border: 0;
+	color: #bbdaef;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: inherit;
+	margin: 0 1rem 0 0;
+	outline: 0;
+	overflow: hidden;
+	padding: 0.5rem 1rem;
+	
+	.label {
+		margin: 0 1rem;
+		display:inline-block;
+	}
+`
+
+
 
 const Wrapper = styled.div`
 	display: flex;
@@ -26,16 +62,40 @@ const Wrapper = styled.div`
 	flex-direction: column;
 `
 
-const Toolbar = styled.header`
+const ToolbarContents = styled.header`
+	display: flex;
 	flex: 0 0 4rem;
-	background: rgba(0,0,0,0.5);
-	padding: 2rem 2rem;
+	padding: 1rem 2rem;
+	box-shadow: 0 -5px 1rem rgba(0,0,0,0.6);
+	border-top: 1px solid black;
+	
+	.buttons {
+		flex:1;
+	}
+	
+	.right {
+		flex: 0 0 2rem;
+	}
 `
+
+const Toolbar = ({handleNew}) =>
+	<ToolbarContents>
+		<div className="buttons">
+			<AddButton onClick={e=>handleNew("book")} label={"Book"} />
+			<AddButton onClick={e=>handleNew("chapter")} label={"Chapter"} />
+			<AddButton onClick={e=>handleNew("journal")} label={"Journal"} />
+		</div>
+		<div className="right">
+			trash
+		</div>
+	</ToolbarContents>
+
+
 
 const Main = styled.main`
 	flex:1;
 	overflow-y: scroll;
-	padding: 2rem 2rem 10rem;
+	padding: 1rem 2rem 10rem;
 `
 
 const Section = styled.section`
@@ -43,25 +103,25 @@ const Section = styled.section`
 `
 
 const ItemWrapper = styled.div`
+	background: rgba(0,0,0,0.1);
 	display: flex;
-	margin-top: 1rem;
-	padding-bottom: 1rem;
-	&:not(:last-child) {
-		border-bottom: 1px solid rgba(255,255,255,0.4);
+	margin-top: 2px;
+	padding: 1rem;
+	
+	.actions {
+		flex: 0 0 2rem;
+		margin-right: 1rem;
 	}
-
-	.Title {
+	
+	.text {
 		flex: 1;
-		font-style: italic;
-		display: block;
-		color: white !important;
-		text-decoration: none;
 	}
+`
 
-	.Delete {
-		margin-top: -6px;
-		flex: 0 0 48px;
-	}
+const Citation = styled.div`
+	  padding-left: 4rem;
+	  text-indent: -4rem;
+	  color: #bbdaef;
 `
 
 const Heading = styled.h2`
@@ -94,8 +154,7 @@ const Items = ({data,...props}) => {
 	return (
 		<>
 			{
-				["book","chapter","journal"].map(kind =>
-					<Kind key={kind} name={kind} allData={data} {...props}/>)
+				data.map((item) => <Item key={data.id} data={item}/>)
 			}
 		</>
 	)
@@ -103,24 +162,19 @@ const Items = ({data,...props}) => {
 
 const Item = ({data,handleUpdate,handleDelete}) =>
 	<ItemWrapper>
-	<Copier
-		text={"i wish this worked " + data.title}
-		icon={ICON_TYPE.NOTE}/>
-	<Copier
-		text="i wish this worked"
-		icon={ICON_TYPE.BIBLIOG}/>
-		<a onClick={e=>handleUpdate(data.id)} href="#" className="Title">{data.title}</a>
-		<div className="Delete">
-			<IconButton
-				handler={e=>handleDelete(data.id)}
-				icon={ICON_TYPE.CROSS}
-				weight="2"
-				size="32"
-				colour="pink"
-			/>
+		<div className="actions">
+			<Copier
+				text={note(data)}
+				icon={ICON_TYPE.NOTE}/>
+		</div>
+		<div className="text">
+			<Citation>
+				{bibliography(data)}
+			</Citation>
 		</div>
 	</ItemWrapper>
 
+	/*
 const Author = ({name,data,handleUpdate,handleDelete}) =>
 	<AuthorWrapper>
 		<div className="Author">{name}</div>
@@ -156,6 +210,7 @@ const Kind = ({name, allData, handleNew, handleUpdate, handleDelete}) => {
 		</Section>
 	)
 }
+*/
 
 const Listing = ({
 	items,
@@ -223,9 +278,7 @@ const Listing = ({
 								data={items}/>
 					}
 				</Main>
-				<Toolbar>
-					<Button onClick={(e)=>alert('Yes, if only this button worked')}>Generate Bibliography</Button>
-				</Toolbar>
+				<Toolbar handleNew={handleNew} />
 			</Wrapper>
 			<Modal
 				isOpen={modalIsOpen}
