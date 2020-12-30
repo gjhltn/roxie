@@ -9,7 +9,7 @@ export const bibliography = (item,wrapFn) => {
 	switch (item.type) {
 		case 'book': return book.bibliography(item,wrapFn)
 		case 'chapter': return chapter.bibliography(item,wrapFn)
-		case 'journal': return journal.bibliography(item)
+		case 'journal': return journal.bibliography(item,wrapFn)
 		default: return `[unsupported item type: ${item.type}]`
 	}
 }

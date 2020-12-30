@@ -1,6 +1,7 @@
 export const A = {
 	// NO URL
 	title: "The Relics of Thomas Becket in England",
+	type: "journal",
 	location: "124-142",
 	url:"",
 	authors:[
@@ -26,6 +27,7 @@ export const A = {
 
 export const B = {
 	// WITH URL
+	type: "journal",
 	title: "The Relics of Thomas Becket in England",
 	location: "124-142",
 	url:"https://doi.org/10.1080/00681288.2020.1787633",
@@ -51,7 +53,8 @@ export const B = {
 }
 
 export const C = {
-	// NO ISSUE 
+	// NO ISSUE
+	type: "journal",
 	title: "The Relics of Thomas Becket in England",
 	location: "124-142",
 	url:"https://doi.org/10.1080/00681288.2020.1787633",

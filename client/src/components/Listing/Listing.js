@@ -65,7 +65,7 @@ const Wrapper = styled.div`
 const ToolbarContents = styled.header`
 	display: flex;
 	flex: 0 0 4rem;
-	padding: 1rem 2rem;
+	padding: 1rem;
 	box-shadow: 0 -5px 1rem rgba(0,0,0,0.6);
 	border-top: 1px solid black;
 	
@@ -95,7 +95,7 @@ const Toolbar = ({handleNew}) =>
 const Main = styled.main`
 	flex:1;
 	overflow-y: scroll;
-	padding: 1rem 2rem 10rem;
+	padding: 1rem 1rem 10rem;
 `
 
 const Section = styled.section`
@@ -106,11 +106,11 @@ const ItemWrapper = styled.div`
 	background: rgba(0,0,0,0.1);
 	display: flex;
 	margin-top: 2px;
-	padding: 1rem;
+	padding:0;
 	
 	.actions {
 		flex: 0 0 2rem;
-		margin-right: 1rem;
+		padding: 0.75rem 1rem 0.5rem;
 	}
 	
 	.text {
@@ -118,15 +118,28 @@ const ItemWrapper = styled.div`
 	}
 `
 
-const Citation = styled.div`
-	  padding-left: 4rem;
-	  text-indent: -4rem;
-	  color: #bbdaef;
+const Citation = styled.button`
+	appearance: none;
+	border-radius: 0;
+	border: 0;
+	color: #bbdaef;
+	cursor: pointer;
+	letter-spacing: inherit;
+	margin: 0;
+	outline: 0;
+	display: block;
+	width: 100%;
+	font-size: 23px;
+	text-align: left;
+	padding: 1rem 1rem 1rem 4rem;
+	text-indent: -4rem;
+	color: #bbdaef;
 	  
 	  .author {
 		  color: ${props => props.theme.author};
 		  font-weight: bold;
 	  }
+	  
 	  .maintitle {
 		  color: ${props => props.theme.maintitle};
 		  font-style: italic;
@@ -146,6 +159,18 @@ const Citation = styled.div`
 	
 	.title {
 		color: ${props => props.theme.title};
+	}
+	
+	.url {
+		color: ${props => props.theme.url};
+	}
+	
+	.location {
+		color: ${props => props.theme.location};
+	}
+	
+	.number {
+		color: ${props => props.theme.number};
 	}
 `
 

@@ -18,7 +18,8 @@ const Roxie = () => {
 		let res = Object.values(require('../../sources/turabianExamples'))
 		let books = Object.values(require('../../sources/book/examples'))
 		let chapters = Object.values(require('../../sources/chapter/examples'))
-		Object.assign(res,books,chapters)
+		let journals = Object.values(require('../../sources/journal/examples'))
+		res = res.concat(books,chapters,journals)
 		setItems(res);
 		setLoaded(true);
 	}
