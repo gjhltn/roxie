@@ -13,7 +13,7 @@ import Editor  from '../Editor/Editor'
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Loading from '../Loading/Loading'
 
-import {bibliography, note} from '../../sources/source'
+import {bibliography, note, wrapInHtmlSpan} from '../../sources/source'
 
 Modal.setAppElement('#root')
 
@@ -122,6 +122,31 @@ const Citation = styled.div`
 	  padding-left: 4rem;
 	  text-indent: -4rem;
 	  color: #bbdaef;
+	  
+	  .author {
+		  color: ${props => props.theme.author};
+		  font-weight: bold;
+	  }
+	  .maintitle {
+		  color: ${props => props.theme.maintitle};
+		  font-style: italic;
+		}
+		
+	.editor {
+		color: ${props => props.theme.editor};
+	}
+	
+	.translator {
+		color: ${props => props.theme.translator};
+	}
+	
+	.imprint {
+		color: ${props => props.theme.imprint};
+	}
+	
+	.title {
+		color: ${props => props.theme.title};
+	}
 `
 
 const Heading = styled.h2`
@@ -160,6 +185,10 @@ const Items = ({data,...props}) => {
 	)
 }
 
+function createMarkup(data) {
+  return {__html: bibliography(data,wrapInHtmlSpan).replace(/_/g, '')};
+}
+
 const Item = ({data,handleUpdate,handleDelete}) =>
 	<ItemWrapper>
 		<div className="actions">
@@ -168,9 +197,7 @@ const Item = ({data,handleUpdate,handleDelete}) =>
 				icon={ICON_TYPE.NOTE}/>
 		</div>
 		<div className="text">
-			<Citation>
-				{bibliography(data)}
-			</Citation>
+			<Citation dangerouslySetInnerHTML={createMarkup(data)} />
 		</div>
 	</ItemWrapper>
 

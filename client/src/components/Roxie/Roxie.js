@@ -16,6 +16,9 @@ const Roxie = () => {
 		setLoaded(false);
 		//let res = await itemService.getAll();
 		let res = Object.values(require('../../sources/turabianExamples'))
+		let books = Object.values(require('../../sources/book/examples'))
+		let chapters = Object.values(require('../../sources/chapter/examples'))
+		Object.assign(res,books,chapters)
 		setItems(res);
 		setLoaded(true);
 	}

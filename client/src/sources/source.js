@@ -2,10 +2,13 @@ import * as book from './book/source.js';
 import * as chapter from './chapter/source.js';
 import * as journal from './journal/source.js';
 
-export const bibliography = (item) => {
+export const wrapInHtmlSpan=(str,opts)=>
+	`<span ${(opts && opts.class) ? ("class=" + opts.class) : null}>${str}</span>`
+
+export const bibliography = (item,wrapFn) => {
 	switch (item.type) {
-		case 'book': return book.bibliography(item)
-		case 'chapter': return chapter.bibliography(item)
+		case 'book': return book.bibliography(item,wrapFn)
+		case 'chapter': return chapter.bibliography(item,wrapFn)
 		case 'journal': return journal.bibliography(item)
 		default: return `[unsupported item type: ${item.type}]`
 	}

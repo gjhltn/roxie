@@ -1,5 +1,6 @@
 export const A = {
 	title: "The Afterlife of the Reliquary",
+	type: "chapter",
 	location: "211-222",
 	authors:[
 		{

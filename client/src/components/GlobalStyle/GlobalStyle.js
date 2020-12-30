@@ -5,11 +5,12 @@ import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
 	bg: "#00366e",
-	author: "hsla(0, 100%, 84%, 1)",
-	title: "hsla(33, 100%, 82%, 1)",
+	author: "white",
+	title: "hsla(0, 100%, 84%, 1)",
+	maintitle: "hsla(33, 100%, 82%, 1)",
 	editor: "hsla(62, 100%, 86%, 1)",
 	translator: "hsla(110, 100%, 87%, 1)",
-	publication:	"hsla(185, 100%, 80%, 1)",
+	imprint:	"hsla(185, 100%, 80%, 1)",
 	unused: "hsla(217, 100%, 81%, 1)",
 	unusedB: "hsla(249, 100%, 85%, 1)",
 	unusedC: "hsla(300, 100%, 89%, 1)",
