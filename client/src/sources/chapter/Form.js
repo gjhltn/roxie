@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import styled from 'styled-components';
 import { Formik, FieldArray } from 'formik';
 import {
+	Title,
 	Fieldset,
 	MyTextArea,
 	MyTextInput,
@@ -25,13 +26,10 @@ const In = ({ values }) =>
 <Fieldset>
 	<Boxed>
 		<h2>In</h2>
-		<h3>Book Title</h3>
-		<MyTextArea
-			label="Chapter Title"
-			name="in.title"
-			type="textArea"
-			rows="4"
-		/>
+		<Title 
+			values={values}
+			label="Book title"
+			name="in.title"/>
 		<h3>Book Editor</h3>
 		<FieldArray
 			name="in.editors"
@@ -47,13 +45,10 @@ const In = ({ values }) =>
 
 const Chapter = ({ values }) =>
 <Fieldset>
-	<h3>Chapter Title</h3>
-	<MyTextArea
-		label="Chapter Title"
-		name="title"
-		type="textArea"
-		rows="4"
-	/>
+		<Title 
+			values={values}
+			label="Book title"
+			name="title"/>
 	<h3>Chapter author</h3>
 	<FieldArray
 		name="authors"

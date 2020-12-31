@@ -147,7 +147,7 @@ export const FormSkeleton = ({id, children, handleDelete, closeModalCallback}) =
 		<Submit id={id} handleDelete={handleDelete} closeModalCallback={closeModalCallback} hideClose={true}/>
 	</Form>
 
-export const Title = ({ values, formik, name="title", label="Title" }) => {
+export const Title = ({ values, name="title", label="Title" }) => {
 	const [current] = useField(name);
 	const { setFieldValue } = useFormikContext();
 	const titlecase = () => {
