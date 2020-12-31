@@ -8,7 +8,8 @@ import {
 	MyTextInput,
 	NameListInput,
 	pruneBlank,
-	FormSkeleton
+	FormSkeleton,
+	Imprint
 } from '../../components/Editor/Editor'
 
 const Boxed = styled.div`
@@ -39,6 +40,7 @@ const In = ({ values }) =>
 				arrayName="in.editors"
 				arrayHelpers={arrayHelpers}
 				vals={values.in.editors} />}/>
+		<Imprint name="in.imprint" values={values}/>
 	</Boxed>
 </Fieldset>
 

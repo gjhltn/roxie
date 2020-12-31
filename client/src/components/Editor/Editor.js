@@ -184,12 +184,12 @@ export const Authorship = ({ values }) =>
 				vals={values.translators} />}/>
 </Fieldset>
 
-export const Imprint = ({ values }) =>
+export const Imprint = ({ values, name }) =>
 <Fieldset>
 	<h2>Imprint</h2>
 	<MyTextInput
 		label="Publisher"
-		name="imprint.publisher"
+		name={name +".publisher"}
 		type="text"
 		placeholder="Birmigham University Press"
 	/>
@@ -197,7 +197,7 @@ export const Imprint = ({ values }) =>
 		<Column>
 			 <MyTextInput
 			 	label="Place"
-				name="imprint.place"
+				name={name+".place"}
 				type="text"
 				placeholder="Birmigham "
 			 />
@@ -205,7 +205,7 @@ export const Imprint = ({ values }) =>
 		<Column>
 			<MyTextInput
 				label="Year"
-				name="imprint.year"
+				name={name+".year"}
 				type="text"
 				placeholder="2021"
 			/>

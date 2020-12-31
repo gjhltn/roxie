@@ -59,7 +59,7 @@ const BookForm = ({action,item,closeModalCallback,handleDelete}) => {
 					handleDelete={handleDelete} closeModalCallback={closeModalCallback}>
 						<Title values={values} />
 						<Authorship values={values} />
-						<Imprint values={values}/>
+						<Imprint name="imprint" values={values}/>
 					</FormSkeleton>
 				)
 			}

@@ -53,6 +53,10 @@ const Journal = ({values}) =>
 		/>
 		</Column>
 	</Columns>
+	<MyTextInput
+		label="URL"
+		name="url"
+		/>
 </Fieldset>
 </>
 
