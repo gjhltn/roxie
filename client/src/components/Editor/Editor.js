@@ -1,10 +1,13 @@
 import React from "react"
 import styled from 'styled-components';
-import { Formik, Form, FieldArray, useField} from 'formik';
+import { Formik, Form, FieldArray, useField, useFormikContext} from 'formik';
+import { titleCase } from "title-case";
 
 import {ICON_TYPE, IconButton} from '../Icon/Icon'
 import Button from '../Button/Button'
 import Columns, {Column} from '../Columns/Columns'
+
+/* utility exports */
 
 /* -- STYLED COMPONENTS ---------------------------------------------*/
 
@@ -144,17 +147,36 @@ export const FormSkeleton = ({id, children, handleDelete, closeModalCallback}) =
 		<Submit id={id} handleDelete={handleDelete} closeModalCallback={closeModalCallback} hideClose={true}/>
 	</Form>
 
-export const Title = ({ values }) =>
+export const Title = ({ values, formik, name="title", label="Title" }) => {
+	const [current] = useField(name);
+	const { setFieldValue } = useFormikContext();
+	const titlecase = () => {
+		setFieldValue(name, titleCase(current.value.toLowerCase()),false)
+	}
+	const google = () => {
+		// <a target=”_blank” href=”http://www.google.com/search?q=Google+tutorial+create+link”>Google tutorial create link</a>
+	}
+return(
 <Fieldset>
-	<h3>Title</h3>
+	<h3>{label}</h3>
 	<MyTextArea
-		label="Title"
-		name="title"
+		label={label}
+		name={name}
 		type="textArea"
 		rows="4"
-		placeholder="Fear and Trembling"
+		placeholder=""
 	/>
-</Fieldset>
+	<div>
+		<IconButton
+			handler={() => titlecase()}
+			icon={ICON_TYPE.LETTERS}
+			weight="2"
+			size="52"
+			colour="white"
+		/>
+		</div>
+</Fieldset>)
+}
 
 export const Authorship = ({ values }) =>
 <Fieldset>
@@ -215,7 +237,7 @@ export const Imprint = ({ values, name }) =>
 
 const Submit = ({id, handleDelete, closeModalCallback, hideClose}) =>
 <WrapSubmit>
-	<Column><Button type="submit">Submit</Button></Column>
+	<Column><Button type="submit">Save</Button></Column>
 	{handleDelete && id && <Column><Button onClick={
 		e=> {
 			handleDelete(id, closeModalCallback)
@@ -229,34 +251,6 @@ const Submit = ({id, handleDelete, closeModalCallback, hideClose}) =>
 				colour="white"
 				/></Column>}
 </WrapSubmit>
-
-/* -- WHOLE FORMS ---------------------------------------------------*/
-
-export const JournalForm = ({action,item,closeModalCallback}) => {
-	const defaults = {
-		title: ""
-	}
-	const initialValues = Object.assign({},defaults,item)
-	return (
-		<Formik
-			initialValues={initialValues}
-
-			onSubmit={values =>
-				setTimeout(() => {
-					var pruned = Object.assign({},values)
-					pruned.type="journal"
-					action(pruned,closeModalCallback)
-				}, 500)
-			}
-		>
-		{({ values }) => (
-			<FormSkeleton>
-					<Title values={values} />
-					</FormSkeleton>
-				)}
-		</Formik>
-	)
-}
 
 /* -- EXPORTED COMPONENT ---------------------------------------------*/
 
