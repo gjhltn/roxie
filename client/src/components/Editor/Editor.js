@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components';
-import { Formik, Form, FieldArray, useField, useFormikContext} from 'formik';
+import { Form, FieldArray, useField, useFormikContext} from 'formik';
 import { titleCase } from "title-case";
 
 import {ICON_TYPE, IconButton} from '../Icon/Icon'

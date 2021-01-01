@@ -4,7 +4,7 @@ import React from "react"
 import styled from 'styled-components';
 import Modal from 'react-modal';
 
-import Icon, {ICON_TYPE, IconButton} from '../Icon/Icon'
+import Icon, {ICON_TYPE} from '../Icon/Icon'
 import Copier from '../Copier/Copier'
 import BookForm from '../../sources/book/Form'
 import ChapterForm from '../../sources/chapter/Form'
@@ -51,7 +51,11 @@ const Button = styled.button`
 		display:inline-block;
 	}
 `
-
+const Count = styled.h1`
+	font-size: 2rem;
+	margin:0 0 0.5rem;
+	font-weight normal;
+`
 
 
 const Wrapper = styled.div`
@@ -93,10 +97,6 @@ const Main = styled.main`
 	flex:1;
 	overflow-y: scroll;
 	padding: 1rem 1rem 10rem;
-`
-
-const Section = styled.section`
-	margin-bottom: 4rem;
 `
 
 const ItemWrapper = styled.div`
@@ -171,10 +171,6 @@ const Citation = styled.button`
 	}
 `
 
-const Heading = styled.h2`
-	text-transform: capitalize;
-`
-
 const AuthorWrapper = styled.div`
 	margin-bottom: 2rem;
 	.Author {
@@ -200,6 +196,7 @@ const SectionHeader = styled.header`
 const Items = ({data,handleUpdate,...props}) => {
 	return (
 		<>
+			<Count><strong>{data.length}</strong> items</Count>
 			{
 				data.map((item) => <Item handleUpdate={handleUpdate}key={data.id} data={item}/>)
 			}
@@ -222,44 +219,6 @@ const Item = ({data,handleUpdate,handleDelete}) =>
 			<Citation onClick={e=>handleUpdate(data.id)} dangerouslySetInnerHTML={createMarkup(data)} />
 		</div>
 	</ItemWrapper>
-
-	/*
-const Author = ({name,data,handleUpdate,handleDelete}) =>
-	<AuthorWrapper>
-		<div className="Author">{name}</div>
-		{
-			data.map(d=><Item key={d.id} handleUpdate={handleUpdate} handleDelete={handleDelete} data={d}/>)
-		}
-	</AuthorWrapper>
-
-const Kind = ({name, allData, handleNew, handleUpdate, handleDelete}) => {
-	const data = allData.filter(datum=>datum.type===name)
-	const grouped = groupBy(data,
-		datum => (datum.authors && datum.authors.length>0) ? names(datum.authors,{flipFirst:true}) : "[anonymous]"
-	);
-	const allNames = Array.from(grouped.keys()).sort()
-	return (
-		<Section>
-			<SectionHeader>
-				<Heading>{name}</Heading>
-				<div className="New">
-					<IconButton
-						handler={e=>handleNew(name)}
-						icon={ICON_TYPE.ADD}
-						weight="2"
-						size="52"
-						colour="white"
-					/>
-				</div>
-			</SectionHeader>
-						{
-				allNames.map(n => <Author key={n}
-			handleUpdate={handleUpdate}	handleDelete={handleDelete} name={n} data={grouped.get(n)}/>)
-			}
-		</Section>
-	)
-}
-*/
 
 const Listing = ({
 	items,

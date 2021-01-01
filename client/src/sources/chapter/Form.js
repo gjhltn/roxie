@@ -5,7 +5,6 @@ import { Formik, FieldArray } from 'formik';
 import {
 	Title,
 	Fieldset,
-	MyTextArea,
 	MyTextInput,
 	NameListInput,
 	pruneBlank,
@@ -47,7 +46,7 @@ const Chapter = ({ values }) =>
 <Fieldset>
 		<Title 
 			values={values}
-			label="Book title"
+			label="Chapter title"
 			name="title"/>
 	<h3>Chapter author</h3>
 	<FieldArray
