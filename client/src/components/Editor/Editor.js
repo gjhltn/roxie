@@ -140,11 +140,15 @@ export const MyTextInput = ({ label, ...props }) => {
 
 export const FormSkeleton = ({id, children, handleDelete, closeModalCallback}) =>
 	<Form>
-		<Submit  closeModalCallback={closeModalCallback}/>
+		<Submit id={id} closeModalCallback={closeModalCallback}/>
 		<Pale>
 			{children}
 		</Pale>
-		<Submit id={id} handleDelete={handleDelete} closeModalCallback={closeModalCallback} hideClose={true}/>
+		<Submit id={id}
+				handleDelete={handleDelete}
+				showDuplicate={true}
+				closeModalCallback={closeModalCallback}
+				hideClose={true}/>
 	</Form>
 
 export const Title = ({ values, name="title", label="Title" }) => {
@@ -235,7 +239,7 @@ export const Imprint = ({ values, name }) =>
 	</Columns>
 </Fieldset>
 
-const Submit = ({id, handleDelete, closeModalCallback, hideClose}) =>
+const Submit = ({id, showDuplicate, handleDelete, closeModalCallback, hideClose}) =>
 <WrapSubmit>
 	<Column><Button type="submit">Save</Button></Column>
 	{handleDelete && id && <Column><Button onClick={
@@ -243,6 +247,11 @@ const Submit = ({id, handleDelete, closeModalCallback, hideClose}) =>
 			handleDelete(id, closeModalCallback)
 		}
 	}type="button">Delete</Button></Column>}
+	{
+		id && showDuplicate && <Column>
+			ID: {id}
+		</Column>
+	}
 	{!hideClose && <Column size="1rem"><IconButton
 				handler={() => closeModalCallback()}
 				icon={ICON_TYPE.CLOSE}
