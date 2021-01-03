@@ -13,6 +13,7 @@ import Editor  from '../Editor/Editor'
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Loading from '../Loading/Loading'
 
+import {authorship} from '../../sources/citation'
 import {bibliography, note, wrapInHtmlSpan} from '../../sources/source'
 
 Modal.setAppElement('#root')
@@ -235,15 +236,10 @@ const Listing = ({
 	const closeModal = () => setIsOpen(false)
 
 	const sortItems = (items) => {
-		let anon = items
-			.filter(item=>item.type==="book")
-			.filter(item=>!(!item.authors || item.authors.length>0))
-			.sort((a, b) => (a.title > b.title) ? 1 : -1)
-		let authored = items.filter(item=>item.authors && item.authors.length>0).sort((a, b) => ((a.authors[0].last + a.authors[0].first).toLowerCase() > (b.authors[0].last + b.authors[0].first).toLowerCase()) ? 1 : -1)
+		items.map(item=> item.authorship = (authorship(item,"bibliography") || "").toLowerCase())
 		
-		return anon.concat(authored)
+		return items.sort((a, b) => (a.authorship > b.authorship) ? 1 : -1)
 	}
-	
 	
 	const componentForType = type => {
 		switch (type) {
