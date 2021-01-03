@@ -158,7 +158,7 @@ export const Title = ({ values, name="title", label="Title" }) => {
 		setFieldValue(name, titleCase(current.value.toLowerCase()),false)
 	}
 	const google = () => {
-		// <a target=”_blank” href=”http://www.google.com/search?q=Google+tutorial+create+link”>Google tutorial create link</a>
+		window.open(`http://google.com/search?q=${current.value}`);
 	}
 return(
 <Fieldset>
@@ -178,7 +178,14 @@ return(
 			size="52"
 			colour="white"
 		/>
-		</div>
+				<IconButton
+			handler={() => google()}
+			icon={ICON_TYPE.MAGNIFY}
+			weight="2"
+			size="52"
+			colour="white"
+			/>
+			</div>
 </Fieldset>)
 }
 

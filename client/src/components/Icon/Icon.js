@@ -39,6 +39,9 @@ const Button = styled.button`
 	outline: 0;
 	padding: 0;
 	margin: 0;
+	& + & {
+		margin-left: 2rem;
+	}
 `
 
 export const IconButton = ({

@@ -5,7 +5,7 @@ const FileSync = require('lowdb/adapters/FileSync');
 const shortid = require('shortid');
 const fs = require('fs');
 
-const dbFile = "db.json"
+const dbFile = "devdb.json"
 
 const backup = `${dbFile}.backup.${new Date().toISOString().replace(/:/g,"-")}`
 
