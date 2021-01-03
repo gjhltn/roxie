@@ -32,13 +32,13 @@ describe('Turabian books', () => {
 describe('chapters', () => {
 	it('simple case - bibliography', () => {
 		expect(bibliography(eg.turabian5)).toEqual(
-		"Gillespie, Kelly. ”Before the Commission: Ethnography as Public Testimony.“ In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017."
+		"Gillespie, Kelly. “Before the Commission: Ethnography as Public Testimony.” In _If Truth Be Told: The Politics of Public Ethnography_, edited by Didier Fassin, 69–95. Durham, NC: Duke University Press, 2017."
 		
 		)
 	})
 	it('simple case - notes', () => {
 		expect(note(eg.turabian5)).toEqual(
-		"Kelly Gillespie, ”Before the Commission: Ethnography as Public Testimony,“ in _If Truth Be Told: The Politics of Public Ethnography_, ed. Didier Fassin (Durham, NC: Duke University Press, 2017), XX."
+		"Kelly Gillespie, “Before the Commission: Ethnography as Public Testimony,” in _If Truth Be Told: The Politics of Public Ethnography_, ed. Didier Fassin (Durham, NC: Duke University Press, 2017), XX."
 		
 		)
 	})
