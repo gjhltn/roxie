@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from "react"
+import { Route, Switch } from 'react-router-dom';
+
 import Listing from '../Listing/Listing'
+import Bibliography from '../Bibliography/Bibliography'
+
 import itemService from '../../services/items'
 
 const Roxie = () => {
@@ -48,13 +52,21 @@ const Roxie = () => {
 	}
 	
 	return(
-		<Listing
-			createFn={createItem}
-			deleteFn={deleteItem}
-			updateFn={updateItem}
-			items={items}
-			loaded={loaded}
-		/>
+		<Switch>
+			<Route path="/listing">
+				<Listing
+					createFn={createItem}
+					deleteFn={deleteItem}
+					updateFn={updateItem}
+					items={items}
+					loaded={loaded}
+				/>
+			</Route>
+			<Route path="/">
+				<Bibliography
+					items={items}	/>
+			</Route>
+		  </Switch>
 	)
 }
 

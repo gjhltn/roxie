@@ -3,6 +3,7 @@
 import React from "react"
 import styled from 'styled-components';
 import Modal from 'react-modal';
+import {Link} from "react-router-dom";
 
 import Icon, {ICON_TYPE} from '../Icon/Icon'
 import Copier from '../Copier/Copier'
@@ -89,6 +90,8 @@ const Toolbar = ({handleNew}) =>
 			<AddButton onClick={e=>handleNew("book")} label={"Book"} />
 			<AddButton onClick={e=>handleNew("chapter")} label={"Chapter"} />
 			<AddButton onClick={e=>handleNew("journal")} label={"Journal"} />
+			
+			<Link to="bibliography">Bibliography</Link>
 		</div>
 	</ToolbarContents>
 
@@ -221,6 +224,12 @@ const Item = ({data,handleUpdate,handleDelete}) =>
 		</div>
 	</ItemWrapper>
 
+export const sortItems = (items) => {
+		items.map(item=> item.authorship = (authorship(item,"bibliography") || "").toLowerCase())
+		
+		return items.sort((a, b) => (a.authorship > b.authorship) ? 1 : -1)
+	}	
+	
 const Listing = ({
 	items,
 	loaded,
@@ -234,12 +243,6 @@ const Listing = ({
 	const [modalComponent, setModalComponent] = React.useState()
 	const openModal = () => setIsOpen(true)
 	const closeModal = () => setIsOpen(false)
-
-	const sortItems = (items) => {
-		items.map(item=> item.authorship = (authorship(item,"bibliography") || "").toLowerCase())
-		
-		return items.sort((a, b) => (a.authorship > b.authorship) ? 1 : -1)
-	}
 	
 	const componentForType = type => {
 		switch (type) {
