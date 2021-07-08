@@ -172,7 +172,7 @@ const Citation = styled.button`
 	}
 `
 
-const AuthorWrapper = styled.div`
+/*const AuthorWrapper = styled.div`
 	margin-bottom: 2rem;
 	.Author {
 		border-bottom: 4px solid white;
@@ -192,7 +192,7 @@ const SectionHeader = styled.header`
 	.New {
 		flex: 0 0 2rem;
 	}
-`
+`*/
 
 const Items = ({data,handleUpdate,...props}) => {
 	return (

@@ -8,6 +8,10 @@ Roxie is a bibliography and citation formatter for the wretched, misconceived, b
 
 Status: Hey, I just started. This is under heavy development and doesn't do anything useful yet. Also, it's a quick hack. I need it in ten days' time 😬 so code quality? Not my main priority here, mmkay.
 
+## To run
+
+
+
 ## Internal data structures
 
 ### Book
