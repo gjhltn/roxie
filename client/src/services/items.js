@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const IP = "192.168.1.84"
+const IP = "192.168.1.68"
 
 const API = {
 	getAll: async () => {

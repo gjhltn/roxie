@@ -117,6 +117,7 @@ const ItemWrapper = styled.div`
 `
 
 const Citation = styled.button`
+background: transparent;
 	appearance: none;
 	border-radius: 0;
 	border: 0;
