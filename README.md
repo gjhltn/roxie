@@ -10,7 +10,13 @@ Status: Hey, I just started. This is under heavy development and doesn't do anyt
 
 ## To run
 
+cd ~/Documents/roxie/api; 
+yarn start;
 
+cd ~/Documents/roxie/client; 
+yarn start;
+
+open 'http://0.0.0.0:3000'
 
 ## Internal data structures
 

@@ -293,7 +293,7 @@ const Listing = ({
 								data={sortItems(items)}/>
 					}
 				</Main>
-				<Toolbar handleNew={handleNew} />
+				<Toolbar handleNew={handleNew} /> 
 			</Wrapper>
 			<Modal
 				isOpen={modalIsOpen}

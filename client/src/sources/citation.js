@@ -29,7 +29,7 @@ export const nameFirstLast = name =>{
 }
 
 export const names = (arr,opts) => {
-    const l = arr.length
+    const l = arr ? arr.length : false
 	const flipFirst = opts && opts.flipFirst
 	// easy cases
     if (!l) return ""
