@@ -1,9 +1,15 @@
-const express = require("express");
-const router = express.Router();
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
-const shortid = require('shortid');
-const fs = require('fs');
+//const express = require("express");
+//const router = express.Router();
+//const low = require('lowdb');
+//const FileSync = require('lowdb/adapters/FileSync');
+//const shortid = require('shortid');
+//const fs = require('fs');
+
+import { join, dirname } from 'path'
+import { Low, JSONFile } from 'lowdb'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const dbFile = "db.json"
 
