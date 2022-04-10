@@ -5,6 +5,7 @@
     "build": "next build",
     "start": "next start"
   },
+  "exports": "./pages/index.js",
   "dependencies": {
     "next": "latest",
     "react": "^17.0.2",
