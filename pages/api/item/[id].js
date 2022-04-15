@@ -1,4 +1,4 @@
-export default function userHandler(req, res) {
+export default function itemHandler(req, res) {
   const {
     query: { id, name },
     method,

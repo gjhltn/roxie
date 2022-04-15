@@ -3,10 +3,10 @@ import useSwr from 'swr'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-export default function User() {
+export default function Item() {
   const router = useRouter()
   const { data, error } = useSwr(
-    router.query.id ? `/api/user/${router.query.id}` : null,
+    router.query.id ? `/api/item/${router.query.id}` : null,
     fetcher
   )
 

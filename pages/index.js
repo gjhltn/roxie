@@ -4,17 +4,17 @@ import Link from 'next/link'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Index() {
-  const { data, error } = useSwr('/api/users', fetcher)
+  const { data, error } = useSwr('/api/items', fetcher)
 
-  if (error) return <div>Failed to load users</div>
+  if (error) return <div>Failed to load items</div>
   if (!data) return <div>Loading...</div>
 
   return (
     <ul>
-      {data.map((user) => (
-        <li key={user.id}>
-          <Link href="/user/[id]" as={`/user/${user.id}`}>
-            <a>{`User ${user.id}`}</a>
+      {data.map((item) => (
+        <li key={item}>
+          <Link href="/item/[id]" as={`/item/${item.id}`}>
+            <a>{`Item ${item.id}`}</a>
           </Link>
         </li>
       ))}
