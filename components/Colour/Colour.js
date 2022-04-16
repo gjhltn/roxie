@@ -42,8 +42,7 @@ const colourStyleString = (colours, allowDarkmode) =>
 		.join('')
 
 const Stylesheet = createGlobalStyle`
-	${props =>
-		colourStyleString(COLOURS, props.allowDarkmode)}
+	${props => colourStyleString(COLOURS, props.allowDarkmode)}
 	}
 
 	body {

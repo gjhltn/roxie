@@ -7,29 +7,30 @@
         1
       ]
     },
-	    {
+    {
       "id": 2,
       "name": "item two",
       "collectionId": [
-        1,2
+        1,
+        2
       ]
-  },
-      {
+    },
+    {
       "id": 3,
       "name": "item three",
       "collectionId": [
         2
       ]
-  }
+    }
   ],
   "collections": [
     {
       "id": 1,
       "name": "Collection A"
     },
-	{
+    {
       "id": 2,
       "name": "Collection B"
-  }
+    }
   ]
 }

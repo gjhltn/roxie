@@ -10,11 +10,12 @@ const Styles = createGlobalStyle`
 	}
 `
 
-const App = ({ Component, pageProps }) =>
-<>
-	<Styles />
-	<Colour allowDarkmode={true} />
-	<Component {...pageProps} />
-</>
+const App = ({ Component, pageProps }) => (
+	<>
+		<Styles />
+		<Colour allowDarkmode={true} />
+		<Component {...pageProps} />
+	</>
+)
 
 export default App
