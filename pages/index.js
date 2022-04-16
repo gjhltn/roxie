@@ -16,26 +16,26 @@ const SelectListingWrapper = styled.div`
 
 		* {
 			cursor: pointer;
-			color: white;
-			font-size: 24px;
+			color: var(--colour-ink);
+			
 		}
 	}
 
 	.react-select__menu * {
-		background: #494685;
+		background: var(--colour-altpaper);
 	}
 
 	.react-select__control {
-		background: #494685;
-		color: white !important;
+		background: var(--colour-altpaper);
+		color: var(--colour-ink) !important;
 		border: 0;
 		border-radius: 0;
 		.react-select__value-container {
-			color: white !important;
+			color: var(--colour-ink) !important;
 		}
 	}
 	.react-select__option {
-		color: white !important;
+		color: var(--colour-ink) !important;
 	}
 `
 
