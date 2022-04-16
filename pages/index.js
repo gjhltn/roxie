@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import useSwr from 'swr'
 import Link from 'next/link'
 import Select from 'react-select'
-
-const fetcher = (url) => fetch(url).then((res) => res.json())
+import fetcher from '../helpers/fetcher'
 
 const ALL = {id: -1, name:"All items"}
 const ALL_COLLECTIONS = {id: 0, name:"All collections"}

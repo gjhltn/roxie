@@ -1,5 +1,5 @@
 import 'normalize.css'
-import { Stylesheet } from '../components/Colour/Colour'
+import { Colour } from '../components'
 import { createGlobalStyle } from 'styled-components'
 
 const Styles = createGlobalStyle`
@@ -13,7 +13,7 @@ const Styles = createGlobalStyle`
 const App = ({ Component, pageProps }) =>
 <>
 	<Styles />
-	<Stylesheet allowDarkmode={true} />
+	<Colour allowDarkmode={true} />
 	<Component {...pageProps} />
 </>
 

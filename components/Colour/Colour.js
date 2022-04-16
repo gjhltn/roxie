@@ -41,7 +41,7 @@ const colourStyleString = (colours, allowDarkmode) =>
 		.map(key => colour(key, colours[key], allowDarkmode))
 		.join('')
 
-export const Stylesheet = createGlobalStyle`
+const Stylesheet = createGlobalStyle`
 	${props =>
 		colourStyleString(COLOURS, props.allowDarkmode)}
 	}
@@ -60,3 +60,5 @@ export const Stylesheet = createGlobalStyle`
 		}
 	}
 `
+
+export default Stylesheet
