@@ -50,7 +50,7 @@ const Collection = ({ name, items }) => (
 	</>
 )
 
-const ListingPage = ({ data }) => {
+const Page = ({ data }) => {
 	const [listing, setListing] = useState(optionify(ALL))
 
 	const itemsInCollection = (collectionId, data) =>
@@ -106,4 +106,4 @@ const ListingPage = ({ data }) => {
 	)
 }
 
-export default ListingPage
+export default Page

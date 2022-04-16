@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import useSwr from 'swr'
-
-const fetcher = url => fetch(url).then(res => res.json())
+import { ItemEditPage as Page } from '/components'
+import fetcher from '/helpers/fetcher'
 
 export default function Item() {
 	const router = useRouter()
@@ -10,5 +10,5 @@ export default function Item() {
 	if (error) return <div>Failed to load user</div>
 	if (!data) return <div>Loading...</div>
 
-	return <div>{data.name}</div>
+	return <Page data={data}/>
 }
