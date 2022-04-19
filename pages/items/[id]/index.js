@@ -5,9 +5,11 @@ import fetcher from '/helpers/fetcher'
 
 export default function Item() {
 	const router = useRouter()
-	const { data, error } = useSwr(router.query.id ? `/api/item/${router.query.id}` : null, fetcher)
+	//const id = router.query.id
+	const id = 1
+	const { data, error } = useSwr(id ? `/api/items/${id}` : null, fetcher)
 
-	if (error) return <div>Failed to load user</div>
+	if (error) return <div>Error [{JSON.stringify(error)}]</div>
 	if (!data) return <div>Loading...</div>
 
 	return <Page data={data}/>

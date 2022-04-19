@@ -5,15 +5,12 @@ const Wrapper = styled.div`
 `
 
 const Page = ({ data }) => {
-	let id, name
-	if (data.current) {
-		id = data.current.id
-		name = data.current.name
-	}
+	const { id, name, collectionId } = data
 	
 	return (
 		<Wrapper>
 			{name} [{id}]
+			{JSON.stringify(data)}
 		</Wrapper>
 	)
 }
