@@ -8,6 +8,8 @@
 	},
 	"exports": "./pages/index.js",
 	"dependencies": {
+		"content-disposition": "^0.5.4",
+		"docx": "^7.3.0",
 		"lodash": "^4.17.21",
 		"lodash-id": "^0.14.1",
 		"lowdb": "^3.0.0",
