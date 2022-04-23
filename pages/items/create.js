@@ -1,5 +1,24 @@
 import { useState } from 'react';
 import Router from 'next/router';
+import { useRouter } from 'next/router'
+
+// 192.168.1.74:3000/items/create?itemType=book
+
+export const ITEM_TYPES = {
+	BOOK: "book",
+	ARTICLE: "article",
+	CHAPTER: "chapter"
+}
+
+ITEM_TYPES.DEFAULT = Object.values(ITEM_TYPES)[0]
+
+export default () => {
+  const router = useRouter()
+	const itemType = router.query.itemType || ITEM_TYPES.DEFAULT
+  return <div>{itemType}</div>
+}
+
+/*
 import { useForm } from 'react-hook-form';
 import Layout from '../../components/layout';
 
@@ -154,4 +173,4 @@ const Create = () => {
     </Layout>
   );
 };
-
+*/

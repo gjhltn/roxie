@@ -1,11 +1,14 @@
 import { Document, Packer, Paragraph, TextRun } from "docx"
 import contentDisposition from 'content-disposition'
+import { read } from '/db/items'
 
-const doc = new Document({
-    sections: [{
-        properties: {},
-        children: [
-            new Paragraph({
+
+//const buildParagraph = (data) =>
+
+const buildDoc = (data) => {
+	
+	let items = []
+	items.push(new Paragraph({
                 children: [
                     new TextRun("Hello World"),
                     new TextRun({
@@ -17,17 +20,22 @@ const doc = new Document({
                         bold: true,
                     }),
                 ],
-            }),
-        ],
+            }))
+	
+return new Document({
+    sections: [{
+        properties: {},
+        children:  items
     }],
 });
+}
 
 
 export default async function(req, res) {
   const id = req.query.id;
   try {
-	  console.log('xxxx')
-	const buffer = await Packer.toBuffer(doc)
+	 const data = await read()
+	const buffer = await Packer.toBuffer(buildDoc(data))
     res.setHeader('Content-Type', 'application/octet-stream');
 	 res.setHeader('Content-Disposition', contentDisposition('bibliography.docx'))
     res.send(buffer);
