@@ -1,176 +1,63 @@
-import { useState } from 'react';
-import Router from 'next/router';
-import { useRouter } from 'next/router'
+import { useState } from 'react'
+import Router, { useRouter } from 'next/router'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 // 192.168.1.74:3000/items/create?itemType=book
 
-export const ITEM_TYPES = {
-	BOOK: "book",
-	ARTICLE: "article",
-	CHAPTER: "chapter"
-}
-
-ITEM_TYPES.DEFAULT = Object.values(ITEM_TYPES)[0]
-
 export default () => {
-  const router = useRouter()
-	const itemType = router.query.itemType || ITEM_TYPES.DEFAULT
-  return <div>{itemType}</div>
+	const router = useRouter()
+	const [errorMessage, setErrorMessage] = useState(false)
+
+	const send = async formData => {
+		try {
+			const res = await fetch('/api/items', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(formData)
+			})
+			if (res.status === 200) {
+				Router.push('/')
+			} else {
+				throw new Error(await res.text())
+			}
+		} catch (error) {
+			console.error(error)
+			setErrorMessage(error.message)
+		}
+	}
+
+	return (
+		<div>
+			{errorMessage}
+			<Formik
+				initialValues={{ email: '' }}
+				validate={values => {
+					const errors = {}
+					if (!values.email) {
+						errors.email = 'Required'
+					} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+						errors.email = 'Invalid email address'
+					}
+					return errors
+				}}
+				onSubmit={(formData, { setSubmitting }) => {
+					setSubmitting(true)
+					setTimeout(() => {send(formData)}, 400)
+				}}
+			>
+				{({ isSubmitting }) => (
+					<Form>
+						<Field type='email' name='email' />
+						<ErrorMessage name='email' component='div' />
+
+						<button type='submit' disabled={isSubmitting}>
+							Submit
+						</button>
+					</Form>
+				)}
+			</Formik>
+		</div>
+	)
 }
-
-/*
-import { useForm } from 'react-hook-form';
-import Layout from '../../components/layout';
-
-const Create = () => {
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = handleSubmit(async (formData) => {
-    if (errorMessage) setErrorMessage('');
-
-    try {
-      const res = await fetch('/api/customers/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (res.status === 200) {
-        Router.push('/');
-      } else {
-        throw new Error(await res.text());
-      }
-    } catch (error) {
-      console.error(error);
-      setErrorMessage(error.message);
-    }
-  });
-
-  return (
-    <Layout>
-      <h1>Create Customer</h1>
-
-      <form onSubmit={onSubmit}>
-        <div>
-          <label>First Name</label>
-          <input
-            type="text"
-            placeholder="e.g. John"
-            {...register('firstName', { required: 'First Name is required' })}
-          />
-          {errors.firstName && (
-            <span role="alert" className="error">
-              {errors.firstName.message}
-            </span>
-          )}
-        </div>
-
-        <div>
-          <label>Last Name</label>
-          <input
-            type="text"
-            placeholder="e.g. Doe"
-            {...register('lastName', { required: 'Last Name is required' })}
-          />
-          {errors.lastName && (
-            <span role="alert" className="error">
-              {errors.lastName.message}
-            </span>
-          )}
-        </div>
-
-        <div>
-          <label>Telephone</label>
-          <input
-            type="text"
-            placeholder="e.g. 123-456-7890"
-            {...register('telephone')}
-          />
-          {errors.telephone && (
-            <span role="alert" className="error">
-              {errors.telephone.message}
-            </span>
-          )}
-        </div>
-
-        <div>
-          <label>Credit Card Number</label>
-          <input
-            type="text"
-            placeholder="e.g. 1234567890123456"
-            {...register('creditCardNumber')}
-          />
-          {errors.creditCardNumber && (
-            <span role="alert" className="error">
-              {errors.creditCardNumber.message}
-            </span>
-          )}
-        </div>
-
-        <div className="submit">
-          <button type="submit" className="submitButton">
-            Create
-          </button>
-        </div>
-      </form>
-
-      {errorMessage && (
-        <p role="alert" className="errorMessage">
-          {errorMessage}
-        </p>
-      )}
-
-      <style jsx>{`
-        form {
-          background-color: #eee;
-          border-radius: 4px;
-          padding: 2rem;
-        }
-        label {
-          font-size: 0.9rem;
-          font-weight: 600;
-		  }
-		      label {
-          font-size: 0.9rem;
-          font-weight: 600;
-        }
-        input {
-          width: 100%;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          padding: 0.75rem;
-          margin: 0.25rem 0 1rem;
-        }
-        .submit {
-          margin-top: 1rem;
-          text-align: right;
-        }
-        .submitButton {
-          background-color: #0070f3;
-          border: none;
-          border-radius: 4px;
-          color: #fff;
-          font-size: 1rem;
-          padding: 0.5rem 1rem;
-          cursor: pointer;
-        }
-        .error,
-        .errorMessage {
-          color: #d32f2f;
-        }
-        .error {
-          display: block;
-          margin-bottom: 1rem;
-        }
-      `}</style>
-    </Layout>
-  );
-};
-*/
