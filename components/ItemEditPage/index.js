@@ -1,11 +1,21 @@
 import { useState } from 'react'
 import Router from 'next/router'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik } from 'formik'
 import styled from 'styled-components'
+import {
+	FormSkeleton,
+	Title,
+	Authorship,
+	Imprint
+} from '/components/form'
+import Book from '/helpers/book'
+import prune from '/helpers/prune'
 
 const Wrapper = styled.div``
 
-export default ({ itemType, ...props }) => {
+export default ({ itemTypeName, ...props }) => {
+	const itemType = Book
+	const item = {}
 	const [errorMessage, setErrorMessage] = useState(false)
 
 	const send = async formData => {
@@ -31,35 +41,27 @@ export default ({ itemType, ...props }) => {
 	return (
 		<Wrapper>
 			{errorMessage}
-			<Formik
-				initialValues={{ email: '' }}
-				validate={values => {
-					const errors = {}
-					if (!values.email) {
-						errors.email = 'Required'
-					} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-						errors.email = 'Invalid email address'
-					}
-					return errors
-				}}
+				<Formik
+				initialValues={Object.assign({}, itemType.defaults, item)}
+				validationSchema={itemType.schema}
 				onSubmit={(formData, { setSubmitting }) => {
 					setSubmitting(true)
 					setTimeout(() => {
-						send(formData)
-					}, 400)
+						var pruned = prune(itemType.pruneFields, Object.assign({}, formData))
+						pruned.type = itemType.name
+						send(pruned)
+					}, 200)
 				}}
 			>
-				{({ isSubmitting }) => (
-					<Form>
-						<Field type='email' name='email' />
-						<ErrorMessage name='email' component='div' />
-
-						<button type='submit' disabled={isSubmitting}>
-							Submit
-						</button>
-					</Form>
+				{({ values }) => (
+					<FormSkeleton id={item && item.id ? item.id : null}>
+						<Title values={values} />
+						<Authorship values={values} />
+						<Imprint name='imprint' values={values} />
+					</FormSkeleton>
 				)}
 			</Formik>
+		
 		</Wrapper>
 	)
 }

@@ -1,10 +1,10 @@
-import * as Yup from 'yup';
+import * as Yup from 'yup'
 
 const defaults = {}
 
 const schema = Yup.object({})
 
-export default const {
+export default Journal = {
 	defaults: defaults,
 	schema: schema
 }

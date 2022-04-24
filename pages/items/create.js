@@ -5,5 +5,5 @@ import { ItemEditPage } from '/components'
 
 export default () => {
 	const router = useRouter()
-	return <ItemEditPage itemType={router.query.itemType}/>
+	return <ItemEditPage itemTypeName={router.query.itemType}/>
 }

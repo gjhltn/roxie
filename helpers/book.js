@@ -1,11 +1,11 @@
-import * as Yup from 'yup';
+import * as Yup from 'yup'
 
 const defaults = {
-	title: "",
+	title: '',
 	authors: [
 		{
-			last:'',
-			first:''
+			last: '',
+			first: ''
 		}
 	],
 	editors: [],
@@ -22,15 +22,17 @@ const schema = Yup.object({
 	imprint: Yup.object().shape({
 		year: Yup.string().required('Required'),
 		publisher: Yup.string().required('Required'),
-		place: Yup.string().required('Required'),
+		place: Yup.string().required('Required')
 	})
 })
 
-const pruneFields = ['authors','editors','translators']
+const pruneFields = ['authors', 'editors', 'translators']
 
-export default const {
-	name: "book",
+const Book = {
+	name: 'book',
 	defaults: defaults,
 	schema: schema,
 	pruneFields: pruneFields
 }
+
+export default Book
