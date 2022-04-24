@@ -5,8 +5,8 @@ import { createGlobalStyle } from 'styled-components'
 const Styles = createGlobalStyle`
 	body {
 		font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-		font-size: 28px;
-		margin: 0 4rem;]
+		font-size: 24px;
+
 	}
 `
 

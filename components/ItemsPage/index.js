@@ -2,13 +2,41 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Select from 'react-select'
+import {
+	AnchorButton,
+	Collection
+}	from '/components'
 
 const ALL = { id: -1, name: 'All items' }
 const ALL_COLLECTIONS = { id: 0, name: 'All collections' }
 
 const optionify = collection => ({ value: collection.id, label: collection.name })
 
+const Wrapper = styled.div`
+	main {
+		margin: 2rem 4rem;
+	}
+
+	.Actionbar{
+		position: sticky;
+		padding: 1rem 4rem;
+		top: 0;
+		background: var(--colour-lesspaper);
+		display: grid;
+	grid-auto-flow: column;
+	gap: 1em;
+	
+	a+a {
+		margin-left:1rem;
+	}
+  grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
+}
+}
+`
+
 const SelectListingWrapper = styled.div`
+	position: relative;
+
 	.react-select-container {
 		* {
 			cursor: pointer;
@@ -17,11 +45,11 @@ const SelectListingWrapper = styled.div`
 	}
 
 	.react-select__menu * {
-		background: var(--colour-altpaper);
+		background: var(--colour-lesspaper);
 	}
 
 	.react-select__control {
-		background: var(--colour-altpaper);
+		background: var(--colour-lesspaper);
 		color: var(--colour-ink) !important;
 		border: 0;
 		border-radius: 0;
@@ -34,28 +62,19 @@ const SelectListingWrapper = styled.div`
 	}
 `
 
-const Collection = ({ name, items }) => (
-	<>
-		<h2>{name}</h2>
-		<ul>
-			{items &&
-				items.map(item => (
-					<li key={item}>
-						<Link href='/item/[id]/edit' as={`/item/${item.id}/edit`}>
-							<a>{item.name}</a>
-						</Link>
-					</li>
-				))}
-		</ul>
-	</>
-)
-
 const Page = ({ data }) => {
-	const [listing, setListing] = useState(optionify(ALL))
+	const [listing, setListing] = useState(optionify(ALL_COLLECTIONS))
 
 	const itemsInCollection = (collectionId, data) =>
 		data.items.filter(item => item.collectionId && item.collectionId.includes(collectionId))
 
+	const isNotInAnyCollecfion = item => {
+		const c = item.collectionId
+		if (!c) { return true} 
+		if (c.length<=0) {return true}
+		return false
+	}
+		
 	const options = [ALL, ALL_COLLECTIONS]
 		.concat(data.collections)
 		.map(collection => optionify(collection))
@@ -77,6 +96,12 @@ const Page = ({ data }) => {
 				name: collection.name,
 				items: itemsInCollection(collection.id, data)
 			}))
+			selectedCollections.push({
+				id: null,
+				name: "(none)",
+				items: data.items.filter(item => isNotInAnyCollecfion(item))
+				}
+			)
 			break
 		default:
 			selectedCollections = [
@@ -89,20 +114,27 @@ const Page = ({ data }) => {
 	}
 
 	return (
-		<>
-			<SelectListingWrapper>
-				<Select
-					className='react-select-container'
-					classNamePrefix='react-select'
-					value={listing}
-					options={options}
-					onChange={e => setListing(options.find(option => option.value === e.value))}
-				/>
-			</SelectListingWrapper>
-
+		<Wrapper>
+			<div className='Actionbar'>
+				<SelectListingWrapper>
+					<Select
+						className='react-select-container'
+						classNamePrefix='react-select'
+						value={listing}
+						options={options}
+						onChange={e => setListing(options.find(option => option.value === e.value))}
+					/>
+				</SelectListingWrapper>
+				<div className='buttons'>
+					<AnchorButton href='/items/create'>Book</AnchorButton>
+					<AnchorButton href='/'>Chapter</AnchorButton>
+					<AnchorButton href='/'>Journal</AnchorButton>
+				</div>
+			</div>
+<main>
 			{selectedCollections &&
 				selectedCollections.map(c => <Collection key={c} name={c.name} items={c.items} />)}
-		</>
+</main>		</Wrapper>
 	)
 }
 

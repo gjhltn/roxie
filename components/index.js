@@ -1,3 +1,5 @@
+export { default as Collection } from './Collection'
+export { default as AnchorButton } from './AnchorButton'
 export { default as Colour } from './Colour'
 export { default as Spinner } from './Spinner'
 export { default as Loading } from './Loading'
