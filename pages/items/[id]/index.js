@@ -12,5 +12,5 @@ export default function Item() {
 	if (error) return <div>Error [{JSON.stringify(error)}]</div>
 	if (!data) return <div>Loading...</div>
 
-	return <Page data={data}/>
+	return <Page data={data} />
 }

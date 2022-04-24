@@ -1,23 +1,19 @@
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import Layout from '../../../components/layout';
-import EditForm from '../../../components/edit-form';
+import { useRouter } from 'next/router'
+import useSWR from 'swr'
+import { ItemEditPage as Page } from '/components'
 
-const fetcher = (url) => fetch(url).then((r) => r.json());
+const fetcher = url => fetch(url).then(r => r.json())
 
 const Update = () => {
-  const router = useRouter();
-  const { id } = router.query;
+	const router = useRouter()
+	const { id } = router.query
 
-  const { data, error } = useSWR(`/api/customers/${id}`, fetcher);
+	const { data, error } = useSWR(`/api/items/${id}`, fetcher)
 
-  if (error) return <div>failed to load</div>;
+	if (error) return <div>Error [{JSON.stringify(error)}]</div>
+	if (!data) return <div>Loading...</div>
 
-  return (
-    <Layout>
-      {data ? <EditForm defaultValues={data} id={id} /> : <div>loading...</div>}
-    </Layout>
-  );
-};
+	return <Page data={data} />
+}
 
-export default Update;
+export default Update
