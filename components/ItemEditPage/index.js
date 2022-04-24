@@ -2,12 +2,7 @@ import { useState } from 'react'
 import Router from 'next/router'
 import { Formik } from 'formik'
 import styled from 'styled-components'
-import {
-	FormSkeleton,
-	Title,
-	Authorship,
-	Imprint
-} from '/components/form'
+import { FormSkeleton, Title, Authorship, Imprint } from '/components/form'
 import Book from '/helpers/book'
 import prune from '/helpers/prune'
 
@@ -41,7 +36,7 @@ export default ({ itemTypeName, ...props }) => {
 	return (
 		<Wrapper>
 			{errorMessage}
-				<Formik
+			<Formik
 				initialValues={Object.assign({}, itemType.defaults, item)}
 				validationSchema={itemType.schema}
 				onSubmit={(formData, { setSubmitting }) => {
@@ -61,7 +56,6 @@ export default ({ itemTypeName, ...props }) => {
 					</FormSkeleton>
 				)}
 			</Formik>
-		
 		</Wrapper>
 	)
 }

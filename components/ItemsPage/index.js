@@ -54,7 +54,7 @@ const Page = ({ data }) => {
 	const [listing, setListing] = useState(optionify(ALL))
 
 	const itemsInCollection = (collectionId, data) =>
-		data.items.filter(item => (item.collectionId && item.collectionId.includes(collectionId)))
+		data.items.filter(item => item.collectionId && item.collectionId.includes(collectionId))
 
 	const options = [ALL, ALL_COLLECTIONS]
 		.concat(data.collections)
