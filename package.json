@@ -4,9 +4,28 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"tidy": "yarn prettier --write ."
+		"tidy": "yarn prettier --write .",
+		 "test": "jest"
 	},
 	"exports": "./pages/index.js",
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
 	"dependencies": {
 		"content-disposition": "^0.5.4",
 		"docx": "^7.3.0",
@@ -27,6 +46,7 @@
 		"yup": "^0.32.11"
 	},
 	"devDependencies": {
+		"jest": "^27.5.1",
 		"prettier": "2.6.2"
 	}
 }

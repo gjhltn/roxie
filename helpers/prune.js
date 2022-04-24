@@ -1,10 +1,10 @@
-const prune = (cull,o) => {
-	cull.forEach(arrName=>{
+const prune = (cull, o) => {
+	cull.forEach(arrName => {
 		var keep = []
-		if (o[arrName]){
+		if (o[arrName]) {
 			keep = o[arrName].filter(
 				name =>
-					(name.first && name.first.trim().length >0 ) || (name.last && name.last.trim().length>0 )
+					(name.first && name.first.trim().length > 0) || (name.last && name.last.trim().length > 0)
 			)
 		}
 		if (keep.length > 0) {
@@ -13,7 +13,7 @@ const prune = (cull,o) => {
 			delete o[arrName]
 		}
 	})
-	return(o)
+	return o
 }
 
 export default prune
