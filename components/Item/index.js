@@ -3,10 +3,9 @@ import styled from 'styled-components'
 import Copier from '../Copier'
 import { ICON_TYPE } from '../Icon'
 
-//import {authorship} from '/helpers/citation'
-//import {bibliography, note, wrapInHtmlSpan} from '/helpers/source'
+import {authorship} from '/helpers/citation'
+import {bibliography, note, wrapInHtmlSpan} from '/helpers/source'
 
-const note = () => null
 
 const ItemWrapper = styled.li`
 	background: rgba(0, 0, 0, 0.1);
@@ -81,8 +80,8 @@ const Citation = styled.a`
 `
 
 function createMarkup(data) {
-	return { __html: JSON.stringify(data) }
-	// return { __html: bibliography(data, wrapInHtmlSpan).replace(/_/g, '') }
+	//return { __html: JSON.stringify(data) }
+	return { __html: bibliography(data, wrapInHtmlSpan).replace(/_/g, '') }
 }
 
 const Item = ({ data, handleUpdate, handleDelete }) => (
