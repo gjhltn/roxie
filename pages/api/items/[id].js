@@ -1,6 +1,7 @@
 import { destroy, read, update } from '/db/items'
 
 export default async function handler(req, res) {
+	
 	switch (req.method) {
 		case 'GET':
 			return await get()
@@ -18,8 +19,8 @@ export default async function handler(req, res) {
 	
 	async function get() {
 		try {
-			const user = await read(req.query.id)
-			return res.status(200).json(user)
+			const item = await read(req.query.id)
+			return res.status(200).json(item)
 		} catch (error) {
 			return res.status(500).json({ message: error })
 		}

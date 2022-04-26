@@ -5,7 +5,8 @@
 		"build": "next build",
 		"start": "next start",
 		"tidy": "yarn prettier --write .",
-		 "test": "jest"
+		"test": "jest",
+		"lint": "yarn run eslint --fix ./"
 	},
 	"exports": "./pages/index.js",
 	"browserslist": {
@@ -46,6 +47,13 @@
 		"yup": "^0.32.11"
 	},
 	"devDependencies": {
+		"@babel/eslint-parser": "^7.17.0",
+		"@babel/preset-react": "^7.16.7",
+		"eslint": "^8.14.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jest": "^26.1.5",
+		"eslint-plugin-react": "^7.29.4",
+		"eslint-plugin-storybook": "^0.5.11",
 		"jest": "^27.5.1",
 		"prettier": "2.6.2"
 	}

@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { useRouter } from 'next/router'
 import { ItemEditPage } from '/components'
 
@@ -5,5 +6,5 @@ import { ItemEditPage } from '/components'
 
 export default () => {
 	const router = useRouter()
-	return <ItemEditPage itemTypeName={router.query.itemType}/>
+	return <ItemEditPage itemTypeName={router.query.itemType || 'book'} />
 }

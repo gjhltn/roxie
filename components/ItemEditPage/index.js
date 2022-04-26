@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { useState } from 'react'
 import Router from 'next/router'
 import { Formik } from 'formik'
@@ -8,14 +9,14 @@ import prune from '/helpers/prune'
 
 const Wrapper = styled.div``
 
-export default ({ itemTypeName, ...props }) => {
+export default ({ id, itemTypeName, item = {}, ...props }) => {
 	const itemType = Book
-	const item = {}
 	const [errorMessage, setErrorMessage] = useState(false)
 
 	const send = async formData => {
 		try {
-			const res = await fetch('/api/items', {
+			const url = id ? '/api/items/' + id : '/api/items'
+			const res = await fetch(url, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'

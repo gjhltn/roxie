@@ -1,3 +1,4 @@
+import * as React from 'react'
 import 'normalize.css'
 import { Colour } from '../components'
 import { createGlobalStyle } from 'styled-components'

@@ -1,3 +1,4 @@
+import * as React from 'react'
 import useSwr from 'swr'
 import fetcher from '/helpers/fetcher'
 import { Loading, ItemsPage } from '/components'

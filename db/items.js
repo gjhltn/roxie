@@ -12,14 +12,18 @@ export const create = async (data) => {
 }
 
 export const read = async (id) => {
+	
 	if (id) {
 		const db = await database()
 		const item = _.getById(db.data.items, id)
+	
 		// denormalise collections
+		if (item.collectionId) {
 		item.collections = item.collectionId.map(
 			cid =>  _.getById(db.data.collections, cid)
 		)
 		delete item.collectionId
+		}
 		return item
 	}
 	// get all records (NB this gets the whole db ie imcliding collections as well)
