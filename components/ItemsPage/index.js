@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Select from 'react-select'
-import {
-	AnchorButton,
-	Collection
-}	from '/components'
+import { AnchorButton, Collection } from '/components'
 
 const ALL = { id: -1, name: 'All items' }
 const ALL_COLLECTIONS = { id: 0, name: 'All collections' }
@@ -70,11 +67,15 @@ const Page = ({ data }) => {
 
 	const isNotInAnyCollecfion = item => {
 		const c = item.collectionId
-		if (!c) { return true} 
-		if (c.length<=0) {return true}
+		if (!c) {
+			return true
+		}
+		if (c.length <= 0) {
+			return true
+		}
 		return false
 	}
-		
+
 	const options = [ALL, ALL_COLLECTIONS]
 		.concat(data.collections)
 		.map(collection => optionify(collection))
@@ -98,10 +99,9 @@ const Page = ({ data }) => {
 			}))
 			selectedCollections.push({
 				id: null,
-				name: "(none)",
+				name: '(none)',
 				items: data.items.filter(item => isNotInAnyCollecfion(item))
-				}
-			)
+			})
 			break
 		default:
 			selectedCollections = [
@@ -131,10 +131,11 @@ const Page = ({ data }) => {
 					<AnchorButton href='/'>Journal</AnchorButton>
 				</div>
 			</div>
-<main>
-			{selectedCollections &&
-				selectedCollections.map(c => <Collection key={c} name={c.name} items={c.items} />)}
-</main>		</Wrapper>
+			<main>
+				{selectedCollections &&
+					selectedCollections.map(c => <Collection key={c} name={c.name} items={c.items} />)}
+			</main>{' '}
+		</Wrapper>
 	)
 }
 

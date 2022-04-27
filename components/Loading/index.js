@@ -1,14 +1,15 @@
-import React from "react"
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import Spinner from '../Spinner/'
 
 const LoadingWrapper = styled.div`
-	flex:1;
+	flex: 1;
 `
 
-const Loading = () =>
+const Loading = () => (
 	<LoadingWrapper>
 		<Spinner />
 	</LoadingWrapper>
+)
 
-  export default Loading
+export default Loading

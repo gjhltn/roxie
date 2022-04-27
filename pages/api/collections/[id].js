@@ -1,4 +1,4 @@
-import { destroy, read, update } from '/db/items'
+import { destroy, read, update } from '/db/collections'
 
 export default async function handler(req, res) {
 	switch (req.method) {

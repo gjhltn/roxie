@@ -16,14 +16,17 @@ export const read = async (id) => {
 	if (id) {
 		const db = await database()
 		const item = _.getById(db.data.items, id)
+		const collections = db.data.collections
 	
 		// denormalise collections
-		if (item.collectionId) {
-		item.collections = item.collectionId.map(
-			cid =>  _.getById(db.data.collections, cid)
+		item.collections = collections.map(
+			c =>  ({
+				id: c.id,
+				name: c.name,
+				selected: item.collectionId && item.collectionId.includes(c.id)
+			})
 		)
-		delete item.collectionId
-		}
+		
 		return item
 	}
 	// get all records (NB this gets the whole db ie imcliding collections as well)

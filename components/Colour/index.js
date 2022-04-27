@@ -5,7 +5,7 @@ const COLOURS = {
 	knockback: { light: '#999', dark: '#999' },
 	paper: { light: '#fff', dark: '#2E2655' },
 	morepaper: { light: '#fafafa', dark: '#6431F8' },
-	lesspaper: { light: '#fafafa', dark: '#161328'},
+	lesspaper: { light: '#fafafa', dark: '#161328' },
 	interaction: { light: '#0060bf', dark: '#FDC5F5' },
 	highlight: { light: '#8dfb88' },
 	highlightink: { light: '#292d33' },

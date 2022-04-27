@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Router from 'next/router'
 import { Formik } from 'formik'
 import styled from 'styled-components'
-import { FormSkeleton, Title, Authorship, Imprint } from '/components/form'
+import { FormSkeleton, Title, Authorship, Imprint, Collections } from '/components/form'
 import Book from '/helpers/book'
 import prune from '/helpers/prune'
 
@@ -54,6 +54,7 @@ export default ({ id, itemTypeName, item = {}, ...props }) => {
 						<Title values={values} />
 						<Authorship values={values} />
 						<Imprint name='imprint' values={values} />
+						<Collections all={item.collections} values={values} />
 					</FormSkeleton>
 				)}
 			</Formik>

@@ -211,6 +211,15 @@ export const Imprint = ({ values, name }) => (
 	</Fieldset>
 )
 
+export const Collections = ({
+	all,
+	values
+}) => 
+<Fieldset>
+	<h2>Collections</h2>
+	{JSON.stringify(all)}
+</Fieldset>
+
 const Submit = ({ id, showDuplicate, handleDelete, closeModalCallback, hideClose }) => (
 	<WrapSubmit>
 		<Column>

@@ -1,16 +1,16 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Button = styled.button`
 	appearance: none;
-	background: ${props => props.red ? "red" : "transparent"};
+	background: ${props => (props.red ? 'red' : 'transparent')};
 	border-radius: 2rem;
 	border: 0;
-	box-shadow:0 0 0 2px #ffff inset;
+	box-shadow: 0 0 0 2px #ffff inset;
 	color: white;
 	cursor: pointer;
 	font-size: 1.5rem;
 	font-weight: bold;
-	height: "3rem";
+	height: '3rem';
 	letter-spacing: inherit;
 	line-height: 2rem;
 	margin-bottom: 0;

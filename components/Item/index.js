@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import Copier from '../Copier'
 import { ICON_TYPE } from '../Icon'
 
-import {authorship} from '/helpers/citation'
-import {bibliography, note, wrapInHtmlSpan} from '/helpers/source'
-
+import { authorship } from '/helpers/citation'
+import { bibliography, note, wrapInHtmlSpan } from '/helpers/source'
 
 const ItemWrapper = styled.li`
 	background: rgba(0, 0, 0, 0.1);

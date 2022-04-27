@@ -1,4 +1,4 @@
-import { create, read } from '/db/items'
+import { create, read } from '/db/collections'
 
 export default async function handler(req, res) {
 	switch (req.method) {

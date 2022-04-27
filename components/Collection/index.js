@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 	h2 {
 		font-weight: normal;
 		opacity: 0.3;
-		font-size:1.5rem;
+		font-size: 1.5rem;
 	}
 	ul,
 	li {
