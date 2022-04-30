@@ -1,58 +1,13 @@
 {
-	"items": [
-		{
-			"id": 2,
-			"name": "item two",
-			"collectionId": [1, 2]
-		},
-		{
-			"id": 3,
-			"name": "item three",
-			"collectionId": [2]
-		},
-		{
-			"name": "My new item",
-			"somefield": "This a thing",
-			"id": "ef2655a1-761c-4f1b-99b0-f023da55e3e2"
-		},
-		{
-			"name": "My new item",
-			"field": "This a new item!",
-			"id": "1bff70ed-9251-4625-8e2b-36c060f0c1b5"
-		},
-		{
-			"email": "sd@sksk.com",
-			"id": "25b9573e-6b0b-414e-bc2a-27b8e332038b"
-		},
-		{
-			"email": "ed@ed.com",
-			"id": "9c43660c-a21b-403c-8a97-f94c8e21863d"
-		},
-		{
-			"title": "Dkd",
-			"authors": [
-				{
-					"last": "D",
-					"first": "X"
-				}
-			],
-			"imprint": {
-				"publisher": "Didk",
-				"place": "Dkd",
-				"year": "201"
-			},
-			"type": "book",
-			"id": "5b9fbc29-2adc-4888-936e-c41855502269"
-		}
-	],
-	"collections": [
-		{
-			"id": 1,
-			"name": "Collection A"
-		},
-		{
-			"id": 2,
-			"name": "Collection B"
-		}
-	]
+  "items": [],
+  "collections": [
+    {
+      "id": 1,
+      "name": "Primary sources"
+    },
+    {
+      "id": 2,
+      "name": "Secondary sources"
+    }
+  ]
 }

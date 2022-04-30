@@ -14,7 +14,8 @@ const defaults = {
 		publisher: '',
 		place: '',
 		year: ''
-	}
+	},
+	collectionID: []
 }
 
 const schema = Yup.object({

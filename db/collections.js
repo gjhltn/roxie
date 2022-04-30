@@ -17,8 +17,7 @@ export const read = async (id) => {
 	if (id) {
 		return	_.getById(db.data.collections, id)
 	}
-	console.log("*****")
-	console.log(db.data.collections)
+	
 	return db.data.collections
 }
 

@@ -62,11 +62,11 @@ const SelectListingWrapper = styled.div`
 const Page = ({ data }) => {
 	const [listing, setListing] = useState(optionify(ALL_COLLECTIONS))
 
-	const itemsInCollection = (collectionId, data) =>
-		data.items.filter(item => item.collectionId && item.collectionId.includes(collectionId))
+	const itemsInCollection = (collectionID, data) =>
+		data.items.filter(item => item.collectionID && item.collectionID.includes(collectionID))
 
 	const isNotInAnyCollecfion = item => {
-		const c = item.collectionId
+		const c = item.collectionID
 		if (!c) {
 			return true
 		}

@@ -9,15 +9,18 @@ import prune from '/helpers/prune'
 
 const Wrapper = styled.div``
 
-export default ({ id, itemTypeName, item = {}, ...props }) => {
+export default ({ id, method="POST", itemTypeName, item = {}, ...props }) => {
 	const itemType = Book
 	const [errorMessage, setErrorMessage] = useState(false)
 
+	const collections = item.collections.slice()
+	delete item.collections
+	
 	const send = async formData => {
 		try {
 			const url = id ? '/api/items/' + id : '/api/items'
 			const res = await fetch(url, {
-				method: 'POST',
+				method: method,
 				headers: {
 					'Content-Type': 'application/json'
 				},
@@ -43,9 +46,10 @@ export default ({ id, itemTypeName, item = {}, ...props }) => {
 				onSubmit={(formData, { setSubmitting }) => {
 					setSubmitting(true)
 					setTimeout(() => {
+						
 						var pruned = prune(itemType.pruneFields, Object.assign({}, formData))
 						pruned.type = itemType.name
-						send(pruned)
+						send(pruned,method)
 					}, 200)
 				}}
 			>
@@ -54,7 +58,7 @@ export default ({ id, itemTypeName, item = {}, ...props }) => {
 						<Title values={values} />
 						<Authorship values={values} />
 						<Imprint name='imprint' values={values} />
-						<Collections all={item.collections} values={values} />
+						<Collections all={collections} values={values} />
 					</FormSkeleton>
 				)}
 			</Formik>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Router from 'next/router'
-import { Form, FieldArray, useField, useFormikContext } from 'formik'
+import { Form, Field, FieldArray, useField, useFormikContext } from 'formik'
 import { titleCase } from 'title-case'
 
 import { ICON_TYPE, IconButton } from '../Icon/'
@@ -114,15 +114,14 @@ export const MyTextInput = ({ label, ...props }) => {
 
 /* -- FORM FRAGMEMTS ------------------------------------------------*/
 
-export const FormSkeleton = ({ id, children, handleDelete, closeModalCallback }) => (
+export const FormSkeleton = ({ id, children, handleDelete }) => (
 	<Form>
-		<Submit id={id} closeModalCallback={closeModalCallback} />
+		<Submit id={id} />
 		<Pale>{children}</Pale>
 		<Submit
 			id={id}
 			handleDelete={handleDelete}
 			showDuplicate={true}
-			closeModalCallback={closeModalCallback}
 			hideClose={true}
 		/>
 	</Form>
@@ -211,13 +210,40 @@ export const Imprint = ({ values, name }) => (
 	</Fieldset>
 )
 
+
+
 export const Collections = ({
 	all,
 	values
 }) => 
 <Fieldset>
 	<h2>Collections</h2>
-	{JSON.stringify(all)}
+	<FieldArray
+    name="collectionID"
+    render={arrayHelpers => (
+        <div>
+            {all.map(tag => (
+                <div><label key={tag.id}>
+                    <input
+                        name="collectionID"
+                        type="checkbox"
+                        value={tag.id}
+                        checked={values.collectionID.includes(tag.id)}
+                        onChange={e => {
+                          if (e.target.checked) {
+                            arrayHelpers.push(tag.id);
+                          } else {
+                            const idx = values.collectionID.indexOf(tag.id);
+                            arrayHelpers.remove(idx);
+                          }
+                        }}
+                    />
+                    <span>{tag.name}</span>
+                </label></div>
+            ))}
+        </div>
+    )}
+	/>
 </Fieldset>
 
 const Submit = ({ id, showDuplicate, handleDelete, closeModalCallback, hideClose }) => (

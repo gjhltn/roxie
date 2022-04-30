@@ -17,7 +17,6 @@ export const read = async (id) => {
 		const db = await database()
 		const item = _.getById(db.data.items, id)
 		const collections = db.data.collections
-	
 		// denormalise collections
 		item.collections = collections.map(
 			c =>  ({

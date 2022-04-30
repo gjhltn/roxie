@@ -13,7 +13,7 @@ const Update = () => {
 	if (error) return <div>Error [{JSON.stringify(error)}]</div>
 	if (!data) return <div>Loading...</div>
 
-	return <Page itemTypeName={data.type} id={id} item={data} />
+	return <Page method="PUT" itemTypeName={data.type} id={id} item={data} />
 }
 
 export default Update
