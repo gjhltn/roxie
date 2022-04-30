@@ -4,18 +4,20 @@ import Router from 'next/router'
 import { Formik } from 'formik'
 import styled from 'styled-components'
 import { FormSkeleton, Title, Authorship, Imprint, Collections } from '/components/form'
-import Book from '/helpers/book'
+import { getItemType } from '/helpers/itemType'
 import prune from '/helpers/prune'
 
 const Wrapper = styled.div``
 
-export default ({ id, method="POST", itemTypeName, item = {}, ...props }) => {
-	const itemType = Book
+export default ({ id, method = 'POST', itemTypeName, item = { collections: [] }, ...props }) => {
+	const itemType = getItemType(itemTypeName)
 	const [errorMessage, setErrorMessage] = useState(false)
 
+	if (item.collections) {
 	const collections = item.collections.slice()
 	delete item.collections
-	
+	}
+
 	const send = async formData => {
 		try {
 			const url = id ? '/api/items/' + id : '/api/items'
@@ -46,10 +48,9 @@ export default ({ id, method="POST", itemTypeName, item = {}, ...props }) => {
 				onSubmit={(formData, { setSubmitting }) => {
 					setSubmitting(true)
 					setTimeout(() => {
-						
 						var pruned = prune(itemType.pruneFields, Object.assign({}, formData))
 						pruned.type = itemType.name
-						send(pruned,method)
+						send(pruned, method)
 					}, 200)
 				}}
 			>

@@ -16,7 +16,7 @@ const defaultDatabase = {
 const database = async () => {
 	await db.read()
 	if (!db.data) {
-		db.data =defaultDatabase
+		db.data = defaultDatabase
 		await db.write()
 	}
 	return db

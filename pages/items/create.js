@@ -9,13 +9,13 @@ import fetcher from '/helpers/fetcher'
 export default () => {
 	const router = useRouter()
 	const { data, error } = useSWR(`/api/collections`, fetcher)
-
+	const blankItem = {
+		collections: data
+	}
 	if (error) return <div>Error [{JSON.stringify(error)}]</div>
 	if (!data) return <div>Loading...</div>
-	
-	return (
-		<ItemEditPage item={{ collections: data }} itemTypeName={router.query.itemType || 'book'} />
-	)
+
+	return <ItemEditPage item={blankItem} itemTypeName={router.query.itemType} />
 }
 
 export async function getServerSideProps(context) {

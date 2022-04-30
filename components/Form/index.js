@@ -118,12 +118,7 @@ export const FormSkeleton = ({ id, children, handleDelete }) => (
 	<Form>
 		<Submit id={id} />
 		<Pale>{children}</Pale>
-		<Submit
-			id={id}
-			handleDelete={handleDelete}
-			showDuplicate={true}
-			hideClose={true}
-		/>
+		<Submit id={id} handleDelete={handleDelete} showDuplicate={true} hideClose={true} />
 	</Form>
 )
 
@@ -210,41 +205,39 @@ export const Imprint = ({ values, name }) => (
 	</Fieldset>
 )
 
-
-
-export const Collections = ({
-	all,
-	values
-}) => 
-<Fieldset>
-	<h2>Collections</h2>
-	<FieldArray
-    name="collectionID"
-    render={arrayHelpers => (
-        <div>
-            {all.map(tag => (
-                <div><label key={tag.id}>
-                    <input
-                        name="collectionID"
-                        type="checkbox"
-                        value={tag.id}
-                        checked={values.collectionID.includes(tag.id)}
-                        onChange={e => {
-                          if (e.target.checked) {
-                            arrayHelpers.push(tag.id);
-                          } else {
-                            const idx = values.collectionID.indexOf(tag.id);
-                            arrayHelpers.remove(idx);
-                          }
-                        }}
-                    />
-                    <span>{tag.name}</span>
-                </label></div>
-            ))}
-        </div>
-    )}
-	/>
-</Fieldset>
+export const Collections = ({ all, values }) => (
+	<Fieldset>
+		<h2>Collections</h2>
+		<FieldArray
+			name='collectionID'
+			render={arrayHelpers => (
+				<div>
+					{all.map(tag => (
+						<div>
+							<label key={tag.id}>
+								<input
+									name='collectionID'
+									type='checkbox'
+									value={tag.id}
+									checked={values.collectionID.includes(tag.id)}
+									onChange={e => {
+										if (e.target.checked) {
+											arrayHelpers.push(tag.id)
+										} else {
+											const idx = values.collectionID.indexOf(tag.id)
+											arrayHelpers.remove(idx)
+										}
+									}}
+								/>
+								<span>{tag.name}</span>
+							</label>
+						</div>
+					))}
+				</div>
+			)}
+		/>
+	</Fieldset>
+)
 
 const Submit = ({ id, showDuplicate, handleDelete, closeModalCallback, hideClose }) => (
 	<WrapSubmit>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 import Select from 'react-select'
 import { AnchorButton, Collection } from '/components'
+import ITEM_TYPE from '/helpers/itemType'
 
 const ALL = { id: -1, name: 'All items' }
 const ALL_COLLECTIONS = { id: 0, name: 'All collections' }
@@ -20,14 +20,15 @@ const Wrapper = styled.div`
 		top: 0;
 		background: var(--colour-lesspaper);
 		display: grid;
-	grid-auto-flow: column;
-	gap: 1em;
+		grid-auto-flow: column;
+		gap: 1em;
+		grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
 	
-	a+a {
-		margin-left:1rem;
+		a+a {
+			margin-left:1rem;
+		}
+  
 	}
-  grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
-}
 }
 `
 
@@ -99,11 +100,12 @@ const Page = ({ data }) => {
 			}))
 			const rejectedItems = data.items.filter(item => isNotInAnyCollecfion(item))
 			if (rejectedItems.length > 0) {
-			selectedCollections.push({
-				id: null,
-				name: '(none)',
-				items: rejectedItems
-			})}
+				selectedCollections.push({
+					id: null,
+					name: '(none)',
+					items: rejectedItems
+				})
+			}
 			break
 		default:
 			selectedCollections = [
@@ -128,9 +130,14 @@ const Page = ({ data }) => {
 					/>
 				</SelectListingWrapper>
 				<div className='buttons'>
-					<AnchorButton href='/items/create'>Book</AnchorButton>
-					<AnchorButton href='/'>Chapter</AnchorButton>
-					<AnchorButton href='/'>Journal</AnchorButton>
+					{Object.keys(ITEM_TYPE).map(key => {
+						const t = ITEM_TYPE[key]
+						return (
+							<AnchorButton key={key} href={`/items/create?itemType=${t.name}`}>
+								{t.name}
+							</AnchorButton>
+						)
+					})}
 				</div>
 			</div>
 			<main>

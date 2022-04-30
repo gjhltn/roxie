@@ -4,7 +4,13 @@ const defaults = {}
 
 const schema = Yup.object({})
 
-export default Chapter = {
+const pruneFields = []
+
+const Chapter = {
+	name: 'chapter',
 	defaults: defaults,
-	schema: schema
+	schema: schema,
+	pruneFields: pruneFields
 }
+
+export default Chapter
