@@ -97,11 +97,13 @@ const Page = ({ data }) => {
 				name: collection.name,
 				items: itemsInCollection(collection.id, data)
 			}))
+			const rejectedItems = data.items.filter(item => isNotInAnyCollecfion(item))
+			if (rejectedItems.length > 0) {
 			selectedCollections.push({
 				id: null,
 				name: '(none)',
-				items: data.items.filter(item => isNotInAnyCollecfion(item))
-			})
+				items: rejectedItems
+			})}
 			break
 		default:
 			selectedCollections = [
