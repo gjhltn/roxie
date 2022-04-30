@@ -1,5 +1,5 @@
 import * as c from './citation.js'
-import * as book from './book/examples.js'
+import * as book from './bookExamples.js'
 import _ from 'lodash'
 
 describe('humaniseArray', () => {

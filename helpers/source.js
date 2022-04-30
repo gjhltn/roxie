@@ -1,4 +1,4 @@
-import * as book from './book/source.js'
+import * as book from './book.js'
 import * as chapter from './chapter/source.js'
 import * as journal from './journal/source.js'
 

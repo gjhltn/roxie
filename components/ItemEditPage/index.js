@@ -14,8 +14,8 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 	const [errorMessage, setErrorMessage] = useState(false)
 
 	if (item.collections) {
-	const collections = item.collections.slice()
-	delete item.collections
+		const collections = item.collections.slice()
+		delete item.collections
 	}
 
 	const send = async formData => {

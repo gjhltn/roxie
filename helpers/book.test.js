@@ -1,5 +1,5 @@
-import { bibliography, note } from './source.js'
-import * as eg from './examples.js'
+import { bibliography, note } from './book.js'
+import * as eg from './bookExamples.js'
 
 describe('bibliography', () => {
 	it('anonymous', () => {
