@@ -1,0 +1,13 @@
+{
+	"items": [],
+	"collections": [
+		{
+			"id": 1,
+			"name": "Primary sources"
+		},
+		{
+			"id": 2,
+			"name": "Secondary sources"
+		}
+	]
+}

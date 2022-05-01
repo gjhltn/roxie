@@ -10,7 +10,7 @@ Status: Hey, I just started. This is under heavy development and doesn't do anyt
 
 ## To run
 
-
+`yarn dev`
 
 ## Internal data structures
 
