@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Router from 'next/router'
 import { Formik } from 'formik'
 import styled from 'styled-components'
-import { FormSkeleton } from '/components/form'
+import { FormSkeleton } from '/components/Form'
 import { getItemType } from '/helpers/itemType'
 import prune from '/helpers/prune'
 
@@ -39,7 +39,7 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 		}
 	}
 
-	const FormComponent = itemType.FormComponent
+	const FormComponent = itemType.formComponent
 
 	return (
 		<Wrapper>
@@ -58,7 +58,7 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 			>
 				{({ values }) => (
 					<FormSkeleton id={item && item.id ? item.id : null}>
-						<FormComponent values={values} cpollections={collections} />
+						<FormComponent values={values} collections={collections} />
 					</FormSkeleton>
 				)}
 			</Formik>

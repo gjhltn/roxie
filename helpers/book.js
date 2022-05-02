@@ -1,7 +1,7 @@
 import * as Yup from 'yup'
 import React from 'react'
 import { authorship, editors, translators, imprint } from './citation.js'
-import { Title, Authorship, Imprint, Collections } from '../components/form'
+import { Title, Authorship, Imprint, Collections } from '../components/Form'
 
 export const bibliography = (item, wrap = (x, opts) => x) =>
 	`${wrap(authorship(item, 'bibliography'), { class: 'author' })}_${wrap(item.title, {
