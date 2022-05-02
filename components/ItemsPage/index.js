@@ -82,6 +82,8 @@ const Page = ({ data }) => {
 		.map(collection => optionify(collection))
 
 	var selectedCollections
+	const rejectedItems = data.items.filter(item => isNotInAnyCollecfion(item))
+
 	switch (listing.value) {
 		case ALL.id:
 			selectedCollections = [
@@ -98,7 +100,6 @@ const Page = ({ data }) => {
 				name: collection.name,
 				items: itemsInCollection(collection.id, data)
 			}))
-			const rejectedItems = data.items.filter(item => isNotInAnyCollecfion(item))
 			if (rejectedItems.length > 0) {
 				selectedCollections.push({
 					id: null,

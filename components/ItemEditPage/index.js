@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Router from 'next/router'
 import { Formik } from 'formik'
 import styled from 'styled-components'
-import { FormSkeleton, Title, Authorship, Imprint, Collections } from '/components/form'
+import { FormSkeleton } from '/components/form'
 import { getItemType } from '/helpers/itemType'
 import prune from '/helpers/prune'
 
@@ -39,6 +39,8 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 		}
 	}
 
+	const FormComponent = itemType.FormComponent
+
 	return (
 		<Wrapper>
 			{errorMessage}
@@ -56,10 +58,7 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 			>
 				{({ values }) => (
 					<FormSkeleton id={item && item.id ? item.id : null}>
-						<Title values={values} />
-						<Authorship values={values} />
-						<Imprint name='imprint' values={values} />
-						<Collections all={collections} values={values} />
+						<FormComponent values={values} cpollections={collections} />
 					</FormSkeleton>
 				)}
 			</Formik>

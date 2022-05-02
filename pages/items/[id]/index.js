@@ -15,7 +15,7 @@ export default function Item() {
 	return <Page data={data} />
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
 	return {
 		props: {}
 	}

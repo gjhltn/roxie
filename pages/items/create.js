@@ -6,7 +6,7 @@ import fetcher from '/helpers/fetcher'
 
 // 192.168.1.74:3000/items/create?itemType=book
 
-export default () => {
+const Page = () => {
 	const router = useRouter()
 	const { data, error } = useSWR(`/api/collections`, fetcher)
 	const blankItem = {
@@ -18,7 +18,9 @@ export default () => {
 	return <ItemEditPage item={blankItem} itemTypeName={router.query.itemType} />
 }
 
-export async function getServerSideProps(context) {
+export default Page
+
+export async function getServerSideProps() {
 	return {
 		props: {}
 	}

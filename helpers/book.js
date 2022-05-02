@@ -1,5 +1,7 @@
 import * as Yup from 'yup'
+import React from 'react'
 import { authorship, editors, translators, imprint } from './citation.js'
+import { Title, Authorship, Imprint, Collections } from '../components/form'
 
 export const bibliography = (item, wrap = (x, opts) => x) =>
 	`${wrap(authorship(item, 'bibliography'), { class: 'author' })}_${wrap(item.title, {
@@ -44,13 +46,23 @@ const schema = Yup.object({
 
 const pruneFields = ['authors', 'editors', 'translators']
 
+const FormComponent = ({ values, collections }) => (
+	<>
+		<Title values={values} />
+		<Authorship values={values} />
+		<Imprint name='imprint' values={values} />
+		<Collections all={collections} values={values} />
+	</>
+)
+
 const Book = {
 	name: 'book',
 	defaults: defaults,
 	schema: schema,
 	pruneFields: pruneFields,
 	bibliography: bibliography,
-	note: note
+	note: note,
+	formComponent: FormComponent
 }
 
 export default Book

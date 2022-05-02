@@ -18,7 +18,7 @@ const Update = () => {
 
 export default Update
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
 	return {
 		props: {}
 	}

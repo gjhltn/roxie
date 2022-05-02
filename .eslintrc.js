@@ -3,21 +3,17 @@ module.exports = {
 		browser: true,
 		es2021: true,
 		node: true,
-		 "jest/globals": true
+		'jest/globals': true
 	},
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'prettier'
-	],
+	extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
 	parser: '@babel/eslint-parser',
 	parserOptions: {
 		requireConfigFile: false,
-babelOptions: {
-  presets: ["@babel/preset-react"]
-}
+		babelOptions: {
+			presets: ['@babel/preset-react']
+		}
 	},
-	plugins: ['react','jest'],
+	plugins: ['react', 'jest'],
 	rules: {
 		'react/prop-types': 0
 	},

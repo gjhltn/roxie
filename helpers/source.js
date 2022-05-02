@@ -1,6 +1,6 @@
-import * as book from './book.js'
-import * as chapter from './chapter/source.js'
-import * as journal from './journal/source.js'
+import * as book from './book'
+import * as chapter from './chapter'
+import * as journal from './journal'
 
 export const wrapInHtmlSpan = (str, opts) =>
 	`<span ${opts && opts.class ? 'class=' + opts.class : null}>${str}</span>`
