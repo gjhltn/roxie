@@ -19,6 +19,7 @@ const defaults = {
 	volume: '',
 	issue: '',
 	date: '',
+	year: '',
 	specialIssue: {
 		title: '',
 		editors: [
@@ -43,7 +44,7 @@ export const bibliography = (item, wrap = (x, opts) => x) =>
 	)} _${wrap(item.journal, { class: 'maintitle' })}_ ${wrap(
 		`${item.volume},${item.issue ? ' no. ' + item.issue : ''}`,
 		{ class: 'number' }
-	)} ${wrap(`(${item.date})`, { class: 'imprint' })}: ${wrap(item.location, {
+	)} ${wrap(`(${item.date?item.date:""}${item.date&&item.year?" " :""}${item.year?item.year:""})`, { class: 'imprint' })}: ${wrap(item.location, {
 		class: 'location'
 	})}.${item.url ? ' ' + wrap(item.url, { class: 'url' }) + '.' : ''}`
 
@@ -75,6 +76,9 @@ const JournalFields = ({ values }) => (
 				</Column>
 				<Column>
 					<MyTextInput label='Date' name='date' />
+				</Column>
+				<Column>
+					<MyTextInput label='Year' name='year' />
 				</Column>
 				<Column>
 					<MyTextInput label='Location' name='location' />

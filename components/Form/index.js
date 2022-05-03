@@ -239,7 +239,7 @@ export const Collections = ({ all, values }) => (
 	</Fieldset>
 )
 
-const Submit = ({ id, showDuplicate, handleDelete, closeModalCallback, hideClose }) => (
+const Submit = ({ id, showDuplicate, handleDelete, hideClose }) => (
 	<WrapSubmit>
 		<Column>
 			<Button type='submit'>Save</Button>
@@ -248,7 +248,7 @@ const Submit = ({ id, showDuplicate, handleDelete, closeModalCallback, hideClose
 			<Column>
 				<Button
 					onClick={e => {
-						handleDelete(id, closeModalCallback)
+						handleDelete(id)
 					}}
 					type='button'
 				>

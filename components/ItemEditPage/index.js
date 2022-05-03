@@ -39,6 +39,26 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 		}
 	}
 
+	const sendDelete = async () => {
+		try {
+			const url = '/api/items/' + id
+			const res = await fetch(url, {
+				method: "DELETE",
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			if (res.status === 200) {
+				Router.push('/')
+			} else {
+				throw new Error(await res.text())
+			}
+		} catch (error) {
+			console.error(error)
+			setErrorMessage(error.message)
+		}
+	}
+	
 	const FormComponent = itemType.formComponent
 
 	return (
@@ -57,7 +77,7 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 				}}
 			>
 				{({ values }) => (
-					<FormSkeleton id={item && item.id ? item.id : null}>
+					<FormSkeleton handleDelete={sendDelete} id={item && item.id ? item.id : null}>
 						<FormComponent values={values} collections={collections} />
 					</FormSkeleton>
 				)}
