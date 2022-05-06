@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Item from '../Item'
+import { authorship, year } from '/helpers/citation'
+import sortByNameAndYear from '/helpers/sortByNameAndYear'
 
 const Wrapper = styled.div`
 	h2 {
@@ -18,13 +20,16 @@ const Wrapper = styled.div`
 	}
 `
 
-const Collection = ({ name, items }) => (
-	<Wrapper>
-		<h2>
-			{name} [{items.length}]
-		</h2>
-		<ul>{items && items.map(item => <Item data={item} key={item.id} />)}</ul>
-	</Wrapper>
-)
+const Collection = ({ name, items }) => {
+	items = sortByNameAndYear(items)
+	return (
+		<Wrapper>
+			<h2>
+				{name} [{items.length}]
+			</h2>
+			<ul>{items && items.map(item => <Item data={item} key={item.id} />)}</ul>
+		</Wrapper>
+	)
+}
 
 export default Collection

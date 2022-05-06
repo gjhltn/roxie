@@ -65,7 +65,20 @@ export const groupBy = (list, keyGetter) => {
 	return map
 }
 
-export const authorship = (item, style) => {
+export const year = item => {
+	switch (item.type) {
+		case 'book':
+			return item.imprint.year
+		case 'journal':
+			return item.year
+		case 'chapter':
+			return item.in.imprint.year
+		default:
+			return null
+	}
+}
+
+export const authorship = (item, style = 'bibliography') => {
 	if (style === 'bibliography') {
 		if (item.authors && item.authors.length === 0) return ''
 		if (item.authors) return `${names(item.authors, { flipFirst: true })}. `

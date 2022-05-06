@@ -36,7 +36,7 @@ export const TextInputInner = styled.div`
 	input,
 	textarea {
 		font-size: inherit;
-		width: 100%;
+		width: 90%;
 		border-radius: 0;
 		border: 2px solid ${props => (props.error ? 'red' : 'transparent')};
 		background: ${props => (props.error ? 'pink' : 'white')};
