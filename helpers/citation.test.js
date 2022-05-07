@@ -23,6 +23,11 @@ describe('name', () => {
 			'Wittgenstein, Ludwig'
 		)
 	})
+	it('trim spaces', () => {
+		expect(c.nameLastFirst({ last: 'Wittgenstein ', first: 'Ludwig  ' })).toEqual(
+			'Wittgenstein, Ludwig'
+		)
+	})
 	it('first, last', () => {
 		expect(c.nameFirstLast({ last: 'Wittgenstein', first: 'Ludwig' })).toEqual(
 			'Ludwig Wittgenstein'

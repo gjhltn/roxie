@@ -18,12 +18,29 @@ export const oxford = (arr, conjunction, ifempty) => {
 
 export const humaniseArray = arr => oxford(arr, 'and', '')
 
+const trimName = name => {
+	let first = name.first
+	if (first) {
+		first = first.trim()
+	}
+	let last = name.last
+	if (last) {
+		last = last.trim()
+	}
+	return ({
+		first: first,
+		last: last
+	}) 
+}
+
 export const nameLastFirst = name => {
+	name = trimName(name)
 	if (!name.first || name.first === '') return name.last
 	return `${name.last}, ${name.first}`
 }
 
 export const nameFirstLast = name => {
+	name = trimName(name)
 	if (!name.first || name.first === '') return name.last
 	return `${name.first} ${name.last}`
 }
