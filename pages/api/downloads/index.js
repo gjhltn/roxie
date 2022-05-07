@@ -40,6 +40,8 @@ const docxBibliographyJournal = (item, elideAuthor) => {
 		children.push(new TextRun(item.volume))
 		if (item.issue) {
 			children.push(new TextRun(', '))
+		} else {
+			children.push(new TextRun(' '))
 		}
 	}
 	if (item.issue) {
