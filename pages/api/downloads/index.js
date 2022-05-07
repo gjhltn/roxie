@@ -2,39 +2,35 @@ import { Document, Packer, Paragraph, TextRun } from 'docx'
 import contentDisposition from 'content-disposition'
 import { read } from '/db/items'
 import sortByNameAndYear from '/helpers/sortByNameAndYear'
-import {authorship, editors, translators, imprint } from '/helpers/citation'
+import { authorship, editors, translators, imprint } from '/helpers/citation'
 
 // http://localhost:3000/api/downloads
 
 const docxBibliographyBook = (item, elideAuthor) =>
 	new Paragraph({
-		indent:(7200, 25000),
+		style: 'hung',
 		children: [
-			new TextRun(authorship(item, 'bibliography')), 
+			new TextRun(authorship(item, 'bibliography')),
 			new TextRun({
 				italics: true,
 				text: item.title
 			}),
-			new TextRun(". "), 
+			new TextRun('. '),
 			new TextRun(editors(item, 'bibliography')),
 			new TextRun(translators(item, 'bibliography')),
 			new TextRun(imprint(item.imprint, 'bibliography')),
-			new TextRun(".")
+			new TextRun('.')
 		]
 	})
 
 const docxBibliographyJournal = (item, elideAuthor) =>
 	new Paragraph({
-		children: [
-			new TextRun('Lorem Ipsum Foo Bar'), 
-			new TextRun('Hello World')]
+		children: [new TextRun('Lorem Ipsum Foo Bar'), new TextRun('Hello World')]
 	})
 
 const docxBibliographyChapter = (item, elideAuthor) =>
 	new Paragraph({
-		children: [
-			new TextRun('Lorem Ipsum Foo Bar'), 
-			new TextRun('Hello World')]
+		children: [new TextRun('Lorem Ipsum Foo Bar'), new TextRun('Hello World')]
 	})
 
 const render = (item, previousItem) => {
@@ -69,6 +65,28 @@ const buildDoc = data => {
 	})
 
 	return new Document({
+		styles: {
+			paragraphStyles: [
+				{
+					id: 'hung',
+					name: 'hung',
+					basedOn: 'Normal',
+					next: 'Normal',
+					quickFormat: true,
+					run: {
+						font: "Helvetica",
+						size: 28
+					},
+					paragraph: {
+						indent: {
+			left: 0,
+			hanging: 720
+		},
+					}
+				}
+			]
+		},
+
 		sections: [
 			{
 				properties: {},
