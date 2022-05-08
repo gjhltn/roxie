@@ -18,7 +18,7 @@ export const oxford = (arr, conjunction, ifempty) => {
 
 export const humaniseArray = arr => oxford(arr, 'and', '')
 
-const trimName = name => {
+export const trimName = name => {
 	let first = name.first
 	if (first) {
 		first = first.trim()

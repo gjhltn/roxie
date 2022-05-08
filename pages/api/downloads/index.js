@@ -2,15 +2,18 @@ import { Document, Packer, Paragraph, TextRun } from 'docx'
 import contentDisposition from 'content-disposition'
 import { read } from '/db/items'
 import sortByNameAndYear from '/helpers/sortByNameAndYear'
-import { names, authorship, editors, translators, imprint } from '/helpers/citation'
+import { trimName, names, authorship, editors, translators, imprint } from '/helpers/citation'
+import _ from 'lodash'
 
 // http://localhost:3000/api/downloads
+
+const ELISION = '⸻'
 
 const docxBibliographyBook = (item, elideAuthor) =>
 	new Paragraph({
 		style: 'hung',
 		children: [
-			new TextRun(authorship(item, 'bibliography')),
+			new TextRun(elideAuthor ? ELISION : authorship(item, 'bibliography')),
 			new TextRun({
 				italics: true,
 				text: item.title
@@ -25,7 +28,7 @@ const docxBibliographyBook = (item, elideAuthor) =>
 
 const docxBibliographyJournal = (item, elideAuthor) => {
 	let children = [
-		new TextRun(names(item.authors, { flipFirst: true })),
+		new TextRun(elideAuthor ? ELISION : names(item.authors, { flipFirst: true })),
 		new TextRun('. '),
 		new TextRun('"'),
 		new TextRun(item.title),
@@ -78,8 +81,7 @@ const docxBibliographyJournal = (item, elideAuthor) => {
 
 const docxBibliographyChapter = (item, elideAuthor) => {
 	let children = [
-		new TextRun(authorship(item, 'bibliography')),
-		,
+		new TextRun(elideAuthor ? ELISION : authorship(item, 'bibliography')),
 		new TextRun(' "'),
 		new TextRun(item.title),
 		new TextRun('." In '),
@@ -110,8 +112,7 @@ const docxBibliographyChapter = (item, elideAuthor) => {
 
 const render = (item, previousItem) => {
 	let paragraph
-	const elideAuthor = false
-
+	const elideAuthor = previousItem && _.isEqual(item.authors, previousItem.authors)
 	switch (item.type) {
 		case 'book':
 			paragraph = docxBibliographyBook(item, elideAuthor)
@@ -132,8 +133,8 @@ const buildDoc = data => {
 	const items = sortByNameAndYear(data.items)
 
 	items.forEach((item, index) => {
-		//const lastItem = index > 0 ? items[index - 1] : null
-		const paragraph = render(item)
+		const previousItem = index > 0 ? items[index - 1] : null
+		const paragraph = render(item, previousItem)
 		if (paragraph) {
 			result.push(paragraph)
 		}

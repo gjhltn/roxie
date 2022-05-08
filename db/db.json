@@ -458,6 +458,79 @@
 			"collectionID": [],
 			"type": "journal",
 			"id": "d1a16856-df49-45ca-83e9-da564757f0a9"
+		},
+		{
+			"title": "Floating Coast: An Environmental History of the Bering Strait",
+			"authors": [
+				{
+					"last": "Demuth",
+					"first": "Bathsheba"
+				}
+			],
+			"imprint": {
+				"publisher": "W.W.Norton",
+				"place": "New York",
+				"year": "2019"
+			},
+			"collectionID": [],
+			"type": "book",
+			"id": "a96ba010-e77b-4444-8b4b-c306ec7bc859"
+		},
+		{
+			"title": "Reindeer at the End of the World",
+			"location": "",
+			"url": "https://emergencemagazine.org/essay/reindeer-at-the-end-of-the-world/",
+			"authors": [
+				{
+					"last": "Demuth",
+					"first": "Bathsheba"
+				}
+			],
+			"journal": "Emergence",
+			"volume": "",
+			"issue": "",
+			"date": "July",
+			"year": "2020",
+			"specialIssue": {
+				"title": "",
+				"editors": [
+					{
+						"last": "",
+						"first": ""
+					}
+				]
+			},
+			"collectionID": [],
+			"type": "journal",
+			"id": "43408728-29d7-4438-8bf0-658abc0c2236"
+		},
+		{
+			"title": "On the Uses of History for Staying Alive",
+			"location": "",
+			"url": "https://thepointmag.com/examined-life/on-the-uses-of-history-for-staying-alive/",
+			"authors": [
+				{
+					"last": "Demuth",
+					"first": "Bathsheba"
+				}
+			],
+			"journal": "The Point Magazine",
+			"volume": "",
+			"issue": "",
+			"date": "July",
+			"year": "2020",
+			"specialIssue": {
+				"title": "",
+				"editors": [
+					{
+						"last": "",
+						"first": ""
+					}
+				]
+			},
+			"collectionID": [],
+			"type": "journal",
+			"id": "14e3e921-5e57-4333-b6b6-aeee25c0d23c"
 		}
 	],
 	"collections": [
