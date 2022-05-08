@@ -76,10 +76,37 @@ const docxBibliographyJournal = (item, elideAuthor) => {
 	})
 }
 
-const docxBibliographyChapter = (item, elideAuthor) =>
-	new Paragraph({
-		children: [new TextRun('Lorem Ipsum Foo Bar'), new TextRun('Hello World')]
+const docxBibliographyChapter = (item, elideAuthor) => {
+	let children = [
+		new TextRun(authorship(item, 'bibliography')),
+		,
+		new TextRun(' "'),
+		new TextRun(item.title),
+		new TextRun('." In '),
+		new TextRun({
+			italics: true,
+			text: item.in.title
+		}),
+		new TextRun(', ')
+	]
+	if (names(item.in.editors).length > 0) {
+		children.push(new TextRun('edited by '))
+		children.push(new TextRun(names(item.in.editors)))
+		children.push(new TextRun(', '))
+	}
+	if (item.location) {
+		children.push(new TextRun(', '))
+		children.push(new TextRun(item.location))
+		children.push(new TextRun('. '))
+	}
+	children.push(new TextRun(imprint(item.in.imprint, 'bibliography')))
+	children.push(new TextRun('.'))
+
+	return new Paragraph({
+		style: 'hung',
+		children: children
 	})
+}
 
 const render = (item, previousItem) => {
 	let paragraph
@@ -93,7 +120,7 @@ const render = (item, previousItem) => {
 			paragraph = docxBibliographyJournal(item, elideAuthor)
 			break
 		case 'chapter':
-			paragraph = null // docxBibliographyChapter(item, elideAuthor)
+			paragraph = docxBibliographyChapter(item, elideAuthor)
 			break
 	}
 
@@ -123,7 +150,7 @@ const buildDoc = data => {
 					quickFormat: true,
 					run: {
 						font: 'Helvetica',
-						size: 28
+						size: 24
 					},
 					paragraph: {
 						indent: {

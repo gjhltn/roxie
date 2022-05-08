@@ -139,6 +139,9 @@ const Page = ({ data }) => {
 							</AnchorButton>
 						)
 					})}
+					<AnchorButton href={`/api/downloads`}>
+								compile
+								</AnchorButton>
 				</div>
 			</div>
 			<main>

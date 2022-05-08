@@ -27,10 +27,10 @@ const trimName = name => {
 	if (last) {
 		last = last.trim()
 	}
-	return ({
+	return {
 		first: first,
 		last: last
-	}) 
+	}
 }
 
 export const nameLastFirst = name => {
@@ -98,7 +98,14 @@ export const year = item => {
 export const authorship = (item, style = 'bibliography') => {
 	if (style === 'bibliography') {
 		if (item.authors && item.authors.length === 0) return ''
-		if (item.authors) return `${names(item.authors, { flipFirst: true })}. `
+		if (item.authors) {
+			let result = `${names(item.authors, { flipFirst: true })}`
+			if (result.slice(-1) === '.') {
+				return result
+			} else {
+				return result + '.'
+			}
+		}
 		if (item.editors) return `${editorNames(item, { flipFirst: true })} `
 	}
 	if (style === 'notes') {
