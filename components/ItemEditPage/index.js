@@ -9,12 +9,12 @@ import prune from '/helpers/prune'
 
 const Wrapper = styled.div``
 
-export default ({ id, method = 'POST', itemTypeName, item = { collections: [] }, ...props }) => {
+const Page = ({ id, method = 'POST', itemTypeName, item = { collections: [] } }) => {
 	const itemType = getItemType(itemTypeName)
 	const [errorMessage, setErrorMessage] = useState(false)
-
+	let collections
 	if (item.collections) {
-		const collections = item.collections.slice()
+		collections = item.collections.slice()
 		delete item.collections
 	}
 
@@ -43,7 +43,7 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 		try {
 			const url = '/api/items/' + id
 			const res = await fetch(url, {
-				method: "DELETE",
+				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json'
 				}
@@ -58,7 +58,7 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 			setErrorMessage(error.message)
 		}
 	}
-	
+
 	const FormComponent = itemType.formComponent
 
 	return (
@@ -85,3 +85,5 @@ export default ({ id, method = 'POST', itemTypeName, item = { collections: [] },
 		</Wrapper>
 	)
 }
+
+export default Page

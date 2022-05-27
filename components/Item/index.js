@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Copier from '../Copier'
 import { ICON_TYPE } from '../Icon'
 
-import { authorship } from '/helpers/citation'
 import { bibliography, note, wrapInHtmlSpan } from '/helpers/source'
 
 const ItemWrapper = styled.li`
@@ -83,7 +82,7 @@ function createMarkup(data) {
 	return { __html: bibliography(data, wrapInHtmlSpan).replace(/_/g, '') }
 }
 
-const Item = ({ data, handleUpdate, handleDelete }) => (
+const Item = ({ data }) => (
 	<ItemWrapper>
 		<div className='actions'>
 			<Copier text={note(data)} icon={ICON_TYPE.NOTE} />

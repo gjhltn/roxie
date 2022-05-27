@@ -1,9 +1,10 @@
+import * as React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div``
 
 const Page = ({ data }) => {
-	const { id, name, collectionId } = data
+	const { id, name } = data
 
 	return (
 		<Wrapper>

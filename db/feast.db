@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "title": "Plenty Coups: King of the Crows",
+      "authors": [
+        {
+          "last": "Linderman",
+          "first": "Frank"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Nebraska",
+        "place": "Lincoln",
+        "year": "1962"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "ad2f6362-9ff8-4cd2-b9f2-1841038cb230"
+	  }
+  ],
+  "collections": [
+    {
+      "id": 1,
+      "name": "Primary sources: Burgundy"
+    },
+    {
+      "id": 2,
+      "name": "Primary sources: England"
+    },
+	    {
+      "id": 13,
+      "name": "Historiography: Huizinga"
+	  },
+	      {
+      "id": 14,
+      "name": "Historiography: Kipling"
+	  },
+	      {
+      "id": 14,
+      "name": "Historiography: Theatre State"
+	  }
+  ]
+  }

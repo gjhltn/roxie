@@ -2,7 +2,7 @@ import { Document, Packer, Paragraph, TextRun } from 'docx'
 import contentDisposition from 'content-disposition'
 import { read } from '/db/items'
 import sortByNameAndYear from '/helpers/sortByNameAndYear'
-import { trimName, names, authorship, editors, translators, imprint } from '/helpers/citation'
+import { names, authorship, editors, translators, imprint } from '/helpers/citation'
 import _ from 'lodash'
 
 // http://localhost:3000/api/downloads
@@ -112,7 +112,11 @@ const docxBibliographyChapter = (item, elideAuthor) => {
 
 const render = (item, previousItem) => {
 	let paragraph
+	
 	const elideAuthor = previousItem && _.isEqual(item.authors, previousItem.authors)
+	
+	// console.log(`${item.authors} ${elideAuthor} ${previousItem.authors}`)
+	
 	switch (item.type) {
 		case 'book':
 			paragraph = docxBibliographyBook(item, elideAuthor)
@@ -181,6 +185,6 @@ export default async function (req, res) {
 		res.setHeader('Content-Disposition', contentDisposition('bibliography.docx'))
 		res.send(buffer)
 	} catch (e) {
-		res.status(400).json({ error: true, message: 'Couldnt build download' })
+		res.status(400).json({ error: true, message: 'Couldnt build download ' + id })
 	}
 }

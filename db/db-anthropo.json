@@ -1,0 +1,1306 @@
+{
+  "items": [
+    {
+      "title": "Plenty Coups: King of the Crows",
+      "authors": [
+        {
+          "last": "Linderman",
+          "first": "Frank"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Nebraska",
+        "place": "Lincoln",
+        "year": "1962"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "ad2f6362-9ff8-4cd2-b9f2-1841038cb230"
+    },
+    {
+      "title": "A Place for Stories: Nature, History, and Narrative",
+      "location": "pp. 1347-1376 ",
+      "url": "https://www.williamcronon.net/writing/cronon_place_for_stories_1991.pdf",
+      "authors": [
+        {
+          "last": "Cronon",
+          "first": "William "
+        }
+      ],
+      "journal": "The Journal of American History",
+      "volume": "78",
+      "issue": "4",
+      "date": "1992",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "50e19600-f5ba-4f84-aac6-b361b2f4dabf"
+    },
+    {
+      "title": "The Limits of Anthropocene Narratives",
+      "location": "",
+      "url": "https://journals.sagepub.com/doi/10.1177/1368431018799256",
+      "authors": [
+        {
+          "last": "Simon",
+          "first": "Zoltán Boldizsár"
+        }
+      ],
+      "journal": "European Journal of Social Theory",
+      "volume": "",
+      "issue": "",
+      "date": "September",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "8e19677e-e892-4813-b0f0-f0debb338de6"
+    },
+    {
+      "title": "Writing History in the Anthropocene",
+      "location": "pp. 579-605",
+      "url": "https://www.jstor.org/stable/10.2307/26986126",
+      "authors": [
+        {
+          "last": "Westermann",
+          "first": "Andrea"
+        },
+        {
+          "last": " Höhler",
+          "first": "Sabine"
+        }
+      ],
+      "journal": "Geschichte und Gesellschaft ",
+      "volume": "46",
+      "issue": "",
+      "date": "Oktober - Dezember",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "20b40f59-4cb1-4cfd-b91d-829a63420121"
+    },
+    {
+      "title": "Anthropocene, Capitalocene, and the Problem of Culture",
+      "location": "pp154-184",
+      "authors": [
+        {
+          "last": "Hartley",
+          "first": "Daniel"
+        }
+      ],
+      "in": {
+        "title": "Anthropocene or Capitalocene? Nature, History, and the Crisis of Capitalism",
+        "editors": [
+          {
+            "last": "Moore",
+            "first": "Jason W."
+          }
+        ],
+        "imprint": {
+          "place": "Oakland",
+          "publisher": "PM Press",
+          "year": "2016"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "fb885b71-d5f0-4394-905d-05009d49e170"
+    },
+    {
+      "title": "Staying with the Trouble: Anthropocene, Capitalocene, Chthulucene",
+      "location": "pp34-76",
+      "authors": [
+        {
+          "last": "Harraway",
+          "first": "Donna J."
+        }
+      ],
+      "in": {
+        "title": "Anthropocene or Capitalocene? Nature, History, and the Crisis of Capitalism",
+        "editors": [
+          {
+            "last": "Moore",
+            "first": "Jason W."
+          }
+        ],
+        "imprint": {
+          "place": "Oakland",
+          "publisher": "PM Press",
+          "year": "2016"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "135fe1e9-3bb3-479f-8c05-17a9a9203961"
+    },
+    {
+      "title": "Archaeologies of the Future: The Desire Called Utopia and Other Science Fictions",
+      "authors": [
+        {
+          "last": "Jameson",
+          "first": "Fredric"
+        }
+      ],
+      "imprint": {
+        "publisher": "Verso",
+        "place": "London",
+        "year": "2005"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "cd7fd354-f6a4-4b69-8203-3b0dc3216cbf"
+    },
+    {
+      "title": "Catastrophe",
+      "location": "pp181-195",
+      "authors": [
+        {
+          "last": "Higgins",
+          "first": "David"
+        },
+        {
+          "last": "Somervell",
+          "first": "Tess"
+        }
+      ],
+      "in": {
+        "title": "The Cambridge Companion to Literature and the Anthropocene",
+        "editors": [
+          {
+            "last": "Parham",
+            "first": "John"
+          }
+        ],
+        "imprint": {
+          "place": "Cambridge",
+          "publisher": "Cambridge University Press",
+          "year": "2021"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "b96f4592-cadd-43ac-9d63-84e9abc21f30"
+    },
+    {
+      "title": "Deep Time Visible",
+      "location": "pp289-303",
+      "authors": [
+        {
+          "last": "Marland",
+          "first": "Pippa"
+        }
+      ],
+      "in": {
+        "title": "The Cambridge Companion to Literature and the Anthropocene",
+        "editors": [
+          {
+            "last": "Parham",
+            "first": "John"
+          }
+        ],
+        "imprint": {
+          "place": "Cambridge",
+          "publisher": "Cambridge University Press",
+          "year": "2021"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "f45f2fb5-4b30-4070-8efd-49ecf25363fa"
+    },
+    {
+      "title": "The Anthropocene and the Time of Historians",
+      "location": "267-299",
+      "url": "https://www.cairn-int.info/journal-annales-2017-2-page-267.htm",
+      "authors": [
+        {
+          "last": "Quenet",
+          "first": "Grégory"
+        }
+      ],
+      "journal": "Annales. Histoire, Sciences Sociales",
+      "volume": "72",
+      "issue": "2",
+      "date": "",
+      "year": "2017",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "cfcbf582-e5b6-469d-ad0d-aab42bf1134b"
+    },
+    {
+      "title": "Hayden White: The Historical Imagination",
+      "authors": [
+        {
+          "last": "Paul",
+          "first": "Herman"
+        }
+      ],
+      "imprint": {
+        "publisher": "Polity",
+        "place": "Cambridge",
+        "year": "2011"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "5d67897b-5dda-4a44-9713-b522dd1b5a0e"
+    },
+    {
+      "title": "Science Fiction and the Time Scales of the Anthropocene",
+      "location": "275-304",
+      "url": "",
+      "authors": [
+        {
+          "last": "Heise",
+          "first": "Ursula K"
+        }
+      ],
+      "journal": "ELH",
+      "volume": "87",
+      "issue": "2",
+      "date": "Summer",
+      "year": "2019",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "86cdf4cc-13e6-4ed1-856b-d8197121d918"
+    },
+    {
+      "title": "Hyperobjects: Philosophy and Ecology after the End of the World",
+      "authors": [
+        {
+          "last": "Morton",
+          "first": "Timothy "
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Minnesota Press",
+        "place": "Minneapolis ",
+        "year": "2013"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "7bfd2223-63e6-4cb9-a8eb-d81487ffc348"
+    },
+    {
+      "title": "The Content of the Form Narrative Discourse and Historical Representation",
+      "authors": [
+        {
+          "last": "White",
+          "first": "Hayden"
+        }
+      ],
+      "imprint": {
+        "publisher": "Johns Hopkins University Press",
+        "place": "Baltimore ",
+        "year": "1987"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "2e42b339-de38-4c60-b225-f38e050c0efa"
+    },
+    {
+      "title": "The Great Acceleration: An Environmental History of the Anthropocene since 1945",
+      "authors": [
+        {
+          "last": "McNeill",
+          "first": "J.R."
+        },
+        {
+          "last": "Engelke",
+          "first": "Peter"
+        }
+      ],
+      "imprint": {
+        "publisher": "The Belknap Press of Harvard University Press",
+        "place": "Cambridge (MA)",
+        "year": "2014"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "6efb7e25-6c1a-4980-8400-223d99347c6c"
+    },
+    {
+      "title": "Historians and the Return to the Diachronic",
+      "location": "",
+      "authors": [
+        {
+          "last": "Corfield",
+          "first": "Penelope J."
+        }
+      ],
+      "in": {
+        "title": "The New Ways of History: Developments in Historiography",
+        "editors": [
+          {
+            "last": "Harlaftis",
+            "first": "Gelina"
+          },
+          {
+            "last": "Karapidakis",
+            "first": "Nikos"
+          },
+          {
+            "last": "Sbonias",
+            "first": "Kostas"
+          },
+          {
+            "last": "Vaiopoulos",
+            "first": "Vaios"
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "I.B.Tauris",
+          "year": "2010"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "538be814-8a69-4fec-8a6f-13d16507ef29"
+    },
+    {
+      "title": "More-Than-Human History: Philosophy of History at the Time of the Anthropocene",
+      "location": "",
+      "authors": [
+        {
+          "last": "Tamm",
+          "first": "Marek"
+        },
+        {
+          "last": "Simon",
+          "first": "Zoltán Boldizsár"
+        }
+      ],
+      "in": {
+        "title": "Philosophy of History: Twenty-First-Century Perspectives",
+        "editors": [
+          {
+            "last": "Kuukkanen",
+            "first": "J-M."
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "Bloomsbury",
+          "year": "2020"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "33e7d0ce-d8ca-4689-955e-f160e4f3b1a6"
+    },
+    {
+      "title": "Visualizing the Anthropocene",
+      "location": "213-232",
+      "url": "",
+      "authors": [
+        {
+          "last": "Mirzoeff",
+          "first": "Nicholas"
+        }
+      ],
+      "journal": "Public Culture",
+      "volume": "26",
+      "issue": "2",
+      "date": "",
+      "year": "2014",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "d1a16856-df49-45ca-83e9-da564757f0a9"
+    },
+    {
+      "title": "Floating Coast: An Environmental History of the Bering Strait",
+      "authors": [
+        {
+          "last": "Demuth",
+          "first": "Bathsheba"
+        }
+      ],
+      "imprint": {
+        "publisher": "W.W.Norton",
+        "place": "New York",
+        "year": "2019"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "a96ba010-e77b-4444-8b4b-c306ec7bc859"
+    },
+    {
+      "title": "Reindeer at the End of the World",
+      "location": "",
+      "url": "https://emergencemagazine.org/essay/reindeer-at-the-end-of-the-world/",
+      "authors": [
+        {
+          "last": "Demuth",
+          "first": "Bathsheba"
+        }
+      ],
+      "journal": "Emergence",
+      "volume": "",
+      "issue": "",
+      "date": "July",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "43408728-29d7-4438-8bf0-658abc0c2236"
+    },
+    {
+      "title": "On the Uses of History for Staying Alive",
+      "location": "",
+      "url": "https://thepointmag.com/examined-life/on-the-uses-of-history-for-staying-alive/",
+      "authors": [
+        {
+          "last": "Demuth",
+          "first": "Bathsheba"
+        }
+      ],
+      "journal": "The Point Magazine",
+      "volume": "",
+      "issue": "",
+      "date": "July",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "14e3e921-5e57-4333-b6b6-aeee25c0d23c"
+    },
+    {
+      "title": "Defining the Anthropocene",
+      "location": "171-180",
+      "url": "https://www.researchgate.net/profile/Mark-Maslin/publication/273467448_Defining_the_Anthropocene/links/550f142e0cf2752610a00a62/Defining-the-Anthropocene.pdf?origin=publication_detail",
+      "authors": [
+        {
+          "last": "Lewis",
+          "first": "Simon L."
+        },
+        {
+          "last": "Maslin",
+          "first": "Mark A."
+        }
+      ],
+      "journal": "Nature",
+      "volume": "519",
+      "issue": "",
+      "date": "March",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "14536c26-4020-4295-a499-ace103ab46bb"
+    },
+    {
+      "title": "The Climate of History: Four Theses",
+      "location": "197-222",
+      "url": "",
+      "authors": [
+        {
+          "last": "Chakrabarty",
+          "first": "Dipesh"
+        }
+      ],
+      "journal": "Critical Inquiry",
+      "volume": "35",
+      "issue": "",
+      "date": "Winter",
+      "year": "2009",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "280981d4-99e0-4f7c-ac28-d010321f56f8"
+    },
+    {
+      "title": "Against the Anthropocene: A Neo-Materialist Perspective",
+      "location": "1-28",
+      "url": "",
+      "authors": [
+        {
+          "last": "LeCain",
+          "first": "Timothy James"
+        }
+      ],
+      "journal": "International Journal of History, Culture, and Modernity",
+      "volume": "3",
+      "issue": "",
+      "date": "",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "c179a19f-a676-4625-9bb0-0f6e24f48605"
+    },
+    {
+      "title": "The Capitalocene, Part I: on the nature and origins of our ecological crisis",
+      "location": "594-630",
+      "url": "https://doi.org/10.1080/03066150.2016.1235036",
+      "authors": [
+        {
+          "last": "Moore",
+          "first": "Jason W."
+        }
+      ],
+      "journal": "The Journal of Peasant Studies",
+      "volume": "44",
+      "issue": "3",
+      "date": "",
+      "year": "2017",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "1716774b-8010-4132-a5c2-de44754cecff"
+    },
+    {
+      "title": "The “Anthropocene” epoch: Scientific decision or political statement?",
+      "location": "",
+      "url": "https://www.geosociety.org/gsatoday/archive/26/3/article/i1052-5173-26-3-4.htm",
+      "authors": [
+        {
+          "last": "Finney",
+          "first": "Stanley C."
+        },
+        {
+          "last": "Edwards",
+          "first": "Lucy E."
+        }
+      ],
+      "journal": "GSA Today",
+      "volume": "26",
+      "issue": "3",
+      "date": "March/April",
+      "year": "2016",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "0b744925-5b37-4590-b42f-3a4b831a55ce"
+    },
+    {
+      "title": "Anthropocene, Capitalocene, Plantationocene, Cthulhucene",
+      "location": "159-165",
+      "url": "",
+      "authors": [
+        {
+          "last": "Harraway",
+          "first": "Donna J."
+        }
+      ],
+      "journal": "Environmental Humanities",
+      "volume": "6",
+      "issue": "1",
+      "date": "",
+      "year": "",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "5ece1d6f-4a75-40c8-9339-df36b763426d"
+    },
+    {
+      "title": "A Threat to Holocene Resurgence is a Threat to Livability,",
+      "location": "",
+      "authors": [
+        {
+          "last": "Tsing",
+          "first": "Anna Lowenhaupt"
+        }
+      ],
+      "in": {
+        "title": "The Anthropology of Sustainability: Beyond Development and Progress",
+        "editors": [
+          {
+            "last": "Brightman",
+            "first": "Mark"
+          },
+          {
+            "last": "Lewis",
+            "first": "Jerome"
+          }
+        ],
+        "imprint": {
+          "place": "New York",
+          "publisher": "Palgrave McMillan",
+          "year": "2017"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "b91d0da6-0c4b-4f88-9cca-7b808573c211"
+    },
+    {
+      "title": "Is the Anthropocene an issue for stratigraphy or pop culture?",
+      "location": "60-61",
+      "url": "",
+      "authors": [
+        {
+          "last": "Autin",
+          "first": "W"
+        },
+        {
+          "last": "Holbrook",
+          "first": "J"
+        }
+      ],
+      "journal": "GSA Today",
+      "volume": "22",
+      "issue": "7",
+      "date": "",
+      "year": "2012",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "b2794581-f315-437d-8a66-031ce7711019"
+    },
+    {
+      "title": "The Anthropocene as Rupture",
+      "location": "93-106",
+      "url": "",
+      "authors": [
+        {
+          "last": "Hamilton",
+          "first": "Clive "
+        }
+      ],
+      "journal": "The Anthropocene Review",
+      "volume": "3",
+      "issue": "2",
+      "date": "",
+      "year": "2016",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "e00f1ca2-7902-4222-b43f-b5fc5fad3493"
+    },
+    {
+      "title": "The early anthropogenic hypothesis: A review",
+      "location": "",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0277379120303486",
+      "authors": [
+        {
+          "last": "Ruddiman",
+          "first": "W.F."
+        },
+        {
+          "last": "He",
+          "first": "F."
+        },
+        {
+          "last": "Vavrus",
+          "first": "S.J."
+        },
+        {
+          "last": "Kutzbach",
+          "first": "J.E."
+        }
+      ],
+      "journal": "Quaternary Science Reviews",
+      "volume": "240",
+      "issue": "",
+      "date": "15 July",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "9d7a0a5b-db34-44ed-be26-b7e0dc803628"
+    },
+    {
+      "title": "The trajectory of the Anthropocene: The Great Acceleration",
+      "location": "81-98",
+      "url": "",
+      "authors": [
+        {
+          "last": "Steffen",
+          "first": "Will"
+        },
+        {
+          "last": "Broadgate",
+          "first": "Wendy"
+        },
+        {
+          "last": "Deutsch",
+          "first": "Lisa"
+        },
+        {
+          "last": "Gaffney",
+          "first": "Owen"
+        },
+        {
+          "last": "Ludwig",
+          "first": "Cornelia"
+        }
+      ],
+      "journal": "The Anthropocene Review",
+      "volume": "2",
+      "issue": "1",
+      "date": "",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "64633354-f50a-480c-82a1-334ce0dff95b"
+    },
+    {
+      "title": "The Nutmeg's Curse: Parables for a Planet in Crisis.",
+      "authors": [
+        {
+          "last": "Ghosh",
+          "first": "Amitav"
+        }
+      ],
+      "imprint": {
+        "publisher": "John Murray ",
+        "place": "New York",
+        "year": "2021"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "18f689df-1e13-4007-9463-9cc207cafa50"
+    },
+    {
+      "title": "Black Marxism : The Making of the Black Radical Tradition\n",
+      "authors": [
+        {
+          "last": "Robinson",
+          "first": "Cedric J."
+        },
+        {
+          "last": "Kelley",
+          "first": "Robin D. G."
+        }
+      ],
+      "imprint": {
+        "publisher": "University of North Carolina Press",
+        "place": "Chapel Hill",
+        "year": "2000"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "8c641aab-f7f6-479f-93f7-ed706aecf6e4"
+    },
+    {
+      "title": "Earth system impacts of the European arrival and Great Dying in the Americas after 1492",
+      "location": "13-36",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0277379118307261",
+      "authors": [
+        {
+          "last": "Koch",
+          "first": "Alexander"
+        },
+        {
+          "last": "Brierley",
+          "first": "Chris"
+        },
+        {
+          "last": "Maslin",
+          "first": "Mark M."
+        },
+        {
+          "last": "Lewis",
+          "first": "Simon L."
+        }
+      ],
+      "journal": "Quaternary Science Reviews",
+      "volume": "207",
+      "issue": "",
+      "date": "1 Mar",
+      "year": "2019",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "89c2434d-6855-4b6f-9d09-67507a709e0f"
+    },
+    {
+      "title": "Quantifying national responsibility for climate breakdown: an equality-based attribution approach for carbon dioxide emissions in excess of the planetary boundary",
+      "location": "e399-e404",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2542519620301960",
+      "authors": [
+        {
+          "last": "Hickel",
+          "first": "Jason"
+        }
+      ],
+      "journal": "The Lancet Planetary Health",
+      "volume": "4",
+      "issue": "9",
+      "date": "September",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "8dfc1961-c0a4-42de-8356-51d8ecd026ea"
+    },
+    {
+      "title": "Climate Change 2022: Impacts, Adaptation and Vulnerability",
+      "authors": [
+        {
+          "last": "IPCC",
+          "first": "Contribution of Working Group II to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change"
+        }
+      ],
+      "editors": [
+        {
+          "last": "Pörtner",
+          "first": "H.-O."
+        },
+        {
+          "last": "Roberts",
+          "first": "D.C."
+        },
+        {
+          "last": "Tignor",
+          "first": "M."
+        },
+        {
+          "last": "Poloczanska",
+          "first": "E.S."
+        },
+        {
+          "last": "Mintenbeck",
+          "first": "K."
+        },
+        {
+          "last": "Alegría",
+          "first": "A."
+        },
+        {
+          "last": "Craig",
+          "first": "M."
+        },
+        {
+          "last": "Langsdorf",
+          "first": "S."
+        },
+        {
+          "last": "Löschke",
+          "first": "S."
+        },
+        {
+          "last": "Möller",
+          "first": "V."
+        },
+        {
+          "last": "Okem",
+          "first": "A."
+        },
+        {
+          "last": "Rama",
+          "first": "B."
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "In press",
+        "year": "2022"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "7985f1d8-37f3-42b6-a64a-c1f94cd63888"
+    },
+    {
+      "title": "The Myth of Continents: A Critique of Metageography",
+      "authors": [
+        {
+          "last": "Lewis",
+          "first": "Martin A."
+        },
+        {
+          "last": "Wigen",
+          "first": "Karen"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of California Press",
+        "place": "Berkeley",
+        "year": "1997"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "c26ababa-509e-41b2-991a-8b56ee1e43c9"
+    },
+    {
+      "title": "'The Ultimate Environmental Dilemma': Making a Place for Historians in the Climate Change and Energy Debates",
+      "location": "76-93",
+      "url": "",
+      "authors": [
+        {
+          "last": "Sabin",
+          "first": "Paul"
+        }
+      ],
+      "journal": "Environmental History",
+      "volume": "15",
+      "issue": "1",
+      "date": "January",
+      "year": "2010",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "786c69be-c77f-47fd-9fb5-5a9060578f29"
+    },
+    {
+      "title": "How making space for Indigenous peoples changes history",
+      "location": "Chapter 15",
+      "authors": [
+        {
+          "last": "Blackbird",
+          "first": "Leila K."
+        },
+        {
+          "last": "Pennock",
+          "first": "Caroline Dodds "
+        }
+      ],
+      "in": {
+        "title": "What Is History, Now?: How the Past and Present Speak to Each Other",
+        "editors": [
+          {
+            "last": "Carr",
+            "first": "Helen"
+          },
+          {
+            "last": "Lipscomb",
+            "first": "Suzannah"
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "Weidenfeld & Nicolson,",
+          "year": "2021"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "05ec8e6d-0649-485d-9732-a517f61f5efc"
+    },
+    {
+      "title": "Anthropocene Time",
+      "location": "5-32",
+      "url": "https://onlinelibrary-wiley-com.ezproxyd.bham.ac.uk/doi/pdfdirect/10.1111/hith.12044",
+      "authors": [
+        {
+          "last": "Chakrabarty",
+          "first": "Dipesh"
+        }
+      ],
+      "journal": "History and Theory",
+      "volume": "57",
+      "issue": "1",
+      "date": "March",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "9c6f62f0-455a-42ff-84e7-d4a7964f04a4"
+    },
+    {
+      "title": "A Response to François Hartog,'Chronos, Kairos, Krisis: the Genesis of Western Time'",
+      "location": "464-8",
+      "url": "",
+      "authors": [
+        {
+          "last": "Chakrabarty",
+          "first": "Dipesh"
+        }
+      ],
+      "journal": "History and Theory",
+      "volume": "60",
+      "issue": "3",
+      "date": "September",
+      "year": "2021",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "82d3fefe-88b6-4cf1-b0f3-31e5ce4c4a1d"
+    },
+    {
+      "title": "The Human Condition in the Anthropocene",
+      "authors": [
+        {
+          "last": "Chakrabarty",
+          "first": "Dipesh"
+        }
+      ],
+      "imprint": {
+        "publisher": "The Tanner Lectures in Human Values",
+        "place": "Yale University",
+        "year": "2015"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "45810251-ce75-49dd-a9ab-1369ee298cab"
+    },
+    {
+      "title": "Practical Past, Runaway Future",
+      "location": "",
+      "url": "https://jhiblog.org/2015/05/11/practical-past-runaway-future/",
+      "authors": [
+        {
+          "last": "Simon",
+          "first": "Zoltán Boldizsár"
+        }
+      ],
+      "journal": "Journal of the History of Ideas blog",
+      "volume": "",
+      "issue": "",
+      "date": "May 11",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "ef629d0a-afa9-43a3-a08d-ec2c6f0ee5e9"
+    },
+    {
+      "title": "The Practical Past",
+      "authors": [
+        {
+          "last": "White",
+          "first": "Hayden"
+        }
+      ],
+      "imprint": {
+        "publisher": "Northwestern University Press",
+        "place": "Evanston",
+        "year": "2014"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "a453ae10-6bbd-49b6-877b-74739e3d0e20"
+    },
+    {
+      "title": "Figural Realism: Studies in the Mimesis Effect",
+      "authors": [
+        {
+          "last": "White",
+          "first": "Hayden"
+        }
+      ],
+      "imprint": {
+        "publisher": "Johns Hopkins University Press",
+        "place": "Baltimore",
+        "year": "1999"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "6ea4de81-75a9-48ec-85b5-0c576aa069af"
+    },
+    {
+      "title": "Tropics of Discourse: Essays in Cultural Criticism",
+      "authors": [
+        {
+          "last": "White",
+          "first": "Hayden"
+        }
+      ],
+      "imprint": {
+        "publisher": "Johns Hopkins Press",
+        "place": "Baltimore",
+        "year": "1978"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "81da93dd-ac63-440e-a202-972633b9ac8a"
+    }
+  ],
+  "collections": [
+    {
+      "id": 1,
+      "name": "Primary sources"
+    },
+    {
+      "id": 2,
+      "name": "Secondary sources"
+    }
+  ]
+}

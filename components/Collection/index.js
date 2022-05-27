@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Item from '../Item'
-import { authorship, year } from '/helpers/citation'
 import sortByNameAndYear from '/helpers/sortByNameAndYear'
 
 const Wrapper = styled.div`

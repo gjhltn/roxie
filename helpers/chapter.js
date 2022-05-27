@@ -50,7 +50,7 @@ const schema = Yup.object({
 
 const pruneFields = ['authors', 'in.editors', 'translators']
 
-export const bibliography = (item, wrap = (x, opts) => x) =>
+export const bibliography = (item, wrap = x => x) =>
 	`${wrap(authorship(item, 'bibliography'), { class: 'author' })}${wrap(`“${item.title}.”`, {
 		class: 'title'
 	})} In _${wrap(item.in.title, { class: 'maintitle' })}_, ${

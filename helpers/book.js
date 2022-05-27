@@ -3,7 +3,7 @@ import React from 'react'
 import { authorship, editors, translators, imprint } from './citation.js'
 import { Title, Authorship, Imprint, Collections } from '../components/Form'
 
-export const bibliography = (item, wrap = (x, opts) => x) =>
+export const bibliography = (item, wrap = x => x) =>
 	`${wrap(authorship(item, 'bibliography'), { class: 'author' })}_${wrap(item.title, {
 		class: 'maintitle'
 	})}_.${wrap(editors(item, 'bibliography'), { class: 'editor' })}${wrap(

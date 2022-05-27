@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Router from 'next/router'
-import { Form, Field, FieldArray, useField, useFormikContext } from 'formik'
+import { Form, FieldArray, useField, useFormikContext } from 'formik'
 import { titleCase } from 'title-case'
 
 import { ICON_TYPE, IconButton } from '../Icon/'
@@ -70,7 +70,7 @@ export const NameListInput = ({ arrayHelpers, arrayName, vals }) => (
 				<Column size='1rem'>
 					<PushdownHack>
 						<IconButton
-							handler={e => arrayHelpers.remove(index)}
+							handler={() => arrayHelpers.remove(index)}
 							icon={ICON_TYPE.CROSS}
 							weight='2'
 							size='32'
@@ -90,7 +90,7 @@ export const NameListInput = ({ arrayHelpers, arrayName, vals }) => (
 	</div>
 )
 
-export const MyTextArea = ({ label, ...props }) => {
+export const MyTextArea = ({ ...props }) => {
 	const [field, meta] = useField(props)
 	return (
 		<TextInputInner error={meta.touched && meta.error}>
@@ -122,7 +122,7 @@ export const FormSkeleton = ({ id, children, handleDelete }) => (
 	</Form>
 )
 
-export const Title = ({ values, name = 'title', label = 'Title' }) => {
+export const Title = ({ name = 'title', label = 'Title' }) => {
 	const [current] = useField(name)
 	const { setFieldValue } = useFormikContext()
 	const titlecase = () => {
@@ -185,7 +185,7 @@ export const Authorship = ({ values }) => (
 	</Fieldset>
 )
 
-export const Imprint = ({ values, name }) => (
+export const Imprint = ({ name }) => (
 	<Fieldset>
 		<h2>Imprint</h2>
 		<MyTextInput
@@ -213,8 +213,8 @@ export const Collections = ({ all, values }) => (
 			render={arrayHelpers => (
 				<div>
 					{all.map(tag => (
-						<div>
-							<label key={tag.id}>
+						<div key={tag.id}>
+							<label>
 								<input
 									name='collectionID'
 									type='checkbox'
@@ -229,7 +229,7 @@ export const Collections = ({ all, values }) => (
 										}
 									}}
 								/>
-								<span>{tag.name}</span>
+								<span style={{ display: 'inline-block', marginLeft: '1rem' }}>{tag.name}</span>
 							</label>
 						</div>
 					))}
@@ -247,7 +247,7 @@ const Submit = ({ id, showDuplicate, handleDelete, hideClose }) => (
 		{handleDelete && id && (
 			<Column>
 				<Button
-					onClick={e => {
+					onClick={() => {
 						handleDelete(id)
 					}}
 					type='button'
