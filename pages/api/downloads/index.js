@@ -7,7 +7,7 @@ import _ from 'lodash'
 
 // http://localhost:3000/api/downloads
 
-const ELISION = '⸻'
+const ELISION = '⸻   '
 
 const docxBibliographyBook = (item, elideAuthor) =>
 	new Paragraph({
@@ -28,17 +28,17 @@ const docxBibliographyBook = (item, elideAuthor) =>
 
 const docxBibliographyJournal = (item, elideAuthor) => {
 	let children = [
-		new TextRun(elideAuthor ? ELISION : names(item.authors, { flipFirst: true })),
-		new TextRun('. '),
-		new TextRun('"'),
-		new TextRun(item.title),
-		new TextRun('." '),
-		new TextRun({
+		new TextRun(elideAuthor ? ELISION : names(item.authors, { flipFirst: true }))
+	]	
+	if (!elideAuthor) children.push(new TextRun('. '))
+	children.push(new TextRun('"'))
+	children.push(new TextRun(item.title))
+	children.push(new TextRun('." '))
+	children.push(new TextRun({
 			italics: true,
 			text: item.journal
-		}),
-		new TextRun(' ')
-	]
+		}))
+	children.push(new TextRun(' '))
 	if (item.volume) {
 		children.push(new TextRun(item.volume))
 		if (item.issue) {
@@ -112,11 +112,11 @@ const docxBibliographyChapter = (item, elideAuthor) => {
 
 const render = (item, previousItem) => {
 	let paragraph
-	
+
 	const elideAuthor = previousItem && _.isEqual(item.authors, previousItem.authors)
-	
+
 	// console.log(`${item.authors} ${elideAuthor} ${previousItem.authors}`)
-	
+
 	switch (item.type) {
 		case 'book':
 			paragraph = docxBibliographyBook(item, elideAuthor)

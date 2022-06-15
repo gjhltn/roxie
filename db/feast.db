@@ -1,22 +1,5308 @@
 {
   "items": [
     {
-      "title": "Plenty Coups: King of the Crows",
+      "title": "The Autumn of the Middle Ages",
       "authors": [
         {
-          "last": "Linderman",
-          "first": "Frank"
+          "last": "Huizinga",
+          "first": "Johan"
         }
       ],
       "imprint": {
-        "publisher": "University of Nebraska",
-        "place": "Lincoln",
-        "year": "1962"
+        "publisher": "University of Chicago Press",
+        "place": " Chicago",
+        "year": "1996"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "ad2f6362-9ff8-4cd2-b9f2-1841038cb230",
+      "translators": [
+        {
+          "last": "Peyton",
+          "first": "Rodney J."
+        },
+        {
+          "last": "Mammitzch",
+          "first": "Ulrich"
+        }
+      ]
+    },
+    {
+      "title": "Autumntide of the Middle Ages",
+      "authors": [
+        {
+          "last": "Huizinga",
+          "first": "Johan"
+        }
+      ],
+      "editors": [
+        {
+          "last": "van der Lem",
+          "first": "Anton"
+        },
+        {
+          "last": "Small",
+          "first": "Graeme"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Webb",
+          "first": "Dianne"
+        }
+      ],
+      "imprint": {
+        "publisher": "Leiden University Press",
+        "place": "Leiden",
+        "year": "2020"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "d1650e34-12db-4b59-ab68-2ee46c3dcfec"
+    },
+    {
+      "title": "Vasari’s rinascita. History, anthropology or art criticism?",
+      "location": "115-127",
+      "authors": [
+        {
+          "last": "Burioni",
+          "first": "Matteo"
+        }
+      ],
+      "in": {
+        "title": "Renaissance? Perceptions of Continuity and Discontinuity in Europe, ca. 1300-1550",
+        "editors": [
+          {
+            "last": "Schnitker",
+            "first": "Harry"
+          }
+        ],
+        "imprint": {
+          "place": "Leiden",
+          "publisher": "Brill",
+          "year": "2010"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "2285de1b-73ae-4d0e-84bb-29995c3f47cf"
+    },
+    {
+      "title": "The Waning of the Middle Ages",
+      "authors": [
+        {
+          "last": "Huizinga",
+          "first": "Johan"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Hopman",
+          "first": "F."
+        }
+      ],
+      "imprint": {
+        "publisher": "Penguin",
+        "place": "London",
+        "year": "1955 (1925)"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "17f5a110-6e61-40bf-bf60-b955cda33c7c"
+    },
+    {
+      "title": "Herfsttij der Middeleeuwen",
+      "location": "3-345",
+      "authors": [
+        {
+          "last": "Huizinga",
+          "first": "Johan"
+        }
+      ],
+      "in": {
+        "title": "Verzamelde werken. Deel 3",
+        "editors": [
+          {
+            "last": "Brummel",
+            "first": "L."
+          }
+        ],
+        "imprint": {
+          "place": "Haarlem",
+          "publisher": "H.D. Tjeenk Willink & Zoon",
+          "year": "1949"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "c4a4fa37-a111-412c-8df7-6ca9e1269de8"
+    },
+    {
+      "title": "The Problem of Periodization in History",
+      "location": "862-871",
+      "url": "",
+      "authors": [
+        {
+          "last": "Gangatharan",
+          "first": "A"
+        }
+      ],
+      "journal": "Proceedings of the Indian History Congress",
+      "volume": "69",
+      "issue": "",
+      "date": "",
+      "year": "2008",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "9fb61801-1d29-4830-bd09-e3df1ba06d39"
+    },
+    {
+      "title": "Huizinga’s Autumntide: The Centenary of a Masterpiece",
+      "location": "",
+      "url": "",
+      "authors": [
+        {
+          "last": "Vale",
+          "first": "Malcolm"
+        }
+      ],
+      "journal": "English Historical Review",
+      "volume": "CXXXVI",
+      "issue": "",
+      "date": "June",
+      "year": "2021",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "journal",
+      "id": "e99d9899-ea22-4d65-b18e-b5ccb0cdbbd6"
+    },
+    {
+      "title": "Huizinga: Anthropologist Avant la Lettre?",
+      "location": "259-274",
+      "authors": [
+        {
+          "last": "Arnade",
+          "first": "Peter"
+        }
+      ],
+      "in": {
+        "title": "Rereading Huizinga: Autumn of the Middle Ages, a Century Later",
+        "editors": [
+          {
+            "last": "Arnade",
+            "first": "Peter"
+          },
+          {
+            "last": "Howell",
+            "first": "Martha"
+          },
+          {
+            "last": "Van der Lem",
+            "first": "Anton"
+          }
+        ],
+        "imprint": {
+          "place": "Amsterdam",
+          "publisher": "Amsterdam University Press",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "a2eae0e1-a7b4-47da-b85f-f455b6ddfee8"
+    },
+    {
+      "title": "The Forms behind the Vormen: Huizinga, New Cultural History, and the Culture of Commerce",
+      "location": "85-104",
+      "authors": [
+        {
+          "last": "Cho",
+          "first": "Jun"
+        }
+      ],
+      "in": {
+        "title": "Rereading Huizinga: Autumn of the Middle Ages, a Century Later",
+        "editors": [
+          {
+            "last": "Arnade",
+            "first": "Peter"
+          },
+          {
+            "last": "Howell",
+            "first": "Martha"
+          },
+          {
+            "last": "Van der Lem",
+            "first": "Anton"
+          }
+        ],
+        "imprint": {
+          "place": "Amsterdam",
+          "publisher": "Amsterdam University Press",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "da2eae0e1-a7b4-47da-b85f-f455b6ddfee8"
+    },
+    {
+      "title": "Harvest of Death: Johan Huizinga’s Critique of Medievalism",
+      "location": "229-244",
+      "authors": [
+        {
+          "last": "Symes",
+          "first": "Carol"
+        }
+      ],
+      "in": {
+        "title": "Rereading Huizinga: Autumn of the Middle Ages, a Century Later",
+        "editors": [
+          {
+            "last": "Arnade",
+            "first": "Peter"
+          },
+          {
+            "last": "Howell",
+            "first": "Martha"
+          },
+          {
+            "last": "Van der Lem",
+            "first": "Anton"
+          }
+        ],
+        "imprint": {
+          "place": "Amsterdam",
+          "publisher": "Amsterdam University Press",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "a2eae0e1d-a7b4-47da-b85f-f455b6ddfee8"
+    },
+    {
+      "title": "Introduction",
+      "location": "11-23",
+      "authors": [
+        {
+          "last": "Arnade",
+          "first": "Peter"
+        },
+        {
+          "last": "Howell",
+          "first": "Martha"
+        }
+      ],
+      "in": {
+        "title": "Rereading Huizinga: Autumn of the Middle Ages, a Century Later",
+        "editors": [
+          {
+            "last": "Arnade",
+            "first": "Peter"
+          },
+          {
+            "last": "Howell",
+            "first": "Martha"
+          },
+          {
+            "last": "Van der Lem",
+            "first": "Anton"
+          }
+        ],
+        "imprint": {
+          "place": "Amsterdam",
+          "publisher": "Amsterdam University Press",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "a2eae0e1fkfk-a7b4-47da-b85f-f455b6ddfee8"
+    },
+    {
+      "title": "Yet Another Failed State? The Huizinga-Pirenne Controversy on the Burgundian State Reconsidered",
+      "location": "105-120",
+      "authors": [
+        {
+          "last": "Boone",
+          "first": "Marc"
+        }
+      ],
+      "in": {
+        "title": "Rereading Huizinga: Autumn of the Middle Ages, a Century Later",
+        "editors": [
+          {
+            "last": "Arnade",
+            "first": "Peter"
+          },
+          {
+            "last": "Howell",
+            "first": "Martha"
+          },
+          {
+            "last": "Van der Lem",
+            "first": "Anton"
+          }
+        ],
+        "imprint": {
+          "place": "Amsterdam",
+          "publisher": "Amsterdam University Press",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "a2eae0e1fk-a7b4-47da-b85f-f455b6ddfee8"
+    },
+    {
+      "title": "Huizinga’s Autumn: The Burgundian Court at Play",
+      "location": "25-40",
+      "authors": [
+        {
+          "last": "Brown",
+          "first": "Andrew"
+        }
+      ],
+      "in": {
+        "title": "Rereading Huizinga: Autumn of the Middle Ages, a Century Later",
+        "editors": [
+          {
+            "last": "Arnade",
+            "first": "Peter"
+          },
+          {
+            "last": "Howell",
+            "first": "Martha"
+          },
+          {
+            "last": "Van der Lem",
+            "first": "Anton"
+          }
+        ],
+        "imprint": {
+          "place": "Amsterdam",
+          "publisher": "Amsterdam University Press",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "a2eae0e1pf-a7b4-47da-b85f-f455b6ddfee8"
+    },
+    {
+      "title": "The Ideology of Burgundy: The Promotion of National Consciousness 1364-1565",
+      "editors": [
+        {
+          "last": "Boulton",
+          "first": "D'arcy Jonathan Dacre"
+        },
+        {
+          "last": "Veenstra",
+          "first": "Jan R,"
+        }
+      ],
+      "imprint": {
+        "publisher": "Brill",
+        "place": "Leiden",
+        "year": "2006"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "7deffe59-5524-439d-b176-4d4bf233139b"
+    },
+    {
+      "title": "Court and Civic Society in the BurgundianLow Countries c.1420–1530",
+      "editors": [
+        {
+          "last": "Brown",
+          "first": "Andrew"
+        },
+        {
+          "last": "Small",
+          "first": "Graham"
+        }
+      ],
+      "imprint": {
+        "publisher": "Manchester University Press",
+        "place": "Manchester",
+        "year": "2007"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "e97776b4-eddd-4c98-91d1-f2076fc7acb4"
+    },
+    {
+      "title": "Honour, community and hierarchy in the feasts of the archery and crossbow guilds of Bruges, 1445–81",
+      "location": "102-113",
+      "url": "",
+      "authors": [
+        {
+          "last": "Crombie",
+          "first": "Laura"
+        }
+      ],
+      "journal": "Journal of Medieval History",
+      "volume": "37",
+      "issue": "",
+      "date": "",
+      "year": "2011",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "journal",
+      "id": "13848ec1-2aa3-4cba-b592-e4fd4cb333f6"
+    },
+    {
+      "title": "Negara: the Theatre State in Nineteenth-Century Bali",
+      "authors": [
+        {
+          "last": "Geertz",
+          "first": "Clifford"
+        }
+      ],
+      "imprint": {
+        "publisher": "Princeton University Press",
+        "place": "Chichester",
+        "year": "1980"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "0a9783e7-dea8-4695-8aa4-7b92c34eb6a9"
+    },
+    {
+      "title": "Beyond Eating: Political and Personal Significance of the entremets at the Banquets of the Burgundian Court",
+      "location": "145-166",
+      "authors": [
+        {
+          "last": "Ross",
+          "first": "L.B."
+        }
+      ],
+      "in": {
+        "title": "At the Table: Metaphorical and Material Cultures of Food in Medieval and Early Modern Europe",
+        "editors": [
+          {
+            "last": "Tomasik",
+            "first": "Timothy J."
+          },
+          {
+            "last": "Vitullo",
+            "first": "Juliann M."
+          }
+        ],
+        "imprint": {
+          "place": "Turnhout",
+          "publisher": "Brepols",
+          "year": "2007"
+        }
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "chapter",
+      "id": "bebcce32-743b-44a8-a089-a35b8f3aa69d"
+    },
+    {
+      "title": "Burgundy",
+      "location": "7:431–56",
+      "authors": [
+        {
+          "last": "Schnerb",
+          "first": "Bertrand"
+        }
+      ],
+      "in": {
+        "title": "The New Cambridge Medieval History",
+        "editors": [
+          {
+            "last": "Allmand",
+            "first": "Christopher"
+          }
+        ],
+        "imprint": {
+          "place": "Cambridge",
+          "publisher": "Cambridge University Press",
+          "year": "1998"
+        }
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "chapter",
+      "id": "d998832d-636a-4f90-af3d-253d2146e525"
+    },
+    {
+      "title": "The Feast of the Seven Sorrows of the Virgin: Piety, Politics and Plainchant at the Burgundian-Habsburg Court",
+      "location": "261–307",
+      "url": "doi:10.1017/S026112791600005X",
+      "authors": [
+        {
+          "last": "Thelen",
+          "first": "Emily S."
+        }
+      ],
+      "journal": "Early Music History ",
+      "volume": "35",
+      "issue": "",
+      "date": "",
+      "year": "2006",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "journal",
+      "id": "c1b21183-ced4-4d01-aaa6-b136af289fca"
+    },
+    {
+      "title": "French Visual Culture and the Making of Medieval Theater",
+      "authors": [
+        {
+          "last": "Weigert",
+          "first": "Laura"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge",
+        "year": "2015"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "37fb6240-5602-4197-a1a9-19f962238767"
+    },
+    {
+      "title": "The Concept of True Nobility at the Burgundian Court",
+      "location": "33-48",
+      "url": "",
+      "authors": [
+        {
+          "last": "Willard",
+          "first": "Charity Cannon"
+        }
+      ],
+      "journal": "Studies in the Renaissance",
+      "volume": "14",
+      "issue": "",
+      "date": "",
+      "year": "1967",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "journal",
+      "id": "4bd71c6f-2dc7-4ba1-8aa6-50d764541328"
+    },
+    {
+      "title": "Northern Renaissance? Burgundy and Netherlandish Art in Fifteenth-Century Europe",
+      "location": "269-288",
+      "authors": [
+        {
+          "last": "Wijsman",
+          "first": "Hanno"
+        }
+      ],
+      "in": {
+        "title": "Renaissance? Perceptions of Continuity and Discontinuity in Europe, c.1300 - c.1550",
+        "editors": [
+          {
+            "last": "Lee",
+            "first": "Alex"
+          },
+          {
+            "last": "Péporté",
+            "first": "Pierre"
+          },
+          {
+            "last": "Schnitker",
+            "first": "Harry"
+          }
+        ],
+        "imprint": {
+          "place": "Leiden",
+          "publisher": "Brill",
+          "year": "2010"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "7b939c51-7c88-47e1-8236-77ee7493938d"
+    },
+    {
+      "title": "Renaissance and Renascences",
+      "location": "201-36",
+      "url": "",
+      "authors": [
+        {
+          "last": "Pankofsky",
+          "first": "Erwin"
+        }
+      ],
+      "journal": "The Kenyan Review",
+      "volume": "6",
+      "issue": "",
+      "date": "",
+      "year": "1944",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "03316348-1929-4674-9ae1-d8a95336d735"
+    },
+    {
+      "title": "The European Renaissance. Centres and Peripheries",
+      "authors": [
+        {
+          "last": "Burke",
+          "first": "Peter"
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Oxford",
+        "place": "Oxford",
+        "year": "1998"
       },
       "collectionID": [],
       "type": "book",
-      "id": "ad2f6362-9ff8-4cd2-b9f2-1841038cb230"
-	  }
+      "id": "5a9e0350-cb77-4cb0-bbde-47a5cee99bc9"
+    },
+    {
+      "title": "Burckhardt's `Civilization of the Renaissance' A Century after its Publication",
+      "location": "207-222",
+      "url": "https://www.jstor.org/stable/2857720",
+      "authors": [
+        {
+          "last": "Baron",
+          "first": "Hans"
+        }
+      ],
+      "journal": "Renaissance News",
+      "volume": "13",
+      "issue": "3",
+      "date": "Autumn",
+      "year": "1960",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "dd763d44-d077-4b0a-b735-0397a7fde8c3"
+    },
+    {
+      "title": "The Civilization of the Renaissance in Italy",
+      "authors": [
+        {
+          "last": "Burckhardt",
+          "first": "Jacob"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Middlemore",
+          "first": "S."
+        }
+      ],
+      "imprint": {
+        "publisher": "Penguin Classics",
+        "place": "London",
+        "year": "1990"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "cd2015fc-7adf-49c4-bd40-c46f2d4679cb"
+    },
+    {
+      "title": "The New Huizinga and the Old Middle Ages",
+      "location": "587-620",
+      "url": "",
+      "authors": [
+        {
+          "last": "Peters",
+          "first": "Edward"
+        },
+        {
+          "last": "Simons",
+          "first": "Walter P."
+        }
+      ],
+      "journal": "Speculum",
+      "volume": "74",
+      "issue": "3",
+      "date": "July ",
+      "year": "1999",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "journal",
+      "id": "0a1d56de-b077-47e7-80e3-05308851e349"
+    },
+    {
+      "title": "L'automne du moyen age.",
+      "authors": [
+        {
+          "last": "Huizinga",
+          "first": "Johan"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Bastin",
+          "first": "J."
+        }
+      ],
+      "imprint": {
+        "publisher": "Payot",
+        "place": "Paris",
+        "year": "1975"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "e54f4a1f-c73d-4eb4-bbd6-2b0f099bc01c"
+    },
+    {
+      "title": "L'odeur du sang et des roses : relire Johan Huizinga aujourd'hui,",
+      "authors": [
+        {
+          "last": "Lecuppre-Desjardin",
+          "first": "Élode"
+        }
+      ],
+      "imprint": {
+        "publisher": "Presses Universitaires du Septentrion",
+        "place": "Villeneuve d'Ascq",
+        "year": "2019"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "4c2a17ec-cf40-406b-8ad1-ddb14c69dbba"
+    },
+    {
+      "title": "La cour ou le théâtre de l’esprit de Johan Huizinga",
+      "location": "",
+      "authors": [
+        {
+          "last": "Brero",
+          "first": "Thalia"
+        },
+        {
+          "last": "Lecuppre-Desjardin",
+          "first": "Élodie"
+        }
+      ],
+      "in": {
+        "title": "Johan Huizinga In: L’odeur du sang et des roses: Relire Johan Huizinga aujourd’hui",
+        "editors": [
+          {
+            "last": "Lecuppre-Desjardin",
+            "first": "Élodie"
+          }
+        ],
+        "imprint": {
+          "place": "Villeneuve d'Ascq",
+          "publisher": "Presses universitaires du Septentrion",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "2ac9228e-68b1-4d98-a23d-3598ce8521fe"
+    },
+    {
+      "title": "Huizinga's Harvest: England and the Waning of the Middle Ages",
+      "location": "1-24",
+      "url": "",
+      "authors": [
+        {
+          "last": "Aston",
+          "first": "Margaret"
+        }
+      ],
+      "journal": "Medievalia et humanistica",
+      "volume": "9",
+      "issue": "",
+      "date": "",
+      "year": "1979",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "journal",
+      "id": "2514e595-6197-42cc-bc48-b448b6579eab"
+    },
+    {
+      "title": "The Problem of the Renaissance’ and ‘Renaissance and Realism’",
+      "location": "243-87",
+      "authors": [
+        {
+          "last": "Huizinga",
+          "first": "Johan "
+        }
+      ],
+      "in": {
+        "title": "Men and Ideas. History, the Middle Ages, the Renaissance: Essays by Johan Huizinga",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ],
+        "imprint": {
+          "place": "New York",
+          "publisher": "Meridian",
+          "year": "1959"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "a2395457-914a-417b-81d0-2e2efd3783fe"
+    },
+    {
+      "title": "The Sense of Decline in Johan Huizinga’s Thought",
+      "location": "57-72",
+      "url": "https://www.johanhuizinga.it/johanhuizinga/wp-content/uploads/2019/07/DeclineHuizingaThought.pdf",
+      "authors": [
+        {
+          "last": "Maiolo",
+          "first": "Francesco"
+        }
+      ],
+      "journal": "Res Publication",
+      "volume": "",
+      "issue": "",
+      "date": "settembre-dicembre ",
+      "year": "2013",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "journal",
+      "id": "63b0f6ff-e50d-4c3c-873e-6c880f6381a3"
+    },
+    {
+      "title": "Homo ludens. A Study of the Play-Element in Culture, ",
+      "authors": [
+        {
+          "last": "Huizinga",
+          "first": "Johan"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Hull",
+          "first": "R.F.C."
+        }
+      ],
+      "imprint": {
+        "publisher": "Rouledge & Kegan Paul",
+        "place": "London",
+        "year": "1949"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "9069b2f5-0bc4-4b43-8ea4-0065c9b83da8"
+    },
+    {
+      "title": "Rethinking the Renaissance: Burgundian Arts across Europe",
+      "authors": [
+        {
+          "last": "Belozerskaya",
+          "first": "Marina"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge",
+        "year": "2012"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "af64b503-19c5-4038-aa10-8a92a374dd26"
+    },
+    {
+      "title": "The Burgundian Netherlands",
+      "authors": [
+        {
+          "last": "Blockmans",
+          "first": "Wim"
+        },
+        {
+          "last": "Prevenier",
+          "first": "Walter"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press ",
+        "place": "Cambridge",
+        "year": "1986"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "955f39ae-a2b8-41ce-99f9-3414ea03f4e3",
+      "translators": [
+        {
+          "last": "King",
+          "first": "Peter"
+        },
+        {
+          "last": "Mead",
+          "first": "Yvette"
+        }
+      ]
+    },
+    {
+      "title": "Bruges and the Burgundian 'Theatre-state': Charles the Bold and Our Lady of the Snow",
+      "location": "573-589",
+      "url": "",
+      "authors": [
+        {
+          "last": "Brown",
+          "first": "Andrew"
+        }
+      ],
+      "journal": "History",
+      "volume": "84",
+      "issue": "276",
+      "date": "October",
+      "year": "1999",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "journal",
+      "id": "8e7843cb-3be3-4ca9-b829-975a12b3144b"
+    },
+    {
+      "title": "L’Automne du Moyen Age, ou la modernité d’une écriture esthétique",
+      "location": "",
+      "authors": [
+        {
+          "last": "Lecuppre-Desjardin",
+          "first": "Élodie"
+        }
+      ],
+      "in": {
+        "title": "L’odeur du sang et des roses: Relire Johan Huizinga aujourd’hui.",
+        "editors": [
+          {
+            "last": "Lecuppre-Desjardin",
+            "first": "Élodie"
+          }
+        ],
+        "imprint": {
+          "place": "Villeneuve-d’Ascq",
+          "publisher": "Presses Universitaires du Septentrion",
+          "year": "2019"
+        }
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "chapter",
+      "id": "b9e8fc96-c7b7-4861-8edd-5927773488af"
+    },
+    {
+      "title": "Philip the Bold: the Formation of the Burgundian State",
+      "authors": [
+        {
+          "last": "Vaughan",
+          "first": "Richard"
+        }
+      ],
+      "imprint": {
+        "publisher": "Harvard University Press",
+        "place": "Cambridge",
+        "year": "1962"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "fedbafc7-1e4b-49f8-aca4-c01843dd86b1"
+    },
+    {
+      "title": "Theatre, Sacrifice, Ritual: Exploring forms of political theatre",
+      "authors": [
+        {
+          "last": "Fischer-Lichte",
+          "first": "Erika"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2002"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "b76a7026-3f1a-403a-ba41-0451c44072b3"
+    },
+    {
+      "title": "Ritual and Event: Interdisciplinary perspectives",
+      "editors": [
+        {
+          "last": "Franko",
+          "first": "Mark"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2007"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "8c75f8ca-5dbb-422f-a0fe-766d25ec08b7"
+    },
+    {
+      "title": "War, State, and Society in England and the Netherlands 1477 – 1559",
+      "authors": [
+        {
+          "last": "Gunn",
+          "first": "Steven"
+        },
+        {
+          "last": "Grummitt",
+          "first": "David"
+        },
+        {
+          "last": "Cools",
+          "first": "Hans"
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2007"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "73e51fd3-1257-4494-b9af-83b69b7079a5"
+    },
+    {
+      "title": "Winter King: the Dawn of Tudor England",
+      "authors": [
+        {
+          "last": "Penn",
+          "first": "Thomas"
+        }
+      ],
+      "imprint": {
+        "publisher": "Penguin",
+        "place": "London",
+        "year": "2012"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "ad94fa99-7c0f-4a66-91c1-d70f440cfb43"
+    },
+    {
+      "title": "Tudor frontiers and noble power: The making of the British state",
+      "authors": [
+        {
+          "last": "Ellis",
+          "first": "Stephen"
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "1998"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "58a9b5e9-68e9-42ff-ab02-90d46b3e975c"
+    },
+    {
+      "title": "The politics of the public sphere in early modern England",
+      "editors": [
+        {
+          "last": "Lake",
+          "first": "Peter"
+        },
+        {
+          "last": "Pinkus",
+          "first": "Stephen"
+        }
+      ],
+      "imprint": {
+        "publisher": "Manchester University Press",
+        "place": "Manchester",
+        "year": "2007"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "6d6e707f-2d7d-4ece-a1b6-0810f839dba6"
+    },
+    {
+      "title": "Art and communication in the reign of Henry VIII",
+      "authors": [
+        {
+          "last": "String",
+          "first": "Tatiana C."
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2008"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "00aaa2cd-3b9d-4d0a-89f5-f3d115c7a1f0"
+    },
+    {
+      "title": "Selling the Tudor monarchy: Authority and image in sixteenth-century England",
+      "authors": [
+        {
+          "last": "Sharpe",
+          "first": "Kevin"
+        }
+      ],
+      "imprint": {
+        "publisher": "Yale University Press",
+        "place": "New Haven",
+        "year": "2009"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "310b0ac1-8d0e-4b91-8e41-8ebba39249c3"
+    },
+    {
+      "title": "Henry VIII: Images of a Tudor king",
+      "authors": [
+        {
+          "last": "Lloyd",
+          "first": "Christopher"
+        }
+      ],
+      "imprint": {
+        "publisher": "Phaidon",
+        "place": "London",
+        "year": "1990"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "37660a5f-daf3-489c-8262-589b2a0a36c4"
+    },
+    {
+      "title": "Images of Tudor kingship",
+      "authors": [
+        {
+          "last": "Anglo",
+          "first": "Sydney"
+        }
+      ],
+      "imprint": {
+        "publisher": "Batsford",
+        "place": "London",
+        "year": "1992"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "0c5953d0-865f-43d8-a577-7708ae854471"
+    },
+    {
+      "title": "Plays of persuasion: Drama and politics at the court of Henry VIII",
+      "authors": [
+        {
+          "last": "Walker",
+          "first": "Greg"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge ",
+        "year": "1991"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "aa24f9f9-d112-4b69-8c9d-a3b62b374295"
+    },
+    {
+      "title": "Tudor political culture",
+      "editors": [
+        {
+          "last": "Hoak",
+          "first": "David"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge",
+        "year": "2002"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "0593349a-82de-4092-859a-b6010e5c541e"
+    },
+    {
+      "title": "Henry VIII and the Court Art, Politics and Performance",
+      "editors": [
+        {
+          "last": "Betteridge",
+          "first": "Thomas"
+        },
+        {
+          "last": "Lipscomb",
+          "first": "Suzannah"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2013"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "31bf17c1-a5d8-4584-9014-c33eaa0a354d"
+    },
+    {
+      "title": "Splendour of the Burgundian Netherlands: Southern Netherlandish Illuminated Manuscripts in Dutch Collections",
+      "authors": [
+        {
+          "last": "As-Vijvers",
+          "first": "Anne Margreet W."
+        },
+        {
+          "last": "Korteweg",
+          "first": "Anne S."
+        }
+      ],
+      "imprint": {
+        "publisher": "Museum Catharijneconvent",
+        "place": "Utrecht",
+        "year": "2018"
+      },
+      "collectionID": [
+        13
+      ],
+      "type": "book",
+      "id": "583bcbfe-c918-42f2-b294-6fb946d91a30"
+    },
+    {
+      "title": "Banquet: Dining in the Great Courts of Late Renaissance Europe",
+      "authors": [
+        {
+          "last": "Albala",
+          "first": "Ken"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Illinois Press",
+        "place": "Urbana",
+        "year": "2007"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "80f349ea-e2ac-479d-b5dc-de6ca79fd33a"
+    },
+    {
+      "title": "The Craft of Ritual Studies",
+      "authors": [
+        {
+          "last": "Grimes",
+          "first": "Ronald L."
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2014"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "77554982-58ae-4e81-b0f6-94cfc5420718"
+    },
+    {
+      "title": "Flanders in the Fifteenth Century: Art and Civilization. Catalogue of the Exhibition \"Masterpieces of Flemish Art: Van Eyck to Bosch\".",
+      "authors": [
+        {
+          "last": "",
+          "first": "The Detroit Institute of Arts"
+        },
+        {
+          "last": "",
+          "first": "The City of Bruges"
+        }
+      ],
+      "imprint": {
+        "publisher": "The Detroit Institute of Arts",
+        "place": "Detroit",
+        "year": "1960"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "d15e87a4-e585-44a9-829d-217cab6f44c1"
+    },
+    {
+      "title": "THE PRINCELY COURT: Medieval Courts and Culture in North-West Europe  ‒",
+      "authors": [
+        {
+          "last": "Vale",
+          "first": "Malcolm"
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2001"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "b445ff21-eba2-4048-95f4-750fcf38c8a5"
+    },
+    {
+      "title": "The Tudor Kitchens Cookery Book, Hampton Court Palace",
+      "authors": [
+        {
+          "last": "Denny",
+          "first": "Roz"
+        }
+      ],
+      "imprint": {
+        "publisher": "Hampton Court Palace",
+        "place": "London",
+        "year": "1994"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "f34dc9f2-a5be-442b-bf0e-66b3a1e5aae3"
+    },
+    {
+      "title": "Theory for Performance Studies",
+      "authors": [
+        {
+          "last": "Auslander",
+          "first": "Philip"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2008"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "78953eb9-f066-4f49-8ab1-457a3f79112d"
+    },
+    {
+      "title": "Illuminating the Renaissance: the Triumph of Flemish Manuscript Painting in Europe",
+      "authors": [
+        {
+          "last": "Kren",
+          "first": "Thomas"
+        },
+        {
+          "last": "McKendrick",
+          "first": "Scot"
+        }
+      ],
+      "imprint": {
+        "publisher": "The J.Paul Getty Museum",
+        "place": "New York",
+        "year": "2003"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "72d65f7b-2f27-4da4-a097-4a3659073139"
+    },
+    {
+      "title": "Charles the Bold: the Last Valois Duke of Burgundy",
+      "authors": [
+        {
+          "last": "Vaughan",
+          "first": "Richard"
+        }
+      ],
+      "imprint": {
+        "publisher": "Harper and Row",
+        "place": "Galsgow",
+        "year": "1974"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "2e1ffbe0-1cbc-4efd-8fc8-ad98badcd29b"
+    },
+    {
+      "title": "Tournaments Jousts, Chivalry, and Pageants in the Middle Ages",
+      "authors": [
+        {
+          "last": "Barber",
+          "first": "Richard"
+        },
+        {
+          "last": "Juliet",
+          "first": "Barker"
+        }
+      ],
+      "imprint": {
+        "publisher": "Weidenfeld and Nicholson",
+        "place": "New York",
+        "year": "1989"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "4d43a5c7-8899-4d3b-a2b9-86adf84fc4f7"
+    },
+    {
+      "title": "Heraldry, Pageantry and Social Display in Medieval England",
+      "editors": [
+        {
+          "last": "Koss",
+          "first": "Peter"
+        },
+        {
+          "last": "Keen",
+          "first": "Maurice"
+        }
+      ],
+      "imprint": {
+        "publisher": "Boydell Press",
+        "place": "Woodbridge",
+        "year": "2003"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "2dc493fb-705a-4c27-8697-2ea7d2caa508"
+    },
+    {
+      "title": "The Fifteenth-Century Illustrations of Christine De Pizan's the Book of the City of Ladies and the Treasure of the City of Ladies",
+      "authors": [
+        {
+          "last": "Dufresne",
+          "first": "Laura Rinaldi"
+        }
+      ],
+      "imprint": {
+        "publisher": "The Edwin Mellen Press",
+        "place": "Lewiston",
+        "year": "2012"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "f704ebd6-8bba-4248-8e40-6fdf32e66377"
+    },
+    {
+      "title": "Special Operations in the Age of Chivalry 1100–1550",
+      "authors": [
+        {
+          "last": "Harari",
+          "first": "Yuval Noah"
+        }
+      ],
+      "imprint": {
+        "publisher": "The Boydell Pres",
+        "place": "Woodbridge",
+        "year": "2007"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "27e9f5a1-944a-4d92-8498-1832199c13bf"
+    },
+    {
+      "title": "A Companion to Chivalry",
+      "editors": [
+        {
+          "last": "Jones",
+          "first": "Robert W."
+        },
+        {
+          "last": "Coss",
+          "first": "Peter"
+        }
+      ],
+      "imprint": {
+        "publisher": "The Boydell Press",
+        "place": "Woodbridge",
+        "year": "2019"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "8213bd57-defd-4ce3-a687-c1eed0bcdbfc"
+    },
+    {
+      "title": "Chivalry",
+      "authors": [
+        {
+          "last": "Keen",
+          "first": "Maurice"
+        }
+      ],
+      "imprint": {
+        "publisher": "Yale University Press",
+        "place": "New Haven",
+        "year": "1984"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "ef6ad652-5e64-41d8-9c55-659dcf970e55"
+    },
+    {
+      "title": "Knights at Court: Courtliness, Chivalry, & Courtesy From Ottonian Germany to the Italian Renaissance",
+      "authors": [
+        {
+          "last": "Scaglione",
+          "first": "Aldo"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of California Press",
+        "place": "Berkeley",
+        "year": "1992"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "4759c6a4-c96a-4a9c-a0b6-76e6ee5588a9"
+    },
+    {
+      "title": "Rethinking Chivalry and Courtly Love",
+      "authors": [
+        {
+          "last": "Wollock",
+          "first": "Jennifer G. "
+        }
+      ],
+      "imprint": {
+        "publisher": "Praeger",
+        "place": "Santa Barbara, CA",
+        "year": "2011"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "acb4760a-44c9-4313-9f3f-22a69601368e"
+    },
+    {
+      "title": "Food, drink and ritualised communication in the household of Eleanor de Montfort, February to August 1265",
+      "location": "75–89",
+      "url": "",
+      "authors": [
+        {
+          "last": "Kjær",
+          "first": "Lars"
+        }
+      ],
+      "journal": "Journal of Medieval History",
+      "volume": "37",
+      "issue": "",
+      "date": "",
+      "year": "2011",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "df548f91-a614-445e-bf92-b8b5ca50ed24"
+    },
+    {
+      "title": "Feasts and gifts: sharing food in the middle ages",
+      "location": "1-5",
+      "url": "",
+      "authors": [
+        {
+          "last": "Kjær",
+          "first": "Lars"
+        },
+        {
+          "last": "Watson",
+          "first": "A.J."
+        }
+      ],
+      "journal": "Journal of Medieval History",
+      "volume": "37",
+      "issue": "",
+      "date": "",
+      "year": "2011",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "7bd973b7-feac-40ed-97bb-169d0a776b78"
+    },
+    {
+      "title": "Medieval Europe",
+      "authors": [
+        {
+          "last": "Wickham",
+          "first": "Chris"
+        }
+      ],
+      "imprint": {
+        "publisher": "Yale University Press",
+        "place": "New Haven",
+        "year": "2016"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "faf141b9-edce-48c6-91e1-ce0c7b525764"
+    },
+    {
+      "title": "The Routledge Introduction to Theatre and Performance Studies",
+      "authors": [
+        {
+          "last": "Fischer-Lichte",
+          "first": "Erika"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2014"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "595d92aa-11b4-4f6e-9f9c-67697b2f42fd"
+    },
+    {
+      "title": "Renaissance Theory",
+      "editors": [
+        {
+          "last": "Elkins",
+          "first": "James"
+        },
+        {
+          "last": "Williams",
+          "first": "Robert"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2008"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "6fee7ced-b9a2-433f-bd47-e8a7742b1ecf"
+    },
+    {
+      "title": "Worldly Goods: a New History of the Renaissance",
+      "authors": [
+        {
+          "last": "Jardine",
+          "first": "Lisa"
+        }
+      ],
+      "imprint": {
+        "publisher": "Doubleday",
+        "place": "New York",
+        "year": "1996"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "4f26d1e3-7162-415e-b8b0-47f7fed2c71c"
+    },
+    {
+      "title": "Performance and Phenomenology",
+      "editors": [
+        {
+          "last": "Bleeker",
+          "first": "Maaike"
+        },
+        {
+          "last": "Foley Sherman",
+          "first": "Jon"
+        },
+        {
+          "last": "Nedelkopoulou",
+          "first": "Eirini"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2015"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "1cf1f43a-1bef-46e1-a93b-54e60fc34116"
+    },
+    {
+      "title": "Performance Phenomenology: To The Thing Itself",
+      "editors": [
+        {
+          "last": "Grant",
+          "first": "Stuart"
+        },
+        {
+          "last": "McNeilly-Renaudie",
+          "first": "Jodie"
+        },
+        {
+          "last": "Wagner",
+          "first": "Matthew"
+        }
+      ],
+      "imprint": {
+        "publisher": "Palgrave Macmillan",
+        "place": "London",
+        "year": "2019"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "7965be5e-4596-47be-9697-480dd2d3205d"
+    },
+    {
+      "title": "Visuality in the Theatre: The Locus of Looking ",
+      "authors": [
+        {
+          "last": "Bleeker",
+          "first": "Maaike"
+        }
+      ],
+      "imprint": {
+        "publisher": "Palgrave Macmillan",
+        "place": "London",
+        "year": "2008"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "82417af9-5b71-4a1d-ab61-05cfd8b0ad70"
+    },
+    {
+      "title": "Performance Theory",
+      "authors": [
+        {
+          "last": "Schechner",
+          "first": "Richard"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London ",
+        "year": "1998"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "425adb48-35a6-4084-ae12-6c27b87d47f7"
+    },
+    {
+      "title": "Between Theater and Anthropology",
+      "authors": [
+        {
+          "last": "Schechner",
+          "first": "Richard"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Pennsylvania Press",
+        "place": "Philadelphia",
+        "year": "1985"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "71c9131c-d6a7-417c-98b1-2f331493f805"
+    },
+    {
+      "title": "The Ritual Process: Structure and Anti-Structure",
+      "authors": [
+        {
+          "last": "Turner",
+          "first": "Victor"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cornell University Press",
+        "place": "Ithaca ",
+        "year": "1991"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "caca7d5b-e4d5-4ab7-8534-61255667a651"
+    },
+    {
+      "title": "From Ritual to Theatre: The Human Seriousness of Play",
+      "authors": [
+        {
+          "last": "Turner",
+          "first": "Victor"
+        }
+      ],
+      "imprint": {
+        "publisher": "Theatre Communications Group Inc.,U.S.",
+        "place": "New York ",
+        "year": "1987"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "6cc07cfe-0822-4175-b9c8-a6e775295a9a"
+    },
+    {
+      "title": "Promised Lands: the Low Countries Under Burgundian Rule, 1369-1530 ",
+      "authors": [
+        {
+          "last": "Blockmans",
+          "first": "Wim"
+        },
+        {
+          "last": "Prevenier",
+          "first": "Walter"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Pennsylvania Press",
+        "place": "Philadelphia",
+        "year": "1999"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "a90e823d-e9fb-47bd-b0e0-6432e57a9e6a",
+      "editors": [
+        {
+          "last": "Peters",
+          "first": "Edward"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Fackelman",
+          "first": "Elizabeth"
+        }
+      ]
+    },
+    {
+      "title": "Honor, Vengeance, and Social Trouble: Honor, Vengeance, and Social Trouble",
+      "authors": [
+        {
+          "last": "Arnade",
+          "first": "Peter"
+        },
+        {
+          "last": "Prevenier",
+          "first": "Walter"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cornell University Press",
+        "place": "Ithaca",
+        "year": "2015"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "9a15040d-17b9-42f0-b89a-f2cbb513f259"
+    },
+    {
+      "title": "The Burgundian state since Richard Vaughan",
+      "location": "1-9",
+      "url": "",
+      "authors": [
+        {
+          "last": "Small",
+          "first": "Graeme"
+        }
+      ],
+      "journal": "Bulletin of the Society for Renaissance Studies",
+      "volume": "19",
+      "issue": "",
+      "date": "",
+      "year": "2002",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "journal",
+      "id": "fee4b674-ba0a-4d54-9923-b711c79fedfb"
+    },
+    {
+      "title": "Realms of Ritual: Burgundian Ceremony and Civic Life in Late Medieval Ghent",
+      "authors": [
+        {
+          "last": "Arnade",
+          "first": "Peter"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cornell University Press",
+        "place": "Ithaca",
+        "year": "1996"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "ddcc461e-8cd0-43d0-ac41-bf8d35dbcb01"
+    },
+    {
+      "title": "Civic Ritual: Bruges and the Counts of Flanders in the Later Middle Ages",
+      "location": "277-299",
+      "url": "",
+      "authors": [
+        {
+          "last": "Brown",
+          "first": "Andrew"
+        }
+      ],
+      "journal": "The English Historical Review",
+      "volume": "112",
+      "issue": "446",
+      "date": "April",
+      "year": "1997",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "868ec4b0-3e1c-44de-9e77-9c3cea7ea4b9"
+    },
+    {
+      "title": "The Dangers of Ritual Between Early Medieval Texts and Social Scientific Theory",
+      "authors": [
+        {
+          "last": "Buc",
+          "first": "Philippe"
+        }
+      ],
+      "imprint": {
+        "publisher": "Princeton University Press",
+        "place": "Princeton",
+        "year": "2009"
+      },
+      "collectionID": [
+        14
+      ],
+      "type": "book",
+      "id": "24fed9ca-ddb9-482c-85fe-b665344991bd"
+    },
+    {
+      "title": "The Evolution of the Early Tudor Disguising, Pageant and Mask",
+      "location": "3-44",
+      "url": "",
+      "authors": [
+        {
+          "last": "Anglo",
+          "first": "Sydney"
+        }
+      ],
+      "journal": "Renaissance Drama",
+      "volume": "1",
+      "issue": "",
+      "date": "",
+      "year": "1968",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "d729b121-ec86-4f66-b72f-80575bdcfbf2"
+    },
+    {
+      "title": "William Cornish in a Play, Pageants, Prison, and Politics",
+      "location": "348-60",
+      "url": "",
+      "authors": [
+        {
+          "last": "Anglo",
+          "first": "Sydney"
+        }
+      ],
+      "journal": "The Review of English Studies",
+      "volume": "10",
+      "issue": "40",
+      "date": "Nov",
+      "year": "1959",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "d3c8045a-88e4-42a6-adef-2e7a745d5187"
+    },
+    {
+      "title": "City, State, and Public Ritual in the Late-Medieval Burgundian Netherlands",
+      "location": "300-318",
+      "url": "",
+      "authors": [
+        {
+          "last": "Arnade",
+          "first": "Peter"
+        }
+      ],
+      "journal": "Comparative Studies in Society and History",
+      "volume": "39",
+      "issue": "2",
+      "date": "",
+      "year": "1997",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "c193cede-744f-4858-9d55-24645be1f2b5"
+    },
+    {
+      "title": "'Have His Carkasse': the Aftermaths of English Court Masques",
+      "location": "211–229",
+      "authors": [
+        {
+          "last": "Bishop",
+          "first": "Tom"
+        }
+      ],
+      "in": {
+        "title": "Spectacle and Public Performance in the Late Middle Ages and the Renaissance",
+        "editors": [
+          {
+            "last": "Stillman",
+            "first": "Robert E."
+          }
+        ],
+        "imprint": {
+          "place": "Leiden",
+          "publisher": "Brill",
+          "year": "2006"
+        }
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "chapter",
+      "id": "732731cc-58e9-4e14-9a24-63607089b5d0"
+    },
+    {
+      "title": "The Sixteenth-century Court Audience",
+      "location": "",
+      "authors": [
+        {
+          "last": "Carpenter ",
+          "first": "Sarah"
+        }
+      ],
+      "in": {
+        "title": "Early Performance: Courts and Audiences - Shifting Paradigms in Early English Drama Studies",
+        "editors": [
+          {
+            "last": "Carpenter",
+            "first": "Sarah "
+          },
+          {
+            "last": "McGavin ",
+            "first": "John J."
+          },
+          {
+            "last": "Walker",
+            "first": "Greg"
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "Routledge",
+          "year": "2020"
+        }
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "chapter",
+      "id": "4a15970a-3cfc-4438-b8db-59c821c0322d"
+    },
+    {
+      "title": "Ben Jonson, Inigo Jones, and the Transformation of Tudor Chivalry",
+      "location": "259-275",
+      "url": "",
+      "authors": [
+        {
+          "last": "Council",
+          "first": "Norman"
+        }
+      ],
+      "journal": "ELH",
+      "volume": "47",
+      "issue": "2",
+      "date": "Summer",
+      "year": "1980",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "41bcf222-e23c-4446-8b6d-2f0db3822026"
+    },
+    {
+      "title": "Selling the Tudor Monarchy. Authority and Image in Sixteenth-Century England. By Kevin Sharpe (review)",
+      "location": "844-5",
+      "url": "",
+      "authors": [
+        {
+          "last": "Gunn",
+          "first": "Steven"
+        }
+      ],
+      "journal": " The Journal of Ecclesiastical History",
+      "volume": "61",
+      "issue": "4",
+      "date": "",
+      "year": "2010",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "49b7bc26-d6b1-42b4-9e9a-f1f12ddcd6c6"
+    },
+    {
+      "title": "Gascoigne and Kenilworth: The Production, Reception, and Afterlife of \"The Princely Pleasures\"",
+      "location": "363-387",
+      "url": "",
+      "authors": [
+        {
+          "last": "Goldring",
+          "first": "Elizabeth"
+        }
+      ],
+      "journal": "English Literary Renaissance ",
+      "volume": "44",
+      "issue": "E3",
+      "date": "Autumn",
+      "year": "2014",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "60efb0ec-e845-4843-9ad5-39eadc16e3ee"
+    },
+    {
+      "title": "The revels accounts: this insubstantial pageant faded leaves not a wrack behind?",
+      "location": "1-17",
+      "url": "",
+      "authors": [
+        {
+          "last": "Jack",
+          "first": "Sybil M."
+        }
+      ],
+      "journal": "Renaissance Studies",
+      "volume": "9",
+      "issue": "1",
+      "date": "March",
+      "year": "1995",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "e11436a9-caee-4ea4-a1f5-3c64191a4cc0"
+    },
+    {
+      "title": "The Triumph of Honour: Burgundian origins of the Elizabethan Renaissance ",
+      "authors": [
+        {
+          "last": "Kipling",
+          "first": "Gordon"
+        }
+      ],
+      "imprint": {
+        "publisher": "Leiden University Press",
+        "place": "Den Haag",
+        "year": "1977"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "48948a9a-fe67-4ac5-9495-20721c7140f0"
+    },
+    {
+      "title": "A Feast for the Eyes: Art, Performance, and the Late Medieval Banquet",
+      "authors": [
+        {
+          "last": "Normore",
+          "first": "Christina"
+        }
+      ],
+      "imprint": {
+        "publisher": "The University of Chicago Press",
+        "place": "Chicago",
+        "year": "2015"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "d195ce09-4473-42ef-aadc-026cc663adca"
+    },
+    {
+      "title": "The court festivals of Henry VII: a study based on the account books of John Heron, Treasurer of the Chamber",
+      "location": "12-45",
+      "url": "",
+      "authors": [
+        {
+          "last": "Anglo",
+          "first": "Sydney"
+        }
+      ],
+      "journal": "Bulletin of the John Rylands Library",
+      "volume": "43",
+      "issue": "1",
+      "date": "",
+      "year": "1960",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "07ab0224-02ae-47aa-b0a0-234d20e13a66"
+    },
+    {
+      "title": "Henry VIII’s Great Feast at Greenwich, May 1527",
+      "location": "1-12",
+      "url": "",
+      "authors": [
+        {
+          "last": "Lehmann",
+          "first": "Gilly"
+        }
+      ],
+      "journal": "The Court Historian",
+      "volume": "23",
+      "issue": "1",
+      "date": "",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "a6731722-0294-41b0-a5aa-43988c633d60"
+    },
+    {
+      "title": "Medici Carnivals from Lorenzo the Magnificent to Duke Francesco I",
+      "location": "17-40",
+      "authors": [
+        {
+          "last": "Plaisance",
+          "first": "Michel"
+        }
+      ],
+      "translators": [
+        {
+          "last": "Carew-Reid",
+          "first": "Nicole"
+        }
+      ],
+      "in": {
+        "title": "Florence in the Time of the Medici. Public Celebrations, Politics, and Literature in the Fifteenth and Sixteenth Centuries",
+        "editors": [
+          {
+            "last": "Carew-Reid",
+            "first": "Nicole"
+          }
+        ],
+        "imprint": {
+          "place": "Toronto",
+          "publisher": "Centre for Reformation and Renaissance Studies,",
+          "year": "2008"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "2be07427-ec10-48ae-84af-0118298f8ac8"
+    },
+    {
+      "title": "Hall's Chronicle and the Greenwich Triumphs of 1527",
+      "location": "",
+      "authors": [
+        {
+          "last": "Rawlinson",
+          "first": "Kent"
+        }
+      ],
+      "in": {
+        "title": "The Oxford Handbook of Tudor Drama",
+        "editors": [
+          {
+            "last": "Betteridge",
+            "first": "Thomas"
+          },
+          {
+            "last": "Walker",
+            "first": "Greg"
+          }
+        ],
+        "imprint": {
+          "place": "Oxford",
+          "publisher": "Oxford University Press",
+          "year": "2012"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "d7620d64-65ed-46fe-9cea-b3bf14de244f"
+    },
+    {
+      "title": "The Coronation of Anne Boleyn",
+      "location": "",
+      "authors": [
+        {
+          "last": "Sowerby",
+          "first": "Tracey"
+        }
+      ],
+      "in": {
+        "title": "The Oxford Handbook of Tudor Drama",
+        "editors": [
+          {
+            "last": "Betteridge",
+            "first": "Thomas"
+          },
+          {
+            "last": "Walker",
+            "first": "Greg"
+          }
+        ],
+        "imprint": {
+          "place": "Oxford",
+          "publisher": "Oxford University Press",
+          "year": "2012"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "d7620d64-65ed-46fefff-9cea-b3bf14de244f"
+    },
+    {
+      "title": "Entertainments for the French ambassadors at the court of Henry VIII",
+      "location": "404-415",
+      "url": "",
+      "authors": [
+        {
+          "last": "Richardson",
+          "first": "Glenn"
+        }
+      ],
+      "journal": "Renaissance Studies",
+      "volume": "9",
+      "issue": "4",
+      "date": "December",
+      "year": "1995",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "332b8e01-1a7b-4c4f-b027-78685ae76755"
+    },
+    {
+      "title": "The Field of Cloth of Gold",
+      "authors": [
+        {
+          "last": "Richardson",
+          "first": "Glenn"
+        }
+      ],
+      "imprint": {
+        "publisher": "Yale University Press",
+        "place": "London ",
+        "year": "2015"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "bc9a8823-bba0-483e-9610-46b65293cf5e"
+    },
+    {
+      "title": "Antique-Work and Naked Boys: Animating the Tudor-Stuart Grotesque",
+      "location": "85-111",
+      "url": "",
+      "authors": [
+        {
+          "last": "Semler",
+          "first": "L.E."
+        }
+      ],
+      "journal": "Parergon",
+      "volume": "21",
+      "issue": "1",
+      "date": "January",
+      "year": "2004",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "b1e8d5f2-d7bd-4902-88be-e9d0ee0a3d78"
+    },
+    {
+      "title": "Chivalry, British sovereignty and dynastic politics: undercurrents of antagonism in Tudor-Stewart relations, c.1490-c.1513",
+      "location": "601-618",
+      "url": "",
+      "authors": [
+        {
+          "last": "Stevenson",
+          "first": "Katie"
+        }
+      ],
+      "journal": "Historical Research",
+      "volume": "86",
+      "issue": "234",
+      "date": "November",
+      "year": "2013",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "23c4f736-b04d-48b3-91b5-dd4350f23e80"
+    },
+    {
+      "title": "Court Revels 1485-1559",
+      "authors": [
+        {
+          "last": "Streitberger",
+          "first": "W.R."
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Toronto Press ",
+        "place": "Toronto",
+        "year": "1994"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "bf2268f6-12a7-45a0-8339-ce77e9ac2255"
+    },
+    {
+      "title": "Henry VIII's Entertainment for the Queen of Scots, 1516: A New Revels Account and Cornish's Play",
+      "location": "29-35",
+      "url": "",
+      "authors": [
+        {
+          "last": "Streitberger ",
+          "first": "W.R."
+        }
+      ],
+      "journal": "Medieval & Renaissance Drama in England ",
+      "volume": "1",
+      "issue": "",
+      "date": "",
+      "year": "1984",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "2d294916-5924-4a15-b32c-04437e5e66b9"
+    },
+    {
+      "title": "The Masters of the Revels and Elizabeth I’s Court Theatre",
+      "authors": [
+        {
+          "last": "Streitberger",
+          "first": "W.R."
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2016"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "20a7ef89-24fd-4bd0-b398-e96be383bbcb"
+    },
+    {
+      "title": "Medieval and Renaissance Wedding Banquets and Other Feasts.",
+      "location": "159-184",
+      "authors": [
+        {
+          "last": "Weiss",
+          "first": "Susan F."
+        }
+      ],
+      "in": {
+        "title": "Food and Eating in Medieval Europe",
+        "editors": [
+          {
+            "last": "Carlin",
+            "first": "Martha"
+          },
+          {
+            "last": "Rosenthal",
+            "first": "Joel T."
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "Bloomsbury Academic",
+          "year": "1998"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "9fcc7658-fe71-435e-9185-e1a89722e2e3"
+    },
+    {
+      "title": "An Italian Poet at the Court of Henry VII",
+      "location": "118-9",
+      "url": "",
+      "authors": [
+        {
+          "last": "Wormald",
+          "first": "Francis"
+        }
+      ],
+      "journal": "Journal of the Warburg and Courtauld Institutes",
+      "volume": "14",
+      "issue": "1/2",
+      "date": "",
+      "year": "1951",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "33c5166b-5c43-41c7-bd57-cc8a714f473a"
+    },
+    {
+      "title": "Waits, musicians, bearwards and players: the inter-urban road travel and performances of itinerant entertainers in sixteenth and seventeenth century England",
+      "location": "430-458",
+      "url": "",
+      "authors": [
+        {
+          "last": "Brayshay",
+          "first": "Mark"
+        }
+      ],
+      "journal": "Journal of Historical Geography",
+      "volume": "21",
+      "issue": "",
+      "date": "",
+      "year": "2005",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "fb2b7910-920d-491e-a1e4-558d6fd8f87f"
+    },
+    {
+      "title": "Banquet Performance Now and Then: Commensal Experiments and Eating as Mise en Scène",
+      "location": "10-31",
+      "url": "",
+      "authors": [
+        {
+          "last": "Stourna",
+          "first": "Athena"
+        }
+      ],
+      "journal": "Platform",
+      "volume": "12",
+      "issue": "1",
+      "date": "Spring",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "465b3980-4ed9-4fe5-a01b-57ec4c899ff1"
+    },
+    {
+      "title": "Wonders and the Order of Nature, 1150-1750",
+      "authors": [
+        {
+          "last": "Daston",
+          "first": "Lorraine"
+        }
+      ],
+      "imprint": {
+        "publisher": "Zone Books",
+        "place": "New York",
+        "year": "1998"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "2199f0d4-3469-400d-bf4f-8b73bc07afd7"
+    },
+    {
+      "title": "Pictorial Babel: Inventing the Flemish Visual Vernacular",
+      "location": "313-338",
+      "authors": [
+        {
+          "last": "Bloom",
+          "first": "James J."
+        }
+      ],
+      "in": {
+        "title": "The Transformation of Vernacular Expression in Early Modern Arts",
+        "editors": [
+          {
+            "last": "Keizer",
+            "first": "Joost"
+          },
+          {
+            "last": "Richardson",
+            "first": "Todd"
+          }
+        ],
+        "imprint": {
+          "place": "Leiden",
+          "publisher": "Brill",
+          "year": "2012"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "80d39e87-b9a9-4fab-a7d9-eeae3aecd60d"
+    },
+    {
+      "title": "The Lack of a Western European Military Response to the Ottoman Invasions of Eastern Europe from Nicopolis (1396) to Mohacs (1526)",
+      "location": "539- 559",
+      "url": "",
+      "authors": [
+        {
+          "last": "DeVries",
+          "first": "Kelly"
+        }
+      ],
+      "journal": "The Journal of Military History",
+      "volume": "63",
+      "issue": "3",
+      "date": "July",
+      "year": "1999",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "5c8b7f2a-964c-4625-b839-d26f41d2df10"
+    },
+    {
+      "title": "Princes of Darkness: The Night at Court, 1650–1750",
+      "location": "235-273",
+      "url": "",
+      "authors": [
+        {
+          "last": "Koslofsky",
+          "first": "Craig"
+        }
+      ],
+      "journal": "The Journal of Modern History",
+      "volume": "79",
+      "issue": "2",
+      "date": "June",
+      "year": "2007",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "a73744d5-c14e-459b-af5f-8175965f2615"
+    },
+    {
+      "title": "Imagining a Medieval Performance: a Phenomenological Approach",
+      "location": "",
+      "url": "",
+      "authors": [
+        {
+          "last": "Hurlbut",
+          "first": "Jesse"
+        }
+      ],
+      "journal": "Research on Medieval and Renaissance Drama",
+      "volume": "52-3",
+      "issue": "",
+      "date": "July",
+      "year": "2014",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "0f3a33a1-0d1d-41fb-8b12-56cbed12b1dc"
+    },
+    {
+      "title": "The Este Portrait by Roger van der Weyden",
+      "location": "165-180",
+      "url": "",
+      "authors": [
+        {
+          "last": "Kantorowicz",
+          "first": "Ernst"
+        }
+      ],
+      "journal": "Journal of the Warburg and Courtauld Institutes",
+      "volume": "3",
+      "issue": "3/4",
+      "date": "Apr-Jul",
+      "year": "1940",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "3ecfc1de-e036-452e-83aa-d928a28ab8b3"
+    },
+    {
+      "title": "Portable Propaganda--Tapestries as Princely Metaphors at the Courts of Philip the Good and Charles the Bold",
+      "location": "123-129",
+      "url": "",
+      "authors": [
+        {
+          "last": "Smith",
+          "first": "Jeffrey Chips"
+        }
+      ],
+      "journal": "Art Journal",
+      "volume": "48",
+      "issue": "2",
+      "date": "Summer",
+      "year": "1989",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "d47e5645-a1ba-48b5-96fc-6faf755ba39b"
+    },
+    {
+      "title": "Instruments at the Court of Burgundy (1363-1467)",
+      "location": "51-51",
+      "url": "",
+      "authors": [
+        {
+          "last": "Bowles",
+          "first": "Edmund A."
+        }
+      ],
+      "journal": "The Galpin Society Journal ",
+      "volume": "6",
+      "issue": "",
+      "date": "Jul",
+      "year": "1953",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "a0dae701-57ee-4b5d-8b91-c1eff2328f35"
+    },
+    {
+      "title": "Castles and Town Residences of Philip the Bold, Duke of Burgundy (1364-1404)",
+      "location": "95-118",
+      "url": "",
+      "authors": [
+        {
+          "last": "De Winter",
+          "first": "Patrick M."
+        }
+      ],
+      "journal": "Artibus et Historiae ",
+      "volume": "4",
+      "issue": "8",
+      "date": "",
+      "year": "1983",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "54393d23-3e86-4a88-9a17-fbb475cde640"
+    },
+    {
+      "title": "Fete noble en Bourgogne au XVe siecle: \"Le banquet Faisan\" (1454), aspects politiques, sociaux et culturels",
+      "authors": [
+        {
+          "last": "Lafortune-Martel",
+          "first": "Agathe"
+        }
+      ],
+      "imprint": {
+        "publisher": "Vrin",
+        "place": "Paris",
+        "year": "1984"
+      },
+      "collectionID": [
+        1
+      ],
+      "type": "book",
+      "id": "5410e110-1f9f-48ea-a505-7d85d52f407d"
+    },
+    {
+      "title": "The Early Tudor Revels Office",
+      "location": "19-25",
+      "url": "",
+      "authors": [
+        {
+          "last": "Edinburgh",
+          "first": "Arnold"
+        }
+      ],
+      "journal": "Shakespeare Quarterly",
+      "volume": "2",
+      "issue": "1",
+      "date": "Jan",
+      "year": "1951",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "9cc14206-9b86-4bf0-a588-fe655835eaf8"
+    },
+    {
+      "title": "‘A La Mode De Bourgoigne?’ The ‘Burgundian’ Ceremonial at the Court of Albert and Isabella in Brussels (1598–1621)",
+      "location": "47-62",
+      "url": "",
+      "authors": [
+        {
+          "last": "Raeymaekers",
+          "first": "Dries"
+        }
+      ],
+      "journal": "Dutch Crossing Journal of Low Countries Studies",
+      "volume": "43",
+      "issue": "1",
+      "date": "",
+      "year": "2019",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "53c84632-f90c-4591-9cd9-8ffb4230c1ba"
+    },
+    {
+      "title": "The Art of Courtly Love",
+      "location": "194-199",
+      "url": "",
+      "authors": [
+        {
+          "last": "Munrow",
+          "first": "David"
+        }
+      ],
+      "journal": "Early Music ",
+      "volume": "1",
+      "issue": "4",
+      "date": "Oct",
+      "year": "1973",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "bc505785-ee55-4457-8e3e-387f2007f40a"
+    },
+    {
+      "title": "Dance in Early Tudor England: An Italian Connection?",
+      "location": "230-234+237-242+244",
+      "url": "",
+      "authors": [
+        {
+          "last": "Nevile",
+          "first": "Jennifer"
+        }
+      ],
+      "journal": "Early Music",
+      "volume": "26",
+      "issue": "2",
+      "date": "May",
+      "year": "1998",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "98cc19af-dafd-4430-ab91-69f6de0b1952"
+    },
+    {
+      "title": "Torchbearers in the English Masque",
+      "location": "246-250+253-262",
+      "url": "",
+      "authors": [
+        {
+          "last": "Daye",
+          "first": "Anne"
+        }
+      ],
+      "journal": "Early Music",
+      "volume": "26",
+      "issue": "2",
+      "date": "May",
+      "year": "1998",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "280f6904-a0cb-46f7-8b7e-bcbc0232fb10"
+    },
+    {
+      "title": "Baroque Opera & Dance in London",
+      "location": "369-371",
+      "url": "",
+      "authors": [
+        {
+          "last": "Goff",
+          "first": "Monica"
+        }
+      ],
+      "journal": "Early Music",
+      "volume": "26",
+      "issue": "2",
+      "date": "May",
+      "year": "1998",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "6394d664-048b-4455-9134-f4f1a9af060a"
+    },
+    {
+      "title": "Rabelais' Lists of Fowls, Fishes, Serpents and Wild Beasts",
+      "location": "431-438",
+      "url": "",
+      "authors": [
+        {
+          "last": "Smith",
+          "first": "W.F."
+        }
+      ],
+      "journal": "The Modern Language Review",
+      "volume": "13",
+      "issue": "4",
+      "date": "Oct",
+      "year": "1918",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "20c2b0f3-44eb-4b9c-8af6-84b2fb5d3886"
+    },
+    {
+      "title": "'Vivre Noblement': Material Culture and Elite Identity in Late Medieval Flanders",
+      "location": "1-31",
+      "url": "",
+      "authors": [
+        {
+          "last": "De Clercq",
+          "first": "Wim"
+        },
+        {
+          "last": "Dumolyn",
+          "first": "Jan"
+        },
+        {
+          "last": "Haemers",
+          "first": "Jelle"
+        }
+      ],
+      "journal": "The Journal of Interdisciplinary History",
+      "volume": "38",
+      "issue": "1",
+      "date": "Summer",
+      "year": "2007",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "f462d9c0-8dfd-43d8-a953-7febfdaf70c0"
+    },
+    {
+      "title": "Burgundian Sword Ritual: Charismatic and Regnal Authority at the Funeral of Philip the Good in Bruges, 1467",
+      "location": "11-28",
+      "url": "",
+      "authors": [
+        {
+          "last": "Murray",
+          "first": "Andrew"
+        }
+      ],
+      "journal": "The Court Historian",
+      "volume": "26",
+      "issue": "1",
+      "date": "",
+      "year": "2021",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "b6e38b4b-38bc-4d31-9c92-4e23c5084b11"
+    },
+    {
+      "title": "Renaissance attachment to things: material culture in last wills and testaments",
+      "location": "984-1004",
+      "url": "",
+      "authors": [
+        {
+          "last": "Cohn",
+          "first": "Samuel"
+        }
+      ],
+      "journal": "The Economic History Review ",
+      "volume": "65",
+      "issue": "3",
+      "date": "August",
+      "year": "2012",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "f2143adf-1140-4912-b508-807f1e5c6347"
+    },
+    {
+      "title": "Furniture in England, France and the Netherlands from the Twelfth to the Fifteenth Century",
+      "location": "i, iii-xxiv, 1-303",
+      "url": "",
+      "authors": [
+        {
+          "last": "Eames",
+          "first": "Penelope"
+        }
+      ],
+      "journal": "Furniture History",
+      "volume": "13",
+      "issue": "",
+      "date": "",
+      "year": "1977",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "a1dc6d7a-80e4-4392-af1e-6b2bef5cb756"
+    },
+    {
+      "title": "The Role of Painters before the Rise of Painting: The Master of Frankfurt's 'Festival of the Archers'",
+      "location": "70-89",
+      "url": "",
+      "authors": [
+        {
+          "last": "Bloom",
+          "first": "James J"
+        }
+      ],
+      "journal": "Nederlands Kunsthistorisch Jaarboek (NKJ) / Netherlands Yearbook for History of Art ",
+      "volume": "59",
+      "issue": "",
+      "date": "",
+      "year": "2009",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "bad92ad2-ec94-4cbf-91f9-5966aebeecdb"
+    },
+    {
+      "title": "The Mystic Lamb and the Golden Fleece: Impressions of the Ghent Altarpiece on Burgundian Music and Culture",
+      "location": "5-59",
+      "url": "",
+      "authors": [
+        {
+          "last": "Haggh",
+          "first": "Barbara"
+        }
+      ],
+      "journal": "Revue belge de Musicologie / Belgisch Tijdschrift voor Muziekwetenschap",
+      "volume": "61",
+      "issue": "",
+      "date": "",
+      "year": "2007",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "bac75b12-83c0-498b-a50a-2e7e9491cb2a"
+    },
+    {
+      "title": "Tudor Court Staging: A Study in Perspective",
+      "location": "194-207",
+      "url": "",
+      "authors": [
+        {
+          "last": "McDowell",
+          "first": "John H."
+        }
+      ],
+      "journal": "The Journal of English and Germanic Philology",
+      "volume": "44",
+      "issue": "2",
+      "date": "April",
+      "year": "1985",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "36ff0252-ef4b-4c94-b72c-0635968d1cd1"
+    },
+    {
+      "title": "Living Pictures: Rereading \"au vif,\" 1350-1550",
+      "location": "163-182",
+      "url": "",
+      "authors": [
+        {
+          "last": "Turel",
+          "first": "Noa"
+        }
+      ],
+      "journal": "Gesta",
+      "volume": "50",
+      "issue": "2",
+      "date": "",
+      "year": "2011",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "1241178f-711c-4439-98e0-48f390953607"
+    },
+    {
+      "title": "Taking Borders Seriously: the significance of cloth-of-gold textile borders in Burgundian and post-Burgundian manuscript illumination in the Low Countries",
+      "location": "22-40",
+      "url": "",
+      "authors": [
+        {
+          "last": "Goehring",
+          "first": "Margaret"
+        }
+      ],
+      "journal": "Oud Holland",
+      "volume": "119",
+      "issue": "",
+      "date": "",
+      "year": "2006",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "360ea053-57da-4baf-b15f-ca4090bbbaa6"
+    },
+    {
+      "title": "Putting On and Removing the Mask: Layers of Performance Pretence",
+      "location": "33-58",
+      "url": "",
+      "authors": [
+        {
+          "last": "Butterworth",
+          "first": "Philip"
+        }
+      ],
+      "journal": "Early Theatre",
+      "volume": "21",
+      "issue": "1",
+      "date": "",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "f46505db-6155-4174-a37e-794f8dfd5580"
+    },
+    {
+      "title": "Drama and the Transfer of Power in Renaissance England",
+      "authors": [
+        {
+          "last": "Wiggins",
+          "first": "Martin"
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2012"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "c2a089f6-c49f-41ac-8994-e752065d01ad"
+    },
+    {
+      "title": "Civic Performance : Pageantry and Entertainments in Early Modern London",
+      "editors": [
+        {
+          "last": "Finlayson",
+          "first": "J.Caitlin "
+        },
+        {
+          "last": "Sen",
+          "first": "Amrita"
+        }
+      ],
+      "imprint": {
+        "publisher": "Routledge",
+        "place": "London",
+        "year": "2020"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "3ed7cd7d-7739-4997-bb72-018753f9db65"
+    },
+    {
+      "title": "Conquering Turk in Carnival Nürnberg: Hans Rosenplüt's Des Turken Vasnachtspil of 1456",
+      "location": "181-200",
+      "authors": [
+        {
+          "last": "Walsh",
+          "first": "Martin W."
+        }
+      ],
+      "in": {
+        "title": "Fifteenth-Century Studies",
+        "editors": [
+          {
+            "last": "Gusick",
+            "first": "Barbara I."
+          },
+          {
+            "last": "Heintzelman",
+            "first": "Matthew Z."
+          }
+        ],
+        "imprint": {
+          "place": "New York",
+          "publisher": "Boydell & Brewer",
+          "year": "2011"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "dfb177d4-a732-417e-88c8-d4aa119f8099"
+    },
+    {
+      "title": "Plays of Persuasion: Drama and Politics at the Court of Henry VIII",
+      "authors": [
+        {
+          "last": "Walker",
+          "first": "Greg"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge",
+        "year": "1991"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "d3d66fcf-a643-42e0-9a0c-fd367de7cb04"
+    },
+    {
+      "title": "Courts, Courtiers, and Culture in Tudor England",
+      "location": "703–722",
+      "url": "",
+      "authors": [
+        {
+          "last": "Mears",
+          "first": "Natalie"
+        }
+      ],
+      "journal": "The Historical Journal",
+      "volume": "46",
+      "issue": "3",
+      "date": "",
+      "year": "2003",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "3bef2391-da0a-4a76-93d5-12da4a4d3daa"
+    },
+    {
+      "title": "Endless cold: a seasonal reconstruction of temperature and precipitation in the Burgundian Low Countries during the 15th century based on documentary evidence",
+      "location": "1049–1066",
+      "url": "",
+      "authors": [
+        {
+          "last": "Camenisch",
+          "first": "C."
+        }
+      ],
+      "journal": "Climate Past",
+      "volume": "11",
+      "issue": "",
+      "date": "",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "704509cf-c5a2-43d9-abd2-906ba324a1aa"
+    },
+    {
+      "title": "The Material Renaissance",
+      "authors": [
+        {
+          "last": "O'Malley",
+          "first": "M."
+        }
+      ],
+      "imprint": {
+        "publisher": "Manchester University Press",
+        "place": "Manchester",
+        "year": "2010"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "1718f702-3332-492a-b703-9626489115ab"
+    },
+    {
+      "title": "Staging the Court of Burgundy Proceedings of the Conference \"the Splendour of Burgundy\"",
+      "editors": [
+        {
+          "last": "Blockmans",
+          "first": "Wim"
+        },
+        {
+          "last": "Borchert",
+          "first": "Till-Holger"
+        },
+        {
+          "last": "Gabriëls",
+          "first": "Nele"
+        },
+        {
+          "last": "Oosterman",
+          "first": "Johan"
+        },
+        {
+          "last": "van Oosterwijk",
+          "first": "Anne"
+        }
+      ],
+      "imprint": {
+        "publisher": "Harvey Miller Publishers",
+        "place": "London, Turnhout",
+        "year": "2013"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "272cbdca-59fc-46c5-8d2f-39918e5c35e6"
+    },
+    {
+      "title": "An Ideal Design by Negotiation: The Construction of Philip the Good’s Palais Rihour at Lille",
+      "location": "223–252",
+      "url": "",
+      "authors": [
+        {
+          "last": "Hurx",
+          "first": "Merlijn"
+        }
+      ],
+      "journal": "Architectural History",
+      "volume": "64",
+      "issue": "",
+      "date": "",
+      "year": "2021",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "2813e190-5678-4df6-b442-f19d54d03c61"
+    },
+    {
+      "title": "Art and Power: Renaissance Festivals 1450-1650",
+      "authors": [
+        {
+          "last": "Strong",
+          "first": "Roy"
+        }
+      ],
+      "imprint": {
+        "publisher": "Boydell Press",
+        "place": "Woodbridge",
+        "year": "1986"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "e3500ead-696b-4e13-a1da-5bb1a34110e1"
+    },
+    {
+      "title": "Feast",
+      "authors": [
+        {
+          "last": "Strong ",
+          "first": "Roy"
+        }
+      ],
+      "imprint": {
+        "publisher": "Pimlico",
+        "place": "London",
+        "year": "2005"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "bdd18e38-d7f8-4afa-84f3-5fff5e02799b"
+    },
+    {
+      "title": "The Elizabethan Image: An Introduction to English Portraiture, 1558-1603",
+      "authors": [
+        {
+          "last": "Strong",
+          "first": "Roy"
+        }
+      ],
+      "imprint": {
+        "publisher": "Yale University Press",
+        "place": "New Haven",
+        "year": "2019"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "c27d7856-adb5-4f4f-b7a5-e89c844d7771"
+    },
+    {
+      "title": "Plenti and Grase: Food and Drink in a Sixteenth-century Household",
+      "authors": [
+        {
+          "last": "Dawson",
+          "first": "Mark"
+        }
+      ],
+      "imprint": {
+        "publisher": "Prospect Books",
+        "place": "London ",
+        "year": "2009"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "00bcca8e-6f73-4738-adeb-7e28605406b7"
+    },
+    {
+      "title": "Drama, Politics, and News in the Earl of Sussex’s Entertainment of Elizabeth I at New Hall, 1579",
+      "location": "343-366",
+      "url": "",
+      "authors": [
+        {
+          "last": "Younger",
+          "first": "Neil"
+        }
+      ],
+      "journal": "The Historical Journal",
+      "volume": "58",
+      "issue": "2",
+      "date": "",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "bd75ad9c-21c6-4377-b67e-cde9428cd6ba"
+    },
+    {
+      "title": "The Matter of Ephemeral Art: Craft, Spectacle, and Power in Early Modern Europe",
+      "location": "78–131",
+      "url": "",
+      "authors": [
+        {
+          "last": "Smith",
+          "first": "Pamela H."
+        },
+        {
+          "last": "Uchacz",
+          "first": "Tianna Helena"
+        },
+        {
+          "last": "Pitman",
+          "first": "Sophie"
+        },
+        {
+          "last": "Taape",
+          "first": "Tillmann"
+        },
+        {
+          "last": "Debuiche",
+          "first": "Colin"
+        }
+      ],
+      "journal": " Renaissance Quarterly",
+      "volume": "73",
+      "issue": "1",
+      "date": "",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "e6c6de3a-f7d0-4db7-ad3f-7986e0f7c072"
+    },
+    {
+      "title": "Who Witnessed and Narrated the ‘Banquet of the Pheasant’ (1454)? A Codicological Examination of the Account’s Five Versions",
+      "location": "28:124–37",
+      "authors": [
+        {
+          "last": "Emerson",
+          "first": "Catherine"
+        }
+      ],
+      "in": {
+        "title": "Fifteenth-Century Studies",
+        "editors": [
+          {
+            "last": "DuBruck",
+            "first": "Edelgard E. "
+          },
+          {
+            "last": "Gusick",
+            "first": "Barbara I."
+          }
+        ],
+        "imprint": {
+          "place": "Woodbridge",
+          "publisher": "Boydell & Brewer",
+          "year": "2003"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "f70e3c3f-4713-43c4-80b9-d10a3b308947"
+    },
+    {
+      "title": "English Masques",
+      "location": "32-41",
+      "authors": [
+        {
+          "last": "Ravelhofer",
+          "first": "Barbara"
+        }
+      ],
+      "in": {
+        "title": "The Cambridge Companion to Ballet",
+        "editors": [
+          {
+            "last": "Kant",
+            "first": "Marion"
+          }
+        ],
+        "imprint": {
+          "place": "Cambridge",
+          "publisher": "Cambridge University Press",
+          "year": "2007"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "0c0ea363-b78d-48f5-b978-394186b30d68"
+    },
+    {
+      "title": "Feasts : Archaeological and Ethnographic Pespectives on Food, Politics, and Power",
+      "editors": [
+        {
+          "last": "Dietler",
+          "first": "Michael"
+        },
+        {
+          "last": "Hayden",
+          "first": "Brian"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Alabama Press",
+        "place": "Tuscaloosa",
+        "year": "2010"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "cefbc494-9600-4f7e-b1fa-70ecfdb5c6ae"
+    },
+    {
+      "title": "On the archival rhetoric of inventories: Some records of the Valois Burgundian court",
+      "location": "215–227",
+      "url": "",
+      "authors": [
+        {
+          "last": "Normore",
+          "first": "Christina"
+        }
+      ],
+      "journal": "Journal of the History of Collections",
+      "volume": "23",
+      "issue": "2",
+      "date": "",
+      "year": "2011",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "5f753f9a-c711-48f5-88fd-6efa72d271ac"
+    },
+    {
+      "title": "Winning Hearts and Minds in Early Fifteenth-Century France: Burgundian Propaganda in Perspective",
+      "location": "",
+      "url": "",
+      "authors": [
+        {
+          "last": "Hutchison",
+          "first": "Emily J."
+        }
+      ],
+      "journal": "French Historical Studies",
+      "volume": "35",
+      "issue": "1",
+      "date": "Winter",
+      "year": "2012",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "5482d881-6650-49c8-bd49-391d42f6409d"
+    },
+    {
+      "title": "'Ostentatious by Nature': Flemish Material Culture at the Marriage of James IV and Margaret Tudor",
+      "location": "27-54",
+      "url": "",
+      "authors": [
+        {
+          "last": "French",
+          "first": "Morvern"
+        }
+      ],
+      "journal": "International Review of Scottish Studies",
+      "volume": "",
+      "issue": "46",
+      "date": "",
+      "year": "2021",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "0fc8ff00-cc08-4b58-aafc-36c19c8acf64"
+    },
+    {
+      "title": "Reviewed Work(s): The Triumph of Honour: Burgundian Origins of the Elizabethan Renaissance by Gordon Kipling",
+      "location": "720-723",
+      "url": "",
+      "authors": [
+        {
+          "last": "Ashley",
+          "first": "L.R.N"
+        }
+      ],
+      "journal": "Bibliothèque d'Humanisme et Renaissance",
+      "volume": "40",
+      "issue": "3",
+      "date": "",
+      "year": "1978",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "cca6be38-a515-44ec-b6e5-d06f19fe3a82"
+    },
+    {
+      "title": "Reviewed Work(s): The Triumph of Honour. Burgundian Origins of the Elizabethan Renaissance by Gordon Kipling",
+      "location": "211-213",
+      "url": "",
+      "authors": [
+        {
+          "last": "Grundy",
+          "first": "Joan"
+        }
+      ],
+      "journal": "The Review of English Studies",
+      "volume": "30",
+      "issue": "118",
+      "date": "May",
+      "year": "1979",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "4a47bf59-53c0-4725-9baf-4e7e311173fc"
+    },
+    {
+      "title": "Reviewed Work(s): The Triumph of Honour: Burgundian Origins of the Elizabethan Renaissance by Gordon Kipling; The Queen's Two Bodies: Drama and the Elizabethan Succession by Marie Axton",
+      "location": "925-928",
+      "url": "",
+      "authors": [
+        {
+          "last": "Hurstfield",
+          "first": "Joel"
+        }
+      ],
+      "journal": "The Modern Language Review",
+      "volume": "76",
+      "issue": "4",
+      "date": "Oct",
+      "year": "1981",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "ec1a4dd3-0f84-4c23-91f9-a654a9a2b936"
+    },
+    {
+      "title": "Review: the Triumph of Honour: Burgundian Origins of the Elizabethan Renaissance, by Gordon Kipling.",
+      "location": "185-7",
+      "url": "",
+      "authors": [
+        {
+          "last": "Emrys",
+          "first": "Jones"
+        }
+      ],
+      "journal": "Notes and Queries",
+      "volume": "",
+      "issue": "",
+      "date": "April",
+      "year": "1979",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "0d11b38e-48c0-460b-a7f4-083d9e516128"
+    },
+    {
+      "title": "Reviewed Work(s): The Triumph of Honour: Burgundian Origins of the Elizabethan Renaissance by Dr. Kipling",
+      "location": "210",
+      "url": "",
+      "authors": [
+        {
+          "last": "Norbrook",
+          "first": "David"
+        }
+      ],
+      "journal": "The English Historical Review",
+      "volume": "96",
+      "issue": "378",
+      "date": "Jan",
+      "year": "1981",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "a18775ce-cecc-4c6a-8947-43a70bffb890"
+    },
+    {
+      "title": "Reviewed Work(s): The Triumph of Honour: Burgundian Origins of the Elizabethan Renaissance by Gordon Kipling",
+      "location": "114-116",
+      "url": "",
+      "authors": [
+        {
+          "last": "Smith",
+          "first": "Hallett"
+        }
+      ],
+      "journal": "The Journal of English and Germanic Philology",
+      "volume": "78",
+      "issue": "1",
+      "date": "Jan",
+      "year": "1979",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "8b085abf-dfd0-43e3-9aeb-d4e74eec9dc7"
+    },
+    {
+      "title": "Reviewed Work(s): The Triumph of Honour: Burgundian Origins of the Elizabethan Renaissance. by Gordon Kipling",
+      "location": "211- 214",
+      "url": "",
+      "authors": [
+        {
+          "last": "Strong",
+          "first": "Roy"
+        }
+      ],
+      "journal": "Renaissance Quarterly ",
+      "volume": "32",
+      "issue": "2",
+      "date": "Summer",
+      "year": "1979",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "journal",
+      "id": "2c3bfc18-b6de-4d98-a661-953b00c76f54"
+    },
+    {
+      "title": "Review: G. Kipling, The Triumph of Honour. Burgundian Origins of the Elizabethan Renaissance ",
+      "location": "96",
+      "url": "",
+      "authors": [
+        {
+          "last": "Vaughan",
+          "first": "Richard"
+        }
+      ],
+      "journal": "Bijdragen en mededelingen betreffende de geschiedenis der Nederlanden",
+      "volume": "97",
+      "issue": "1",
+      "date": "",
+      "year": "1982",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "0801b463-9f62-44c0-9be3-3a6eff894bf4"
+    },
+    {
+      "title": "The Spirit of Chivalry",
+      "location": "24-27",
+      "authors": [
+        {
+          "last": "Yates",
+          "first": "Frances"
+        }
+      ],
+      "in": {
+        "title": "Ideas and Ideals in the North European Renaissance",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "Routledge ",
+          "year": "1984"
+        }
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "chapter",
+      "id": "16346fed-297e-4404-b589-c9c0a2d74c8d"
+    },
+    {
+      "title": "Some Observations on Trends in the Recent Historiography of Tudor Art",
+      "location": "251-255",
+      "url": "",
+      "authors": [
+        {
+          "last": "String",
+          "first": "Tatiana C."
+        }
+      ],
+      "journal": "Reformation",
+      "volume": "4",
+      "issue": "1",
+      "date": "Apr",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "861a440a-76af-40eb-90c1-b2fef323becb"
+    },
+    {
+      "title": "The Tudor and Stuart monarchy : pageantry, painting, iconography. Vol.1, Tudor.",
+      "authors": [
+        {
+          "last": "Strong",
+          "first": "Roy"
+        }
+      ],
+      "imprint": {
+        "publisher": "Boydell",
+        "place": "Woodbridge",
+        "year": "1995"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "46529aa3-d75a-4a4c-b753-59254ae2b875"
+    },
+    {
+      "title": "The Italian Encounter with Tudor England: A Cultural Politics of Translation",
+      "authors": [
+        {
+          "last": "Wyatt",
+          "first": "Michael"
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge",
+        "year": "2005"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "bb872880-5b27-4e20-a8be-223d637e48a9"
+    },
+    {
+      "title": "Social Performance: Symbolic Action, Cultural Pragmatics, and Ritual",
+      "authors": [
+        {
+          "last": "Alexander",
+          "first": "Jeffrey C."
+        }
+      ],
+      "imprint": {
+        "publisher": "Cambridge University Press",
+        "place": "Cambridge",
+        "year": "2009"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "35d185e8-5eb0-444a-94f7-df489dfbf7f7"
+    },
+    {
+      "title": "Italian Renaissance Courts : Art, Pleasure and Power",
+      "authors": [
+        {
+          "last": "Cole",
+          "first": "Alison"
+        }
+      ],
+      "imprint": {
+        "publisher": "Laurence King Publishing",
+        "place": "London",
+        "year": "2016"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "3e7c58de-b7ed-489d-a952-1c9c95a3587a"
+    },
+    {
+      "title": "Political Narrative and Symbolism in the Feast of the Pheasant (1454)",
+      "location": "317–342",
+      "url": "",
+      "authors": [
+        {
+          "last": "Strøm-Olsen",
+          "first": "Rolf"
+        }
+      ],
+      "journal": "Viator",
+      "volume": "46",
+      "issue": "3",
+      "date": "",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "23c43166-3f98-4be8-84fe-b83ca08d93c6"
+    },
+    {
+      "title": "The English Entertainment for the French Ambassadors in 1564",
+      "location": "79-100",
+      "url": "",
+      "authors": [
+        {
+          "last": "McGee ",
+          "first": "C. Edward"
+        }
+      ],
+      "journal": "Early Theatre",
+      "volume": "14",
+      "issue": "1",
+      "date": "",
+      "year": "2011",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "c0f882f5-68b0-40ca-bbab-b3a46b4ff0e7"
+    },
+    {
+      "title": "Cultures of Clothing in Later Medieval and Early Modern Europe\n",
+      "location": "459-481",
+      "url": "",
+      "authors": [
+        {
+          "last": "Rosenthal",
+          "first": "Margaret F."
+        }
+      ],
+      "journal": "Journal of Medieval and Early Modern Studies",
+      "volume": "39",
+      "issue": "3",
+      "date": "Fall",
+      "year": "2009",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "0ff8a851-948e-4d82-9f27-5a26f2b535ee"
+    },
+    {
+      "title": "Food: the key concepts.",
+      "authors": [
+        {
+          "last": "Belasco",
+          "first": "W."
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2008"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "03b9a482-7939-482b-8b4c-8b64177726f3"
+    },
+    {
+      "title": "Masks and Masking in Medieval and Early Tudor England,",
+      "authors": [
+        {
+          "last": "Twycross",
+          "first": "Meg"
+        },
+        {
+          "last": "Carpenter",
+          "first": "Sarah"
+        }
+      ],
+      "imprint": {
+        "publisher": "Taylor & Francis Group",
+        "place": "London",
+        "year": "2002"
+      },
+      "collectionID": [
+        15
+      ],
+      "type": "book",
+      "id": "7648601a-6522-46f1-b5f6-30a45a86af75"
+    },
+    {
+      "title": "‘Media Events’ reconsidered: from ritual theory to simulation and performativity",
+      "location": "1-15",
+      "url": "",
+      "authors": [
+        {
+          "last": "Pawlett",
+          "first": "William"
+        }
+      ],
+      "journal": "Journal for Cultural Research",
+      "volume": "21",
+      "issue": "1",
+      "date": "",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "e4fc6767-55c0-4fe9-896d-20bfd56f9794"
+    },
+    {
+      "title": "Music and musicians at the Burgundian court in the fifteenth century",
+      "location": "427–45",
+      "authors": [
+        {
+          "last": "Fiala",
+          "first": "David"
+        }
+      ],
+      "in": {
+        "title": "The Cambridge History of Fifteenth-Century Music",
+        "editors": [
+          {
+            "last": "Berger",
+            "first": "Anna Maria Busse"
+          },
+          {
+            "last": "Rodin",
+            "first": "Jesse"
+          }
+        ],
+        "imprint": {
+          "place": "Cambridge",
+          "publisher": " Cambridge University Press",
+          "year": "2015"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "6d00e929-e0f0-49de-89ba-fbab1fe3104d"
+    },
+    {
+      "title": "The Court of the Dukes of Burgundy: A Model for Europe?",
+      "location": "69–102",
+      "authors": [
+        {
+          "last": "Paravicini",
+          "first": "Werner"
+        }
+      ],
+      "in": {
+        "title": "Princes, Patronage, and the Nobility: The Court at the Beginning of the Modern Age c.1450-1650",
+        "editors": [
+          {
+            "last": "Asch",
+            "first": "Ronald G."
+          },
+          {
+            "last": "Burke",
+            "first": "Adolf M."
+          }
+        ],
+        "imprint": {
+          "place": "Oxford",
+          "publisher": "Oxford University Press ",
+          "year": "1991"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "ab2fc01b-5ec5-4b7c-a7fe-1ee902d1a9f8"
+    },
+    {
+      "title": "Performer-Audience Relationships in Fifteenth- and Sixteenth-century Danced Spectacles",
+      "location": "123–40",
+      "authors": [
+        {
+          "last": "Neville",
+          "first": "Jennifer"
+        }
+      ],
+      "in": {
+        "title": "Medieval Theatre Performance: Actors, Dancers, Automata and their Audiences",
+        "editors": [
+          {
+            "last": "Butterworth",
+            "first": "Philip"
+          },
+          {
+            "last": "Normington",
+            "first": "Katie"
+          }
+        ],
+        "imprint": {
+          "place": "Woodbridge",
+          "publisher": "Boydell & Brewer",
+          "year": "2018"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "cb18226c-aefe-4725-81e8-4ffa8b8ea1fa"
+    },
+    {
+      "title": "Viandier of Taillevent: An Edition of All Extant Manuscripts",
+      "editors": [
+        {
+          "last": "Scully",
+          "first": "Terence"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of Ottawa Press",
+        "place": "Ottawa",
+        "year": "1988"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "22ee5b22-3ac1-472e-ba4f-c73b14972096"
+    },
+    {
+      "title": "The Tableau Vivant —: an Ephemeral Art Form in Burgundian Civic Festivitiesw",
+      "location": "37-64",
+      "url": "",
+      "authors": [
+        {
+          "last": "Eichberger",
+          "first": "D.H."
+        }
+      ],
+      "journal": "Parergon",
+      "volume": "",
+      "issue": "6A",
+      "date": "",
+      "year": "1998",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "9f4cf351-63b2-43e5-8c79-62fcbfd86860"
+    },
+    {
+      "title": "The Boy Who Would Be King: Court Revels of King Edward VI, 1547-1553",
+      "location": "271-290",
+      "url": "",
+      "authors": [
+        {
+          "last": "Westfall",
+          "first": "Suzanne"
+        }
+      ],
+      "journal": "Comparative Drama",
+      "volume": "35",
+      "issue": "3/4",
+      "date": "Fall/Winter",
+      "year": "2001-02",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "4407d9c9-6631-40bb-9cfe-004ff1a0603b"
+    },
+    {
+      "title": "Civic Drama in the Burgundian Territories in the Late Middle Ages",
+      "location": "409-422",
+      "url": "",
+      "authors": [
+        {
+          "last": "Runnalls",
+          "first": "Graham A."
+        }
+      ],
+      "journal": "Revue belge de philologie et d'histoire",
+      "volume": "78",
+      "issue": "2",
+      "date": "",
+      "year": "2000",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "c2c45731-b04b-4a4d-8b38-af53e6f7f36e"
+    },
+    {
+      "title": "Tudor Artists. A Study of Painters in the Royal Service and of Portraiture on Illuminated Documents from the Accession of Henry VIII to the Death of Elizabeth I",
+      "authors": [
+        {
+          "last": "Auerbach",
+          "first": "Erna"
+        }
+      ],
+      "imprint": {
+        "publisher": "University of London Athlone Press",
+        "place": "London",
+        "year": "1954"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "ae576bd8-bfdc-4345-8fd6-4461db47d1fb"
+    },
+    {
+      "title": "Un Maître Prévaricateur À La Chambre Des Comptes De Lille Sous Philippe Le Bon : Roland Du Bois",
+      "location": "421-447",
+      "url": "",
+      "authors": [
+        {
+          "last": "Santamaria",
+          "first": "Jean-Baptiste"
+        }
+      ],
+      "journal": "Revue du Nord",
+      "volume": "",
+      "issue": "380",
+      "date": "2",
+      "year": "2009",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "e7f5f76b-c8e7-4d04-83e6-341123a11edd"
+    },
+    {
+      "title": "Scattered knives and dismembered song: cutlery, music and the rituals of dining",
+      "location": "156-184",
+      "authors": [
+        {
+          "last": "Dennis",
+          "first": "Flora"
+        }
+      ],
+      "in": {
+        "title": "Re-Thinking Renaissance Objects : Design, Function and Meaning",
+        "editors": [
+          {
+            "last": "Moture",
+            "first": "Peta"
+          },
+          {
+            "last": "O'Malley",
+            "first": "Michelle"
+          }
+        ],
+        "imprint": {
+          "place": "London",
+          "publisher": "John Wiley & Sons",
+          "year": "2011"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "4e3fb3e0-12ca-43e1-8383-5abddd2ffaac"
+    },
+    {
+      "title": "The vows of the Pheasant and late chivalric ritual \n",
+      "location": "611-643",
+      "authors": [
+        {
+          "last": "Orgelfinger ",
+          "first": "Gail"
+        }
+      ],
+      "in": {
+        "title": "The Study of Chivalry: Resources and Approaches",
+        "editors": [
+          {
+            "last": "Chickering",
+            "first": "Howell"
+          },
+          {
+            "last": "Seiler",
+            "first": "Thomas H."
+          }
+        ],
+        "imprint": {
+          "place": "Kalamazoo",
+          "publisher": "The Study of Chivalry: Resources and Approaches",
+          "year": "1988"
+        }
+      },
+      "collectionID": [],
+      "type": "chapter",
+      "id": "eeb8905a-34be-43cf-9afd-de31c68a7e30"
+    },
+    {
+      "title": "Renaissance Intersections: The Arts of Italy and Early Tudor Visual Experience\n",
+      "location": "1-20",
+      "url": "",
+      "authors": [
+        {
+          "last": "Woolfson",
+          "first": "Jonathan "
+        }
+      ],
+      "journal": "Visual Resources",
+      "volume": "36",
+      "issue": "1",
+      "date": "",
+      "year": "2020",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "ac0f0f81-e782-476f-a647-7b08e8f1bf9f"
+    },
+    {
+      "title": "Banquet plate and Renaissance culture:: a day in the life\n",
+      "location": "621-633",
+      "url": "",
+      "authors": [
+        {
+          "last": "Taylor",
+          "first": "Valerie"
+        }
+      ],
+      "journal": "Renaissance Studies ",
+      "volume": "19",
+      "issue": "5",
+      "date": "",
+      "year": "2005",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "febda63f-4d89-40de-a493-dabde3f4e2e7"
+    },
+    {
+      "title": "17 février 1454 : le Banquet du Vœu du Faisan, fête de cour et\nstratégies de pouvoir.",
+      "location": "269-288",
+      "url": "",
+      "authors": [
+        {
+          "last": "Caron",
+          "first": "Marie-Thérèse"
+        }
+      ],
+      "journal": "Revue du Nord",
+      "volume": "78",
+      "issue": "315",
+      "date": "Avril-juin",
+      "year": "1996",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "93dd5ce4-af39-4ffe-8988-d6a773f6457f"
+    },
+    {
+      "title": "The Masque of Food: Staging and Banqueting in Shakespeare’s England",
+      "location": "91-105",
+      "url": "",
+      "authors": [
+        {
+          "last": "Purkiss",
+          "first": "Dianne"
+        }
+      ],
+      "journal": "Shakespeare Studies",
+      "volume": "42",
+      "issue": "",
+      "date": "",
+      "year": "2014",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "0f7b788a-ad15-4d3d-9d77-62ed173aa46d"
+    },
+    {
+      "title": "Magnanimous Dukes and Rising States - The Unification of the Burgundian Netherlands, 1380-1480",
+      "authors": [
+        {
+          "last": "Stein",
+          "first": "Robert "
+        }
+      ],
+      "imprint": {
+        "publisher": "Oxford University Press",
+        "place": "Oxford",
+        "year": "2017"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "d211b7e9-7ef3-4e19-ad7e-53b7f1352df0"
+    },
+    {
+      "title": "The household inventory as urban ‘theatre’ in late medieval Burgundy\n",
+      "location": "335-359",
+      "url": "",
+      "authors": [
+        {
+          "last": "Wilson",
+          "first": "Katherine Anne"
+        }
+      ],
+      "journal": "Social History",
+      "volume": "40",
+      "issue": "3",
+      "date": "",
+      "year": "2015",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "5e40ce80-314e-44f0-9510-7f3dfc58a8fc"
+    },
+    {
+      "title": "Urban Theatre in the Low Countries, 1400–1625",
+      "editors": [
+        {
+          "last": "Strietman",
+          "first": "Elsa"
+        },
+        {
+          "last": "Happé",
+          "first": "Peter"
+        }
+      ],
+      "imprint": {
+        "publisher": "Brepols",
+        "place": "Turnhout",
+        "year": "2006"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "f69e0c29-79f3-45f5-bae9-833a9a1a11b3"
+    },
+    {
+      "title": "Enigma as Display in the Fifteenth-Century Chastellain de Coucy: Veiled Performances",
+      "location": "215-246",
+      "url": "",
+      "authors": [
+        {
+          "last": "Dixon",
+          "first": "Rebecca"
+        }
+      ],
+      "journal": "Speculum",
+      "volume": "88",
+      "issue": "1",
+      "date": "January",
+      "year": "2013",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "7882b505-f3fa-4460-9afa-b4b170a1bcd3"
+    },
+    {
+      "title": "Social Status and Classicism in the Visual and Material Culture of the Sweet Banquet in Early Modern England",
+      "location": "913-942",
+      "url": "",
+      "authors": [
+        {
+          "last": "Stewart",
+          "first": "Louise"
+        }
+      ],
+      "journal": "The Historical Journal",
+      "volume": "61",
+      "issue": "4",
+      "date": "",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "fd9f4251-569c-43c9-96f9-20995897b13a"
+    },
+    {
+      "title": "Contesting Chivalry: James II and the control of chivalric culture in the 1450s",
+      "location": "197-214",
+      "url": "",
+      "authors": [
+        {
+          "last": "Stevenson",
+          "first": "Katie"
+        }
+      ],
+      "journal": "Journal of Medieval History",
+      "volume": "33",
+      "issue": "",
+      "date": "",
+      "year": "2007",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "f8131372-36f2-4317-afbf-57f701f52e06"
+    },
+    {
+      "title": "The Prince’s Court at Bruges: A Reconstruction of the Lost Residence of the Dukes of Burgundy",
+      "location": "1-14",
+      "url": "",
+      "authors": [
+        {
+          "last": "Maekelberg",
+          "first": "S"
+        },
+        {
+          "last": "De Jonge",
+          "first": "K."
+        }
+      ],
+      "journal": "Architectural Histories",
+      "volume": "6/1",
+      "issue": "23",
+      "date": "",
+      "year": "2018",
+      "specialIssue": {
+        "title": "",
+        "editors": [
+          {
+            "last": "",
+            "first": ""
+          }
+        ]
+      },
+      "collectionID": [],
+      "type": "journal",
+      "id": "25e092dc-e455-488f-8592-91fcb4d458c4"
+    },
+    {
+      "title": "Philip the Good: The Apogee of Burgundy ",
+      "authors": [
+        {
+          "last": "Vaughan",
+          "first": "Richard"
+        }
+      ],
+      "imprint": {
+        "publisher": "Longmans, Green and Co Ltd",
+        "place": "London",
+        "year": "1970"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "a4ed001b-53b5-47b4-bc16-6853598e2997"
+    },
+    {
+      "title": "Waterborne Pageants and Festivities in the Renaissance : Essays in Honour of J. R. Mulryne",
+      "authors": [
+        {
+          "last": "Shewring",
+          "first": "Margaret "
+        }
+      ],
+      "imprint": {
+        "publisher": "Taylor & Francis Group",
+        "place": "London",
+        "year": "2013"
+      },
+      "collectionID": [],
+      "type": "book",
+      "id": "394ffc67-25b1-41d0-bd90-66fd1b6fa317"
+    }
   ],
   "collections": [
     {
@@ -27,17 +5313,17 @@
       "id": 2,
       "name": "Primary sources: England"
     },
-	    {
+    {
       "id": 13,
       "name": "Historiography: Huizinga"
-	  },
-	      {
-      "id": 14,
-      "name": "Historiography: Kipling"
-	  },
-	      {
+    },
+    {
       "id": 14,
       "name": "Historiography: Theatre State"
-	  }
+    },
+    {
+      "id": 15,
+      "name": "Historiography: Kipling"
+    }
   ]
-  }
+}
